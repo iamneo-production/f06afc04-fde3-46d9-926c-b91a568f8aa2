@@ -94,9 +94,19 @@
 =======
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> 26eee07 (first commit)
+<<<<<<< HEAD
 >>>>>>> a85ad3b (first commit)
+<<<<<<< HEAD
 >>>>>>> 4dfcb85 (first commit)
+=======
+=======
+=======
+>>>>>>> e86ce51 (first commit)
+>>>>>>> f553430 (first commit)
+>>>>>>> 81b4921 (first commit)
+>>>>>>> 9274969 (first commit)
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>
