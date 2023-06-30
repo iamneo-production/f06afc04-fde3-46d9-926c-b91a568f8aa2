@@ -1,0 +1,6 @@
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/SpringappApplication.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/CustomerRepository.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Customer.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/security/SecurityConfig.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/CustomerService.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/CustomerController.java
