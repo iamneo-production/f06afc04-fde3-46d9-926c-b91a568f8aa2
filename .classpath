@@ -33,6 +33,7 @@
 	</classpathentry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8a4c3b6 (api 16 done)
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
@@ -57,6 +58,8 @@
 >>>>>>> f553430 (first commit)
 =======
 >>>>>>> 8a4c3b6 (api 16 done)
+=======
+>>>>>>> 26eee07 (first commit)
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>
