@@ -40,6 +40,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,8 +58,21 @@
 >>>>>>> 32d8cb2 (first commit)
 =======
 >>>>>>> e7b3c5d (merg to main)
+<<<<<<< HEAD
 >>>>>>> 796e73c (merg to main)
+<<<<<<< HEAD
 >>>>>>> 2b1d650 (merg to main)
+=======
+=======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 93a8852 (first commit)
+>>>>>>> c00d62b (first commit)
+>>>>>>> 32d8cb2 (first commit)
+>>>>>>> 43431b5 (first commit)
+>>>>>>> a5fb484 (first commit)
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -72,6 +86,7 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +106,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> 2b1d650 (merg to main)
+=======
+>>>>>>> a5fb484 (first commit)
 >>>>>>> deff43fc3665e43775af2aa3b94a0425ce172108
 =======
 =======
@@ -111,9 +128,30 @@
 =======
 >>>>>>> dd6a3f2 (merg to main)
 >>>>>>> e7b3c5d (merg to main)
+<<<<<<< HEAD
 >>>>>>> 0867d64 (merg to main)
+<<<<<<< HEAD
 >>>>>>> 796e73c (merg to main)
+<<<<<<< HEAD
 >>>>>>> 2b1d650 (merg to main)
+=======
+=======
+=======
+=======
+=======
+>>>>>>> dd6a3f2 (merg to main)
+=======
+<<<<<<< HEAD
+>>>>>>> deff43fc3665e43775af2aa3b94a0425ce172108
+=======
+=======
+>>>>>>> dc613a9 (first commit)
+>>>>>>> 93a8852 (first commit)
+>>>>>>> c00d62b (first commit)
+>>>>>>> 32d8cb2 (first commit)
+>>>>>>> 19a892c (first commit)
+>>>>>>> 43431b5 (first commit)
+>>>>>>> a5fb484 (first commit)
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>
