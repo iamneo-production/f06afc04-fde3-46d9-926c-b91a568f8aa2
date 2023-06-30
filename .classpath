@@ -32,6 +32,7 @@
 		</attributes>
 	</classpathentry>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,6 +64,7 @@
 <<<<<<< HEAD
 >>>>>>> deff43fc3665e43775af2aa3b94a0425ce172108
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> dd6a3f2 (merg to main)
 >>>>>>> e7b3c5d (merg to main)
@@ -82,6 +84,9 @@
 >>>>>>> c00d62b (first commit)
 >>>>>>> 32d8cb2 (first commit)
 >>>>>>> 19a892c (first commit)
+=======
+>>>>>>> dc613a9 (first commit)
+>>>>>>> 2466566 (first commit)
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>
