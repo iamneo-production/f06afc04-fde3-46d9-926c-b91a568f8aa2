@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3338104 (Api 6,7)
 =======
 >>>>>>> 1770f5c (reverting)
+=======
+>>>>>>> 23412c7 (adding classpath)
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" output="target/classes" path="src/main/java">
@@ -55,6 +58,7 @@
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -121,3 +125,5 @@
 >>>>>>> 3338104 (Api 6,7)
 =======
 >>>>>>> 1770f5c (reverting)
+=======
+>>>>>>> 23412c7 (adding classpath)
