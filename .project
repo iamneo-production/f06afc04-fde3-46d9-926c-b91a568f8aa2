@@ -23,15 +23,19 @@
 	<filteredResources>
 		<filter>
 <<<<<<< HEAD
+<<<<<<< HEAD
 			<id>1688113407674</id>
 =======
 			<id>1688051281088</id>
 >>>>>>> 0e4f39f6fc6cb2626bfc18c2e4f7dd1f6c6b0a59
+=======
+			<id>1688124233932</id>
+>>>>>>> 8a4c3b6 (api 16 done)
 			<name></name>
 			<type>30</type>
 			<matcher>
 				<id>org.eclipse.core.resources.regexFilterMatcher</id>
-				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
 			</matcher>
 		</filter>
 	</filteredResources>
