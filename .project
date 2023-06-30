@@ -22,22 +22,11 @@
 	</natures>
 	<filteredResources>
 		<filter>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 75b5cbc8 (first commit)
-			<id>1683004934301</id>
-=======
-			<id>1688051281088</id>
->>>>>>> 9135be3 (first commit)
-			<name></name>
+<name></name>
 			<type>30</type>
 			<matcher>
 				<id>org.eclipse.core.resources.regexFilterMatcher</id>
-				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
->>>>>>> b03ce4cb (updated the home and search components for home screen)
+				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
 			</matcher>
 		</filter>
 	</filteredResources>
