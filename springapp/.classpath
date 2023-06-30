@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3338104 (Api 6,7)
+=======
+>>>>>>> 1770f5c (reverting)
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" output="target/classes" path="src/main/java">
@@ -52,6 +55,7 @@
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <?xml version="1.0" encoding="UTF-8"?>
@@ -115,3 +119,5 @@
 >>>>>>> a45319b (Api 6,7 done)
 =======
 >>>>>>> 3338104 (Api 6,7)
+=======
+>>>>>>> 1770f5c (reverting)
