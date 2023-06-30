@@ -35,10 +35,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8a4c3b6 (api 16 done)
 =======
 >>>>>>> e190f3a (first commit)
+=======
+=======
+>>>>>>> cbf9383 (api 16 done)
+>>>>>>> feea624 (api 16 done)
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -52,6 +57,7 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -68,6 +74,12 @@
 =======
 >>>>>>> e86ce51 (first commit)
 >>>>>>> e190f3a (first commit)
+=======
+=======
+>>>>>>> e86ce51 (first commit)
+=======
+>>>>>>> cbf9383 (api 16 done)
+>>>>>>> feea624 (api 16 done)
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>

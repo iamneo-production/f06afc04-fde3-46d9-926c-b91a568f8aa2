@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/LoginService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/SpringappApplication.java
+<<<<<<< HEAD
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Restaurant.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/CustomerRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Login.java
@@ -22,6 +23,10 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/SpringappApplication.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/MenuItemController.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/CustomerRepository.java
+=======
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/MenuItemController.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/CustomerRepository.java
+>>>>>>> feea624 (api 16 done)
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/MenuItemRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/MenuItem.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/MenuItemService.java

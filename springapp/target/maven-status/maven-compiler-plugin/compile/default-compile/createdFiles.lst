@@ -1,6 +1,7 @@
 com/example/springapp/SpringappApplication.class
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 main/java/com/example/springapp/service/LoginService.class
 com/example/springapp/model/MenuItem.class
 main/java/com/example/springapp/model/Login.class
@@ -24,6 +25,10 @@ com/example/springapp/repository/MenuItemRepository.class
 com/example/springapp/service/MenuItemService.class
 com/example/springapp/model/MenuItem.class
 >>>>>>> 8a4c3b6 (api 16 done)
+=======
+com/example/springapp/service/MenuItemService.class
+com/example/springapp/model/MenuItem.class
+>>>>>>> feea624 (api 16 done)
 com/example/springapp/controller/CustomerController.class
 com/example/springapp/service/CustomerService.class
 com/example/springapp/repository/CustomerRepository.class
