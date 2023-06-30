@@ -21,11 +21,6 @@ public class CustomerController {
 	
 	@Autowired
 	private CustomerService customerService;
-
-	@GetMapping("/")
-	public String home() {
-		return "Welcome to food app";
-	}
 	
 	@PostMapping("/customer")
 	public String register(@RequestBody Customer customer) {
