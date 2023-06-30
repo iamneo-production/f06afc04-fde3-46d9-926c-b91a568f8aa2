@@ -26,6 +26,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			<id>1688113407674</id>
 =======
 			<id>1688051281088</id>
@@ -45,15 +46,22 @@
 			<id>1688113407674</id>
 >>>>>>> e86ce51 (first commit)
 >>>>>>> f553430 (first commit)
+=======
+			<id>1688124233932</id>
+>>>>>>> 8a4c3b6 (api 16 done)
 			<name></name>
 			<type>30</type>
 			<matcher>
 				<id>org.eclipse.core.resources.regexFilterMatcher</id>
 <<<<<<< HEAD
+<<<<<<< HEAD
 				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
 =======
 				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
 >>>>>>> 26eee07 (first commit)
+=======
+				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+>>>>>>> 8a4c3b6 (api 16 done)
 			</matcher>
 		</filter>
 	</filteredResources>
