@@ -26,6 +26,7 @@
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	<filteredResources>
 		<filter>
@@ -39,4 +40,6 @@
 		</filter>
 	</filteredResources>
 >>>>>>> a45319b (Api 6,7 done)
+=======
+>>>>>>> 3338104 (Api 6,7)
 </projectDescription>
