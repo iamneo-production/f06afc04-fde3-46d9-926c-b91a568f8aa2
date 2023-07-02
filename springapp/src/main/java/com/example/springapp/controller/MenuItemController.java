@@ -24,4 +24,16 @@ public class MenuItemController {
 		return repsonse;
 	}
 
+	@PutMapping(value = "/PUT/menu-item")
+	public String updateMenuItems(@RequestBody MenuItem menuItem) {
+		String response = menuItemService.
+	}
+
+	@GetMapping(value = "get/menu-item")
+	public String getMenuItems() {
+		String response = menuItemService.
+	}
+
+}
+
 }
