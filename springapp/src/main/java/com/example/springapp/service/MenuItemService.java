@@ -16,5 +16,20 @@ public class MenuItemService {
 		menuItemRepository.save(menuItem);
 		return "Created";
 	}
-	
+	public String updateMenuItems(MenuItem menuItem) {
+		Optional<MenuItem> menuItemOptional = menuItemRepository.findByName(menuItem.getName());
+		if(menuItemOptional.isPresent()){
+			menuItem.setId(menuItemOptional.get().getId());
+			BeanProperties.copy(menuItem, menuItemOptional.get());
+			menuItemRepository.save(menuItemOptional.get());
+			return "Updated";
+		}
+		return "Not Updated";
+	}
+
+	public List<MenuItem> getMenuItems(){
+		return menuItemRepository.findAll();
+	}
+
 }
+
