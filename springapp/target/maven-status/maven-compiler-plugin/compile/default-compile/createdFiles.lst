@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 com/example/springapp/controller/LoginController.class
 com/example/springapp/model/Payment.class
 com/example/springapp/model/Restaurant.class
@@ -58,3 +59,20 @@ com/example/springapp/model/Customer.class
 >>>>>>> 1770f5c (reverting)
 =======
 >>>>>>> 281429d (modified Login files)
+=======
+com/example/springapp/controller/LoginController.class
+com/example/springapp/controller/MenuItemController.class
+com/example/springapp/security/SecurityConfig.class
+com/example/springapp/SpringappApplication.class
+com/example/springapp/model/MenuItem.class
+com/example/springapp/repository/OrderRepository.class
+com/example/springapp/repository/LoginRepository.class
+com/example/springapp/model/Customer.class
+com/example/springapp/service/LoginService.class
+com/example/springapp/service/MenuItemService.class
+com/example/springapp/controller/CustomerController.class
+com/example/springapp/model/Login.class
+com/example/springapp/service/CustomerService.class
+com/example/springapp/repository/CustomerRepository.class
+com/example/springapp/repository/MenuItemRepository.class
+>>>>>>> 4143877 (modifications in login)
