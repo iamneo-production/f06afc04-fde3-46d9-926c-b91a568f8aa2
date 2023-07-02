@@ -16,7 +16,7 @@ import com.example.springapp.service.CustomerService;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping()
+@RequestMapping("")
 public class CustomerController {
 	
 	@Autowired
