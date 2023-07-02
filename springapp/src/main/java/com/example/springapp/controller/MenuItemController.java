@@ -1,14 +1,13 @@
 package com.example.springapp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.example.springapp.model.MenuItem;
 import com.example.springapp.service.MenuItemService;
+
+import java.awt.*;
+import java.util.List;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -26,14 +25,12 @@ public class MenuItemController {
 
 	@PutMapping(value = "/PUT/menu-item")
 	public String updateMenuItems(@RequestBody MenuItem menuItem) {
-		String response = menuItemService.
+		return menuItemService.updateMenuItems(menuItem);
 	}
 
 	@GetMapping(value = "get/menu-item")
-	public String getMenuItems() {
-		String response = menuItemService.
+	public List<MenuItem> getMenuItems() {
+		return menuItemService.getMenuItems();
 	}
-
-}
 
 }

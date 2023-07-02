@@ -1,10 +1,15 @@
 package com.example.springapp.service;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.springapp.model.MenuItem;
 import com.example.springapp.repository.MenuItemRepository;
+
+import java.beans.BeanProperty;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MenuItemService {
@@ -20,7 +25,7 @@ public class MenuItemService {
 		Optional<MenuItem> menuItemOptional = menuItemRepository.findByName(menuItem.getName());
 		if(menuItemOptional.isPresent()){
 			menuItem.setId(menuItemOptional.get().getId());
-			BeanProperties.copy(menuItem, menuItemOptional.get());
+			BeanUtils.copyProperties(menuItem, menuItemOptional.get());
 			menuItemRepository.save(menuItemOptional.get());
 			return "Updated";
 		}
