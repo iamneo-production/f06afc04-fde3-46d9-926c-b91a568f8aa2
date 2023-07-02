@@ -23,12 +23,12 @@ public class MenuItemController {
 		return repsonse;
 	}
 
-	@PutMapping(value = "/PUT/menu-item")
+	@PutMapping("/menu-item")
 	public String updateMenuItems(@RequestBody MenuItem menuItem) {
 		return menuItemService.updateMenuItems(menuItem);
 	}
 
-	@GetMapping(value = "get/menu-item")
+	@GetMapping("/menu-item")
 	public List<MenuItem> getMenuItems() {
 		return menuItemService.getMenuItems();
 	}
