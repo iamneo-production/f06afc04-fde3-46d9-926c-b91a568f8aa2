@@ -1,8 +1,8 @@
-package com.example.springapp.controller;
+package main.java.com.example.springapp.controller;
 
 
-import com.example.springapp.model.Login;
-import com.example.springapp.service.LoginService;
+import main.java.com.example.springapp.model.Login;
+import main.java.com.example.springapp.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 @RestController
