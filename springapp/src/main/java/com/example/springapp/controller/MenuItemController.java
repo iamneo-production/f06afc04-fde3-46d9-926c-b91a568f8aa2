@@ -13,29 +13,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/menu-item")
 public class MenuItemController {
-<<<<<<< HEAD
-	
-	@Autowired
-	private MenuItemService menuItemService;
-	
-	@PostMapping("/menu-item")
-	public String addMenuItem(@RequestBody MenuItem menuItem) {
-		String repsonse = menuItemService.addMenuItem(menuItem);
-		return repsonse;
-	}
-
-	@PutMapping("/menu-item")
-	public String updateMenuItems(@RequestBody MenuItem menuItem) {
-		return menuItemService.updateMenuItems(menuItem);
-	}
-
-	@GetMapping("/menu-item")
-	public List<MenuItem> getMenuItems() {
-		return menuItemService.getMenuItems();
-	}
-
-}
-=======
 
     @Autowired
     private MenuItemService menuItemService;
@@ -62,4 +39,3 @@ public class MenuItemController {
         return menuItem;
     }
 }
->>>>>>> ee22ef3 (api 19 completed)
