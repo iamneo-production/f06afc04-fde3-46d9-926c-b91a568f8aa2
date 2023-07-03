@@ -1,6 +1,9 @@
 package com.example.springapp.service;
 
 import com.example.springapp.model.Order;
+import com.example.springapp.repository.OrderRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class OrderService {
