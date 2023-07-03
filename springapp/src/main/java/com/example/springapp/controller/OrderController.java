@@ -28,4 +28,9 @@ public class OrderController {
         Order order = orderService.getOrderById(id);
         return order;
     }
+
+    @PutMapping("/{status}")
+    public Order updateOrderStatus(@RequestParam("orderId") Long orderId, @RequestParam("status") String status) {
+        return orderService.updateOrderStatus(orderId, status);
+    }
 }

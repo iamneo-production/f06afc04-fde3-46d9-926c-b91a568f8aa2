@@ -23,5 +23,14 @@ public class OrderService {
     public Order getOrderById(Long id) {
         return orderRepository.findById(id).orElse(null);
     }
+
+    public Order updateOrderStatus(Long orderId, String status) {
+        Order existingOrder = orderRepository.findById(orderId).orElse(null);
+        if (existingOrder != null) {
+            existingOrder.setStatus(status);
+            return orderRepository.save(existingOrder);
+        }
+        return null; // Handle error or exception if order not found
+    }
 }
 
