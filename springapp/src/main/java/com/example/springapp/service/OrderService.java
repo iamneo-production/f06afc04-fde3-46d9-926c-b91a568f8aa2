@@ -1,10 +1,8 @@
 package com.example.springapp.service;
 
 import com.example.springapp.model.Order;
-import com.example.springapp.repository.OrderRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
+<<<<<<< HEAD
 @Service
 public class OrderService {
 
@@ -32,5 +30,10 @@ public class OrderService {
         }
         return null; // Handle error or exception if order not found
     }
+=======
+public interface OrderService {
+    String createOrder(Order order);
+    Order getOrderById(Long id);
+>>>>>>> origin/Food-Ordering-and-Delivery-Application-Ravi-Byahut
 }
 
