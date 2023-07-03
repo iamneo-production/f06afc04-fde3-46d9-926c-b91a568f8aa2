@@ -2,7 +2,6 @@ package com.example.springapp.service;
 
 import com.example.springapp.model.Order;
 
-<<<<<<< HEAD
 @Service
 public class OrderService {
 
@@ -30,10 +29,4 @@ public class OrderService {
         }
         return null; // Handle error or exception if order not found
     }
-=======
-public interface OrderService {
-    String createOrder(Order order);
-    Order getOrderById(Long id);
->>>>>>> origin/Food-Ordering-and-Delivery-Application-Ravi-Byahut
 }
-
