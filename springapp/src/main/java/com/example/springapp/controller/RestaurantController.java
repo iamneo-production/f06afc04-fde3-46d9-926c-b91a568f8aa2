@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 
+
 import java.util.List;
 
 @CrossOrigin(origins = "*")
@@ -24,13 +25,20 @@ public class RestaurantController {
     }
 
     @PostMapping
+
     public ResponseEntity<Restaurant> createRestaurant(@RequestBody Restaurant restaurant) {
          Restaurant createdRestaurant=restaurantService.createRestaurant(restaurant);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdRestaurant);
+
+    public String createRestaurant(@RequestBody Restaurant restaurant) {
+        String response = restaurantService.createRestaurant(restaurant);
+        return response;
+
     }
 
 
     @GetMapping
+
     public ResponseEntity<List<Restaurant>> getAllRestaurant() {
     List<Restaurant> restaurants = restaurantService.getAllRestaurant();
     if (restaurants.isEmpty()) {
@@ -46,6 +54,10 @@ public class RestaurantController {
         } else {
             return ResponseEntity.notFound().build();
         }
+
+    public List<Restaurant> getRestaurant() {
+        return restaurantService.getRestaurant();
+
     }
 
     @GetMapping("/{id}")
@@ -57,11 +69,33 @@ public class RestaurantController {
             return ResponseEntity.notFound().build();
         }
     }
+
+
+    public Restaurant getRestaurantById(@PathVariable Long id) {
+        Restaurant restaurant = restaurantService.getRestaurantById(id);
+        return restaurant;
+    }
+
     @PutMapping
     public  Restaurant updateRestaurant(@RequestBody Restaurant restaurant)
     {
         return restaurantService.restaurant(restaurant);
         return restaurantRepository.save(res);
 
-    }
+    
+
+
+
+
+
 }
+
+    }
+
+
+    
+  
+
+    
+
+

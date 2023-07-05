@@ -7,7 +7,10 @@ import java.util.Optional;
 
 public interface RestaurantRepository extends JpaRepository<Restaurant, Long> {
 
+<<<<<<< HEAD
     Restaurant findByName(String name);
 
 
+=======
+>>>>>>> ebb8483 (api 11,12,13)
 }
