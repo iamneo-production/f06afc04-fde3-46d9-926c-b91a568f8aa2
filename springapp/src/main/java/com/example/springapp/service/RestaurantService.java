@@ -16,18 +16,28 @@ public class RestaurantService {
         this.restaurantRepository = restaurantRepository;
     }
 
+<<<<<<< HEAD
     public Restaurant createRestaurant(Restaurant restaurant)
     {
         return restaurantRepository.save(restaurant);
     }
 
    public List<Restaurant> getAllRestaurant() {
+=======
+    public String createRestaurant(Restaurant restaurant) {
+        restaurantRepository.save(restaurant);
+        return "Restaurant created";
+    }
+
+    public List<Restaurant> getRestaurant() {
+>>>>>>> ebb8483 (api 11,12,13)
         return restaurantRepository.findAll();
     }
 
     public Restaurant getRestaurantById(Long id) {
         return restaurantRepository.findById(id).orElse(null);
     }
+<<<<<<< HEAD
     public  Restaurant restaurant(Restaurant restaurant){
         long  id = restaurant.getId();
        Restaurant res = restaurantRepository.findById(id).get();
@@ -42,4 +52,18 @@ public class RestaurantService {
      public Restaurant findByRestaurantName(String name) {
     return restaurantRepository.findByName(name);
 }
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+=======
+}
+
+
+
+>>>>>>> ebb8483 (api 11,12,13)
+>>>>>>> ed4dde3 (api 11,12,13)
+>>>>>>> 8a97903 (api 11,12,13)
