@@ -38,6 +38,12 @@ public class RestaurantController {
         Restaurant restaurant = restaurantService.getRestaurantById(id);
         return restaurant;
     }
+    @PutMapping
+    public  Restaurant updateRestaurant(@RequestBody Restaurant restaurant)
+    {
+        return restaurantService.restaurant(restaurant);
+
+    }
 
     }
 
