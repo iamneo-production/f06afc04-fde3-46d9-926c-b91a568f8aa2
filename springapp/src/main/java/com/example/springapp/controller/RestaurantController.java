@@ -116,6 +116,13 @@ public class RestaurantController {
 =======
 >>>>>>> e0587b5 (api 14 is completed)
 
+
+    
+    @GetMapping("/name")
+    public Restaurant getRestaurantByName(@RequestParam("name") String name) {
+        return restaurantService.getRestaurantByName(name);
+    }
+
     }
 
 >>>>>>> ebb8483 (api 11,12,13)

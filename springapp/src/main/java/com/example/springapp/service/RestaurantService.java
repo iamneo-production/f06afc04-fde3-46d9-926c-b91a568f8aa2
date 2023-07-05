@@ -52,6 +52,7 @@ public class RestaurantService {
  
      }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
      public Restaurant findByRestaurantName(String name) {
     return restaurantRepository.findByName(name);
@@ -66,6 +67,14 @@ public class RestaurantService {
 =======
 =======
 >>>>>>> e0587b5 (api 14 is completed)
+=======
+
+
+     
+     public Restaurant getRestaurantByName(String name) {
+        return restaurantRepository.findByName(name);
+    }
+>>>>>>> 018dfc0 (api 15 is completed)
 }
 
 
