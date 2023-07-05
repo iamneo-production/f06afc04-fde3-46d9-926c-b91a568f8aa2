@@ -69,25 +69,64 @@ public class RestaurantController {
             return ResponseEntity.notFound().build();
         }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> c1de581 (api 14 is completed)
 
 
     public Restaurant getRestaurantById(@PathVariable Long id) {
         Restaurant restaurant = restaurantService.getRestaurantById(id);
         return restaurant;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 88b72a8 (test-case_success)
+=======
+<<<<<<< HEAD
+>>>>>>> ed4dde3 (api 11,12,13)
+<<<<<<< HEAD
+>>>>>>> 9f58a86 (api 11,12,13)
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e0587b5 (api 14 is completed)
+>>>>>>> 2eaf1cb (api 14 is completed)
+>>>>>>> 9f7dc72 (api 14 is completed)
+>>>>>>> c1de581 (api 14 is completed)
     @PutMapping
     public  Restaurant updateRestaurant(@RequestBody Restaurant restaurant)
     {
         return restaurantService.restaurant(restaurant);
         return restaurantRepository.save(res);
 
+<<<<<<< HEAD
     
 
 
 
 
 
+=======
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 8a97903 (api 11,12,13)
+=======
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 2eaf1cb (api 14 is completed)
+>>>>>>> 327d11e (api 14 is completed)
+>>>>>>> c1de581 (api 14 is completed)
 }
 
     }
@@ -97,5 +136,16 @@ public class RestaurantController {
   
 
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+=======
+>>>>>>> e0587b5 (api 14 is completed)
+
+    }
+>>>>>>> c1de581 (api 14 is completed)
 
 
