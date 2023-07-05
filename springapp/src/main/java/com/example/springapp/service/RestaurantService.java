@@ -38,6 +38,12 @@ public class RestaurantService {
  
  
      }
+
+
+     
+     public Restaurant getRestaurantByName(String name) {
+        return restaurantRepository.findByName(name);
+    }
 }
 
 

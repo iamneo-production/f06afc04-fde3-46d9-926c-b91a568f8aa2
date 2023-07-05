@@ -45,6 +45,13 @@ public class RestaurantController {
 
     }
 
+
+    
+    @GetMapping("/name")
+    public Restaurant getRestaurantByName(@RequestParam("name") String name) {
+        return restaurantService.getRestaurantByName(name);
+    }
+
     }
 
 
