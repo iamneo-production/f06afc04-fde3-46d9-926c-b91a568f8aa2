@@ -28,6 +28,15 @@ public class OrderController {
         Order order = orderService.getOrderById(id);
         return order;
     }
+     
+    @GetMapping("/customerId/{customerId}")
+    public Order getOrdersByCustomerId(@PathVariable Long customerId) {
+        return orderService.getOrdersByCustomerId(customerId);
+    }
+    @GetMapping("/restaurantId/{restaurantId}")
+    public Order getOrdersByRestaurantId(@PathVariable Long restaurantId) {
+        return orderService.getOrdersByRestaurantId(restaurantId);
+    }
 
     @PutMapping("/{status}")
     public Order updateOrderStatus(@RequestParam("orderId") Long orderId, @RequestParam("status") String status) {

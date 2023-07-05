@@ -19,6 +19,12 @@ public class OrderService {
         orderRepository.save(order);
         return "Order created";
     }
+    public Order getOrdersByCustomerId(Long customerId) {
+        return orderRepository.findByCustomerId(customerId);
+    }
+    public Order getOrdersByRestaurantId(Long restaurantId) {
+        return orderRepository.findByRestaurantId(restaurantId);
+    }
 
     public Order getOrderById(Long id) {
         return orderRepository.findById(id).orElse(null);
