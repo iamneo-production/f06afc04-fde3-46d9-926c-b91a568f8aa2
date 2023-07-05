@@ -38,6 +38,9 @@ public class RestaurantService {
         return restaurantRepository.findById(id).orElse(null);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e0587b5 (api 14 is completed)
     public  Restaurant restaurant(Restaurant restaurant){
         long  id = restaurant.getId();
        Restaurant res = restaurantRepository.findById(id).get();
@@ -48,6 +51,7 @@ public class RestaurantService {
  
  
      }
+<<<<<<< HEAD
 
      public Restaurant findByRestaurantName(String name) {
     return restaurantRepository.findByName(name);
@@ -60,6 +64,8 @@ public class RestaurantService {
 =======
 }
 =======
+=======
+>>>>>>> e0587b5 (api 14 is completed)
 }
 
 

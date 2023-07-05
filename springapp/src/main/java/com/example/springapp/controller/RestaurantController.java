@@ -72,10 +72,16 @@ public class RestaurantController {
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> ed4dde3 (api 11,12,13)
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e0587b5 (api 14 is completed)
+>>>>>>> 2eaf1cb (api 14 is completed)
     @PutMapping
     public  Restaurant updateRestaurant(@RequestBody Restaurant restaurant)
     {
@@ -84,11 +90,19 @@ public class RestaurantController {
 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 }
 =======
 >>>>>>> 8a97903 (api 11,12,13)
+=======
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 2eaf1cb (api 14 is completed)
+>>>>>>> 327d11e (api 14 is completed)
 }
 
     
@@ -99,6 +113,8 @@ public class RestaurantController {
 
 =======
 =======
+=======
+>>>>>>> e0587b5 (api 14 is completed)
 
     }
 
