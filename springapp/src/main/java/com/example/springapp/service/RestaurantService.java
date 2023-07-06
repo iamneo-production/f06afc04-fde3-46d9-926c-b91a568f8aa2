@@ -42,4 +42,7 @@ public class RestaurantService {
      public Restaurant findByRestaurantName(String name) {
     return restaurantRepository.findByName(name);
 }
+
 }
+
+
