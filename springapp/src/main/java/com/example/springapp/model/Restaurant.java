@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.example.springapp.model;
 
 import javax.persistence.Column;
@@ -66,4 +67,8 @@ public class Restaurant {
     public Restaurant() {
         super();
     }
+=======
+public class Restaurant {
+    
+>>>>>>> 049d5b9 (added restaurant)
 }
