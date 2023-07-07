@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="restaurants")
+@Table(name = "restaurants")
 public class Restaurant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,7 +21,7 @@ public class Restaurant {
     private String address;
 
     @Column(nullable = false)
-    private String menu_item_id;
+    private Long menu_item_id;
 
     public long getId() {
         return id;
@@ -47,26 +47,23 @@ public class Restaurant {
         this.address = address;
     }
 
-    public String getMenu_item_id() {
+    public Long getMenu_item_id() {
         return menu_item_id;
     }
 
-    public void setMenu_item_id(String menu_item_id) {
+    public void setMenu_item_id(Long menu_item_id) {
         this.menu_item_id = menu_item_id;
     }
 
-    public Restaurant(long id, String name, String address, String menu_item_id) {
+    public Restaurant(long id, String name, String address, Long menu_item_id) {
         super();
         this.id = id;
         this.name = name;
         this.address = address;
         this.menu_item_id = menu_item_id;  
-        
     }
 
     public Restaurant() {
         super();
     }
 }
-
-

@@ -1,5 +1,7 @@
 package com.example.springapp.service;
 
+import java.util.List;
+
 import com.example.springapp.model.Order;
 import com.example.springapp.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +17,12 @@ public class OrderService {
         this.orderRepository = orderRepository;
     }
 
-    public String createOrder(Order order) {
-        orderRepository.save(order);
-        return "Order created";
+    public Order createOrder(Order order)
+    {
+        return orderRepository.save(order);
+    }
+    public List<Order> getAllOrder() {
+        return orderRepository.findAll();
     }
     public Order getOrdersByCustomerId(Long customerId) {
         return orderRepository.findByCustomerId(customerId);
@@ -26,7 +31,8 @@ public class OrderService {
         return orderRepository.findByRestaurantId(restaurantId);
     }
 
-    public Order getOrderById(Long id) {
+    public Order getOrderById(Long id)
+    {
         return orderRepository.findById(id).orElse(null);
     }
 
@@ -39,4 +45,3 @@ public class OrderService {
         return null; // Handle error or exception if order not found
     }
 }
-

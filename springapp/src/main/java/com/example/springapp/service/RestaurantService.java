@@ -16,12 +16,12 @@ public class RestaurantService {
         this.restaurantRepository = restaurantRepository;
     }
 
-    public String createRestaurant(Restaurant restaurant) {
-        restaurantRepository.save(restaurant);
-        return "Restaurant created";
+    public Restaurant createRestaurant(Restaurant restaurant)
+    {
+        return restaurantRepository.save(restaurant);
     }
 
-    public List<Restaurant> getRestaurant() {
+   public List<Restaurant> getAllRestaurant() {
         return restaurantRepository.findAll();
     }
 
@@ -39,12 +39,7 @@ public class RestaurantService {
  
      }
 
-
-     
-     public Restaurant getRestaurantByName(String name) {
-        return restaurantRepository.findByName(name);
-    }
+     public Restaurant findByRestaurantName(String name) {
+    return restaurantRepository.findByName(name);
 }
-
-
-
+}

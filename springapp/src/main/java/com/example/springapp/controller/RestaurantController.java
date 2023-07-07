@@ -4,6 +4,8 @@ import com.example.springapp.model.Restaurant;
 import com.example.springapp.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 
 import java.util.List;
 
@@ -22,15 +24,28 @@ public class RestaurantController {
     }
 
     @PostMapping
-    public String createRestaurant(@RequestBody Restaurant restaurant) {
-        String response = restaurantService.createRestaurant(restaurant);
-        return response;
+    public ResponseEntity<Restaurant> createRestaurant(@RequestBody Restaurant restaurant) {
+         Restaurant createdRestaurant=restaurantService.createRestaurant(restaurant);
+        return ResponseEntity.status(HttpStatus.CREATED).body(createdRestaurant);
     }
 
 
     @GetMapping
-    public List<Restaurant> getRestaurant() {
-        return restaurantService.getRestaurant();
+    public ResponseEntity<List<Restaurant>> getAllRestaurant() {
+    List<Restaurant> restaurants = restaurantService.getAllRestaurant();
+    if (restaurants.isEmpty()) {
+        return ResponseEntity.noContent().build();
+    }
+    return ResponseEntity.ok(restaurants);
+    }
+    @GetMapping("/name")
+    public ResponseEntity<Restaurant> getRestaurantByName(@RequestParam("name") String name) {
+        Restaurant restaurant = restaurantService.findByRestaurantName(name);
+        if (restaurant != null) {
+            return ResponseEntity.ok(restaurant);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @GetMapping("/{id}")
@@ -44,14 +59,4 @@ public class RestaurantController {
         return restaurantService.restaurant(restaurant);
 
     }
-
-
-    
-    @GetMapping("/name")
-    public Restaurant getRestaurantByName(@RequestParam("name") String name) {
-        return restaurantService.getRestaurantByName(name);
-    }
-
-    }
-
-
+}
