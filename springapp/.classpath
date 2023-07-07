@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3338104 (Api 6,7)
 =======
@@ -11,6 +12,8 @@
 >>>>>>> 23412c7 (adding classpath)
 =======
 >>>>>>> d0b6ca4 (Api 6,7 done)
+=======
+>>>>>>> 19f6a13 (.)
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" output="target/classes" path="src/main/java">
@@ -61,6 +64,7 @@
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -136,3 +140,5 @@
 >>>>>>> 23412c7 (adding classpath)
 =======
 >>>>>>> d0b6ca4 (Api 6,7 done)
+=======
+>>>>>>> 19f6a13 (.)
