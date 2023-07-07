@@ -9,7 +9,7 @@ import com.example.springapp.repository.CustomerRepository;
 @Service
 public class CustomerService {
 	
-	@Autowired
+@Autowired
 	private CustomerRepository customerRepository;
 	
 	public String register(Customer customer) {
