@@ -42,8 +42,13 @@ public class OrderController {
         }
     }
 
-    @PutMapping("/{status}")
-    public Order updateOrderStatus(@RequestParam("orderId") Long orderId, @RequestParam("status") String status) {
-        return orderService.updateOrderStatus(orderId, status);
+    @PutMapping("/status")
+    public ResponseEntity<String> updateOrderStatus(@RequestParam("orderId") Long orderId, @RequestParam("status") String status) {
+        String result = orderService.updateOrderStatus(orderId, status);
+        if (result.equals("updated")) {
+            return ResponseEntity.ok(result);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
-}
+    }
