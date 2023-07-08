@@ -30,7 +30,7 @@ public class OrderService {
         return orderRepository.findById(id).orElse(null);
     }
 
-    public String updateOrderStatus(Long orderId, String status) {
+    public String updateOrderStatus(Long orderId, String status, Order order) {
         Order existingOrder = orderRepository.findById(orderId).orElse(null);
         if (existingOrder != null) {
             existingOrder.setStatus(status);
