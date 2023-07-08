@@ -34,7 +34,7 @@ public class CustomerService {
 		boolean customerExists = customerRepository.existsById(customer.getId());
 		if(customerExists) {
 			customerRepository.save(customer);
-			return "";
+			return "Customer profile updated successfully";
 		}
 		else {
 			return "No customer with the given id";
