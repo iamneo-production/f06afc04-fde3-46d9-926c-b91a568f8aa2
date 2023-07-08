@@ -27,13 +27,25 @@ public class CustomerController {
 		return customerService.register(customer);
 	}
 	
-	@GetMapping("/customer/id")
-	public Customer getUserProfile(@RequestParam long id, @RequestHeader String email, @RequestHeader String password) {
-		return customerService.getUserProfile(id, email, password);
-	}
 	
-	@PutMapping("/customer")
-	public String updateUserProfile(@RequestBody Customer customer) {
-		return customerService.updateUserProfile(customer);
-	}
+    @GetMapping("/{id}")
+    public ResponseEntity<Customer> getUserProfileById(@PathVariable("id") Long id) {
+        Customer customer = customerService.getUserProfileById(id);
+        if (customer != null) {
+            return ResponseEntity.ok(customer);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @PutMapping
+    public ResponseEntity<String> updateUserProfile(@RequestBody Customer customer) {
+        String result = customerService.updateUserProfile(customer);
+        if (result != null) {
+            return ResponseEntity.ok(result);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }
