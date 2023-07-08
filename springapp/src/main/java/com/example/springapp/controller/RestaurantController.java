@@ -62,6 +62,7 @@ public class RestaurantController {
     public  Restaurant updateRestaurant(@RequestBody Restaurant restaurant)
     {
         return restaurantService.restaurant(restaurant);
+        return restaurantRepository.save(res);
 
     }
 }
