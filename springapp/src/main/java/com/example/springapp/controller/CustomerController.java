@@ -16,16 +16,19 @@ import com.example.springapp.service.CustomerService;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("")
+@RequestMapping("/customer")
 public class CustomerController {
 	
 	@Autowired
 	private CustomerService customerService;
 	
-	@PostMapping("/customer")
-	public String register(@RequestBody Customer customer) {
-		return customerService.register(customer);
-	}
+	
+
+    @PostMapping
+    public ResponseEntity<String> register(@RequestBody Customer customer) {
+        String result = customerService.register(customer);
+        return ResponseEntity.status(HttpStatus.CREATED).body(result);
+    }
 	
 	
     @GetMapping("/{id}")
