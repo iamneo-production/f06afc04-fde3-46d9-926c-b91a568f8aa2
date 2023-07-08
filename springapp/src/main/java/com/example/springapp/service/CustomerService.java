@@ -20,15 +20,10 @@ public class CustomerService {
 		return "Customer not created, email is already registered";
 	}
 	
-	public Customer getUserProfile(long id, String email, String password) {
-		if(customerRepository.existsByEmailAndPassword(email, password)) {
-			Customer customer = customerRepository.findById(id).orElse(null);
-			return customer;
-		}
-		else {
-			return null;
-		}
-	}
+	public Customer getUserProfileById(Long id)
+    {
+        return customerRepository.findById(id).orElse(null);
+    }
 	
 	public String updateUserProfile(Customer customer) {
 		boolean customerExists = customerRepository.existsById(customer.getId());
