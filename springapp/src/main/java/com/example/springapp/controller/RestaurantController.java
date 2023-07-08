@@ -49,10 +49,15 @@ public class RestaurantController {
     }
 
     @GetMapping("/{id}")
-    public Restaurant getRestaurantById(@PathVariable Long id) {
+    public ResponseEntity<Restaurant> getRestaurantById(@PathVariable Long id) {
         Restaurant restaurant = restaurantService.getRestaurantById(id);
-        return restaurant;
+        if (restaurant != null) {
+            return ResponseEntity.ok(restaurant);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
+
     @PutMapping
     public  Restaurant updateRestaurant(@RequestBody Restaurant restaurant)
     {
