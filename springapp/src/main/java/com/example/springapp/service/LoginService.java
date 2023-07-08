@@ -30,5 +30,6 @@ public class LoginService {
     public String logout() {
 
         return "Logout successfully done";
+
     }
 }
