@@ -28,7 +28,23 @@ public class RestaurantService {
     public Restaurant getRestaurantById(Long id) {
         return restaurantRepository.findById(id).orElse(null);
     }
+<<<<<<< HEAD
     
+=======
+    public Restaurant updateRestaurant(Restaurant restaurant) {
+        Long id = restaurant.getId();
+        Restaurant existingRestaurant = restaurantRepository.findById(id).orElse(null);
+        if (existingRestaurant != null) {
+            existingRestaurant.setName(restaurant.getName());
+            existingRestaurant.setAddress(restaurant.getAddress());
+            existingRestaurant.setMenu_item_id(restaurant.getMenu_item_id());
+            return restaurantRepository.save(existingRestaurant);
+        } else {
+            return null;
+        }
+    }
+
+>>>>>>> 0a2df80 (updated the restaurant controller)
      public Restaurant findByRestaurantName(String name) {
     return restaurantRepository.findByName(name);
 }
