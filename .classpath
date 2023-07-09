@@ -38,6 +38,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8a4c3b6 (api 16 done)
 =======
@@ -60,6 +61,9 @@
 =======
 >>>>>>> origin/main
 >>>>>>> 348e15e (merging code from main to local branch)
+=======
+=======
+>>>>>>> origin
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -73,6 +77,7 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,6 +130,9 @@
 >>>>>>> deff43fc3665e43775af2aa3b94a0425ce172108
 >>>>>>> origin/main
 >>>>>>> 348e15e (merging code from main to local branch)
+=======
+>>>>>>> deff43fc3665e43775af2aa3b94a0425ce172108
+>>>>>>> origin
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>

@@ -25,33 +25,4 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d0b6ca4 (Api 6,7 done)
-=======
-	<filteredResources>
-		<filter>
-			<id>1688212971883</id>
-			<name></name>
-			<type>30</type>
-			<matcher>
-				<id>org.eclipse.core.resources.regexFilterMatcher</id>
-				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
-			</matcher>
-		</filter>
-	</filteredResources>
->>>>>>> a45319b (Api 6,7 done)
-<<<<<<< HEAD
-=======
->>>>>>> 3338104 (Api 6,7)
-=======
->>>>>>> 1770f5c (reverting)
-=======
->>>>>>> d0b6ca4 (Api 6,7 done)
-=======
->>>>>>> 19f6a13 (.)
 </projectDescription>
