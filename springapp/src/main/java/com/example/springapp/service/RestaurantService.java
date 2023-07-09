@@ -28,9 +28,9 @@ public class RestaurantService {
     public Restaurant getRestaurantById(Long id) {
         return restaurantRepository.findById(id).orElse(null);
     }
-<<<<<<< HEAD
+
     
-=======
+
     public Restaurant updateRestaurant(Restaurant restaurant) {
         Long id = restaurant.getId();
         Restaurant existingRestaurant = restaurantRepository.findById(id).orElse(null);
@@ -44,19 +44,10 @@ public class RestaurantService {
         }
     }
 
->>>>>>> 0a2df80 (updated the restaurant controller)
+
      public Restaurant findByRestaurantName(String name) {
     return restaurantRepository.findByName(name);
 }
+}
 
-public String updateRestaurant(Restaurant restaurant) {
-    boolean restaurantExists = restaurantRepository.existsById(restaurant.getId());
-    if(restaurantExists) {
-        restaurantRepository.save(restaurant);
-        return "Restaurant updated successfully";
-    }
-    else {
-        return "No restaurant with the given id";
-    }
-}
-}
+

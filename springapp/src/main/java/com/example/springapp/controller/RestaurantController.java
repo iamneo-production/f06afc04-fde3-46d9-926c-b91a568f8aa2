@@ -59,19 +59,14 @@ public class RestaurantController {
     }
 
     @PutMapping
-<<<<<<< HEAD
-    public ResponseEntity<String> updateRestaurant(@RequestBody Restaurant restaurant) {
-        String result = restaurantService.updateRestaurant(restaurant);
-        if (result != null) {
-            return ResponseEntity.ok(result);
-=======
+
     public ResponseEntity<Restaurant> updateRestaurant(@RequestBody Restaurant restaurant) {
         Restaurant updatedRestaurant = restaurantService.updateRestaurant(restaurant);
         if (updatedRestaurant != null) {
             return ResponseEntity.ok(updatedRestaurant);
->>>>>>> 0a2df80 (updated the restaurant controller)
+
         } else {
             return ResponseEntity.notFound().build();
         }
     }
-}
+        }
