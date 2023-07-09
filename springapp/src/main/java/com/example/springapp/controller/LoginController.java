@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/")
 public class LoginController {

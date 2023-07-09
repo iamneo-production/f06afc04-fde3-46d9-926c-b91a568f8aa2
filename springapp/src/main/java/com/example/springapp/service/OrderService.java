@@ -35,13 +35,14 @@ public class OrderService {
     {
         return orderRepository.findById(id).orElse(null);
     }
-
-    public Order updateOrderStatus(Long orderId, String status) {
+    public String updateOrderStatus(Long orderId, String status) {
         Order existingOrder = orderRepository.findById(orderId).orElse(null);
         if (existingOrder != null) {
             existingOrder.setStatus(status);
-            return orderRepository.save(existingOrder);
+            orderRepository.save(existingOrder);
+            return "updated";
+        } else {
+            return "Order not found";
         }
-        return null; // Handle error or exception if order not found
     }
 }
