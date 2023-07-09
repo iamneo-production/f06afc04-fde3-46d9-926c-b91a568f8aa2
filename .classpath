@@ -37,6 +37,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8a4c3b6 (api 16 done)
 =======
@@ -47,10 +48,18 @@
 >>>>>>> feea624 (api 16 done)
 =======
 =======
+>>>>>>> 348e15e (merging code from main to local branch)
+=======
 >>>>>>> cbf9383 (api 16 done)
 =======
 >>>>>>> a85ad3b (first commit)
+<<<<<<< HEAD
 >>>>>>> 4dfcb85 (first commit)
+=======
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 348e15e (merging code from main to local branch)
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -64,6 +73,7 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,6 +95,8 @@
 =======
 =======
 >>>>>>> 4dfcb85 (first commit)
+=======
+>>>>>>> 348e15e (merging code from main to local branch)
 =======
 >>>>>>> e86ce51 (first commit)
 =======
@@ -106,7 +118,13 @@
 >>>>>>> e86ce51 (first commit)
 >>>>>>> f553430 (first commit)
 >>>>>>> 81b4921 (first commit)
+<<<<<<< HEAD
 >>>>>>> 9274969 (first commit)
+=======
+=======
+>>>>>>> deff43fc3665e43775af2aa3b94a0425ce172108
+>>>>>>> origin/main
+>>>>>>> 348e15e (merging code from main to local branch)
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>
