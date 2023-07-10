@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+=======
+import { Router} from '@angular/router';
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
+<<<<<<< HEAD
 export class HeaderComponent implements OnInit {
   constructor(public router: Router,  private http: HttpClient) {}
 
@@ -38,3 +43,17 @@ export class HeaderComponent implements OnInit {
 =======
 }
 >>>>>>> 099de46 (updated the home and search components for home screen)
+=======
+export class HeaderComponent implements OnInit{
+
+constructor(public router:Router){
+
+}
+
+ngOnInit(): void {
+  
+}
+
+
+}
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)

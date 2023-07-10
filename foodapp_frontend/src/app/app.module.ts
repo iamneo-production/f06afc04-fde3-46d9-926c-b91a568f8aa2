@@ -1,17 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {  FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 =======
 import { FormsModule } from '@angular/forms';
 >>>>>>> 099de46 (updated the home and search components for home screen)
+=======
+import {  FormsModule } from '@angular/forms';
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { UsersignupComponent } from './usersignup/usersignup.component';
@@ -21,6 +28,7 @@ import { RestaurantloginComponent } from './restaurantlogin/restaurantlogin.comp
 import { RestaurantsignupComponent } from './restaurantsignup/restaurantsignup.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
+<<<<<<< HEAD
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { CartComponent } from './cart/cart.component';
 import { MenuComponent } from './menu/menu.component';
@@ -39,6 +47,12 @@ import { OrdertrackingComponent } from './ordertracking/ordertracking.component'
   declarations: [
     AppComponent,
     CartComponent,
+=======
+
+@NgModule({
+  declarations: [
+    AppComponent,
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
     HeaderComponent,
     DashboardComponent,
     UserloginComponent,
@@ -48,6 +62,7 @@ import { OrdertrackingComponent } from './ordertracking/ordertracking.component'
     RestaurantloginComponent,
     RestaurantsignupComponent,
     ContactusComponent,
+<<<<<<< HEAD
     AboutComponent,
     AdminpanelComponent,
     MenuComponent,
@@ -74,10 +89,14 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     SearchComponent
 >>>>>>> 099de46 (updated the home and search components for home screen)
+=======
+    AboutComponent
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
 <<<<<<< HEAD
     HttpClientModule,
     FormsModule
@@ -86,6 +105,10 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
 >>>>>>> 099de46 (updated the home and search components for home screen)
+=======
+    FormsModule
+
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
   ],
   providers: [],
   bootstrap: [AppComponent]

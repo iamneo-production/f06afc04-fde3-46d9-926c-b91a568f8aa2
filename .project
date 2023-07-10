@@ -25,6 +25,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			<id>1683004934301</id>
 =======
 <<<<<<< HEAD
@@ -55,10 +56,14 @@
 			<id>1683004934301</id>
 >>>>>>> 099de46 (updated the home and search components for home screen)
 >>>>>>> a397c9c (updated the home and search components for home screen)
+=======
+			<id>1688999234453</id>
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
 			<name></name>
 			<type>30</type>
 			<matcher>
 				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+<<<<<<< HEAD
 <<<<<<< HEAD
 				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
 =======
@@ -80,6 +85,9 @@
 				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
 >>>>>>> 099de46 (updated the home and search components for home screen)
 >>>>>>> a397c9c (updated the home and search components for home screen)
+=======
+				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
 			</matcher>
 		</filter>
 	</filteredResources>

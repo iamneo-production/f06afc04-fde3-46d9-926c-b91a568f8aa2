@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Cart
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
@@ -13,6 +14,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 >>>>>>> 099de46 (updated the home and search components for home screen)
+=======
+# FoodappFrontend
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
 
 ## Development server
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .topnav {
 <<<<<<< HEAD
   overflow: hidden;
@@ -20,11 +21,44 @@
 .topnav .topnav-right {
   float: right;
 }
+=======
+
+   .topnav {
+    overflow: hidden;
+    background-color: #74919b;
+    margin: 0;
+  }
+ 
+
+ .topnav a {
+   padding: 16px 10px;
+   text-decoration: none;
+   font-size: 18px;
+ }
+
+
+ .topnav-left {
+   float: left;
+ }
+ .topnav .topnav-right {
+   float: right;
+ }
+ 
+
+
+
+
+
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
 
 
 
 .dropdown {
+<<<<<<< HEAD
   position: relative;
+=======
+  position:relative;
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
   display: contents;
 }
 
@@ -33,6 +67,7 @@
   position: absolute;
   background-color: white;
   min-width: 160px;
+<<<<<<< HEAD
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 
@@ -43,13 +78,28 @@
   color:   #FF3131;
   padding: 8px 16px;
   text-align: center;
+=======
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+ 
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 8px 16px;
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
   text-decoration: none;
   display: block;
 }
 
+<<<<<<< HEAD
 .dropdown-menu a:hover {
   background-color: whitesmoke
 }
+=======
+.dropdown-menu a:hover {background-color: #a36868}
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
 
 .dropdown:hover .dropdown-menu {
   display: block;
@@ -58,6 +108,7 @@
 
 
 
+<<<<<<< HEAD
 .active {
   border-radius: 4px;
   border: none;
@@ -66,13 +117,30 @@
   text-align: center;
   font-size: 18px;
   padding: 16px 16px;
+=======
+.active{
+  border-radius: 4px;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 16px 16px;
+  background-color: #a36868;
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
 
 }
 
 
+<<<<<<< HEAD
 .logo-container {
   padding-left: 30px;
   padding-top: 1px;
+=======
+.rounded-circle{
+  border: none;
+  margin-top: 3px;
+  background-color: #74919b;
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
 
 }
 
@@ -83,7 +151,13 @@
 
 .button {
   border-radius: 4px;
+<<<<<<< HEAD
   border: none;
+=======
+  background-color:#74919b;
+  border: none;
+  color: #FFFFFF;
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
   text-align: center;
   font-size: 18px;
   padding: 16px 16px;
@@ -107,11 +181,16 @@
 }
 
 .button:hover {
+<<<<<<< HEAD
   background-color: #fa4a4a;
   
 
 }
 
+=======
+background-color:#a36868;
+}
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
 .button:hover span {
   padding-right: 20px;
 }
@@ -120,6 +199,7 @@
   opacity: 1;
   right: 0;
 }
+<<<<<<< HEAD
 =======
     overflow: hidden;
     background-color: white;
@@ -242,3 +322,8 @@
     right: 0;
   }
 >>>>>>> 099de46 (updated the home and search components for home screen)
+=======
+
+
+
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
