@@ -16,6 +16,7 @@ import { RestaurantloginComponent } from './restaurantlogin/restaurantlogin.comp
 import { RestaurantsignupComponent } from './restaurantsignup/restaurantsignup.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
+<<<<<<< HEAD
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { CartComponent } from './cart/cart.component';
 import { MenuComponent } from './menu/menu.component';
@@ -34,6 +35,12 @@ import { OrdertrackingComponent } from './ordertracking/ordertracking.component'
   declarations: [
     AppComponent,
     CartComponent,
+=======
+
+@NgModule({
+  declarations: [
+    AppComponent,
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
     HeaderComponent,
     DashboardComponent,
     UserloginComponent,
@@ -57,13 +64,28 @@ import { OrdertrackingComponent } from './ordertracking/ordertracking.component'
     ProfileComponent,
     OrderHistoryComponent,
     OrdertrackingComponent,
+=======
+import { HomeComponent } from './home/home.component';
+import { SearchComponent } from './search/search.component';
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     HttpClientModule,
     FormsModule
 
+=======
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

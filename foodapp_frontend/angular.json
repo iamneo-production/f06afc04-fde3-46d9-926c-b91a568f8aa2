@@ -72,6 +72,7 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "foodapp_frontend:build"
+>>>>>>> 099de46 (updated the home and search components for home screen)
           }
         },
         "test": {
@@ -96,6 +97,6 @@
     }
   },
   "cli": {
-    "analytics": "880512f1-8f23-430a-816a-443a07a1dc34"
+
   }
 }
