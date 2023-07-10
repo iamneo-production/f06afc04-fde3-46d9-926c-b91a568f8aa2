@@ -44,7 +44,10 @@ public class OrderController {
 
     //need to be changed to response entity object
     @PutMapping("/{status}")
-    public Order updateOrderStatus(@RequestParam("orderId") Long orderId, @RequestParam("status") String status) {
-        return orderService.updateOrderStatus(orderId, status);
-    }
+public ResponseEntity<Order> updateOrderStatus(
+        @RequestParam("orderId") Long orderId,
+        @RequestParam("status") String status) {
+    Order updatedOrder = orderService.updateOrderStatus(orderId, status);
+    return ResponseEntity.ok(updatedOrder);
+}
 }
