@@ -32,6 +32,7 @@
 		</attributes>
 	</classpathentry>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
@@ -47,6 +48,8 @@
 		</attributes>
 	</classpathentry>
 >>>>>>> ec75852372be6f1a12583025cd1786856d5ad35b
+=======
+>>>>>>> 98fdfa89a834b4f048fbd7c0654ef6cd3e932024
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>
