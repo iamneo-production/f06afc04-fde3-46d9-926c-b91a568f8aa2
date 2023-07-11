@@ -3,11 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-<<<<<<< HEAD
     "cart": {
-=======
-    "foodapp_frontend": {
->>>>>>> ec75852372be6f1a12583025cd1786856d5ad35b
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -17,11 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-<<<<<<< HEAD
             "outputPath": "dist/cart",
-=======
-            "outputPath": "dist/foodapp_frontend",
->>>>>>> ec75852372be6f1a12583025cd1786856d5ad35b
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -68,17 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-<<<<<<< HEAD
               "browserTarget": "cart:build:production"
             },
             "development": {
               "browserTarget": "cart:build:development"
-=======
-              "browserTarget": "foodapp_frontend:build:production"
-            },
-            "development": {
-              "browserTarget": "foodapp_frontend:build:development"
->>>>>>> ec75852372be6f1a12583025cd1786856d5ad35b
             }
           },
           "defaultConfiguration": "development"
@@ -86,11 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-<<<<<<< HEAD
             "browserTarget": "cart:build"
-=======
-            "browserTarget": "foodapp_frontend:build"
->>>>>>> ec75852372be6f1a12583025cd1786856d5ad35b
           }
         },
         "test": {
@@ -115,10 +96,6 @@
     }
   },
   "cli": {
-<<<<<<< HEAD
     "analytics": "32711637-e8cd-416d-b241-69d4a2971fd8"
-=======
-    "analytics": "2d43ca6a-88c5-4a34-8c19-ed806bcc1bb4"
->>>>>>> ec75852372be6f1a12583025cd1786856d5ad35b
   }
 }

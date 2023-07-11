@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "cart",
-=======
-  "name": "foodapp-frontend",
->>>>>>> ec75852372be6f1a12583025cd1786856d5ad35b
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -27,13 +23,8 @@
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@angular-devkit/build-angular": "^16.1.0",
     "@angular/cli": "~16.1.0",
-=======
-    "@angular-devkit/build-angular": "^16.1.4",
-    "@angular/cli": "~16.1.4",
->>>>>>> ec75852372be6f1a12583025cd1786856d5ad35b
     "@angular/compiler-cli": "^16.1.0",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",

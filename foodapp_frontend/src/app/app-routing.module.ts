@@ -1,18 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-<<<<<<< HEAD
 import { CheckoutComponent } from './checkout/checkout.component';
-import { CartComponent } from './cart/cart.component';
-
-const routes: Routes = [
-  
-    {path:'Checkout',component:CheckoutComponent},
-    {path:'Cart',component:CartComponent},
-
-{path:'**',pathMatch:'full',redirectTo:'Cart'}
-
-  
-=======
+import { CartComponent } from './cart/cart.component'; 
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
@@ -37,12 +26,13 @@ const routes: Routes = [
   {path:'Restaurantsignup',component:RestaurantsignupComponent},
   {path:'About',component:AboutComponent},
   {path:'Contactus',component:ContactusComponent},
+  {path:'Checkout',component:CheckoutComponent},
+  {path:'Cart',component:CartComponent},
 
   
   {path:'**',pathMatch:'full',redirectTo:'Dashboard'}
 
 
->>>>>>> ec75852372be6f1a12583025cd1786856d5ad35b
 ];
 
 @NgModule({
