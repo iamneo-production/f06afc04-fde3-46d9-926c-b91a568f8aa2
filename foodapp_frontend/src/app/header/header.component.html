@@ -34,6 +34,7 @@
             <div class="dropdown" *ngIf="router.url==='/Dashboard'
             || router.url==='/Userlogin'
             || router.url==='/Adminlogin'
+            || router.url==='/Usersignup'
             || router.url==='/Restaurantlogin'" >
                 <button  class="button" >
                 <i class="fa fa-fw fa-user"></i>Login <i class="fa fa-caret-down"></i></button>
@@ -53,6 +54,7 @@
             || router.url=='/About'
             || router.url==='/Userlogin'
             || router.url==='/Adminlogin'
+            || router.url==='/Usersignup'
             || router.url==='/Restaurantlogin'"  class="button"  style="color: white;" [routerLink]="(['/Contactus'])"><i class="fa fa-fw fa-envelope"></i> <span>Contact us</span></button>
             <button *ngIf="router.url==='/Contactus'" class="active"  style="color: white;" title="You are in Contact page"><i class="fa fa-fw fa-envelope"></i> Contact us</button>
 <!--profile-->
