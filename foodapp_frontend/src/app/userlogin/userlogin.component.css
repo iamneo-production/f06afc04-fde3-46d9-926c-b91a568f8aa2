@@ -16,7 +16,7 @@ body {
 .container {
   max-width: 640px;
   padding: 0 20px;
-  margin: 15vh auto;
+  margin: 20vh auto;
 }
 
 .wrapper {
@@ -54,7 +54,7 @@ body {
   outline: none;
   padding-left: 60px;
   border-radius: 5px;
-  border: 1px solid lightgrey;
+  border: 1px solid #ccc;
   font-size: 16px;
   border-bottom-width: 2px;
   transition: all 0.3s ease;
