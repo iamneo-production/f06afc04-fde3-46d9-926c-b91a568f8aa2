@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+<<<<<<< HEAD
   title = 'cart';
+=======
+  title = 'foodapp_frontend';
+>>>>>>> e632fe5 (frontebd)
 }

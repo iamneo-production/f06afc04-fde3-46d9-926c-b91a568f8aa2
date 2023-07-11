@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+<<<<<<< HEAD
 import {  FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -64,6 +65,19 @@ import { OrdertrackingComponent } from './ordertracking/ordertracking.component'
     HttpClientModule,
     FormsModule
 
+=======
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+>>>>>>> e632fe5 (frontebd)
   ],
   providers: [],
   bootstrap: [AppComponent]

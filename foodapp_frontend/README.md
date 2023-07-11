@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Cart
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
@@ -7,6 +8,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 >>>>>>> ec75852372be6f1a12583025cd1786856d5ad35b
+=======
+# FoodappFrontend
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+>>>>>>> e632fe5 (frontebd)
 
 ## Development server
 

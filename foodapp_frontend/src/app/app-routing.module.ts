@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+<<<<<<< HEAD
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
@@ -65,6 +66,10 @@ const routes: Routes = [
 
 
 ];
+=======
+
+const routes: Routes = [];
+>>>>>>> e632fe5 (frontebd)
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
