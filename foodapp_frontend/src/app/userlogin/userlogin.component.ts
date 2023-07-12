@@ -14,7 +14,15 @@ export class UserloginComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
   login(): void {
-    const loginData = { email: this.email, password: this.password };
+    if ( !this.email || !this.password ) {
+      alert('Please provide all the required details.');
+      return; 
+    }
+    
+    const loginData = { 
+      email: this.email, 
+      password: this.password 
+    };
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
     this.http.post('http://localhost:8080/login', loginData, { headers, observe: 'response' }).subscribe(
