@@ -1,7 +1,7 @@
 
    .topnav {
     overflow: hidden;
-    background-color: #74919b;
+    background-color: #ffffff;
     margin: 0;
   }
  
@@ -63,11 +63,11 @@
 .active{
   border-radius: 4px;
   border: none;
-  color: #FFFFFF;
+  color: orange;
   text-align: center;
   font-size: 18px;
   padding: 16px 16px;
-  background-color: #a36868;
+  background-color: whitesmoke;
 
 }
 
@@ -86,9 +86,9 @@
 
 .button {
   border-radius: 4px;
-  background-color:#74919b;
+  background-color:white;
   border: none;
-  color: #FFFFFF;
+  color: orange;
   text-align: center;
   font-size: 18px;
   padding: 16px 16px;
@@ -112,7 +112,7 @@
 }
 
 .button:hover {
-background-color:#a36868;
+background-color:whitesmoke;
 }
 .button:hover span {
   padding-right: 20px;

@@ -3,7 +3,7 @@
 
 <div class="topnav-left">
     <!--home-->
-    <button *ngIf="router.url==='/Dashboard'" class="active"  style="color: white;" title="You are in Dashboard"><i class="fa fa-home"></i> Home</button>
+    <button *ngIf="router.url==='/Dashboard'" class="active" title="You are in Dashboard"><i class="fa fa-home"></i> Home</button>
     <button  *ngIf="router.url==='/About' 
     || router.url==='/Usersignup'
     || router.url==='/Restaurantsignup' 
@@ -11,18 +11,18 @@
     || router.url==='/Userlogin'
     || router.url==='/Adminlogin'
     || router.url==='/Restaurantlogin'
-    || router.url==='/Contactus'" class="button" style="color: white;" [routerLink]="(['/Dashboard'])"><span><i class="fa fa-home"></i> Home</span></button>
+    || router.url==='/Contactus'" class="button" [routerLink]="(['/Dashboard'])"><span><i class="fa fa-home"></i> Home</span></button>
    
     <!--Logo-->
     <button *ngIf="router.url==='/Home'"
-     class="rounded-circle"  style="color: white;" [routerLink]="(['/Home'])"><img src="..\assets\images\logo1.jpeg" width="90" height="50"></button>
+     class="rounded-circle"  [routerLink]="(['/Home'])"><img src="..\assets\images\logo1.jpeg" width="90" height="50"></button>
    
      <!--About-->
     <button *ngIf="router.url==='/About'" 
-    class="active"  style="color: white;" title="You are in About page">About</button>
+    class="active"title="You are in About page">About</button>
     <button  *ngIf="router.url==='/Dashboard'
     ||router.url==='/Contactus'" 
-    class="button" style="color: white;" [routerLink]="(['/About'])"><span> About</span></button>
+    class="button" [routerLink]="(['/About'])"><span> About</span></button>
           
     
 </div>       
@@ -31,34 +31,41 @@
 <div class="topnav-right">           
          
 <!--Login-->
-            <div class="dropdown" *ngIf="router.url==='/Dashboard'|| router.url==='/Userlogin'|| router.url==='/Adminlogin'|| router.url==='/Restaurantlogin'" >
-                <button  class="button" >
-                <i class="fa fa-fw fa-user"></i>Login <i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-menu">
-                        <a class="dropdown-item" style="color: rgb(21, 12, 12);" [routerLink]="(['/Userlogin'])">Customer</a>
-                        <a class="dropdown-item" style="color: rgb(21, 12, 12);"[routerLink]="(['/Adminlogin'])">Admin</a>
-                        <a class="dropdown-item" style="color: rgb(21, 12, 12);"[routerLink]="(['/Restaurantlogin'])">Resturants</a>
-            </div>
-            </div> 
+<div class="dropdown" *ngIf="router.url==='/Dashboard' || router.url==='/Userlogin' || router.url==='/Adminlogin' || router.url==='/Restaurantlogin'">
+    <button class="button">
+      <em class="fa fa-fw fa-user"></em>Login <em class="fa fa-caret-down"></em>
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" style="color: rgb(21, 12, 12);" [routerLink]="['/Userlogin']">Customer</a>
+      <a class="dropdown-item" style="color: rgb(21, 12, 12);" [routerLink]="['/Adminlogin']">Admin</a>
+      <a class="dropdown-item" style="color: rgb(21, 12, 12);" [routerLink]="['/Restaurantlogin']">Restaurants</a>
+    </div>
+</div>
 
 <!--Sign up-->
-            <button *ngIf="router.url==='/Userlogin'"  class="button" style="color: white;" [routerLink]="(['/Usersignup'])"><i class="fa fa-fw fa-user"></i><span>sign up</span></button>        
-            <button *ngIf="router.url==='/Adminlogin'"  class="button" style="color: white;" [routerLink]="(['/Adminsignup'])"><i class="fa fa-fw fa-user"></i><span>sign up</span></button>
-            <button *ngIf="router.url==='/Restaurantlogin'"  class="button" style="color: white;" [routerLink]="(['/Restaurantsignup'])"><i class="fa fa-fw fa-user"></i><span>sign up</span></button>
+            <button *ngIf="router.url==='/Userlogin'"  class="button" [routerLink]="(['/Usersignup'])"><i class="fa fa-fw fa-user"></i><span>sign up</span></button>        
+            <button *ngIf="router.url==='/Adminlogin'"  class="button"  [routerLink]="(['/Adminsignup'])"><i class="fa fa-fw fa-user"></i><span>sign up</span></button>
+            <button *ngIf="router.url==='/Restaurantlogin'"  class="button" [routerLink]="(['/Restaurantsignup'])"><i class="fa fa-fw fa-user"></i><span>sign up</span></button>
 <!--Contact us-->
             <button *ngIf="router.url=='/Dashboard' 
             || router.url=='/About'
             || router.url==='/Userlogin'
             || router.url==='/Adminlogin'
-            || router.url==='/Restaurantlogin'"  class="button"  style="color: white;" [routerLink]="(['/Contactus'])"><i class="fa fa-fw fa-envelope"></i> <span>Contact us</span></button>
-            <button *ngIf="router.url==='/Contactus'" class="active"  style="color: white;" title="You are in Contact page"><i class="fa fa-fw fa-envelope"></i> Contact us</button>
+            || router.url==='/Restaurantlogin'"  class="button"   [routerLink]="(['/Contactus'])"><i class="fa fa-fw fa-envelope"></i> <span>Contact us</span></button>
+            <button *ngIf="router.url==='/Contactus'" class="active"  title="You are in Contact page"><i class="fa fa-fw fa-envelope"></i> Contact us</button>
 <!--profile-->
-            <button *ngIf="router.url==='/Home'"  class="button" style="color: white;" ><span>Profile</span></button>
+            <button *ngIf="router.url==='/Home'"  class="button" ><span>Profile</span></button>
 <!--My cart-->
-            <button *ngIf="router.url==='/Dashboard'"  class="button"style="color: white;" onclick="alert('Please Login to view Your Cart')" value="My cart"><img src="https://img.icons8.com/material-rounded/24/ffffff/shopping-cart.png"><span>My Cart </span></button>
-            <button *ngIf="router.url==='/Home'"  class="button"style="color: white;"  value="My cart"><span>My Cart </span></button>
+<button *ngIf="router.url==='/Dashboard'" class="button" onclick="alert('Please Login to view Your Cart')" value="My cart">
+    <img src="https://img.icons8.com/material-rounded/24/ff6600/shopping-cart.png" style="filter: invert(53%) sepia(95%) saturate(4288%) hue-rotate(3deg) brightness(111%) contrast(95%);">
+    <span>My Cart</span>
+  </button>
+  <button *ngIf="router.url==='/Home'" class="button" value="My cart">
+    <span>My Cart</span>
+  </button>
+  
  <!--Log out-->         
-            <button *ngIf="router.url==='/Home'"  class="button" style="color: white;" [routerLink]="(['/Dashboard'])"><span>Log out</span></button>
+            <button *ngIf="router.url==='/Home'"  class="button" [routerLink]="(['/Dashboard'])"><span>Log out</span></button>
 
           
 </div>
