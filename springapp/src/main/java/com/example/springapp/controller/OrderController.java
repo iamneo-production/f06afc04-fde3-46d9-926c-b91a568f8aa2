@@ -46,10 +46,12 @@ public class OrderController {
     public Order getOrdersByCustomerId(@PathVariable Long customerId) {
         return orderService.getOrdersByCustomerId(customerId);
     }
+
     @GetMapping("/restaurantId/{restaurantId}")
     public Order getOrdersByRestaurantId(@PathVariable Long restaurantId) {
         return orderService.getOrdersByRestaurantId(restaurantId);
     }
+    
     @PutMapping("/status")
     public ResponseEntity<String> updateOrderStatus(@RequestParam("orderId") Long orderId, @RequestParam("status") String status) {
         String result = orderService.updateOrderStatus(orderId, status);

@@ -38,6 +38,7 @@ public class RestaurantController {
     }
     return ResponseEntity.ok(restaurants);
     }
+    
     @GetMapping("/name")
     public ResponseEntity<Restaurant> getRestaurantByName(@RequestParam("name") String name) {
         Restaurant restaurant = restaurantService.findByRestaurantName(name);
@@ -69,4 +70,4 @@ public class RestaurantController {
             return ResponseEntity.notFound().build();
         }
     }
-        }
+ }

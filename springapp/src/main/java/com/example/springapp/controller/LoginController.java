@@ -21,12 +21,16 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody Login login) {
+    public ResponseEntity<Map<String, String>> login(@RequestBody Login login) {
        String result = loginService.login(login.getEmail(), login.getPassword());
        HttpStatus status = result.equals("Login successful") ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
-       return ResponseEntity.status(status).body(result);
+       Map<String, String> response = new HashMap<>();
+        response.put("message", result);
+      
+       return ResponseEntity.status(status).body(response);
   
     }
+
 
     @PostMapping("/logout")
     public ResponseEntity<String> logout() {
