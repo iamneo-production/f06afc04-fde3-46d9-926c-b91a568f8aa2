@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import {  FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -36,8 +39,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    RouterModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [],
