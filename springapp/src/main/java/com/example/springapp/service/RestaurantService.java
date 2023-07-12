@@ -17,6 +17,7 @@ public class RestaurantService {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public String createRestaurant(Restaurant restaurant) {
         restaurantRepository.save(restaurant);
         return "Restaurant created";
@@ -24,13 +25,18 @@ public class RestaurantService {
 
     public List<Restaurant> getRestaurant() {
 =======
+=======
+>>>>>>> f288ea2a64350e396d9fa82821278236b095453c
     public Restaurant createRestaurant(Restaurant restaurant)
     {
         return restaurantRepository.save(restaurant);
     }
 
    public List<Restaurant> getAllRestaurant() {
+<<<<<<< HEAD
 >>>>>>> 523baac2dfffdf7b2dc640730352d1cc708c9789
+=======
+>>>>>>> f288ea2a64350e396d9fa82821278236b095453c
         return restaurantRepository.findAll();
     }
 
@@ -38,10 +44,28 @@ public class RestaurantService {
         return restaurantRepository.findById(id).orElse(null);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> f288ea2a64350e396d9fa82821278236b095453c
 
+    
 
+    public Restaurant updateRestaurant(Restaurant restaurant) {
+        Long id = restaurant.getId();
+        Restaurant existingRestaurant = restaurantRepository.findById(id).orElse(null);
+        if (existingRestaurant != null) {
+            existingRestaurant.setName(restaurant.getName());
+            existingRestaurant.setAddress(restaurant.getAddress());
+            existingRestaurant.setMenu_item_id(restaurant.getMenu_item_id());
+            return restaurantRepository.save(existingRestaurant);
+        } else {
+            return null;
+        }
+    }
+
+<<<<<<< HEAD
 =======
     public  Restaurant restaurant(Restaurant restaurant){
         long  id = restaurant.getId();
@@ -53,9 +77,16 @@ public class RestaurantService {
  
  
      }
+=======
+>>>>>>> f288ea2a64350e396d9fa82821278236b095453c
 
      public Restaurant findByRestaurantName(String name) {
     return restaurantRepository.findByName(name);
 }
 }
+<<<<<<< HEAD
 >>>>>>> 523baac2dfffdf7b2dc640730352d1cc708c9789
+=======
+
+
+>>>>>>> f288ea2a64350e396d9fa82821278236b095453c

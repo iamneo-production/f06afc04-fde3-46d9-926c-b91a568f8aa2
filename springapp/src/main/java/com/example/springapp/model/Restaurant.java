@@ -9,10 +9,14 @@ import javax.persistence.Table;
 
 @Entity
 <<<<<<< HEAD
+<<<<<<< HEAD
 @Table(name="restaurants")
 =======
 @Table(name = "restaurants")
 >>>>>>> 523baac2dfffdf7b2dc640730352d1cc708c9789
+=======
+@Table(name = "restaurants")
+>>>>>>> f288ea2a64350e396d9fa82821278236b095453c
 public class Restaurant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,10 +30,14 @@ public class Restaurant {
 
     @Column(nullable = false)
 <<<<<<< HEAD
+<<<<<<< HEAD
     private String menu_item_id;
 =======
     private Long menu_item_id;
 >>>>>>> 523baac2dfffdf7b2dc640730352d1cc708c9789
+=======
+    private Long menu_item_id;
+>>>>>>> f288ea2a64350e396d9fa82821278236b095453c
 
     public long getId() {
         return id;
@@ -56,6 +64,7 @@ public class Restaurant {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public String getMenu_item_id() {
         return menu_item_id;
     }
@@ -66,6 +75,8 @@ public class Restaurant {
 
     public Restaurant(long id, String name, String address, String menu_item_id) {
 =======
+=======
+>>>>>>> f288ea2a64350e396d9fa82821278236b095453c
     public Long getMenu_item_id() {
         return menu_item_id;
     }
@@ -75,24 +86,34 @@ public class Restaurant {
     }
 
     public Restaurant(long id, String name, String address, Long menu_item_id) {
+<<<<<<< HEAD
 >>>>>>> 523baac2dfffdf7b2dc640730352d1cc708c9789
+=======
+>>>>>>> f288ea2a64350e396d9fa82821278236b095453c
         super();
         this.id = id;
         this.name = name;
         this.address = address;
         this.menu_item_id = menu_item_id;  
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 >>>>>>> 523baac2dfffdf7b2dc640730352d1cc708c9789
+=======
+>>>>>>> f288ea2a64350e396d9fa82821278236b095453c
     }
 
     public Restaurant() {
         super();
     }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> 523baac2dfffdf7b2dc640730352d1cc708c9789
+=======
+}
+>>>>>>> f288ea2a64350e396d9fa82821278236b095453c
