@@ -1,25 +1,25 @@
 
-   .topnav {
-    overflow: hidden;
-    background-color: #74919b;
-    margin: 0;
-  }
- 
-
- .topnav a {
-   padding: 16px 10px;
-   text-decoration: none;
-   font-size: 18px;
- }
+.topnav {
+  overflow: hidden;
+  background-color: #ffffff;
+  margin: 0;
+}
 
 
- .topnav-left {
-   float: left;
- }
- .topnav .topnav-right {
-   float: right;
- }
- 
+.topnav a {
+ padding: 16px 10px;
+ text-decoration: none;
+ font-size: 18px;
+}
+
+
+.topnav-left {
+ float: left;
+}
+.topnav .topnav-right {
+ float: right;
+}
+
 
 
 
@@ -29,53 +29,53 @@
 
 
 .dropdown {
-  position:relative;
-  display: contents;
+position:relative;
+display: contents;
 }
 
 .dropdown-menu {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+display: none;
+position: absolute;
+background-color: white;
+min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
 
- 
+
 }
 
 .dropdown-menu a {
-  color: black;
-  padding: 8px 16px;
-  text-decoration: none;
-  display: block;
+color: black;
+padding: 8px 16px;
+text-decoration: none;
+display: block;
 }
 
 .dropdown-menu a:hover {background-color: #a36868}
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+display: block;
 }
 
 
 
 
 .active{
-  border-radius: 4px;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 18px;
-  padding: 16px 16px;
-  background-color: #a36868;
+border-radius: 4px;
+border: none;
+color: orange;
+text-align: center;
+font-size: 18px;
+padding: 16px 16px;
+background-color: whitesmoke;
 
 }
 
 
 .rounded-circle{
-  border: none;
-  margin-top: 3px;
-  background-color: #74919b;
+border: none;
+margin-top: 3px;
+background-color: #74919b;
 
 }
 
@@ -85,43 +85,42 @@
 
 
 .button {
-  border-radius: 4px;
-  background-color:#74919b;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 18px;
-  padding: 16px 16px;
-  transition: all 0.5s;
+border-radius: 4px;
+background-color:white;
+border: none;
+color: orange;
+text-align: center;
+font-size: 18px;
+padding: 16px 16px;
+transition: all 0.5s;
 }
 
 .button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
 }
 
 .button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
 }
 
 .button:hover {
-background-color:#a36868;
+background-color:whitesmoke;
 }
 .button:hover span {
-  padding-right: 20px;
+padding-right: 20px;
 }
 
 .button:hover span:after {
-  opacity: 1;
-  right: 0;
+opacity: 1;
+right: 0;
 }
-
 
 
