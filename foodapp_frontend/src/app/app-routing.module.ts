@@ -10,6 +10,9 @@ import { RestaurantloginComponent } from './restaurantlogin/restaurantlogin.comp
 import { RestaurantsignupComponent } from './restaurantsignup/restaurantsignup.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
+import { UserlistComponent } from './userlist/userlist.component';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { NotificationComponent } from './notification/notification.component';
 
 
 const routes: Routes = [
@@ -24,6 +27,10 @@ const routes: Routes = [
   {path:'Restaurantsignup',component:RestaurantsignupComponent},
   {path:'About',component:AboutComponent},
   {path:'Contactus',component:ContactusComponent},
+  {path: 'Userlist',component:UserlistComponent},
+  {path:'Updateuser', component:UpdateuserComponent},
+  {path:'Notification', component:NotificationComponent},
+ 
 
   
   {path:'**',pathMatch:'full',redirectTo:'Dashboard'}

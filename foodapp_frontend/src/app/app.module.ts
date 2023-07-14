@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {  FormsModule } from '@angular/forms';
+import {  FormsModule,  ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +16,10 @@ import { RestaurantloginComponent } from './restaurantlogin/restaurantlogin.comp
 import { RestaurantsignupComponent } from './restaurantsignup/restaurantsignup.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
+import { UserlistComponent } from './userlist/userlist.component';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { NotificationComponent } from './notification/notification.component';
+
 
 @NgModule({
   declarations: [
@@ -28,12 +33,19 @@ import { AboutComponent } from './about/about.component';
     RestaurantloginComponent,
     RestaurantsignupComponent,
     ContactusComponent,
-    AboutComponent
+    UserlistComponent,
+    AboutComponent,
+    UpdateuserComponent,
+    NotificationComponent,
+  
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
