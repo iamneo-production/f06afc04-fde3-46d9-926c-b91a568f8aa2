@@ -1,9 +1,7 @@
-
-   .topnav {
-    overflow: hidden;
-    background-color: #74919b;
-    margin: 0;
-  }
+.topnav {
+  overflow: hidden;
+   background-color:#74919b;
+   }
  
 
  .topnav a {
@@ -20,12 +18,6 @@
    float: right;
  }
  
-
-
-
-
-
-
 
 
 .dropdown {
@@ -47,6 +39,7 @@
 .dropdown-menu a {
   color: black;
   padding: 8px 16px;
+  text-align: center;
   text-decoration: none;
   display: block;
 }

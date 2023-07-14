@@ -7,7 +7,7 @@
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
-body {
+.body {
   background-color: #9f9da7;
   overflow: hidden;
   height: 91.59vh;
@@ -16,19 +16,18 @@ body {
 .container {
   max-width: 640px;
   padding: 0 20px;
-  margin: 15vh auto;
+  margin: 20vh auto;
 }
 
 .wrapper {
   width: 100%;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0px 0px 50px 20px #74919b;
 }
 
 .wrapper .title {
   height: 90px;
-  background: #9f9da7;
+  background-color: #74919b;
   border-radius: 100px 10px 0 0;
   color: #fff;
   font-size: 30px;
@@ -54,7 +53,7 @@ body {
   outline: none;
   padding-left: 60px;
   border-radius: 5px;
-  border: 1px solid lightgrey;
+  border: 1px solid #ccc;
   font-size: 16px;
   border-bottom-width: 2px;
   transition: all 0.3s ease;
@@ -75,7 +74,7 @@ form .row input::placeholder {
   height: 100%;
   color: #fff;
   font-size: 18px;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  background-color: #74919b;
   border: 1px solid #74919b;
   border-radius: 5px 0 0 5px;
   display: flex;
@@ -83,19 +82,6 @@ form .row input::placeholder {
   justify-content: center;
 }
 
-.wrapper form .pass {
-  margin: -8px 0 20px 0;
-}
-
-.wrapper form .pass a {
-  color: #16a085;
-  font-size: 17px;
-  text-decoration: none;
-}
-
-.wrapper form .pass a:hover {
-  text-decoration: underline;
-}
 
 .wrapper form .signup-link {
   text-align: center;
@@ -118,7 +104,7 @@ input[type="submit"] {
   margin-top: 8px;
   border-radius: 8px;
   display: block;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  background-color: #74919b;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
@@ -132,11 +118,18 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  background-color:#a36868;
+
 }
 
 @media (max-width: 768px) {
   .container {
-    margin: 10vh auto;
+    margin: 20vh auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    max-width: 80%;
   }
 }
