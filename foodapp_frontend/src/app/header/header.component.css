@@ -45,13 +45,13 @@
 }
 
 .dropdown-menu a {
-  color: black;
+  color: orange;
   padding: 8px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-menu a:hover {background-color: #a36868}
+.dropdown-menu a:hover {background-color: whitesmoke}
 
 .dropdown:hover .dropdown-menu {
   display: block;
