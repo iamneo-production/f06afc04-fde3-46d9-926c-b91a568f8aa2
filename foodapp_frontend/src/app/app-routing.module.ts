@@ -12,6 +12,8 @@ import { RestaurantloginComponent } from './restaurantlogin/restaurantlogin.comp
 import { RestaurantsignupComponent } from './restaurantsignup/restaurantsignup.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
+import { AdminpanelComponent } from './adminpanel/adminpanel.component';
+
 
 
 const routes: Routes = [
@@ -26,8 +28,8 @@ const routes: Routes = [
   {path:'Restaurantsignup',component:RestaurantsignupComponent},
   {path:'About',component:AboutComponent},
   {path:'Contactus',component:ContactusComponent},
-  {path:'Checkout',component:CheckoutComponent},
-  {path:'Cart',component:CartComponent},
+  {path:'Adminpanel',component:AdminpanelComponent},
+
 
   
   {path:'**',pathMatch:'full',redirectTo:'Dashboard'}

@@ -22,12 +22,6 @@
  
 
 
-
-
-
-
-
-
 .dropdown {
   position:relative;
   display: contents;
@@ -47,6 +41,7 @@
 .dropdown-menu a {
   color: orange;
   padding: 8px 16px;
+  text-align: center;
   text-decoration: none;
   display: block;
 }

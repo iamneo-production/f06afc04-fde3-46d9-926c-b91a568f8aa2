@@ -18,7 +18,7 @@ import { RestaurantloginComponent } from './restaurantlogin/restaurantlogin.comp
 import { RestaurantsignupComponent } from './restaurantsignup/restaurantsignup.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
-import { RouterModule } from '@angular/router';
+import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,8 @@ import { RouterModule } from '@angular/router';
     RestaurantloginComponent,
     RestaurantsignupComponent,
     ContactusComponent,
-    AboutComponent
+    AboutComponent,
+    AdminpanelComponent
   ],
   imports: [
     BrowserModule,
