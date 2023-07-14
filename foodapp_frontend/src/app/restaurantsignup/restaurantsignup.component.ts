@@ -12,13 +12,13 @@ export class RestaurantsignupComponent {
   name: string = '';
   email: string = '';
   password: string = '';
-  addressId: string = '';
+  phone_number: string = '';
 
   constructor(private http: HttpClient, private router: Router) {}
 
   register(): void {
 
-    if (!this.name || !this.email || !this.password || !this.addressId) {
+    if (!this.name || !this.email || !this.password || !this.phone_number) {
       alert('Please provide all the required details.');
       return; 
     }
@@ -26,7 +26,7 @@ export class RestaurantsignupComponent {
       name: this.name,
       email: this.email,
       password: this.password,
-      addressId: this.addressId
+      phone_number: this.phone_number
     };
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });

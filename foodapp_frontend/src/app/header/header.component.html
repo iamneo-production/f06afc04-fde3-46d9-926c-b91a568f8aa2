@@ -14,8 +14,8 @@
     || router.url==='/Contactus'" class="button"  [routerLink]="(['/Dashboard'])"><span><i class="fa fa-home"></i> Home</span></button>
    
     <!--Logo-->
-    <button *ngIf="router.url==='/Home'"
-     class="rounded-circle"   [routerLink]="(['/Home'])"><img src="..\assets\images\logo1.jpeg" width="90" height="50" alt="##"></button>
+    <button *ngIf="router.url==='/Home' 
+    || router.url==='/Adminpanel'"  class="rounded-circle"   [routerLink]="(['/Adminpanel'])"><img src="..\assets\images\logo3.png" width="90" height="50" alt="Logo"></button>
    
      <!--About-->
     <button *ngIf="router.url==='/About'" 
@@ -41,8 +41,9 @@
                 <i class="fa fa-fw fa-user"></i>Login <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-menu">
                         <a class="dropdown-item" [routerLink]="(['/Userlogin'])">Customer</a>
-                        <a class="dropdown-item" [routerLink]="(['/Adminlogin'])">Admin</a>
                         <a class="dropdown-item" [routerLink]="(['/Restaurantlogin'])">Resturants</a>
+                        <hr>
+                        <a class="dropdown-item" [routerLink]="(['/Adminlogin'])">Admin</a>
             </div>
             </div> 
 
@@ -50,6 +51,7 @@
             <button *ngIf="router.url==='/Userlogin'"  class="button" [routerLink]="(['/Usersignup'])"><i class="fa fa-fw fa-user"></i><span>sign up</span></button>        
             <button *ngIf="router.url==='/Adminlogin'"  class="button" [routerLink]="(['/Adminsignup'])"><i class="fa fa-fw fa-user"></i><span>sign up</span></button>
             <button *ngIf="router.url==='/Restaurantlogin'"  class="button" [routerLink]="(['/Restaurantsignup'])"><i class="fa fa-fw fa-user"></i><span>sign up</span></button>
+
 <!--Contact us-->
             <button *ngIf="router.url=='/Dashboard' 
             || router.url=='/About'
@@ -59,15 +61,22 @@
             || router.url==='/Restaurantsignup'
             || router.url==='/Restaurantlogin'"  class="button"   [routerLink]="(['/Contactus'])"><i class="fa fa-fw fa-envelope"></i> <span>Contact us</span></button>
             <button *ngIf="router.url==='/Contactus'" class="active"   title="You are in Contact page"><i class="fa fa-fw fa-envelope"></i> Contact us</button>
+
 <!--profile-->
             <button *ngIf="router.url==='/Home'"  class="button"  ><span>Profile</span></button>
+
 <!--My cart-->
             <button *ngIf="router.url==='/Dashboard'"  class="button"  onclick="alert('Please Login to view Your Cart')" value="My cart"> 
                   <span><i class='fas fa-shopping-cart' ></i>  My Cart </span></button>
             <button *ngIf="router.url==='/Home'"  class="button"  value="My cart"><span>My Cart </span></button>
- <!--Log out-->         
-            <button *ngIf="router.url==='/Home'"  class="button"  [routerLink]="(['/Dashboard'])"><span>Log out</span></button>
 
+<!-- admin id  -->
+               <button *ngIf="router.url==='/Adminpanel'" class="button" style="color: white;"><span><i class="fas fa-user"></i> Edit Profile</span></button>
+
+               
+ <!--Log out-->         
+            <button *ngIf="router.url==='/Home'
+                     || router.url==='/Adminpanel'"   class="button" (click)="logout()"> <span> <i class="fas fa-sign-out-alt"> </i> Log out</span></button>
 
 </div>
 </nav> 
