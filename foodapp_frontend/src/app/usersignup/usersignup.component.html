@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+<div class="body">
+<div class="container">  
+<div class="title">User Registration</div>
+<div class="content">
+
+<form (submit)="register()" #signupForm="ngForm">      
+<div class="user-details">
+
+<div class="input-box">
+          <span class="details">Full Name</span>
+          <input type="text" placeholder="Enter your name"  [(ngModel)]="name" name="name" required >
+
+</div>  
+  
+<div class="input-box">
+          <span class="details">Email</span>
+          <input type="email" placeholder="Enter your email" [(ngModel)]="email" name="email" required >
+</div>
+
+<div class="input-box">
+          <span class="details">Password</span>
+          <input type="password" placeholder="Enter your password" [(ngModel)]="password" name="password" required>
+</div>
+
+<div class="input-box">
+    <span class="details">Pincode</span>
+    <input type="text" placeholder="Enter your address" [(ngModel)]="addressId" name="address" required >
+</div>
+
+</div> <!--user details ending-->
+          
+<div>
+          <input type="submit" value="Sign up">
+
+</div>
+<div class="signup-link">Already a member? <a [routerLink]="[('/Userlogin')]">Login here</a></div>
+</form>
+</div>                     <!--content ending-->
+</div>                     <!--container ending-->
+</div>
+
