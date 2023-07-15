@@ -9,12 +9,16 @@ import { HttpClient } from '@angular/common/http';
 export class AdminpanelComponent {
   showCustomer: boolean = false;
   showRestaurant: boolean = false;
+  showComplaints: boolean = false;
   customers: any[] = [];
   restaurants: any[] = [];
+  complaints: any[] = [];
   filteredCustomers: any[] = [];
   filteredRestaurants: any[] = [];
+  filteredComplaints: any[] = [];
   customerSearchTerm: string = '';
   restaurantSearchTerm: string = '';
+  complaintSearchTerm: string = '';
 
   constructor(private http: HttpClient) {}
 
@@ -32,6 +36,13 @@ export class AdminpanelComponent {
     }
   }
 
+  toggleComplaints() {
+    this.showComplaints = !this.showComplaints;
+    if (this.showComplaints) {
+      this.fetchComplaints();
+    }
+  }
+
   fetchCustomerDetails() {
     this.http.get<any[]>('http://localhost:8080/customer')
       .subscribe(data => {
@@ -45,6 +56,14 @@ export class AdminpanelComponent {
       .subscribe(data => {
         this.restaurants = data;
         this.filteredRestaurants = this.restaurants;
+      });
+  }
+
+  fetchComplaints() {
+    this.http.get<any[]>('http://localhost:8080/contactus')
+      .subscribe(data => {
+        this.complaints = data;
+        this.filteredComplaints = this.complaints;
       });
   }
 
@@ -72,6 +91,19 @@ export class AdminpanelComponent {
       });
   }
 
+
+
+  deleteComplaint(complaint: any) {
+    this.http.delete(`http://localhost:8080/contactus/${complaint.id}`, { responseType: 'text' })
+      .subscribe(() => {
+        this.filteredComplaints = this.filteredComplaints.filter(c => c.id !== complaint.id);
+        window.alert('Complaint deleted successfully');
+      }, (error: any) => {
+        console.error('Error deleting complaint:', error);
+        window.alert('Failed to delete complaint');
+      });
+  }
+
   filterCustomers() {
     const searchTerm = this.customerSearchTerm.toLowerCase();
     this.filteredCustomers = this.customers.filter(c => c.name.toLowerCase().includes(searchTerm));
@@ -80,5 +112,14 @@ export class AdminpanelComponent {
   filterRestaurants() {
     const searchTerm = this.restaurantSearchTerm.toLowerCase();
     this.filteredRestaurants = this.restaurants.filter(r => r.name.toLowerCase().includes(searchTerm));
+  }
+
+  filterComplaints() {
+    const searchTerm = this.complaintSearchTerm.toLowerCase();
+    this.filteredComplaints = this.complaints.filter(
+      c => c.name.toLowerCase().includes(searchTerm) ||
+        c.email.toLowerCase().includes(searchTerm) ||
+        c.message.toLowerCase().includes(searchTerm)
+    );
   }
 }
