@@ -31,7 +31,7 @@ export class RestaurantsignupComponent {
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post('http://localhost:8080/customer', customerData, { headers, responseType: 'text' }).subscribe(
+    this.http.post('http://localhost:8080/restaurant', customerData, { headers, responseType: 'text' }).subscribe(
       (response: any) => {
         console.log(response); 
         if (response.includes('created') || response.includes('Customer created')) {

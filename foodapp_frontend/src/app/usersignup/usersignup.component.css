@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: #9f9da7;
+  background-color: #aeabb8;
 }
 .container{
   max-width: 800px;
@@ -51,16 +51,16 @@
   justify-content: space-between;
   margin: 20px 0 12px 0;
 }
-form .user-details .input-box{
+form .user-details .form-group{
   margin-bottom: 15px;
   width: calc(100% / 2 - 20px);
 }
-form .input-box span.details{
+form .form-group span.details{
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
 }
-.user-details .input-box input{
+.user-details .form-group input{
   height: 45px;
   width: 100%;
   outline: none;
@@ -71,10 +71,7 @@ form .input-box span.details{
   border-bottom-width: 2px;
   transition: all 0.3s ease;
 }
-.user-details .input-box input:focus,
-.user-details .input-box input:valid{
-  border-color: #0fd19e;
-}
+
 
 
 
@@ -90,12 +87,13 @@ height: 59px;
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
-  background-color: #74919b;
+  background-color: #73919b;
+
 }
 
 input[type="submit"]:hover {
-  background-color:#a36868;
- 
+  background-color: #768b94;
+
 }
 
 
@@ -106,7 +104,7 @@ input[type="submit"]:hover {
   font-size: 17px;
 }
  .signup-link a{
-  color: #16a085;
+  color: orange;
   text-decoration: none;
 }
 .signup-link a:hover{
@@ -119,7 +117,7 @@ input[type="submit"]:hover {
   .container{
    max-width: 100%;
  }
- form .user-details .input-box{
+ form .user-details .form-group{
      margin-bottom: 15px;
      width: 100%;
    }

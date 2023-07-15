@@ -10,28 +10,36 @@ export class ContactusComponent {
   constructor(private http: HttpClient) {}
 
   submitForm(event: Event) {
-    
     event.preventDefault(); // Prevent default form submission behavior
-
+  
+    const nameInput = <HTMLInputElement>document.getElementById('name');
+    const emailInput = <HTMLInputElement>document.getElementById('email');
+    const messageInput = <HTMLInputElement>document.getElementById('message');
+  
     const formData = {
-      name: (<HTMLInputElement>document.getElementById('name')).value,
-      email: (<HTMLInputElement>document.getElementById('email')).value,
-      message: (<HTMLInputElement>document.getElementById('message')).value
+      name: nameInput.value,
+      email: emailInput.value,
+      message: messageInput.value
     };
-
+  
+    // Check if any field is empty
+    if (!formData.name || !formData.email || !formData.message) {
+      alert('Please provide all the required details.');
+      return; // Stop the form submission
+    }
+  
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     };
-
+  
     this.http.post('http://localhost:8080/contactus', formData, httpOptions)
       .subscribe(
         () => {
           // Handle success response
           console.log('Form submitted successfully.');
           alert('Form submitted successfully.');
-
         },
         (error) => {
           // Handle error response
@@ -39,4 +47,4 @@ export class ContactusComponent {
         }
       );
   }
-}
+  }

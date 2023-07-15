@@ -1,16 +1,21 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-.container{
-    max-width:1000px;
-    height:91.5vh;
-   
-    
-}  
+body {
+  background-color: #aeabb8;
+  overflow-y: auto;
+}
+
+.container {
+  padding-top: 70px;
+  min-height: calc(100vh - 59px);
+  overflow-y: auto;
+}
 
 .pointer-cursor {
-    cursor: pointer;
-  }
-  body{
-    background-color: bisque;
-    margin: 0;
-  padding: 0;
-  }
+  cursor: pointer;
+}

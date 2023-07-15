@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { CartComponent } from './cart/cart.component'; 
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
@@ -13,26 +11,29 @@ import { RestaurantsignupComponent } from './restaurantsignup/restaurantsignup.c
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
+import { CartComponent } from './cart/cart.component';
+
 
 
 
 const routes: Routes = [
 
-  {path:'Header',component:HeaderComponent},
-  {path:'Dashboard',component:DashboardComponent},
-  {path:'Userlogin',component:UserloginComponent},
-  {path:'Usersignup',component:UsersignupComponent},
-  {path:'Adminlogin',component:AdminloginComponent},
-  {path:'Adminsignup',component:AdminsignupComponent},
-  {path:'Restaurantlogin',component:RestaurantloginComponent},
-  {path:'Restaurantsignup',component:RestaurantsignupComponent},
-  {path:'About',component:AboutComponent},
-  {path:'Contactus',component:ContactusComponent},
-  {path:'Adminpanel',component:AdminpanelComponent},
+  {path:'header',component:HeaderComponent},
+  {path:'dashboard',component:DashboardComponent},
+  {path:'userlogin',component:UserloginComponent},
+  {path:'usersignup',component:UsersignupComponent},
+  {path:'adminlogin',component:AdminloginComponent},
+  {path:'adminsignup',component:AdminsignupComponent},
+  {path:'restaurantlogin',component:RestaurantloginComponent},
+  {path:'restaurantsignup',component:RestaurantsignupComponent},
+  {path:'about',component:AboutComponent},
+  {path:'contactus',component:ContactusComponent},
+  {path:'adminpanel',component:AdminpanelComponent},
+  {path:'cart',component:CartComponent},
 
 
   
-  {path:'**',pathMatch:'full',redirectTo:'Dashboard'}
+  {path:'**',pathMatch:'full',redirectTo:'dashboard'}
 
 
 ];

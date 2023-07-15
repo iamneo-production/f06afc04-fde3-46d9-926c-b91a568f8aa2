@@ -1,38 +1,6 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+
   
-<nav class="topnav">
-
-<div class="topnav-left">
-    
-  <button  class="button" style="color: white;" [routerLink]="(['/About'])"><span><i class="fa fa-home"></i> Home</span></button>
-
-     
-          
-</div>       
-         
-                  
-<div class="topnav-right">
-           
-            <button class="button"  style="color: white;" [routerLink]="(['/Contact'])"><i class="fa fa-fw fa-envelope"></i> <span>Contact us</span></button>
-
-            <button class="active"style="color: white;"  value="My cart"><img src="https://img.icons8.com/material-rounded/24/ffffff/shopping-cart.png"><span>My Cart </span></button>
-
-          </div>
-</nav> 
-
-
- 
-</body>
-
-
-<br><br>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div *ngIf="items.length === 0" class="alert alert-info">
   Your cart is empty.
@@ -144,6 +112,7 @@
   <div class="d-flex justify-content-between">
     <button class="btn btn-secondary" id="clearcart" (click)="clearCart()">Clear Cart</button>
     <button class="btn btn-secondary" id="checkout" routerLink="/Checkout">Checkout</button>
+  </div>
   </div>
   
   

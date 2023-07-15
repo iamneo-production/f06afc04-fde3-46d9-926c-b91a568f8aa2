@@ -14,13 +14,9 @@ export class AdminloginComponent {
   constructor(
     private http: HttpClient,
     private router: Router,
-  ) {}
+  ) { }
 
   adminlogin(): void {
-    if (!this.validateEmailFormat(this.email)) {
-      alert('Incorrect email format. Please enter a valid email address.');
-      return;
-    }
 
     const loginData = {
       email: this.email,
@@ -35,7 +31,7 @@ export class AdminloginComponent {
           // Login successful, store the admin name in AdminService
 
           // Redirect to the Adminpanel component
-          this.router.navigate(['/Adminpanel']);
+          this.router.navigate(['/adminpanel']);
         }
       },
       (error: HttpErrorResponse) => {
@@ -49,9 +45,4 @@ export class AdminloginComponent {
     );
   }
 
-  validateEmailFormat(email: string): boolean {
-    // Regular expression for email format validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
 }

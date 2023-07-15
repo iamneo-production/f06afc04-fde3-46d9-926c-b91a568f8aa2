@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
       .subscribe(
         () => {
           // Redirect to login page or perform other logout actions
-          this.router.navigate(['/Userlogin']); // Redirect to login page
+          this.router.navigate(['/Dashboard']); // Redirect to login page
         },
         (error: any) => {
           console.error('Error logging out:', error);

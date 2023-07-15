@@ -26,11 +26,11 @@ export class RestaurantloginComponent {
     };
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post('http://localhost:8080/login', loginData, { headers, observe: 'response' }).subscribe(
+    this.http.post('http://localhost:8080/restaurant', loginData, { headers, observe: 'response' }).subscribe(
       (response) => {
         if (response.status === 200) {
           // Login successful, redirect to the Home component
-          this.router.navigate(['/Contactus']);
+          this.router.navigate(['/restaurantpanel']);
         } 
         },
       (error: HttpErrorResponse) => {
