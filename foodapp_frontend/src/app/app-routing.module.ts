@@ -29,6 +29,8 @@ const routes: Routes = [
   {path:'About',component:AboutComponent},
   {path:'Contactus',component:ContactusComponent},
   {path:'Adminpanel',component:AdminpanelComponent},
+  {path:'cart',component:CartComponent},
+  {path:'checkout',component:CheckoutComponent},
 
 
   

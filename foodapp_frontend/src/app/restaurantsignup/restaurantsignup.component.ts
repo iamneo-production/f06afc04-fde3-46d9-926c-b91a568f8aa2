@@ -12,34 +12,34 @@ export class RestaurantsignupComponent {
   name: string = '';
   email: string = '';
   password: string = '';
-  phone_number: string = '';
+  phone: string = '';
 
   constructor(private http: HttpClient, private router: Router) {}
 
   register(): void {
 
-    if (!this.name || !this.email || !this.password || !this.phone_number) {
+    if (!this.name || !this.email || !this.password || !this.phone) {
       alert('Please provide all the required details.');
       return; 
     }
-    const customerData = {
+    const restaurantData = {
       name: this.name,
       email: this.email,
       password: this.password,
-      phone_number: this.phone_number
+      phone: this.phone
     };
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post('http://localhost:8080/customer', customerData, { headers, responseType: 'text' }).subscribe(
+    this.http.post('http://localhost:8080/restaurants/signup', restaurantData, { headers, responseType: 'text' }).subscribe(
       (response: any) => {
         console.log(response); 
-        if (response.includes('created') || response.includes('Customer created')) {
-          alert('Registration successful!');
-        } else if (response.includes('already registered')) {
+        if (response.includes('Restaurant Created')) {
+          alert('Restaurant registration successful!');
+        } else if (response.includes('Email is already registered')) {
           alert('Email is already registered. Please use a different email.');
         } else {
-          alert('Registration failed. Please try again later.');
+          alert('Restaurant registration failed. Please try again later.');
         }
       },
       (error: HttpErrorResponse) => {
