@@ -1,0 +1,22 @@
+<header>
+    <nav class="topnav">
+      <div class="topnav-left">
+        <!-- Home -->
+        <button *ngIf="router.url !== '/Home'" class="button" style="color: white;" [routerLink]="['/Home']">
+          <i class="fa fa-home" aria-hidden="true" ></i> Home
+        </button>
+      </div>
+      <div class="topnav-right">
+        <!-- Profile -->
+        <button  class="button" style="color: white;" routerLink="Profile">
+          <i class="fa fa-user" aria-hidden="true"></i> Profile
+        </button>
+        
+        <!-- Cancel Order -->
+        <button class="button" style="color: white;" routerLink="Cancel Order">
+          <i class="fa fa-times-circle" aria-hidden="true"></i> Cancel Order
+        </button>
+      </div>
+    </nav>
+  </header>
+  

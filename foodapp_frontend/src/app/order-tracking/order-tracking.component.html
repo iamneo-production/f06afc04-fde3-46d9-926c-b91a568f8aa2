@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="order-container">
+      <div class="order-section">
+       <style> 
+        p {
+          font-weight: bold;
+        }
+      </style>
+        <h2>Order Details</h2>
+        <p>Order ID: {{ order.id }}</p>
+        <p>Status: {{ order.status }}</p>
+        <p>Estimated delivery time: {{ order.deliveryTime }}</p>
+      </div>
+      <div class="order-section">
+        <h2>Delivery Person</h2>
+        <img [src]="'assets/deliveryPerson.png'" alt="{{ order.deliveryPerson.name }}">
+        <p>Name: {{ order.deliveryPerson.name }}</p>
+        <p>Location: {{ order.deliveryPerson.location }}</p>
+        <a href="https://www.google.com/maps/@16.3050267,80.4215138,15z" class="track-order-button">Track my order</a>
+
+      </div>
+    </div>
+    </div>
+    
