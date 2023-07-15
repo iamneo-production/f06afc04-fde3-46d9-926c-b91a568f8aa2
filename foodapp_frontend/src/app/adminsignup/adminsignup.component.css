@@ -91,11 +91,11 @@ height: 59px;
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
-  background-color: #74919b;
+  background-color: #768b94;
 }
 
 input[type="submit"]:hover {
-  background-color:#a36868;
+  background-color: #73919b;
  
 }
 
@@ -107,7 +107,7 @@ input[type="submit"]:hover {
   font-size: 17px;
 }
  .signup-link a{
-  color: #16a085;
+  color: orange;
   text-decoration: none;
 }
 .signup-link a:hover{

@@ -8,7 +8,8 @@
 }
 
 .body {
-  background-color: rgb(107, 203, 211);
+  background-color: #9f9da7;
+
   overflow: hidden;
   height: 91.59vh;
 }
@@ -27,7 +28,7 @@
 
 .wrapper .title {
   height: 90px;
-  background-color: orange;
+  background-color: #74919b;
   border-radius: 100px 10px 0 0;
   color: white;
   font-size: 30px;
@@ -104,7 +105,8 @@ input[type="submit"] {
   margin-top: 8px;
   border-radius: 8px;
   display: block;
-  background-color: orange;
+  
+  background-color: #768b94;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
@@ -118,7 +120,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color:rgb(107, 203, 211);
+  background-color: #73919b;
+  
 
 }
 
