@@ -1,17 +1,19 @@
 <body>
-<div class="container">
+  <div class="container">
     <h2 class="text-center">Welcome to Admin Panel</h2>
-    <h5 class="text-center">You can access customer and restaurant details here</h5>
+    <h5 class="text-center">You can access customer, restaurant, and complaints details here</h5>
+    <br>
     <br>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="card">
           <div class="card-header text-center pointer-cursor" (click)="toggleCustomer()">
             <h3>Customer</h3>
           </div>
           <div class="card-body" *ngIf="showCustomer">
             <div>
-              <input type="text" class="form-control mb-3" placeholder="Search by Customer Name" [(ngModel)]="customerSearchTerm" (input)="filterCustomers()">
+              <input type="text" class="form-control mb-3" placeholder="Search by Customer Name"
+                [(ngModel)]="customerSearchTerm" (input)="filterCustomers()">
             </div>
             <div *ngFor="let customer of filteredCustomers">
               <p>Customer ID: {{ customer.id }}</p>
@@ -23,22 +25,21 @@
               <hr>
             </div>
             <div class="text-center">
-              <p>Total Customers: {{ customers.length }}</p>
+              <p>Total Customers: {{ filteredCustomers.length }}</p>
             </div>
           </div>
         </div>
       </div>
-  
-  <br>
-  
-      <div class="col-md-6">
+
+      <div class="col-md-4">
         <div class="card">
           <div class="card-header text-center pointer-cursor" (click)="toggleRestaurant()">
             <h3>Restaurant</h3>
           </div>
           <div class="card-body" *ngIf="showRestaurant">
             <div>
-              <input type="text" class="form-control mb-3" placeholder="Search by Restaurant Name" [(ngModel)]="restaurantSearchTerm" (input)="filterRestaurants()">
+              <input type="text" class="form-control mb-3" placeholder="Search by Restaurant Name"
+                [(ngModel)]="restaurantSearchTerm" (input)="filterRestaurants()">
             </div>
             <div *ngFor="let restaurant of filteredRestaurants">
               <p>Restaurant ID: {{ restaurant.id }}</p>
@@ -50,13 +51,42 @@
               <hr>
             </div>
             <div class="text-center">
-              <p>Total Restaurants: {{ restaurants.length }}</p>
+              <p>Total Restaurants: {{ filteredRestaurants.length }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header text-center pointer-cursor" (click)="toggleComplaints()">
+            <h3>Complaints</h3>
+          </div>
+          <div class="card-body" *ngIf="showComplaints">
+            <div>
+              <input type="text" class="form-control mb-3" placeholder="Search by Name, Email, or Message"
+                [(ngModel)]="complaintSearchTerm" (input)="filterComplaints()">
+            </div>
+            <ng-container *ngIf="filteredComplaints.length > 0; else noComplaints">
+              <div *ngFor="let complaint of filteredComplaints">
+                <p>Name: {{ complaint.name }}</p>
+                <p>Email: {{ complaint.email }}</p>
+                <p>Message: {{ complaint.message }}</p>
+                <div class="text-center">
+                  <button class="btn btn-danger" (click)="deleteComplaint(complaint)">Delete Complaint</button>
+                </div>
+                <hr>
+              </div>
+            </ng-container>
+            <ng-template #noComplaints>
+              <p class="text-center">No complaints found.</p>
+            </ng-template>
+            <div class="text-center">
+              <p>Total Complaints: {{ filteredComplaints.length }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
-  <br>
-  </body>
+</body>

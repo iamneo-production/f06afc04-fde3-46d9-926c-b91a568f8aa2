@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {CartService} from './cart.service';
-import { CheckoutComponent } from '../checkout/checkout.component';
 import { Router } from '@angular/router';
 
 

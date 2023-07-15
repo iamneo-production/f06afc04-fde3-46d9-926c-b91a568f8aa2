@@ -29,7 +29,7 @@ export class UserloginComponent {
       (response) => {
         if (response.status === 200) {
           // Login successful, redirect to the Home component
-          this.router.navigate(['/Contactus']);
+          this.router.navigate(['/contactus']);
         } 
         },
       (error: HttpErrorResponse) => {

@@ -7,26 +7,25 @@
 <form (submit)="register()" #signupForm="ngForm">      
 <div class="user-details">
 
-<div class="input-box">
-          <span class="details">Full Name</span>
-          <input type="text" placeholder="Enter your name"  [(ngModel)]="name" name="name" required >
-
-</div>  
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" class="form-control" [(ngModel)]="name" placeholder="Enter your name" >
+      </div>
   
-<div class="input-box">
-          <span class="details">Email</span>
-          <input type="email" placeholder="Enter your email" [(ngModel)]="email" name="email" required >
-</div>
+      <div class="form-group">
+        <label for="phone_number">Phone Number</label>
+        <input type="addressId" id="addressId" name="addressId" class="form-control" [(ngModel)]="addressId"  placeholder="Enter your phone number">
+      </div>
 
-<div class="input-box">
-          <span class="details">Password</span>
-          <input type="password" placeholder="Enter your password" [(ngModel)]="password" name="password" required>
-</div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-control"  [(ngModel)]="email" placeholder="Enter your email" >
+      </div>
 
-<div class="input-box">
-    <span class="details">Pincode</span>
-    <input type="text" placeholder="Enter your address" [(ngModel)]="addressId" name="address" required >
-</div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" [(ngModel)]="password" placeholder="Enter your password">
+      </div>
 
 </div> <!--user details ending-->
           
@@ -34,7 +33,8 @@
           <input type="submit" value="Sign up">
 
 </div>
-<div class="signup-link">Already a member? <a [routerLink]="[('/Userlogin')]">Login here</a></div>
+<div class="signup-link">Already a member? <a [routerLink]="[('/userlogin')]">Login here</a></div>
+<br>
 </form>
 </div>                     <!--content ending-->
 </div>                     <!--container ending-->
