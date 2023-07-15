@@ -1,8 +1,16 @@
 
 .container{
-    margin-top: 120px;
+    max-width:1000px;
+    height:91.5vh;
+   
+    
 }  
 
 .pointer-cursor {
     cursor: pointer;
+  }
+  body{
+    background-color: bisque;
+    margin: 0;
+  padding: 0;
   }

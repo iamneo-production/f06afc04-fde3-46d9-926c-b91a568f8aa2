@@ -9,6 +9,7 @@
 
 .body {
   background-color: #9f9da7;
+
   overflow: hidden;
   height: 91.59vh;
 }
@@ -29,7 +30,7 @@
   height: 90px;
   background-color: #74919b;
   border-radius: 100px 10px 0 0;
-  color: #fff;
+  color: white;
   font-size: 30px;
   font-weight: 600;
   display: flex;
@@ -72,10 +73,10 @@ form .row input::placeholder {
   position: absolute;
   width: 47px;
   height: 100%;
-  color: #fff;
+  color: orange;
   font-size: 18px;
-  background-color: #74919b;
-  border: 1px solid #74919b;
+  background-color: whitesmoke;
+  border: 1px solid orange;
   border-radius: 5px 0 0 5px;
   display: flex;
   align-items: center;
@@ -90,7 +91,7 @@ form .row input::placeholder {
 }
 
 .wrapper form .signup-link a {
-  color: #16a085;
+  color: orange;
   text-decoration: none;
 }
 
@@ -104,7 +105,8 @@ input[type="submit"] {
   margin-top: 8px;
   border-radius: 8px;
   display: block;
-  background-color: #74919b;
+  
+  background-color: #768b94;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
@@ -118,7 +120,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color:#a36868;
+  background-color: #73919b;
+  
 
 }
 

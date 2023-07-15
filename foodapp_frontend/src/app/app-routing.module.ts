@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { CartComponent } from './cart/cart.component'; 
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserloginComponent } from './userlogin/userlogin.component';

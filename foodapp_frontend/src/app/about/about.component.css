@@ -9,8 +9,7 @@
     height: 91.5vh;
     padding: 70px 0;
     width: 100%;
-    background: #ddd;
-    overflow-y: auto; /* Add this line to enable vertical scrolling when necessary */
+    background-color: #aeabb8;
   }
   
   .pic {

@@ -45,7 +45,7 @@
     margin-top: 8px;
     border-radius: 8px;
     display: block;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background-color: #768b94;
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
@@ -55,7 +55,7 @@
   
   
 .contact-form button:hover {
-    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  background-color: #73919b;
   }
   
   @media (max-width: 600px) {
