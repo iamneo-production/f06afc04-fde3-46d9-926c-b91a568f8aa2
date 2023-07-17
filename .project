@@ -22,7 +22,16 @@
 	</natures>
 	<filteredResources>
 		<filter>
+<<<<<<< HEAD
 
+=======
+			<id>1683004934301</id>
+			<name></name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+>>>>>>> b03ce4cb (updated the home and search components for home screen)
 			</matcher>
 		</filter>
 	</filteredResources>
