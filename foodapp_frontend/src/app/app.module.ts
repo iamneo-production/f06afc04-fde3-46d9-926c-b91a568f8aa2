@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+<<<<<<< HEAD
 import {  FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+=======
+import { FormsModule } from '@angular/forms';
+>>>>>>> 099de46 (updated the home and search components for home screen)
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+<<<<<<< HEAD
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { UsersignupComponent } from './usersignup/usersignup.component';
@@ -57,13 +62,30 @@ import { OrdertrackingComponent } from './ordertracking/ordertracking.component'
     ProfileComponent,
     OrderHistoryComponent,
     OrdertrackingComponent,
+=======
+import { HomeComponent } from './home/home.component';
+import { SearchComponent } from './search/search.component';
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    SearchComponent
+>>>>>>> 099de46 (updated the home and search components for home screen)
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     HttpClientModule,
     FormsModule
 
+=======
+    FormsModule,
+    HttpClientModule,
+>>>>>>> 099de46 (updated the home and search components for home screen)
   ],
   providers: [],
   bootstrap: [AppComponent]

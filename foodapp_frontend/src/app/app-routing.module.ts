@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+<<<<<<< HEAD
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { UsersignupComponent } from './usersignup/usersignup.component';
@@ -60,6 +61,15 @@ const routes: Routes = [
   
   {path:'**',pathMatch:'full',redirectTo:'dashboard'}
 
+=======
+import { SearchComponent } from './search/search.component';
+import { HomeComponent } from './home/home.component';
+const routes: Routes = [
+  {path:'header',component:HeaderComponent},
+  {path:'search',component:SearchComponent},
+  {path:'home',component:HomeComponent},
+  {path:'**',pathMatch:'full',redirectTo:'home'}
+>>>>>>> 099de46 (updated the home and search components for home screen)
 
 ];
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="search-bar">
   <input type="text" class="location-input" placeholder="Search for Restaurant and Food" [(ngModel)]="searchText"(keyup.enter)="onSearch()">
   <button class="search-button" (click)="onSearch()">Search</button>
@@ -16,3 +17,18 @@
 </div>
 
 
+=======
+<app-search></app-search>
+  <br><br>
+  <div class="container"  >
+    <div class="card-container">
+      <div class="card " *ngFor = "let item of restaurant">
+        <img class="restaurant-image" [src]="item.image"alt="Restaurant 1">
+        <div class="restaurant-name">{{item.name}}</div>
+        <div class="food-type">{{item.description}}</div>
+        <div class="food-promotions">{{item.promotions}}</div>
+  
+    
+    </div>
+  </div>
+>>>>>>> 099de46 (updated the home and search components for home screen)
