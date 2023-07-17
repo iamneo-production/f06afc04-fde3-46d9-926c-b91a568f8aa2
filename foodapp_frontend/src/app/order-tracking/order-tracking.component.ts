@@ -14,9 +14,8 @@ export class OrderTrackingComponent {
     deliveryTime: '2:30 PM',
     deliveryPerson: {
       name: 'Jhon',
-      photo: 'https://via.placeholder.com/150',
+      contactno: '6304713223',
       location: '1-135A, Ramayapalem, Near Kondepi, Ongole',
-
     }
 }
 }

@@ -1,24 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
+
 import { HeaderComponent } from './header/header.component';
-import { CancelOrderComponent } from './cancel-order/cancel-order.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     OrderTrackingComponent,
+
     HeaderComponent,
-    CancelOrderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+

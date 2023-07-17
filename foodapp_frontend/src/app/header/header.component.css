@@ -1,131 +1,121 @@
-.container {
-    height: 100vh; 
-    overflow: hidden;
-  }
-  .topnav {
-      overflow: hidden;
-      background-color: #74919b;
-      margin: 0;
-    }
-   
-  
-   .topnav a {
-     padding: 16px 10px;
-     text-decoration: none;
-     font-size: 18px;
-   }
-  
-  
-   .topnav-left {
-     float: left;
-   }
-   .topnav .topnav-right {
-     float: right;
-   }
-   
-  
-  
-  
-  
-  
-  
-  
-  
-  .dropdown {
-    position:relative;
-    display: contents;
-  }
-  
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  
-   
-  }
-  
-  .dropdown-menu a {
-    color: black;
-    padding: 8px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-menu a:hover {background-color: #a36868}
-  
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  
-  
-  
-  
-  .active{
-    border-radius: 4px;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 18px;
-    padding: 16px 16px;
-    background-color: #a36868;
-  
-  }
-  
-  
-  .rounded-circle{
-    border: none;
-    margin-top: 3px;
-    background-color: #74919b;
-  
-  }
-  
-  
-  
-  
-  
-  
-  .button {
-    border-radius: 4px;
-    background-color:#74919b;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 18px;
-    padding: 16px 16px;
-    transition: all 0.5s;
-  }
-  
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .button:hover {
-  background-color:#a36868;
-  }
-  .button:hover span {
-    padding-right: 20px;
-  }
-  
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-  
-  
-  
-  
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  margin: 0;
+}
+
+
+.topnav a {
+  padding: 16px 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+.topnav-left {
+  float: left;
+}
+
+.topnav .topnav-right {
+  float: right;
+}
+
+
+
+.dropdown {
+  position: relative;
+  display: contents;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+
+}
+
+.dropdown-menu a {
+  color: orange;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: whitesmoke
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+
+
+.active {
+  border-radius: 4px;
+  border: none;
+  color: orange;
+  text-align: center;
+  font-size: 18px;
+  padding: 16px 16px;
+  background-color: rgb(241, 237, 237);
+
+}
+
+
+.logo-container {
+  padding-left: 30px;
+  padding-top: 1px;
+
+}
+
+
+
+
+
+
+.button {
+  border-radius: 4px;
+  background-color: white;
+  border: none;
+  color: orange;
+  text-align: center;
+  font-size: 18px;
+  padding: 16px 16px;
+  transition: all 0.5s;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover {
+  background-color: rgb(241, 237, 237);
+}
+
+.button:hover span {
+  padding-right: 20px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
