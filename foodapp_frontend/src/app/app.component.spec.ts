@@ -25,6 +25,5 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('foodapp_frontend app is running!');
->>>>>>> 099de46 (updated the home and search components for home screen)
   });
 });

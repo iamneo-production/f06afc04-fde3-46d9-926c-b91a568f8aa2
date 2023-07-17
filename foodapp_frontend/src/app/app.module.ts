@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {  FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,15 +21,9 @@ import { CartComponent } from './cart/cart.component';
 import { MenuComponent } from './menu/menu.component';
 import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantdashboard.component';
 import { HomeComponent } from './home/home.component';
-import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetails.component';
-import { UpdateCustomerComponent } from './update-customer/update-customer.component';
-import { ResdetailsComponent } from './resdetails/resdetails.component';
-import { NotificationComponent } from './notification/notification.component';
-import { ProfileComponent } from './profile/profile.component';
-import { OrderHistoryComponent } from './order-history/order-history.component';
-import { OrdertrackingComponent } from './ordertracking/ordertracking.component';
+import { SearchComponent } from './search/search.component';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,18 +35,6 @@ import { OrdertrackingComponent } from './ordertracking/ordertracking.component'
     AppComponent,
 >>>>>>> ec75852 (header, userlogin, dashboard was updated)
     HeaderComponent,
-    DashboardComponent,
-    UserloginComponent,
-    UsersignupComponent,
-    AdminsignupComponent,
-    AdminloginComponent,
-    RestaurantloginComponent,
-    RestaurantsignupComponent,
-    ContactusComponent,
-    AboutComponent,
-    AdminpanelComponent,
-    MenuComponent,
-    RestaurantdashboardComponent,
     HomeComponent,
     RestaurantlistComponent,
     CheckoutComponent,
@@ -90,6 +71,4 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [],
   bootstrap: [AppComponent]
 })
-
 export class AppModule { }
-

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 08a481a5c5f6d54a173704e846821425e3d3b270
 =======
@@ -37,6 +38,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 >>>>>>> b03ce4cb (updated the home and search components for home screen)
 =======
 >>>>>>> edd87a05 (header, userlogin, dashboard was updated)
+=======
+# FoodappFrontend
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+>>>>>>> 7a9a5638 (updated the home and search components for home screen)
 
 ## Development server
 
