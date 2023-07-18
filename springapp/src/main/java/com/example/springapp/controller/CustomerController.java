@@ -34,8 +34,8 @@ public class CustomerController {
     }
 	
 	
-    @GetMapping("/{id}")
-    public ResponseEntity<Customer> getUserProfileById(@PathVariable("id") Long id) {
+    @GetMapping("/id")
+    public ResponseEntity<Customer> getUserProfileById(@RequestParam long id) {
         Customer customer = customerService.getUserProfileById(id);
         if (customer != null) {
             return ResponseEntity.ok(customer);
