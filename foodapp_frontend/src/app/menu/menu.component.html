@@ -1,0 +1,46 @@
+<div class="centered">
+    <div id="hotel-details">
+        <a id="hotel-name">Zesty Foods</a>
+        <a>
+            <div id="ratings">
+            <a class="stars">4.2 <img src="/assets/menu/star.svg" alt="star"></a>
+            <a class="times">11K ratings</a>
+            </div>
+        </a>
+        <input id="search" placeholder="Search within menu" (keyup)="searchMenu($event)">
+    </div>
+
+    <ul>
+        <li *ngFor="let food of filteredMenu">
+            <div class="content">
+                <div class="content-left">
+                    <img src="{{food.imageUrl}}" alt="food" class="food">
+                </div>
+                <div class="content-right">
+                    <div class="name">{{food.name}}</div>
+                    <div class="price">{{food.price | currency:'INR'}}</div>
+                    <div class="tags">
+                        <div class="tag" *ngFor="let tag of food.tags">{{tag}}</div>
+                    </div>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper ligula sed diam ultrices venenatis. Duis nec sem lobortis arcu euismod efficitur eget amet.</div>
+                    <div class="addToCart" id="addToCart-{{food.id}}">
+                        <button value="{{food.id}}" (click)="addToCart($event)">Add to Cart</button>
+                    </div>
+                    <div class="addToCart hidden" id="addToCartBtns-{{food.id}}">
+                        <button value="{{food.id}}" (click)="decrease($event)">-</button>
+                        <a>{{order[food.id]}}</a>
+                        <button value="{{food.id}}" (click)="increase($event)">+</button>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <div id="order" class="centered" *ngIf="!zeroItems()">
+        <div class="num-items" *ngIf="oneItem()">{{totalItems}} item</div>
+        <div class="num-items" *ngIf="!oneItem()">{{totalItems}} items</div>
+        &nbsp;|&nbsp;
+        <div class="cost">{{totalAmount | currency:'INR'}}</div>
+        <div class="view-cart" routerLink="/cart">View Cart <img src="/assets/menu/cart.svg"></div>
+    </div>
+</div>
