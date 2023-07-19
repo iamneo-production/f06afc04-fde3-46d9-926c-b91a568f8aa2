@@ -1,0 +1,21 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background-color: #aeabb8;
+  overflow-y: auto;
+}
+
+.container {
+  padding-top: 70px;
+  min-height: calc(100vh - 59px);
+  overflow-y: auto;
+}
+
+.pointer-cursor {
+  cursor: pointer;
+}

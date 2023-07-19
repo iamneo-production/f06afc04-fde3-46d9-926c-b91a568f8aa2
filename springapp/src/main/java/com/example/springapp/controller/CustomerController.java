@@ -1,5 +1,8 @@
 package com.example.springapp.controller;
 
+import org.springframework.web.bind.annotation.*;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,24 +19,39 @@ import com.example.springapp.service.CustomerService;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping()
+@RequestMapping("/customer")
 public class CustomerController {
 	
 	@Autowired
 	private CustomerService customerService;
 	
-	@PostMapping("/customer")
-	public String register(@RequestBody Customer customer) {
-		return customerService.register(customer);
-	}
 	
-	@GetMapping("/customer/id")
-	public Customer getUserProfile(@RequestParam long id, @RequestHeader String email, @RequestHeader String password) {
-		return customerService.getUserProfile(id, email, password);
-	}
+
+    @PostMapping
+    public ResponseEntity<String> register(@RequestBody Customer customer) {
+        String result = customerService.register(customer);
+        return ResponseEntity.status(HttpStatus.CREATED).body(result);
+    }
 	
-	@PutMapping("/customer")
-	public String updateUserProfile(@RequestBody Customer customer) {
-		return customerService.updateUserProfile(customer);
-	}
+	
+    @GetMapping("/id")
+    public ResponseEntity<Customer> getUserProfileById(@RequestParam long id) {
+        Customer customer = customerService.getUserProfileById(id);
+        if (customer != null) {
+            return ResponseEntity.ok(customer);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @PutMapping
+    public ResponseEntity<String> updateUserProfile(@RequestBody Customer customer) {
+        String result = customerService.updateUserProfile(customer);
+        if (result != null) {
+            return ResponseEntity.ok(result);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }
