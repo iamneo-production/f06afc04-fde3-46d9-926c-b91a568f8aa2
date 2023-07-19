@@ -18,6 +18,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { CartComponent } from './cart/cart.component';
+import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantdashboard.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { CartComponent } from './cart/cart.component';
     RestaurantsignupComponent,
     ContactusComponent,
     AboutComponent,
-    AdminpanelComponent
+    AdminpanelComponent,
+    RestaurantdashboardComponent
   ],
   imports: [
     BrowserModule,

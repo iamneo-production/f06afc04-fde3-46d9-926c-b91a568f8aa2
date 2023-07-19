@@ -12,6 +12,8 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { CartComponent } from './cart/cart.component';
+import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantdashboard.component';
+
 
 
 
@@ -30,6 +32,7 @@ const routes: Routes = [
   {path:'contactus',component:ContactusComponent},
   {path:'adminpanel',component:AdminpanelComponent},
   {path:'cart',component:CartComponent},
+  {path:'restaurantdashboard',component:RestaurantdashboardComponent},
 
 
   

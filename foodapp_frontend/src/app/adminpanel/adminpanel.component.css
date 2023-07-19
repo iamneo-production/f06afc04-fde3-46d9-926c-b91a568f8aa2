@@ -1,13 +1,7 @@
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-body {
   background-color: #aeabb8;
-  overflow-y: auto;
+    overflow-y: auto;
+    height: 40.5rem;
 }
 
 .container {
@@ -18,4 +12,12 @@ body {
 
 .pointer-cursor {
   cursor: pointer;
+}
+
+.after-form-spacing {
+  margin-bottom: 20px;
+}
+
+.after-form-spacing1 {
+  margin-bottom: 70px;
 }
