@@ -1,0 +1,26 @@
+
+<table class="table table-dark">
+    <thead>
+      <tr>
+       
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Address</th>
+  
+        <th >Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr *ngFor="let customer of customers"> -->
+       <tr>
+        
+        <td>{{customer.name}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.addressId}}</td>
+        <td><button (click)="updateCustomer(customer.id)" class="btn-btn-primary">Update</button>
+            
+        </td>
+      </tr>
+      
+       </tbody>
+  </table>
