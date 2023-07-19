@@ -1,5 +1,6 @@
 package com.example.springapp.service;
 
+import com.example.springapp.model.Order;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,7 @@ public class MenuItemService {
 
 	@Autowired
 	private MenuItemRepository menuItemRepository;
-	
+
 	public String addMenuItem(MenuItem menuItem) {
 		menuItemRepository.save(menuItem);
 		return "Created";
@@ -36,5 +37,8 @@ public class MenuItemService {
 		return menuItemRepository.findAll();
 	}
 
-}
+	public MenuItem getMenuItemsById(Long id) {
+		return menuItemRepository.findById(id).orElse(null);
+	}
 
+}

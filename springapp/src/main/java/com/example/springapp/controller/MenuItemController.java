@@ -6,31 +6,35 @@ import org.springframework.web.bind.annotation.*;
 import com.example.springapp.model.MenuItem;
 import com.example.springapp.service.MenuItemService;
 
-import java.awt.*;
 import java.util.List;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping()
+@RequestMapping("/menu-item")
 public class MenuItemController {
-	
+
 	@Autowired
 	private MenuItemService menuItemService;
-	
-	@PostMapping("/menu-item")
+
+	@PostMapping
 	public String addMenuItem(@RequestBody MenuItem menuItem) {
 		String repsonse = menuItemService.addMenuItem(menuItem);
 		return repsonse;
 	}
 
-	@PutMapping(value = "/PUT/menu-item")
+	@PutMapping
 	public String updateMenuItems(@RequestBody MenuItem menuItem) {
 		return menuItemService.updateMenuItems(menuItem);
 	}
 
-	@GetMapping(value = "get/menu-item")
+	@GetMapping
 	public List<MenuItem> getMenuItems() {
 		return menuItemService.getMenuItems();
 	}
 
+	@GetMapping("/{id}")
+	public MenuItem getMenuItemById(@PathVariable Long id) {
+		MenuItem menuItem = menuItemService.getMenuItemsById(id);
+		return menuItem;
+	}
 }
