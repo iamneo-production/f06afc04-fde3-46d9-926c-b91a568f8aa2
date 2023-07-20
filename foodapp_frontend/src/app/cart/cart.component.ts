@@ -19,6 +19,7 @@ export class CartComponent implements OnInit {
   deliveryCharge:number=0;
   availablecoupans:string[]=['WELCOME','BIGDAY','FRESHIP']
   
+  
 
   constructor(private cartService: CartService, private router: Router) {}
   
