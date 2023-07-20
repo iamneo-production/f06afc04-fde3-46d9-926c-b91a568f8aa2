@@ -20,27 +20,27 @@
                     <div class="name">{{food.name}}</div>
                     <div class="price">{{food.price | currency:'INR'}}</div>
                     <div class="tags">
-                        <div class="tag" *ngFor="let tag of food.tags">{{tag}}</div>
+                        <div class="tag" *ngFor="let tag of food.tags.split(',')">{{tag}}</div>
                     </div>
-                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper ligula sed diam ultrices venenatis. Duis nec sem lobortis arcu euismod efficitur eget amet.</div>
-                    <div class="addToCart" id="addToCart-{{food.id}}">
+                    <div class="description">{{food.description}}</div>
+                    <div class="addToCart" *ngIf="getQtyById(food.id)==0">
                         <button value="{{food.id}}" (click)="addToCart($event)">Add to Cart</button>
                     </div>
-                    <div class="addToCart hidden" id="addToCartBtns-{{food.id}}">
-                        <button value="{{food.id}}" (click)="decrease($event)">-</button>
-                        <a>{{order[food.id]}}</a>
-                        <button value="{{food.id}}" (click)="increase($event)">+</button>
+                    <div class="addToCart" *ngIf="getQtyById(food.id)!=0">
+                        <button value="{{food.id}}" (click)="decreaseQty($event)">-</button>
+                        <a>{{getQtyById(food.id)}}</a>
+                        <button value="{{food.id}}" (click)="increaseQty($event)">+</button>
                     </div>
                 </div>
             </div>
         </li>
     </ul>
 
-    <div id="order" class="centered" *ngIf="!zeroItems()">
-        <div class="num-items" *ngIf="oneItem()">{{totalItems}} item</div>
-        <div class="num-items" *ngIf="!oneItem()">{{totalItems}} items</div>
+    <div id="order" class="centered" *ngIf="order.length!=0">
+        <div class="num-items" *ngIf="order.length==1">{{order.length}} item</div>
+        <div class="num-items" *ngIf="order.length>1">{{order.length}} items</div>
         &nbsp;|&nbsp;
-        <div class="cost">{{totalAmount | currency:'INR'}}</div>
+        <div class="cost">{{getTotalAmount() | currency:'INR'}}</div>
         <div class="view-cart" routerLink="/cart">View Cart <img src="/assets/menu/cart.svg"></div>
     </div>
 </div>

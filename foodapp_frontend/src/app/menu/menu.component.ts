@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { FoodItem } from '../menuService/foodItem';
-import { GetMenuService } from '../menuService/menu-service.service';
+import { MenuService } from './menu.service';
+import { FoodItem } from '../FoodItem';
+import { Order } from '../Order';
 
 @Component({
   selector: 'app-menu',
@@ -9,66 +10,42 @@ import { GetMenuService } from '../menuService/menu-service.service';
 })
 export class MenuComponent {
 
-  constructor(private menuService:GetMenuService) { }
-  
-  menu:FoodItem[] = this.menuService.getMenu();
-  filteredMenu:FoodItem[] = this.menu;
+  constructor(private menuService:MenuService) { }
 
-  order:any = {};
-  totalItems:number = 0;
-  totalAmount:number = 0;
+  menu:FoodItem[] = [];
+  filteredMenu:FoodItem[] = [];
 
-  zeroItems() {
-    if(this.totalItems==0)
-      return true;
-    return false;
+  ngOnInit() {
+    this.menuService.getMenu()
+      .subscribe(data => {
+        this.menu = data;
+        this.filteredMenu = this.menu;
+      });
   }
 
-  oneItem() {
-    if(this.totalItems==1)
-      return true;
-    return false;
-  }
+  order:Order[] = this.menuService.order;
 
   addToCart(event:any) {
     let foodId:number = event.target.value;
-    this.order[foodId] = 1;
-    
-    this.totalItems++;
-    event.target.parentNode.style.display = "none";
-    (<HTMLDivElement>document.querySelector("#addToCartBtns-"+foodId)).style.display = "block";
-
-    this.totalAmount += this.getPrice(foodId);
+    let foodItem:FoodItem = this.menu.find(foodItem => foodItem.id == foodId) as FoodItem;
+    this.order.push(new Order(foodItem.id, foodItem.name, foodItem.description, foodItem.tags, foodItem.price, foodItem.imageUrl, 1));
   }
 
-  increase(event:any) {
+  increaseQty(event:any) {
     let foodId:number = event.target.value;
-    this.order[foodId] += 1;
-
-    this.totalAmount += this.getPrice(foodId);
+    let orderItem:Order = this.order.find(orderItem => orderItem.id == foodId) as Order;
+    orderItem.quantity++;
   }
 
-  decrease(event:any) {
+  decreaseQty(event:any) {
     let foodId:number = event.target.value;
+    let orderItem:Order = this.order.find(orderItem => orderItem.id == foodId) as Order;
+    orderItem.quantity--;
 
-    if(this.order[foodId] == 1) {
-      this.totalItems--;
-      event.target.parentNode.style.display = "none";
-      (<HTMLDivElement>document.querySelector("#addToCart-"+foodId)).style.display = "block";
+    if(orderItem.quantity == 0) {
+      let deleteIndex:number = this.order.findIndex(orderItem => orderItem.id == foodId);
+      this.order.splice(deleteIndex, 1);
     }
-    else
-      this.order[foodId] -= 1;
-
-    this.totalAmount -= this.getPrice(foodId);
-  }
-
-  getPrice(foodId:number) {
-    for(let i=0;i<this.menu.length;i++) {
-      if(foodId == this.menu[i].id)
-        return this.menu[i].price;
-    }
-    console.log("Price not found for food with id "+foodId);
-    return 0;
   }
 
   searchMenu(event:any) {
@@ -79,5 +56,20 @@ export class MenuComponent {
     else {
       this.filteredMenu = this.menu.filter(food => food.name.toLowerCase().includes(searchTerm.toLowerCase()));
     }
+  }
+
+  getTotalAmount() {
+    let totalAmount:number = 0;
+    this.order.forEach(orderItem => {
+      totalAmount += orderItem.price*orderItem.quantity;
+    });
+    return totalAmount;
+  }
+
+  getQtyById(foodId:number) {
+    let orderItem:Order = this.order.find(orderItem => orderItem.id == foodId) as Order;
+    if(orderItem == undefined)
+      return 0;
+    return orderItem.quantity;
   }
 }
