@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { OrderCreateComponent } from './order-create/order-create.component';
+import { NotificationComponent } from './notification/notification.component';
 
 const routes: Routes = [
   // Other routes...
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'update-customer/:id', component: UpdateCustomerComponent},
   {path: 'order-history', component: OrderHistoryComponent},
   {path: 'order-create', component: OrderCreateComponent},
+  {path: 'notification', component: NotificationComponent},
   {path:'',redirectTo:'login',pathMatch:'full'},
   {
     path: 'profile',

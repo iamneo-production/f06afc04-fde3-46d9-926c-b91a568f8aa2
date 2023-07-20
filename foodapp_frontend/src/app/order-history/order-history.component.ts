@@ -44,5 +44,10 @@ getOrders(){
     this.orders=data;
   })
 }
+reorderItems(order:any){
+  this.service.reorderItems(order,order.customerId).subscribe((response: any) => {
+  this.router.navigate(['cart', order.customerId]);
+});
+}
 
 }

@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { OrderCreateComponent } from './order-create/order-create.component';
+import { NotificationComponent } from './notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { OrderCreateComponent } from './order-create/order-create.component';
     UpdateCustomerComponent,
     OrderHistoryComponent,
     OrderCreateComponent,
+    NotificationComponent,
     
    
   ],
