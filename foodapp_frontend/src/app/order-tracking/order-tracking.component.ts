@@ -1,22 +1,41 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
+interface Order {
+  id: number;
+  customerId: number;
+  menuItemId: number;
+  totalCost: number;
+  deliveryAddress: string;
+  deliveryTime: string;
+  restaurantId: number;
+  status: string;
+}
 
 @Component({
   selector: 'app-order-tracking',
   templateUrl: './order-tracking.component.html',
   styleUrls: ['./order-tracking.component.css']
 })
-export class OrderTrackingComponent {
-  order = {
-    id: 34760,
-    status: 'Preparing',
-    deliveryTime: '2:30 PM',
-    deliveryPerson: {
-      name: 'Jhon',
-      contactno: '6304713223',
-      location: '1-135A, Ramayapalem, Near Kondepi, Ongole',
-    }
-}
-}
+export class OrderTrackingComponent implements OnInit {
+  order: Order | undefined;
 
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+    this.fetchOrderDetails();
+  }
+
+  fetchOrderDetails() {
+    const orderId = 1; 
+    this.http.get<Order>(`http://localhost:8080/order/${orderId}`)
+      .subscribe(
+        (response) => {
+          this.order = response;
+        },
+        (error) => {
+          console.error('Failed to fetch order details:', error);
+        }
+      );
+  }
+}
