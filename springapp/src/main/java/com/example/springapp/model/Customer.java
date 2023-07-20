@@ -23,8 +23,9 @@ public class Customer {
 	@Column(nullable=false)
 	private String password;
 	
-	@Column
-	private int addressId;
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="address_id")
+	private Address addressId;
 
 	public long getId() {
 		return id;
@@ -58,15 +59,15 @@ public class Customer {
 		this.password = password;
 	}
 
-	public int getAddressId() {
+	public Address getAddressId() {
 		return addressId;
 	}
 
-	public void setAddressId(int addressId) {
+	public void setAddressId(Address addressId) {
 		this.addressId = addressId;
 	}
-
-	public Customer(long id, String name, String email, String password, int addressId) {
+	
+	public Customer(long id, String name, String email, String password, Address addressId) {
 		super();
 		this.id = id;
 		this.name = name;
