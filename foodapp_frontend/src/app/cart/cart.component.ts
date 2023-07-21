@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {CartService} from './cart.service';
 import { Router } from '@angular/router';
+import { MenuService } from '../menu/menu.service';
+import { Order } from '../Order';
 
 
 @Component({
@@ -21,14 +23,16 @@ export class CartComponent implements OnInit {
   
   
 
-  constructor(private cartService: CartService, private router: Router) {}
+  constructor(private cartService: CartService, private router: Router,private menuService:MenuService) {}
   
 
   ngOnInit() {
     this.items = this.cartService.getItems();
     this.total = this.cartService.getTotal();
     this.calculateDiscountedPrice();
+    
   }
+  orders:Order[]=this.menuService.order;
 
   incrementItemQuantity(item: any): void {
     this.cartService.incrementItemQuantity(item);

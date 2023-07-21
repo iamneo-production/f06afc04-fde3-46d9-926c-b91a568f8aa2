@@ -12,7 +12,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { CartComponent } from './cart/cart.component';
-
+import { MenuComponent } from './menu/menu.component';
 
 
 
@@ -30,7 +30,7 @@ const routes: Routes = [
   {path:'contactus',component:ContactusComponent},
   {path:'adminpanel',component:AdminpanelComponent},
   {path:'cart',component:CartComponent},
-
+  { path: 'menu', component: MenuComponent },
 
   
   {path:'**',pathMatch:'full',redirectTo:'dashboard'}

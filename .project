@@ -24,6 +24,16 @@
 		<filter>
 <<<<<<< HEAD
 <<<<<<< HEAD
+			<id>1688104497859</id>
+=======
+<<<<<<< HEAD
+			<id>1688114600148</id>
+=======
+			<id>1688051281088</id>
+>>>>>>> a237f48f8c7ea80b83be2a9b95ae698c76adf8ad
+>>>>>>> deff43fc3665e43775af2aa3b94a0425ce172108
+=======
+<<<<<<< HEAD
 			<id>1689149951248</id>
 =======
 <<<<<<< HEAD
@@ -43,10 +53,14 @@
 =======
 			<id>1689240979094</id>
 >>>>>>> 07b30fd81a250e6070f26c7afcfe9712e30cc599
+>>>>>>> origin/Project-Workspace-Ravi-Byahut
 			<name></name>
 			<type>30</type>
 			<matcher>
 				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+<<<<<<< HEAD
+				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
@@ -56,6 +70,7 @@
 =======
 				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
 >>>>>>> 98fdfa89a834b4f048fbd7c0654ef6cd3e932024
+>>>>>>> origin/Project-Workspace-Ravi-Byahut
 			</matcher>
 		</filter>
 	</filteredResources>
