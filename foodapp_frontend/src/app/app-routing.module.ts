@@ -13,6 +13,8 @@ import { AboutComponent } from './about/about.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { CartComponent } from './cart/cart.component';
 import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantdashboard.component';
+import { HomeComponent } from './home/home.component';
+
 
 
 
@@ -33,6 +35,7 @@ const routes: Routes = [
   {path:'adminpanel',component:AdminpanelComponent},
   {path:'cart',component:CartComponent},
   {path:'restaurantdashboard',component:RestaurantdashboardComponent},
+  {path:'home',component:HomeComponent},
 
 
   

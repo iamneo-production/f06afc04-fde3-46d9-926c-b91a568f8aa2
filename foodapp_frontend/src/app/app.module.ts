@@ -19,6 +19,7 @@ import { AboutComponent } from './about/about.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { CartComponent } from './cart/cart.component';
 import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantdashboard.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantda
     ContactusComponent,
     AboutComponent,
     AdminpanelComponent,
-    RestaurantdashboardComponent
+    RestaurantdashboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
