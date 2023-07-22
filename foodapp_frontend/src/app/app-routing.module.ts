@@ -37,7 +37,7 @@ const routes: Routes = [
   {path: 'contactus',component:ContactusComponent},
   {path: 'home', component: HomeComponent, canActivate: [UserAuthGuard]},
   {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard] },
-  {path: 'menu',component:MenuComponent, canActivate: [UserAuthGuard] },
+  {path: 'menu',component:MenuComponent,canActivate: [UserAuthGuard] },
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
   {path: 'adminpanel', component: AdminpanelComponent, canActivate: [AdminAuthGuard] },
 

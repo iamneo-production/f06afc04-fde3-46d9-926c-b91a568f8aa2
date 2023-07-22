@@ -21,27 +21,26 @@ export class CartComponent implements OnInit {
   deliveryCharge:number=0;
   availablecoupans:string[]=['WELCOME','BIGDAY','FRESHIP']
   
+  
 
-  constructor(private cartService: CartService, private router: Router,private menuService:MenuService) {}
+  constructor(private cartService: CartService, private router: Router,public menuService:MenuService) {}
   
 
   ngOnInit() {
     this.items = this.cartService.getItems();
     this.total = this.cartService.getTotal();
     this.calculateDiscountedPrice();
-    
   }
+  
   orders:Order[]=this.menuService.order;
-
   incrementItemQuantity(item: any): void {
     this.cartService.incrementItemQuantity(item);
-    this.total = this.cartService.getTotal();
     this.discount(this.coupanInput);
   }
 
   decrementItemQuantity(item: any): void {
     this.cartService.decrementItemQuantity(item);
-    this.total = this.cartService.getTotal();
+    // this.total = this.cartService.getTotal();
     this.discount(this.coupanInput);
   }
 
@@ -56,28 +55,32 @@ export class CartComponent implements OnInit {
   }
 
   clearCart(): void {
-    this.cartService.clearCart();
-    this.items = [];
+    // this.cartService.clearCart();
+    this.orders = [];
     this.total = 0;
     this.calculateDiscountedPrice();
   }
 
   discount(couponInput: string): void {
     const enteredCoupon = couponInput.trim().toUpperCase();
-    
-    if (couponInput === 'WELCOME' && this.discountcount === 0) {
-      this.discountvalue = 0.5 * this.total;
+
+    if (enteredCoupon === 'WELCOME' && this.discountcount === 0) {
+      this.discountvalue = Math.min(0.5 * this.menuService.getTotalAmount(), 200);
       this.calculateDiscountedPrice();
       this.discountcount++;
       alert('Coupon Applied Successfully');
-    } else if (couponInput === 'WELCOME' && this.discountcount !== 0) {
-      this.discountvalue=0.5*this.total;
+    } else if (enteredCoupon === 'BIGDAY' && this.discountcount===0) {
+      this.discountvalue = 100;
       this.calculateDiscountedPrice();
+      this.discountcount++;
+    } else if (enteredCoupon === 'FREESHIP' && this.discountcount==0 && this.deliveryCharge===50) {
+      this.discountvalue = 50;
+      this.calculateDiscountedPrice();
+      this.discountcount++;
     } else {
       this.discountedprice = this.total;
       this.discountcount = 0;
       this.discountvalue = 0;
-      
     }
   }
 
@@ -90,9 +93,11 @@ export class CartComponent implements OnInit {
   }
   update1():void{
    this.deliveryCharge=50;
+   
   }
   update2():void{
     this.deliveryCharge=0;
   }
-}
 
+  
+}
