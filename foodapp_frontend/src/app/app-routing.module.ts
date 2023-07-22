@@ -15,6 +15,7 @@ import { CartComponent } from './cart/cart.component';
 import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantdashboard.component';
 import { HomeComponent } from './home/home.component';
 import { UserAuthGuard, RestaurantAuthGuard, AdminAuthGuard } from './auth.guard';
+import { MenuComponent } from './menu/menu.component';
 
 
 
@@ -36,6 +37,7 @@ const routes: Routes = [
   {path: 'contactus',component:ContactusComponent},
   {path: 'home', component: HomeComponent, canActivate: [UserAuthGuard]},
   {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard] },
+  {path: 'menu',component:MenuComponent, canActivate: [UserAuthGuard] },
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
   {path: 'adminpanel', component: AdminpanelComponent, canActivate: [AdminAuthGuard] },
 

@@ -22,8 +22,13 @@
 
     <!--Logo-->
     <div class="logo-container">
-      <a *ngIf="router.url==='/home' || router.url==='/adminpanel'     || router.url==='/menu'
-      " [routerLink]="['/home']">
+      <a *ngIf="router.url==='/home'" [routerLink]="['/home']">
+        <img src="..\assets\images\logo4.jpg" width="100" height="55" alt="Logo">
+      </a>
+      <a *ngIf="router.url==='/adminpanel'"[routerLink]="['/adminpanel']">
+        <img src="..\assets\images\logo4.jpg" width="100" height="55" alt="Logo">
+      </a>
+      <a *ngIf="router.url==='/restaurantdashboard'"[routerLink]="['/restaurantdashboard']">
         <img src="..\assets\images\logo4.jpg" width="100" height="55" alt="Logo">
       </a>
     </div>
@@ -80,7 +85,7 @@
     <!--My cart-->
     <button *ngIf="router.url==='/dashboard'" class="button" onclick="alert('Please Login to view Your Cart')"
       value="My cart"> <span><i class='fas fa-shopping-cart'></i> My Cart </span></button>
-    <button *ngIf="router.url==='/home'" class="button" value="My cart"><span>My Cart </span></button>
+    <button *ngIf="router.url==='/home'" class="button" value="My cart" [routerLink]="(['/cart'])"><span>My Cart </span></button>
 
     <!-- profile  -->
     <button *ngIf="router.url==='/adminpanel'" class="button"><span><i class="fas fa-user"></i>
@@ -90,6 +95,7 @@
     <!--Log out-->
     <button *ngIf="router.url==='/home'
                      || router.url==='/adminpanel'
+                     || router.url==='/restaurantdashboard'
                      || router.url==='/cart'" class="button" (click)="logout()"> <span> <i class="fas fa-sign-out-alt">
         </i> Log out</span></button>
 
