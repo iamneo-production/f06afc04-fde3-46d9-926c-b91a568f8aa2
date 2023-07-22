@@ -10,7 +10,6 @@
   padding: 70px 0;
   width: 100%;
   background-color: #aeabb8;
-  overflow-y: auto; /* Add this line to enable vertical scrolling when necessary */
 }
 
 .pic {

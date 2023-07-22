@@ -19,6 +19,8 @@ import { AboutComponent } from './about/about.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { CartComponent } from './cart/cart.component';
 import { MenuComponent } from './menu/menu.component';
+import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantdashboard.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { MenuComponent } from './menu/menu.component';
     ContactusComponent,
     AboutComponent,
     AdminpanelComponent,
-    MenuComponent
+    MenuComponent,
+    RestaurantdashboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
