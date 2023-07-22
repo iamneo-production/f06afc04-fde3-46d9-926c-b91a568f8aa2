@@ -112,7 +112,7 @@ div.content-right .name {
 .addToCart button, .addToCart a {
     padding: 10px 15px;
     border: none;
-    background: #e72929;
+    background: orange;
     color: white;
     opacity: 0.8;
     margin: 0;
@@ -132,7 +132,7 @@ img.food {
 
 #order {
     display: flex;
-    background-color: #e72929;
+    background-color:orange;
     color: white;
     padding: 10px;
     position: fixed;

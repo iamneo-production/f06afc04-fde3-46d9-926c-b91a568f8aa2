@@ -81,16 +81,18 @@
     <button *ngIf="router.url==='/dashboard'" class="button" onclick="alert('Please Login to view Your Cart')"
       value="My cart"> <span><i class='fas fa-shopping-cart'></i> My Cart </span></button>
     <button *ngIf="router.url==='/home'" class="button" value="My cart"><span>My Cart </span></button>
+    <button *ngIf="router.url==='/menu'" class="button" value="My cart" [routerLink]="(['/cart'])"><span><i class='fas fa-shopping-cart'></i>My Cart </span></button>
 
     <!-- profile  -->
-    <button *ngIf="router.url==='/adminpanel'" class="button"><span><i class="fas fa-user"></i>
+    <button *ngIf="router.url==='/adminpanel'" class="button" ><span><i class="fas fa-user"></i>
         Edit Profile</span></button>
 
 
     <!--Log out-->
     <button *ngIf="router.url==='/home'
                      || router.url==='/adminpanel'
-                     || router.url==='/cart'" class="button" (click)="logout()"> <span> <i class="fas fa-sign-out-alt">
+                     || router.url==='/cart'
+                     || router.url==='/menu'" class="button" (click)="logout()"> <span> <i class="fas fa-sign-out-alt">
         </i> Log out</span></button>
 
   </div>

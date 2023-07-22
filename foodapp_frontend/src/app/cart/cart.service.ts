@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -8,19 +9,20 @@ export class CartService {
   total = 0;
 
   constructor() { }
+  
 
-  addToCart(item:any): void {
-    let existingItem = this.items.find((x: { name: any; }) => x.name === item.name);
-    if (existingItem) {
-      existingItem.quantity++;
-    } else {
-      item.quantity = 1;
-      this.items.push(item);
-    }
-    this.total += item.price;
-    console.log("Item added to cart: ", item);
-    console.log("Total after adding item: ", this.total);
-  }
+  // addToCart(item:any): void {
+  //   let existingItem = this.items.find((x: { name: any; }) => x.name === item.name);
+  //   if (existingItem) {
+  //     existingItem.quantity++;
+  //   } else {
+  //     item.quantity = 1;
+  //     this.items.push(item);
+  //   }
+  //   this.total += item.price;
+  //   console.log("Item added to cart: ", item);
+  //   console.log("Total after adding item: ", this.total);
+  // }
   
 
   getItems() {
@@ -61,9 +63,9 @@ export class CartService {
     }
   }
 
-  clearCart(): void {
-    this.items = [];
-    this.total = 0;
-  }
+  // clearCart(): void {
+  //   this.orders = [];
+  //   this.total = 0;
+  // }
   
 }

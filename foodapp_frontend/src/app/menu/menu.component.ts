@@ -59,11 +59,8 @@ export class MenuComponent {
   }
 
   getTotalAmount() {
-    let totalAmount:number = 0;
-    this.order.forEach(orderItem => {
-      totalAmount += orderItem.price*orderItem.quantity;
-    });
-    return totalAmount;
+    return this.menuService.getTotalAmount();
+    
   }
 
   getQtyById(foodId:number) {

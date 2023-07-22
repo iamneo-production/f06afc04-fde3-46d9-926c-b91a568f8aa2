@@ -122,7 +122,7 @@
   
   .button {
     border-radius: 4px;
-    background-color:#74919b;
+    background-color:orange;
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -172,4 +172,5 @@
     body {
       background-color: #f7f7f7; /* Set the background color here */
     }
+  
  

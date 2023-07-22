@@ -2,12 +2,11 @@
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<body> 
-<div *ngIf="items.length === 0" class="alert alert-info">
+<div *ngIf="orders.length === 0" class="alert alert-info">
   Your cart is empty.
 </div>
 
-<div *ngIf="items.length > 0">
+<div *ngIf="orders.length > 0">
   <table class="table">
     <thead>
       <tr>
@@ -19,17 +18,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of items">
-        <td>{{ item.name }}</td>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.name }}</td>
         <td>
-          <button class="btn btn-sm btn-secondary me-1" (click)="decrementItemQuantity(item)">-</button>
-          {{ item.quantity }}
-          <button class="btn btn-sm btn-secondary ms-1" (click)="incrementItemQuantity(item)">+</button>
+          <button class="btn btn-sm btn-secondary me-1" (click)="decrementItemQuantity(order)">-</button>
+          {{ order.quantity }}
+          <button class="btn btn-sm btn-secondary ms-1" (click)="incrementItemQuantity(order)">+</button>
         </td>
-        <td>{{ item.price | currency:'INR' }}</td>
-        <td>{{ item.quantity * item.price | currency:'INR' }}</td>
+        <td>{{ order.price | currency:'INR' }}</td>
+        <td>{{ order.quantity * order.price | currency:'INR' }}</td>
         <td>
-          <button class="btn btn-sm btn-danger" (click)="removeItem(item)">
+          <button class="btn btn-sm btn-danger" (click)="menuService.removeItem(order.id)">
             <i class="fas fa-trash-alt"></i>
           </button>
         </td>
@@ -38,11 +37,11 @@
     </tbody>
     <tfoot>
       <tr>
-        <td><button class="btn btn-secondary ml-0" routerLink="/restaurant/{{items[0].restaurantId}}">Add More Items</button></td>
+        <td><button class="btn btn-secondary ml-0" routerLink="/menu">Add More Items</button></td>
         <td></td>
         <td></td>
         <td></td>
-        <td style="font-size: medium;"><strong>Total: {{ total | currency:'INR' }}</strong></td>
+        <td style="font-size: medium;"><strong>Total: {{ menuService.getTotalAmount() | currency:'INR' }}</strong></td>
       </tr>
     </tfoot>
   </table>
@@ -94,7 +93,7 @@
     <h2>Summary</h2>
     <div class="summary-row">
       <span class="summary-label">Subtotal:</span>
-      <span class="summary-value">{{ total | currency:'INR' }}</span>
+      <span class="summary-value">{{ menuService.getTotalAmount() | currency:'INR' }}</span>
     </div>
     <div class="summary-row">
       <span class="summary-label">Discount:</span>
@@ -106,7 +105,7 @@
     </div>
     <div class="summary-row total-row">
       <span class="summary-label"><strong>Total:</strong></span>
-      <span class="summary-value">{{ (total - discountvalue + deliveryCharge) | currency:'INR' }}</span>
+      <span class="summary-value">{{ (menuService.getTotalAmount() - discountvalue + deliveryCharge) | currency:'INR' }}</span>
     </div>
   </div>
 
@@ -115,7 +114,6 @@
     <button class="btn btn-secondary" id="checkout" routerLink="/Checkout">Checkout</button>
   </div>
   </div>
-  </body>
   
   
 
