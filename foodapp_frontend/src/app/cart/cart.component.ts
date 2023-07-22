@@ -93,7 +93,7 @@ export class CartComponent implements OnInit {
   }
   update1():void{
    this.deliveryCharge=50;
-   this.discount(this.coupanInput);
+   
   }
   update2():void{
     this.deliveryCharge=0;
