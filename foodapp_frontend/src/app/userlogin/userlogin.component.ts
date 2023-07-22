@@ -34,7 +34,7 @@ export class UserloginComponent {
           // Login successful, redirect to the Home component
           this.authService.setAuthenticated(true, 'user'); // Set the user type as 'admin'
 
-          this.router.navigate(['/restaurantpanel']);
+          this.router.navigate(['/home']);
         } 
         },
       (error: HttpErrorResponse) => {
