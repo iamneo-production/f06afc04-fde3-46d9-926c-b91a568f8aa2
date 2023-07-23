@@ -19,24 +19,23 @@ export class RestaurantloginComponent {
   login(): void {
     if ( !this.email || !this.password ) {
       alert('Please provide all the required details.');
-      return; 
+      return;
     }
-    
-    const loginData = { 
-      email: this.email, 
-      password: this.password 
+  
+    const loginData = {
+      email: this.email,
+      password: this.password
     };
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
-    this.http.post('http://localhost:8080/restaurant', loginData, { headers, observe: 'response' }).subscribe(
+  
+    this.http.post<any>('http://localhost:8080/restaurantsLogin', loginData, { headers, observe: 'response' }).subscribe(
       (response) => {
-        if (response.status === 200) {
+        if (response.body?.message === 'Restaurants Login successful') {
           // Login successful, redirect to the Home component
-          this.authService.setAuthenticated(true, 'restaurant'); // Set the user type as 'admin'
-
-          this.router.navigate(['/restaurantpanel']);
+          this.authService.setAuthenticated(true, 'restaurant'); // Set the user type as 'restaurant'
+          this.router.navigate(['/restaurantdashboard']);
         } 
-        },
+      },
       (error: HttpErrorResponse) => {
         if (error.status === 401) {
           // Show an alert for invalid credentials
@@ -47,4 +46,4 @@ export class RestaurantloginComponent {
       }
     );
   }
-}
+  }
