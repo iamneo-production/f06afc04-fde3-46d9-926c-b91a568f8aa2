@@ -20,13 +20,7 @@ public class Restaurant {
     @Column(nullable = false)
     private String address;
 
-    public Restaurant(long id, String name, String address, Long menu_item_id, String email) {
-        this.id = id;
-        this.name = name;
-        this.address = address;
-        this.menu_item_id = menu_item_id;
-        this.email = email;
-    }
+ 
 
     @Column(nullable = false)
     private Long menu_item_id;
@@ -67,12 +61,40 @@ public class Restaurant {
         this.menu_item_id = menu_item_id;
     }
 
-    public Restaurant(long id, String name, String address, Long menu_item_id) {
-        super();
+  
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Restaurant(long id, String name, String address, Long menu_item_id, String email, String password) {
         this.id = id;
         this.name = name;
         this.address = address;
-        this.menu_item_id = menu_item_id;  
+        this.menu_item_id = menu_item_id;
+        this.email = email;
+        this.password = password;
+    }
+
+    
+
+    public Restaurant(long id, String name, String address, Long menu_item_id) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.menu_item_id = menu_item_id;
     }
 
     public Restaurant() {
