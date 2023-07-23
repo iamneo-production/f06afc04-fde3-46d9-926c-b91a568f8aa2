@@ -1,4 +1,18 @@
-* button,a,.btn-secondary{ 
+ button,a,.btn-secondary{ 
     background: #e72929;
     color: white;
 }
+
+
+input[type="submit"] {
+ 
+    background-color: #e72929;
+    color: #fff;
+   
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #768b94;
+    
+  
+  }

@@ -1,6 +1,6 @@
 .topnav {
   overflow: hidden;
-  background-color: white;
+  background-color:  #e72929;
   margin: 0;
 }
 
@@ -60,11 +60,11 @@
 .active {
   border-radius: 4px;
   border: none;
-  color: orange;
+  background-color: #e72929;
+  color:white;
   text-align: center;
   font-size: 18px;
   padding: 16px 16px;
-  background-color: rgb(241, 237, 237);
 
 }
 
@@ -82,9 +82,11 @@
 
 .button {
   border-radius: 4px;
-  background-color: white;
+  background-color:  #e72929;
+  opacity: 0.8;
+
   border: none;
-  color: orange;
+  color: white;
   text-align: center;
   font-size: 18px;
   padding: 16px 16px;
@@ -108,7 +110,9 @@
 }
 
 .button:hover {
-  background-color: rgb(241, 237, 237);
+  background-color:  #e72929;
+  opacity: 1;
+
 }
 
 .button:hover span {
