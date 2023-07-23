@@ -1,0 +1,118 @@
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <div *ngIf="orders.length === 0" class="alert alert-info">
+    Your cart is empty.
+  </div>
+  
+  <div *ngIf="orders.length > 0">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.name }}</td>
+          <td>
+            <button class="btn btn-sm btn-secondary me-1" (click)="decrementItemQuantity(order)">-</button>
+            {{ order.quantity }}
+            <button class="btn btn-sm btn-secondary ms-1" (click)="incrementItemQuantity(order)">+</button>
+          </td>
+          <td>{{ order.price | currency:'INR' }}</td>
+          <td>{{ order.quantity * order.price | currency:'INR' }}</td>
+          <td>
+            <button class="btn btn-sm btn-danger" (click)="menuService.removeItem(order.id)">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+          
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><button class="btn btn-secondary ml-0" routerLink="/menu">Add More Items</button></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td style="font-size: medium;"><strong>Total: {{ menuService.getTotalAmount() | currency:'INR' }}</strong></td>
+        </tr>
+      </tfoot>
+    </table>
+    <div class="select-delivery-option ml-3"><p>Select Delivery Option</p></div>
+    <table class="table">
+      <tr>
+        <td>
+          <div class="ml-1">
+          <div class="form-check mt-2">
+            <input class="form-check-input" type="radio" name="deliveryOption" id="delivery" value="delivery" [(ngModel)]="deliveryOption" (click)="update1()">
+            <label class="form-check-label" for="delivery">
+              Delivery
+            </label>
+          </div>
+          <div class="form-check mt-2">
+            <input class="form-check-input" type="radio" name="deliveryOption" id="pickup" value="pickup" [(ngModel)]="deliveryOption" (click)="update2()">
+            <label class="form-check-label" for="pickup">
+              Pickup
+            </label>
+          </div>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="deliveryOption === 'delivery'">
+        <td>
+          Delivery Charge: {{ deliveryCharge | currency:'INR' }}
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <div class="d-flex">
+            <input type="text" style="margin-right: 10px;" [(ngModel)]="coupanInput">
+            <button class="btn btn-sm btn-secondary me-1" (click)="discount(coupanInput)">Apply Coupon</button>
+          </div>
+          <div class="alert alert-success mt-3" *ngIf="discountvalue > 0">
+            <h3>Congratulations!</h3>
+            <p class="lead">You saved: {{ discountvalue | currency:'INR' }}</p>
+          </div>
+        </td>
+      </tr>
+      
+     
+    </table>
+    
+  
+    
+    <div class="summary-section" id="summary" class="text-bg-light p-3">
+      <h2>Summary</h2>
+      <div class="summary-row">
+        <span class="summary-label">Subtotal:</span>
+        <span class="summary-value">{{ menuService.getTotalAmount() | currency:'INR' }}</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Discount:</span>
+        <span class="summary-value">{{ discountvalue | currency:'INR' }}</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Delivery:</span>
+        <span class="summary-value">{{ deliveryCharge | currency:'INR' }}</span>
+      </div>
+      <div class="summary-row total-row">
+        <span class="summary-label"><strong>Total:</strong></span>
+        <span class="summary-value">{{ (menuService.getTotalAmount() - discountvalue + deliveryCharge) | currency:'INR' }}</span>
+      </div>
+    </div>
+  
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-secondary" id="clearcart" (click)="clearCart()">Clear Cart</button>
+      <button class="btn btn-secondary" id="checkout" routerLink="/Checkout">Checkout</button>
+    </div>
+    </div>
+    
+    
