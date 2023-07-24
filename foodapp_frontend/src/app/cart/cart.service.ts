@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { MenuService } from '../menu/menu.service';
 
 
 @Injectable({
@@ -8,7 +9,7 @@ export class CartService {
   items:any = [];
   total = 0;
 
-  constructor() { }
+  constructor(private menuService:MenuService) { }
   
 
   // addToCart(item:any): void {
@@ -25,14 +26,14 @@ export class CartService {
   // }
   
 
-  getItems() {
-    // return a default item to display in the cart
-    return [
-      { id: 1, name: 'Pizza', price: 9.99, quantity: 0 },
-      { id: 2, name: 'Burger', price: 6.99, quantity: 0 },
-      { id: 3, name: 'Fries', price: 3.99, quantity: 0 }
-    ];
-  }
+  // getItems() {
+  //   // return a default item to display in the cart
+  //   return [
+  //     { id: 1, name: 'Pizza', price: 9.99, quantity: 0 },
+  //     { id: 2, name: 'Burger', price: 6.99, quantity: 0 },
+  //     { id: 3, name: 'Fries', price: 3.99, quantity: 0 }
+  //   ];
+  // }
 
   getTotal(): number {
   console.log("Current total: ", this.total);
@@ -47,11 +48,11 @@ export class CartService {
   decrementItemQuantity(item:any): void {
     if(item.quantity>0)
     {item.quantity--;
-    this.total -= item.price;
-    if (item.quantity === 0) {
-      this.removeItem(item);
+    this.total -= item.price;}
+    else {
+      this.menuService.removeItem(item.id);
     }
-  }
+  
   }
 
   removeItem(item:any): void {
@@ -62,10 +63,11 @@ export class CartService {
       
     }
   }
+  
 
-  // clearCart(): void {
-  //   this.orders = [];
-  //   this.total = 0;
-  // }
+  
+  finalAmount(discountvalue:number,deliveryCharge:number):number{
+    return this.menuService.getTotalAmount()-discountvalue+deliveryCharge;
+  }
   
 }

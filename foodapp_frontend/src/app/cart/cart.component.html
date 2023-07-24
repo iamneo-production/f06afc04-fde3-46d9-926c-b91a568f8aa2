@@ -28,8 +28,8 @@
         <td>{{ order.price | currency:'INR' }}</td>
         <td>{{ order.quantity * order.price | currency:'INR' }}</td>
         <td>
-          <button class="btn btn-sm btn-danger" (click)="menuService.removeItem(order.id)">
-            <i class="fas fa-trash-alt"></i>
+          <button class="btn btn-sm btn-danger" (click)="menuService.removeItem(order.id); calculateDiscountedPrice()">
+                        <i class="fas fa-trash-alt"></i>
           </button>
         </td>
         
@@ -75,7 +75,9 @@
       <td>
         <div class="d-flex">
           <input type="text" style="margin-right: 10px;" [(ngModel)]="coupanInput">
-          <button class="btn btn-sm btn-secondary me-1" (click)="discount(coupanInput)">Apply Coupon</button>
+          <button class="btn btn-sm" [class.btn-danger]="couponApplied" [class.btn-secondary]="!couponApplied" (click)="discount(coupanInput)">
+            {{ couponApplied ? 'Remove Coupon' : 'Apply Coupon' }}
+          </button>
         </div>
         <div class="alert alert-success mt-3" *ngIf="discountvalue > 0">
           <h3>Congratulations!</h3>
@@ -105,7 +107,7 @@
     </div>
     <div class="summary-row total-row">
       <span class="summary-label"><strong>Total:</strong></span>
-      <span class="summary-value">{{ (menuService.getTotalAmount() - discountvalue + deliveryCharge) | currency:'INR' }}</span>
+      <span class="summary-value">{{ finalAmount() | currency:'INR' }}</span>
     </div>
   </div>
 
