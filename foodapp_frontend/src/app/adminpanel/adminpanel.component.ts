@@ -47,38 +47,43 @@ export class AdminpanelComponent {
   }
 
   fetchCustomerDetails() {
+    
+    this.showComplaints = false;
+    this.showRestaurant = false;
     this.http.get<any[]>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/customer')
       .subscribe(data => {
         this.customers = data;
         this.filteredCustomers = this.customers;
         this.pageSize = this.filteredCustomers.length; // Set the page size based on the number of customers
 
-        this.showComplaints = false;
-        this.showRestaurant = false;
+        
       });
   }
 
   fetchRestaurantDetails() {
+          
+    this.showCustomer = false;
+    this.showComplaints = false;
     this.http.get<any[]>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/restaurant')
       .subscribe(data => {
+  
         this.restaurants = data;
         this.filteredRestaurants = this.restaurants;
         this.pageSize = this.filteredCustomers.length; // Set the page size based on the number of customers
 
-        this.showCustomer = false;
-        this.showComplaints = false;
       });
   }
 
   fetchComplaints() {
+
+    this.showCustomer = false;
+    this.showRestaurant = false;
     this.http.get<any[]>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/contactus')
       .subscribe(data => {
         this.complaints = data;
         this.filteredComplaints = this.complaints;
         this.pageSize = this.filteredCustomers.length; // Set the page size based on the number of customers
 
-        this.showCustomer = false;
-        this.showRestaurant = false;
       });
   }
 

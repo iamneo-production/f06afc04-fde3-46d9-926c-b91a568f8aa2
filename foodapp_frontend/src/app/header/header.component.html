@@ -100,7 +100,7 @@
     <button *ngIf="router.url==='/home'
                      || router.url==='/adminpanel'
                      || router.url==='/restaurantdashboard'
-                     || router.url==='/cart'" class="button" (click)="logout()"> <span> <i class="fas fa-sign-out-alt">
+                     || router.url==='/cart'" class="button" routerLink='/dashboard'> <span> <i class="fas fa-sign-out-alt">
         </i> Log out</span></button>
 
   </div>

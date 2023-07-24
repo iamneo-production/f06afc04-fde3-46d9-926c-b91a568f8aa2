@@ -16,6 +16,7 @@ import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantda
 import { HomeComponent } from './home/home.component';
 import { UserAuthGuard, RestaurantAuthGuard, AdminAuthGuard } from './auth.guard';
 import { MenuComponent } from './menu/menu.component';
+import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
 
 
 
@@ -33,11 +34,14 @@ const routes: Routes = [
   {path: 'adminsignup',component:AdminsignupComponent},
   {path: 'restaurantlogin',component:RestaurantloginComponent},
   {path: 'restaurantsignup',component:RestaurantsignupComponent},
+
   {path: 'about',component:AboutComponent},
   {path: 'contactus',component:ContactusComponent},
   {path: 'home', component: HomeComponent, canActivate: [UserAuthGuard]},
-  {path: 'cart', component: CartComponent },
-  {path: 'menu',component:MenuComponent },
+  {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard]},
+  {path: 'menu',component:MenuComponent, canActivate: [UserAuthGuard]},
+  {path: 'restaurantlist',component:RestaurantlistComponent, canActivate: [UserAuthGuard]},
+
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
   {path: 'adminpanel', component: AdminpanelComponent, canActivate: [AdminAuthGuard] },
 
