@@ -13,6 +13,7 @@
             <p><strong>Delivery Address:</strong> {{ order.deliveryAddress }}</p>
             <p><strong>Delivery Time:</strong> {{ order.deliveryTime | date }}</p>
             <p><strong>Status:</strong> {{ order.status }}</p>
+            <a href="https://www.google.com/maps/@16.3050267,80.4215138,15z" class="btn btn-info track-order-button">Track my order</a>
           </div>
         </div>
         <div *ngIf="!order" class="text-center mt-3">

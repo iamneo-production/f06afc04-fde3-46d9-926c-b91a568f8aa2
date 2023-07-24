@@ -1,5 +1,5 @@
 body {
-  background-color: #aeabb8;
+  background-color: white;
   
   height: 90.75vh;
   overflow-y: auto;
@@ -29,9 +29,23 @@ body {
 
 .container .header {
   font-weight: bold;
-  background-color: orange;
+  background-color: #e72929;
   border-radius: 30px 50px ; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.track-order-button {
+  display: inline-block;
+  justify-content: center;
+  padding: 10px 25px;
+  background-color: #e72929;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.track-order-button:hover {
+  background-color: rgb(255, 0, 25);
 }
 
 
