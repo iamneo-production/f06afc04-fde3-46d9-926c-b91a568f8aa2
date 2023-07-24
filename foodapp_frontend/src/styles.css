@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+button, .btn-secondary, input[type="submit"], .title { 
+    background: #e72929;
+    opacity: 0.8;
+    color: white;
+}
+
+button:hover, .btn-secondary:hover, input[type="submit"]:hover, .title:hover { 
+    opacity: 1;
+}
