@@ -11,28 +11,38 @@ export class UsersignupComponent {
   name: string = '';
   email: string = '';
   password: string = '';
-  addressId: string = '';
+  city: string = '';
+  street: string = '';
+  state: string = '';
+  zipcode: string = '';
 
   constructor(private http: HttpClient, private router: Router) {}
 
   register(): void {
-
-    if (!this.name || !this.email || !this.password || !this.addressId) {
+    if (!this.name || !this.email || !this.password || !this.street || !this.city || !this.state || !this.zipcode) {
       alert('Please provide all the required details.');
-      return; 
+      return;
     }
+
+    const addressData = {
+      street: this.street,
+      city: this.city,
+      state: this.state,
+      zipCode: this.zipcode
+    };
+
     const customerData = {
       name: this.name,
       email: this.email,
       password: this.password,
-      addressId: this.addressId
+      addressId: addressData
     };
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post('http://localhost:8080/customer', customerData, { headers, responseType: 'text' }).subscribe(
+    this.http.post('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/customer', customerData, { headers, responseType: 'text' }).subscribe(
       (response: any) => {
-        console.log(response); 
+        console.log(response);
         if (response.includes('created') || response.includes('Customer created')) {
           alert('Registration successful!');
         } else if (response.includes('already registered')) {
