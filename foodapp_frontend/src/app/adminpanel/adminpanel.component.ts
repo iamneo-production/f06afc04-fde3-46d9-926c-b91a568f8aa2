@@ -19,6 +19,9 @@ export class AdminpanelComponent {
   customerSearchTerm: string = '';
   restaurantSearchTerm: string = '';
   complaintSearchTerm: string = '';
+  currentPage: number = 1;
+  pageSize :any;
+
 
   constructor(private http: HttpClient) {}
 
@@ -44,31 +47,43 @@ export class AdminpanelComponent {
   }
 
   fetchCustomerDetails() {
-    this.http.get<any[]>('http://localhost:8080/customer')
+    this.http.get<any[]>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/customer')
       .subscribe(data => {
         this.customers = data;
         this.filteredCustomers = this.customers;
+        this.pageSize = this.filteredCustomers.length; // Set the page size based on the number of customers
+
+        this.showComplaints = false;
+        this.showRestaurant = false;
       });
   }
 
   fetchRestaurantDetails() {
-    this.http.get<any[]>('http://localhost:8080/restaurant')
+    this.http.get<any[]>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/restaurant')
       .subscribe(data => {
         this.restaurants = data;
         this.filteredRestaurants = this.restaurants;
+        this.pageSize = this.filteredCustomers.length; // Set the page size based on the number of customers
+
+        this.showCustomer = false;
+        this.showComplaints = false;
       });
   }
 
   fetchComplaints() {
-    this.http.get<any[]>('http://localhost:8080/contactus')
+    this.http.get<any[]>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/contactus')
       .subscribe(data => {
         this.complaints = data;
         this.filteredComplaints = this.complaints;
+        this.pageSize = this.filteredCustomers.length; // Set the page size based on the number of customers
+
+        this.showCustomer = false;
+        this.showRestaurant = false;
       });
   }
 
   deleteCustomer(customer: any) {
-    this.http.delete(`http://localhost:8080/customer/${customer.id}`, { responseType: 'text' })
+    this.http.delete(`https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/customer/${customer.id}`, { responseType: 'text' })
       .subscribe(() => {
         this.customers = this.customers.filter(c => c.id !== customer.id);
         this.filteredCustomers = this.filteredCustomers.filter(c => c.id !== customer.id);
@@ -80,7 +95,7 @@ export class AdminpanelComponent {
   }
 
   deleteRestaurant(restaurant: any) {
-    this.http.delete(`http://localhost:8080/restaurant/${restaurant.id}`, { responseType: 'text' })
+    this.http.delete(`https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/restaurant/${restaurant.id}`, { responseType: 'text' })
       .subscribe(() => {
         this.restaurants = this.restaurants.filter(r => r.id !== restaurant.id);
         this.filteredRestaurants = this.filteredRestaurants.filter(r => r.id !== restaurant.id);
@@ -94,7 +109,7 @@ export class AdminpanelComponent {
 
 
   deleteComplaint(complaint: any) {
-    this.http.delete(`http://localhost:8080/contactus/${complaint.id}`, { responseType: 'text' })
+    this.http.delete(`https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/contactus/${complaint.id}`, { responseType: 'text' })
       .subscribe(() => {
         this.filteredComplaints = this.filteredComplaints.filter(c => c.id !== complaint.id);
         window.alert('Complaint deleted successfully');

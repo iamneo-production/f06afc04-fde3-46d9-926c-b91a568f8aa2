@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class FoodService {
-  url = 'http://localhost:8080/item';
+  url = 'https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/item';
   constructor(private http:HttpClient){}
   restaurant(){
     return this.http.get(this.url);
