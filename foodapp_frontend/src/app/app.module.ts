@@ -22,6 +22,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantdashboard.component';
 import { HomeComponent } from './home/home.component';
 import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { RestaurantlistComponent } from './restaurantlist/restaurantlist.compone
     MenuComponent,
     RestaurantdashboardComponent,
     HomeComponent,
-    RestaurantlistComponent
+    RestaurantlistComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
