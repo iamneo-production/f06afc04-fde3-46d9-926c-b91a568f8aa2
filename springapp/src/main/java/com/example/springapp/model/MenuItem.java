@@ -10,70 +10,70 @@ import javax.persistence.Table;
 @Entity
 @Table(name="menu")
 public class MenuItem {
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
-	
-	@Column(nullable=false)
-	private String name;
-	
-	private String description;
-	
-	@Column(nullable=false)
-	private double price;
-	
-	private String tags;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
 
-	public Long getId() {
-		return id;
-	}
+    @Column(nullable=false)
+    private String name;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    private String description;
 
-	public String getName() {
-		return name;
-	}
+    @Column(nullable=false)
+    private double price;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    private String tags;
 
-	public String getDescription() {
-		return description;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public double getPrice() {
-		return price;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setPrice(double price) {
-		this.price = price;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getTags() {
-		return tags;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public void setTags(String tags) {
-		this.tags = tags;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public MenuItem(Long id, String name, String description, double price, String tags) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.price = price;
-		this.tags = tags;
-	}
+    public double getPrice() {
+        return price;
+    }
 
-	public MenuItem() {
-		super();
-	}
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getTags() {
+        return tags;
+    }
+
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
+
+    public MenuItem(Long id, String name, String description, double price, String tags) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.tags = tags;
+    }
+
+    public MenuItem() {
+        super();
+    }
 }
