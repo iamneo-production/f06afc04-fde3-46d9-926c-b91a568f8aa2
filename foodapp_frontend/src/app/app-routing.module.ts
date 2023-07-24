@@ -38,11 +38,11 @@ const routes: Routes = [
 
   {path: 'about',component:AboutComponent},
   {path: 'contactus',component:ContactusComponent},
-  {path: 'home', component: HomeComponent, canActivate: [UserAuthGuard]},
-  {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard]},
-  {path: 'menu',component:MenuComponent, canActivate: [UserAuthGuard]},
-  {path: 'restaurantlist',component:RestaurantlistComponent, canActivate: [UserAuthGuard]},
-  {path: 'checkout',component:CheckoutComponent, canActivate: [UserAuthGuard]},
+  {path: 'home', component: HomeComponent, canActivate: [RestaurantAuthGuard]},
+  {path: 'cart', component: CartComponent, canActivate: [RestaurantAuthGuard]},
+  {path: 'menu',component:MenuComponent, canActivate: [RestaurantAuthGuard]},
+  {path: 'restaurantlist',component:RestaurantlistComponent, canActivate: [RestaurantAuthGuard]},
+  {path: 'checkout',component:CheckoutComponent, canActivate: [RestaurantAuthGuard]},
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
   {path: 'adminpanel', component: AdminpanelComponent, canActivate: [AdminAuthGuard] },
 

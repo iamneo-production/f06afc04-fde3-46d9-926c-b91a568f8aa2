@@ -8,6 +8,7 @@ import { MenuService } from '../menu/menu.service';
 export class CartService {
   items:any = [];
   total = 0;
+  finaltotal=0;
 
   constructor(private menuService:MenuService) { }
   
@@ -67,7 +68,8 @@ export class CartService {
 
   
   finalAmount(discountvalue:number,deliveryCharge:number):number{
-    return this.menuService.getTotalAmount()-discountvalue+deliveryCharge;
+    this.finaltotal=this.menuService.getTotalAmount()-discountvalue+deliveryCharge;
+    return this.finaltotal;
   }
   
 }
