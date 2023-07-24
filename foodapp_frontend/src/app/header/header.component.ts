@@ -14,8 +14,9 @@ export class HeaderComponent implements OnInit {
 
   
 
+  
   logout(): void {
-    this.http.post('http://localhost:8080/logout', null)
+    this.http.post('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/logout', null)
       .subscribe(
         () => {
           // Redirect to login page or perform other logout actions

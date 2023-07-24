@@ -4,8 +4,8 @@ package com.example.springapp.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="customers")
-public class Login {
+@Table(name="restaurants")
+public class RestaurantsLogin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -13,11 +13,12 @@ public class Login {
     private String password;
 
 
-    public Login() {
+
+    public RestaurantsLogin() {
 
     }
 
-    public Login(String email, String password) {
+    public RestaurantsLogin(String email, String password) {
         this.email = email;
         this.password = password;
     }

@@ -17,10 +17,21 @@ export class MenuComponent {
 
   ngOnInit() {
     this.menuService.getMenu()
-      .subscribe(data => {
-        this.menu = data;
-        this.filteredMenu = this.menu;
-      });
+      .subscribe({
+        next: data => {
+          this.menu = data;
+          this.filteredMenu = this.menu;
+          },
+        error: error => {
+          this.menuService.apiAvailable = false;
+          
+          this.menuService.getMenuFromJSON()
+              .subscribe(data => {
+                this.menu = data;
+                this.filteredMenu = this.menu;
+              });
+          }
+        });
   }
 
   order:Order[] = this.menuService.order;

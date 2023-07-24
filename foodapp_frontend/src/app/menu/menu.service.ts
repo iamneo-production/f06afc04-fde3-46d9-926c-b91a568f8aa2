@@ -11,11 +11,21 @@ export class MenuService {
 
   constructor(private httpService: HttpClient) { }
 
+  apiAvailable:boolean = true;
+
   order:Order[] = [];
 
   getMenu() : Observable<FoodItem[]> {
+    if(! this.apiAvailable)
+      return this.getMenuFromJSON();
+      
+    return this.httpService.get<FoodItem[]>('http://localhost:8080/menu-item');
+  }
+
+  getMenuFromJSON() : Observable<FoodItem[]> {
     return this.httpService.get<FoodItem[]>('/assets/menu/menu.json');
   }
+
   getTotalAmount(){
     let totalAmount:number = 0;
     this.order.forEach(orderItem => {
