@@ -39,7 +39,7 @@
 }
 
 .dropdown-menu a {
-  color: orange;
+  color:   #e72929;
   padding: 8px 16px;
   text-align: center;
   text-decoration: none;
@@ -110,8 +110,8 @@
 }
 
 .button:hover {
-  background-color:  #e72929;
-  opacity: 1;
+  background-color: #ec4a4a;
+  
 
 }
 
