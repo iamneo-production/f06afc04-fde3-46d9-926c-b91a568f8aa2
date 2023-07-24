@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a7d4add (Update Restaurant)
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
@@ -11,12 +14,13 @@ import { RestaurantloginComponent } from './restaurantlogin/restaurantlogin.comp
 import { RestaurantsignupComponent } from './restaurantsignup/restaurantsignup.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
-import { AdminpanelComponent } from './adminpanel/adminpanel.component';
+
 import { CartComponent } from './cart/cart.component';
 import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantdashboard.component';
 import { HomeComponent } from './home/home.component';
 import { UserAuthGuard, RestaurantAuthGuard, AdminAuthGuard } from './auth.guard';
 import { MenuComponent } from './menu/menu.component';
+<<<<<<< HEAD
 import { CheckoutComponent } from './checkout/checkout.component';
 import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
 import { NotificationComponent } from './notification/notification.component';
@@ -26,6 +30,9 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { OrdertrackingComponent } from './ordertracking/ordertracking.component';
 import { ResdetailsComponent } from './resdetails/resdetails.component';
 import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetails.component';
+=======
+import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
+>>>>>>> a7d4add (Update Restaurant)
 
 
 
@@ -46,6 +53,7 @@ const routes: Routes = [
   {path: 'restaurantsignup',component:RestaurantsignupComponent},
   {path: 'about',component:AboutComponent},
   {path: 'contactus',component:ContactusComponent},
+<<<<<<< HEAD
   {path: 'home', component: HomeComponent, canActivate: [UserAuthGuard]},
   {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard]},
   {path: 'menu',component:MenuComponent, canActivate: [UserAuthGuard]},
@@ -60,16 +68,29 @@ const routes: Routes = [
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
   {path: 'adminpanel', component: AdminpanelComponent, canActivate: [AdminAuthGuard] },
   {path: 'adminsignup',component:AdminsignupComponent, canActivate: [AdminAuthGuard] },
+=======
+  {path: 'home', component: HomeComponent},
+  {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard] },
+  {path: 'menu',component:MenuComponent,canActivate: [UserAuthGuard] },
+  {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
+  {path: 'restaurantlist',component:RestaurantlistComponent  },
+
+ 
+
+>>>>>>> a7d4add (Update Restaurant)
 
   
   {path:'**',pathMatch:'full',redirectTo:'dashboard'}
 
 
 ];
+<<<<<<< HEAD
 =======
 
 const routes: Routes = [];
 >>>>>>> e632fe5 (frontebd)
+=======
+>>>>>>> a7d4add (Update Restaurant)
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

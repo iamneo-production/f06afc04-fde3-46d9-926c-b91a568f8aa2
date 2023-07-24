@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a7d4add (Update Restaurant)
 import {  FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -17,12 +20,13 @@ import { RestaurantloginComponent } from './restaurantlogin/restaurantlogin.comp
 import { RestaurantsignupComponent } from './restaurantsignup/restaurantsignup.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
-import { AdminpanelComponent } from './adminpanel/adminpanel.component';
+
 import { CartComponent } from './cart/cart.component';
 import { MenuComponent } from './menu/menu.component';
 import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantdashboard.component';
 import { HomeComponent } from './home/home.component';
 import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
+<<<<<<< HEAD
 import { CheckoutComponent } from './checkout/checkout.component';
 import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetails.component';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
@@ -31,6 +35,10 @@ import { NotificationComponent } from './notification/notification.component';
 import { ProfileComponent } from './profile/profile.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { OrdertrackingComponent } from './ordertracking/ordertracking.component';
+=======
+
+
+>>>>>>> a7d4add (Update Restaurant)
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,10 +53,11 @@ import { OrdertrackingComponent } from './ordertracking/ordertracking.component'
     RestaurantsignupComponent,
     ContactusComponent,
     AboutComponent,
-    AdminpanelComponent,
+   
     MenuComponent,
     RestaurantdashboardComponent,
     HomeComponent,
+<<<<<<< HEAD
     RestaurantlistComponent,
     CheckoutComponent,
     RestaurantdetailsComponent,
@@ -58,6 +67,9 @@ import { OrdertrackingComponent } from './ordertracking/ordertracking.component'
     ProfileComponent,
     OrderHistoryComponent,
     OrdertrackingComponent,
+=======
+    RestaurantlistComponent
+>>>>>>> a7d4add (Update Restaurant)
   ],
   imports: [
     BrowserModule,
@@ -65,6 +77,7 @@ import { OrdertrackingComponent } from './ordertracking/ordertracking.component'
     HttpClientModule,
     FormsModule
 
+<<<<<<< HEAD
 =======
 
 import { AppRoutingModule } from './app-routing.module';
@@ -78,6 +91,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule
 >>>>>>> e632fe5 (frontebd)
+=======
+>>>>>>> a7d4add (Update Restaurant)
   ],
   providers: [],
   bootstrap: [AppComponent]
