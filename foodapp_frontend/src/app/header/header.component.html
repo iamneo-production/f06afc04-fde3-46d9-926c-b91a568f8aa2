@@ -11,6 +11,7 @@
     || router.url==='/userlogin'
     || router.url==='/adminlogin'
     || router.url==='/restaurantlogin'
+    || router.url=='/menu'
     || router.url==='/cart'
     || router.url==='/contactus'" class="button" [routerLink]="(['/dashboard'])"><span><i class="fa fa-home"></i>
         Home</span></button>
@@ -85,7 +86,7 @@
     <!--My cart-->
     <button *ngIf="router.url==='/dashboard'" class="button" onclick="alert('Please Login to view Your Cart')"
       value="My cart"> <span><i class='fas fa-shopping-cart'></i> My Cart </span></button>
-    <button *ngIf="router.url==='/home'" class="button" value="My cart" [routerLink]="(['/cart'])"><span><i class="fas fa-shopping-cart"></i> My Cart </span></button>
+    <button *ngIf="router.url==='/home' || router.url=='/menu'" class="button" value="My cart" [routerLink]="(['/cart'])"><span><i class="fas fa-shopping-cart"></i> My Cart </span></button>
 
      <!-- profile  -->
      <button *ngIf="router.url==='/adminpanel' || router.url==='/restaurantlist' || router.url==='/home' " class="button"><span><i class="fas fa-user"></i>
