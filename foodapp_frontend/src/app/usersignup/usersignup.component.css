@@ -1,0 +1,145 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+.body{
+  height: 91.57vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #aeabb8;
+}
+.container{
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  padding: 0px 30px;
+  border-radius: 10px;
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  height: 90px;
+  margin-left: -30px;
+  margin-right: -30px;
+  background-color: #74919b;
+  border-radius: 100px 10px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .form-group{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .form-group span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .form-group input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+
+
+
+input[type="submit"] {
+ height: 100%;
+  width: 100%;
+height: 59px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #73919b;
+
+}
+
+input[type="submit"]:hover {
+  background-color: #768b94;
+
+}
+
+
+
+.signup-link{
+  text-align: end;
+  margin-top: 20px;
+  font-size: 17px;
+}
+ .signup-link a{
+  color: orange;
+  text-decoration: none;
+}
+.signup-link a:hover{
+  text-decoration: underline;
+}
+
+
+
+@media(max-width: 584px){
+  .container{
+   max-width: 100%;
+ }
+ form .user-details .form-group{
+     margin-bottom: 15px;
+     width: 100%;
+   }
+   form .category{
+     width: 100%;
+   }
+   .content form .user-details{
+     max-height: 300px;
+     overflow-y: scroll;
+   }
+   .user-details::-webkit-scrollbar{
+     width: 5px;
+   }
+   }
+   @media(max-width: 459px){
+   .container .content .category{
+     flex-direction: column;
+   }
+ }
+
+ @media (max-width: 1000px) {
+  .container {
+    max-width: 80%;
+  }
+}

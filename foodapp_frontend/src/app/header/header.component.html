@@ -11,8 +11,11 @@
     || router.url==='/userlogin'
     || router.url==='/adminlogin'
     || router.url==='/restaurantlogin'
+<<<<<<< HEAD
     || router.url==='/cart'
     
+=======
+>>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
     || router.url==='/contactus'" class="button" [routerLink]="(['/dashboard'])"><span><i class="fa fa-home"></i>
         Home</span></button>
 
@@ -23,7 +26,17 @@
 
     <!--Logo-->
     <div class="logo-container">
+<<<<<<< HEAD
       <a *ngIf="router.url==='/home' || router.url==='/adminpanel'|| router.url==='/order-tracking'" [routerLink]="['/home']">
+=======
+      <a *ngIf="router.url==='/home' || router.url==='/menu'|| router.url==='/cart'|| router.url==='/checkout'|| router.url==='/restaurantlist' || router.url.startsWith('/restaurantlist')" [routerLink]="['/home']">
+        <img src="..\assets\images\logo4.jpg" width="100" height="55" alt="Logo">
+      </a>
+      <a *ngIf="router.url==='/adminpanel'"[routerLink]="['/adminpanel']">
+        <img src="..\assets\images\logo4.jpg" width="100" height="55" alt="Logo">
+      </a>
+      <a *ngIf="router.url==='/restaurantdashboard'"[routerLink]="['/restaurantdashboard']">
+>>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
         <img src="..\assets\images\logo4.jpg" width="100" height="55" alt="Logo">
       </a>
     </div>
@@ -70,7 +83,10 @@
             || router.url==='/usersignup'
             || router.url==='/restaurantsignup' 
             || router.url==='/adminsignup'           
+<<<<<<< HEAD
             || router.url==='/cart'
+=======
+>>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
             || router.url==='/restaurantlogin'" class="button" [routerLink]="(['/contactus'])"><i
         class="fa fa-fw fa-envelope"></i> <span>Contact us</span></button>
     <button *ngIf="router.url==='/contactus'" class="active" title="You are in Contact page"><i
@@ -80,6 +96,7 @@
     <!--My cart-->
     <button *ngIf="router.url==='/dashboard'" class="button" onclick="alert('Please Login to view Your Cart')"
       value="My cart"> <span><i class='fas fa-shopping-cart'></i> My Cart </span></button>
+<<<<<<< HEAD
     <button *ngIf="router.url==='/home'" class="button" value="My cart"><span>My Cart </span></button>
 
     <!-- profile  -->
@@ -91,6 +108,23 @@
     <button *ngIf="router.url==='/home'
                      || router.url==='/adminpanel'|| router.url==='/order-tracking'
                      || router.url==='/cart'" class="button" (click)="logout()"> <span> <i class="fas fa-sign-out-alt">
+=======
+    <button *ngIf="router.url==='/home' || router.url=='/menu'" class="button" value="My cart" routerLink='/cart' ><span><i class="fas fa-shopping-cart"></i> My Cart </span></button>
+
+     <!-- profile  -->
+     <button *ngIf="router.url==='/adminpanel' || router.url==='/restaurantlist' || router.url==='/home' " class="button"><span><i class="fas fa-user"></i>
+      Edit Profile</span></button>
+
+       <!-- restaurant  -->
+  <button *ngIf="router.url==='/home'" class="button" routerLink='/restaurantlist'><span> <i class="fas fa-utensils"></i>
+      Restaurants</span></button>
+
+    <!--Log out-->
+    <button *ngIf="router.url==='/home'
+                     || router.url==='/adminpanel'
+                     || router.url==='/restaurantdashboard'
+                     || router.url==='/cart'" class="button" routerLink='/dashboard'> <span> <i class="fas fa-sign-out-alt">
+>>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
         </i> Log out</span></button>
 
   </div>

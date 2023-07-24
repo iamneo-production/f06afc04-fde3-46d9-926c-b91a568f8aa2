@@ -39,7 +39,11 @@
 }
 
 .dropdown-menu a {
+<<<<<<< HEAD
   color: orange;
+=======
+  color:   #e72929;
+>>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
   padding: 8px 16px;
   text-align: center;
   text-decoration: none;
@@ -110,8 +114,13 @@
 }
 
 .button:hover {
+<<<<<<< HEAD
   background-color:  #e72929;
   opacity: 1;
+=======
+  background-color: #ec4a4a;
+  
+>>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
 
 }
 

@@ -1,0 +1,27 @@
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+<div class="body">
+<div class="container">
+<div class="wrapper">
+  <div class="title"><span>User Login</span></div>
+
+  <form (ngSubmit)="login()">
+    
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" [(ngModel)]="email">
+      <label for="floatingInput"> <i class="fas fa-user"></i>  Email address</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" [(ngModel)]="password">
+      <label for="floatingInput"> <i class="fas fa-lock"></i> Password</label>
+    </div>
+
+    <div>
+      <input type="submit" id="login" value="Login">
+    </div>
+    <div class="signup-link">Not a member? <a [routerLink]="['/usersignup']">Signup now</a></div>
+  </form>
+</div>
+</div>
+</div>

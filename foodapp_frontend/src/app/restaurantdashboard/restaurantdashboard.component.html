@@ -1,0 +1,122 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<body>
+  <div class="container custom-margin">
+    <h2 class="text-center">Welcome to Restaurant Dashboard</h2>
+    <h5 class="text-center">Here you can able Create menu items, Delete menu items, Edit menu items</h5>
+    <div class="after-form-spacing"></div>
+
+    <div class="mb-3">
+      <!-- Add New button -->
+      <button class="btn btn-primary" (click)="toggleAddForm()">Add New Item</button>
+    </div>
+
+    <!-- Add New Item Form -->
+    <div class="card mb-3" *ngIf="showAddForm">
+      <div class="card-header">
+        <h5 class="text-center">Add New Menu Item</h5>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required [(ngModel)]="newMenuItem.name">
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description" name="description"
+              [(ngModel)]="newMenuItem.description">
+          </div>
+          <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" class="form-control" id="price" name="price" required [(ngModel)]="newMenuItem.price">
+          </div>
+          <div class="form-group">
+            <label for="tags">Tags</label>
+            <input type="text" class="form-control" id="tags" name="tags" [(ngModel)]="newMenuItem.tags">
+          </div>
+       
+          <button type="button" class="btn btn-success" (click)="onAddSubmit()">Add</button>
+        </form>
+      </div>
+    </div>
+    <div class="after-form-spacing"></div>
+
+
+    <!-- Menu Items Table -->
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Tags</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let menuItem of menuItems">
+          <td>{{ menuItem.id }}</td>
+          <td>{{ menuItem.name }}</td>
+          <td>{{ menuItem.description }}</td>
+          <td>{{ menuItem.price }}</td>
+          <td>{{ menuItem.tags }}</td>
+          <td>
+            <div class="button-group">
+              <button class="btn btn-primary btn-sm" (click)="openEditModal(menuItem)">Edit</button>
+              <button class="btn btn-danger btn-sm" (click)="deleteMenuItem(menuItem)">Delete</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="text-center mt-3">
+      <p>Total items: {{ getTotalItems() }}</p>
+    </div>
+
+    <!-- Edit Menu Item Container -->
+    <div class="edit-container" *ngIf="showEditForm">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="text-center">Edit Menu Item</h5>
+        </div>
+        <div class="card-body">
+          <form>
+            <!-- Edit form fields -->
+            <div class="form-group">
+              <label for="editName">Name</label>
+              <input type="text" class="form-control" id="editName" name="editName" required
+                [(ngModel)]="editedMenuItem.name">
+            </div>
+            <div class="form-group">
+              <label for="editDescription">Description</label>
+              <input type="text" class="form-control" id="editDescription" name="editDescription"
+                [(ngModel)]="editedMenuItem.description">
+            </div>
+            <div class="form-group">
+              <label for="editPrice">Price</label>
+              <input type="number" class="form-control" id="editPrice" name="editPrice" required
+                [(ngModel)]="editedMenuItem.price">
+            </div>
+            <div class="form-group">
+              <label for="editTags">Tags</label>
+              <input type="text" class="form-control" id="editTags" name="editTags" [(ngModel)]="editedMenuItem.tags">
+            </div>
+            <div class="button-group">
+
+              <button class="btn btn-success" (click)="onEditSubmit()">Update</button>
+              <button class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+    <div class="after-form-spacing"></div>
+
+  </div>
+
+
+</body>

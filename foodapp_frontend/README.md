@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 # FoodappFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+=======
+<<<<<<< HEAD
+# Cart
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+=======
+# FoodappFrontend
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+>>>>>>> ec75852372be6f1a12583025cd1786856d5ad35b
+>>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
 
 ## Development server
 

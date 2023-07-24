@@ -14,8 +14,14 @@ export class HeaderComponent implements OnInit {
 
   
 
+<<<<<<< HEAD
   logout(): void {
     this.http.post('http://localhost:8080/logout', null)
+=======
+  
+  logout(): void {
+    this.http.post('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/logout', null)
+>>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
       .subscribe(
         () => {
           // Redirect to login page or perform other logout actions
@@ -27,4 +33,8 @@ export class HeaderComponent implements OnInit {
         }
       );
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
