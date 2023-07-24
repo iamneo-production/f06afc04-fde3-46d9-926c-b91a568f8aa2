@@ -1,21 +1,45 @@
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.card {
+  margin-bottom: 20px;
+}
+.pointer-cursor{
+cursor: pointer;
 }
 
-body {
-  background-color: #aeabb8;
-  overflow-y: auto;
+.custom-button-center {
+  text-align: center;
 }
 
-.container {
-  padding-top: 70px;
-  min-height: calc(100vh - 59px);
-  overflow-y: auto;
+
+.container{
+  max-width: 1400px;
 }
 
-.pointer-cursor {
-  cursor: pointer;
+.table {
+  border-collapse: collapse;
+  width: 1398px;
+}
+
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+
+}
+
+.table th {
+  background-color: #f2f2f2;
+  text-align: center;
+
+}
+
+
+
+.after-form-spacing1 {
+  margin-bottom: 30px;
+}
+
+.after-form-spacing {
+  margin-bottom: 80px;
 }

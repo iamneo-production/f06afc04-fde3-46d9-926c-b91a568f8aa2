@@ -12,29 +12,32 @@ export class RestaurantsignupComponent {
   name: string = '';
   email: string = '';
   password: string = '';
-  phone_number: string = '';
+  address: string = '';
+  menu_item_id: number =0; // Make menu_item_id nullable
 
   constructor(private http: HttpClient, private router: Router) {}
 
   register(): void {
-
-    if (!this.name || !this.email || !this.password || !this.phone_number) {
+    if (!this.name || !this.email || !this.password || !this.address) {
       alert('Please provide all the required details.');
-      return; 
+      return;
     }
-    const customerData = {
-      restaurantname: this.name,
+  
+    const restaurantData = {
+      name: this.name,
       email: this.email,
       password: this.password,
-      phone_number: this.phone_number
+      address: this.address,
+      menu_item_id: this.menu_item_id // Assign the value of menu_item_id
     };
-
+  
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
-    this.http.post('http://localhost:8080/restaurantsSignup', customerData, { headers, responseType: 'text' }).subscribe(
+  
+  
+    this.http.post('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/restaurant', restaurantData, { headers, responseType: 'text' }).subscribe(
       (response: any) => {
-        console.log(response); 
-        if (response.includes('created') || response.includes('Customer created')) {
+        console.log(response);
+        if (response.includes('created') || response.includes('Restaurant created')) {
           alert('Registration successful!');
         } else if (response.includes('already registered')) {
           alert('Email is already registered. Please use a different email.');
