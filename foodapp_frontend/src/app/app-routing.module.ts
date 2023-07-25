@@ -22,7 +22,7 @@ import { NotificationComponent } from './notification/notification.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
-import { UpdateDetailsComponent } from './update-details/update-details.component';
+
 import { ResdetailsComponent } from './resdetails/resdetails.component';
 
 
@@ -42,7 +42,7 @@ const routes: Routes = [
   {path: 'order-history', component: OrderHistoryComponent},
  
   {path: 'notification', component: NotificationComponent},
-  {path: 'update-details/:id', component: UpdateDetailsComponent},
+
   {path: 'resdetails', component: ResdetailsComponent},
   {path: 'adminlogin',component:AdminloginComponent},
   {path: 'adminsignup',component:AdminsignupComponent},
