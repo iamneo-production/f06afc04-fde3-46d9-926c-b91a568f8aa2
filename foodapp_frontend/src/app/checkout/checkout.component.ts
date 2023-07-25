@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Payment } from '../Payment';
 import { MenuService } from '../menu/menu.service';
+import { CartService } from '../cart/cart.service';
 
 @Component({
   selector: 'app-checkout',
@@ -9,12 +10,13 @@ import { MenuService } from '../menu/menu.service';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent {
-  constructor(public menuService:MenuService, private http: HttpClient) { } 
+  constructor(public menuService:MenuService, private http: HttpClient,private cartService:CartService) { } 
 
   orders=this.menuService.order;
 
   amount:number=this.menuService.getTotalAmount();
   date:Date=new Date();
+  finaltotal=this.cartService.finaltotal;
   
   makePayment() {
     const url = 'https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/payment'; // Replace with your server's endpoint

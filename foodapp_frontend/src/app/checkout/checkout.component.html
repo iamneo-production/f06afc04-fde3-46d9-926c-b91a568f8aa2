@@ -46,7 +46,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td style="font-size: medium;"><strong>Total: {{ menuService.getTotalAmount() | currency:'INR' }}</strong></td>
+            <td style="font-size: medium;"><strong>Amount to Pay: {{ finaltotal | currency:'INR' }}</strong></td>
           </tr>
         </tfoot>
       </table>
@@ -78,7 +78,7 @@
         <div class="payment-summary">
         
           <label for="orderId">Date:</label>{{date}}<br>
-          <label for="orderId">Amount:</label>{{amount}}<br>
+          <label for="orderId">Amount:</label>{{finaltotal}}<br>
           
           <br>
         </div>
