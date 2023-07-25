@@ -5,6 +5,9 @@
     
     <div class="container1"  >
       <div class="card-container">
+        <div *ngIf="restaurant.length === 0" class="no-restaurants">
+          No Results Found
+        </div>
         <div class="card " *ngFor = "let item of restaurant ">
           <img class="restaurant-image" [src]="item.imageData" alt="Restaurant ">
           <div class="restaurant-name">{{item.name}}</div>
