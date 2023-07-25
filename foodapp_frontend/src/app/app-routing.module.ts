@@ -18,6 +18,12 @@ import { UserAuthGuard, RestaurantAuthGuard, AdminAuthGuard } from './auth.guard
 import { MenuComponent } from './menu/menu.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
+import { NotificationComponent } from './notification/notification.component';
+import { ProfileComponent } from './profile/profile.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { UpdateDetailsComponent } from './update-details/update-details.component';
+import { ResdetailsComponent } from './resdetails/resdetails.component';
 
 
 
@@ -31,6 +37,13 @@ const routes: Routes = [
   {path: 'dashboard',component:DashboardComponent},
   {path: 'userlogin',component:UserloginComponent},
   {path: 'usersignup',component:UsersignupComponent},
+  { path: 'profile', component: ProfileComponent },
+  {path: 'update-customer/:id', component: UpdateCustomerComponent},
+  {path: 'order-history', component: OrderHistoryComponent},
+ 
+  {path: 'notification', component: NotificationComponent},
+  {path: 'update-details/:id', component: UpdateDetailsComponent},
+  {path: 'resdetails', component: ResdetailsComponent},
   {path: 'adminlogin',component:AdminloginComponent},
   {path: 'adminsignup',component:AdminsignupComponent},
   {path: 'restaurantlogin',component:RestaurantloginComponent},

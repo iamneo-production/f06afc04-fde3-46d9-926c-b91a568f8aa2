@@ -25,6 +25,13 @@ import { RestaurantlistComponent } from './restaurantlist/restaurantlist.compone
 import { CheckoutComponent } from './checkout/checkout.component';
 import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetails.component';
 import { OrderTrackingComponent } from './ordertracking/ordertracking.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { ResdetailsComponent } from './resdetails/resdetails.component';
+import { UpdateDetailsComponent } from './update-details/update-details.component';
+import { OrderComponent } from './order/order.component';
+import { NotificationComponent } from './notification/notification.component';
+import { ProfileComponent } from './profile/profile.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +54,14 @@ import { OrderTrackingComponent } from './ordertracking/ordertracking.component'
     RestaurantlistComponent,
     CheckoutComponent,
     RestaurantdetailsComponent,
-    OrderTrackingComponent
+    OrderTrackingComponent,
+    UpdateCustomerComponent,
+    ResdetailsComponent,
+    UpdateDetailsComponent,
+    OrderComponent,
+    NotificationComponent,
+    ProfileComponent,
+    OrderHistoryComponent
   ],
   imports: [
     BrowserModule,
