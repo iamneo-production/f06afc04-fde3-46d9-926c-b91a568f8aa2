@@ -23,11 +23,7 @@ import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantda
 import { HomeComponent } from './home/home.component';
 import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-<<<<<<< HEAD
-import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
-=======
 import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetails.component';
->>>>>>> 3ed0285 (now searching for food is working)
 
 
 @NgModule({
@@ -50,11 +46,7 @@ import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetail
     HomeComponent,
     RestaurantlistComponent,
     CheckoutComponent,
-<<<<<<< HEAD
-    OrderTrackingComponent
-=======
     RestaurantdetailsComponent
->>>>>>> 3ed0285 (now searching for food is working)
   ],
   imports: [
     BrowserModule,
