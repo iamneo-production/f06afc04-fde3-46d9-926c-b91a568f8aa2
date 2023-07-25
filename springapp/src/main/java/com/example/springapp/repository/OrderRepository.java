@@ -1,9 +1,12 @@
 package com.example.springapp.repository;
 
-import com.example.springapp.model.Order;
+import com.project.backend.entity.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
     Order findByCustomerId(Long customerId);
-	Order findByRestaurantId(Long restaurantId);
+    List<Order> findByIdIn(List<Long> orderIds);
 }
+
