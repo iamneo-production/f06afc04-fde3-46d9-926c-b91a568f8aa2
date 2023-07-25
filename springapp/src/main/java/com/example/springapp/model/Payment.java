@@ -15,8 +15,7 @@ public class Payment {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;
 
-    @Column(nullable=false, unique=true)
-    private long orderId;
+    // private long orderId;
 
     @Column(nullable=false)
     private double amount;
@@ -30,14 +29,6 @@ public class Payment {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public long getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(long orderId) {
-        this.orderId = orderId;
     }
 
     public double getAmount() {
@@ -56,16 +47,14 @@ public class Payment {
         this.date = date;
     }
 
-    public Payment(long id, long orderId, double amount, Date date) {
+    public Payment(long id, double amount, Date date) {
         super();
         this.id = id;
-        this.orderId = orderId;
         this.amount = amount;
         this.date = date;
     }
 
     public Payment() {
         super();
-    }
-    
+    }    
 }

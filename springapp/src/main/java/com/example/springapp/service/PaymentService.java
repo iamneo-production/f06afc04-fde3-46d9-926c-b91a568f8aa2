@@ -10,11 +10,10 @@ public class PaymentService  {
 
     @Autowired
     private PaymentRepository paymentRepository;
+
     public String makePayment(Payment payment) {
-
             paymentRepository.save(payment);
-            return "Payment created";
-
+            return "{\"response\": \"Payment done\"}";
     }
 }
 
