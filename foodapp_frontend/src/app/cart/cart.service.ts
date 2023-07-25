@@ -68,7 +68,7 @@ export class CartService {
 
   
   finalAmount(discountvalue:number,deliveryCharge:number):number{
-    this.finaltotal=this.menuService.getTotalAmount()-discountvalue+deliveryCharge;
+    this.finaltotal= this.menuService.getTotalAmount()-discountvalue+deliveryCharge;
     return this.finaltotal;
   }
   

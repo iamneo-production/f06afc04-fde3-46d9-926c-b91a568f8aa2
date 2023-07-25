@@ -23,6 +23,7 @@ import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantda
 import { HomeComponent } from './home/home.component';
 import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     RestaurantdashboardComponent,
     HomeComponent,
     RestaurantlistComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    OrderTrackingComponent
   ],
   imports: [
     BrowserModule,

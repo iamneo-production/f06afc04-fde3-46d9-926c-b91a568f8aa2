@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Payment } from '../Payment';
 import { MenuService } from '../menu/menu.service';
-import { CartComponent } from '../cart/cart.component';
 import { CartService } from '../cart/cart.service';
 
 @Component({
@@ -18,8 +17,6 @@ export class CheckoutComponent {
   amount:number=this.menuService.getTotalAmount();
   date:Date=new Date();
   finaltotal=this.cartService.finaltotal;
-  
-  
   
   makePayment() {
     const url = 'https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/payment'; // Replace with your server's endpoint
