@@ -24,7 +24,7 @@ import { HomeComponent } from './home/home.component';
 import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetails.component';
-
+import { OrderTrackingComponent } from './ordertracking/ordertracking.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,8 @@ import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetail
     HomeComponent,
     RestaurantlistComponent,
     CheckoutComponent,
-    RestaurantdetailsComponent
+    RestaurantdetailsComponent,
+    OrderTrackingComponent
   ],
   imports: [
     BrowserModule,

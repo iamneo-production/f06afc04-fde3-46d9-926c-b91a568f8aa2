@@ -2,9 +2,9 @@ export class Payment {
 
     amount:number;
 
-    date:Date;
+    date:String;
 
-   constructor (amt:number,date:Date){
+   constructor (amt:number,date:String){
        this.amount=amt;
        this.date=date;
    }
