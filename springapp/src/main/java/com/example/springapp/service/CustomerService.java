@@ -24,21 +24,23 @@ public class CustomerService {
     }
 
 
-    public Customer getUserProfileById(Long id)
+	public Customer getUserProfileById(Long id)
     {
         return customerRepository.findById(id).orElse(null);
     }
-
-    public String updateUserProfile(Customer customer) {
+    public Customer updateUserProfile(Customer customer) {
         boolean customerExists = customerRepository.existsById(customer.getId());
         if(customerExists) {
-            customerRepository.save(customer);
-            return "Customer profile updated successfully";
+            return customerRepository.save(customer);
+//            
         }
         else {
-            return "No customer with the given id";
+//           
+            return null;
         }
+
     }
+
 
     public boolean deleteCustomer(Long id) {
         if (customerRepository.existsById(id)) {

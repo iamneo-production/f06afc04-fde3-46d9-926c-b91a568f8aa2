@@ -10,6 +10,7 @@ public interface RestaurantRepository extends JpaRepository<Restaurant, Long> {
     Optional<Restaurant> findByEmail(String email);
 
     public Boolean existsByEmail(String email);
+    public Boolean existsByEmailAndPassword(String email, String password);
 
     void deleteById(Long id);
 }
