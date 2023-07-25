@@ -32,6 +32,7 @@ export class MenuComponent {
           },
         error: error => {
           this.menuService.apiAvailable = false;
+          this.restaurant.name = "Zesty Foods";
           
           this.menuService.getMenuFromJSON()
               .subscribe(data => {
