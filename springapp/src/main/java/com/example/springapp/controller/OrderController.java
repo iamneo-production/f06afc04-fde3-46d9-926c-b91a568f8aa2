@@ -21,16 +21,10 @@ public class OrderController {
     }
 
     @PostMapping
-    public ResponseEntity<Order> createOrder(@RequestBody Order order, @RequestParam Long customerId) {
-        Order createdOrder=orderService.createOrder(order, customerId);
-        return ResponseEntity.status(HttpStatus.CREATED).body(createdOrder);
+    public ResponseEntity<Order> createOrder(@RequestBody Order order) {
+       Order createdOrder=orderService.createOrder(order);
+       return ResponseEntity.status(HttpStatus.CREATED).body(createdOrder);
 
-    }
-
-    @PostMapping("/reorder")
-    public ResponseEntity<Object> reorderOrders(@RequestBody List<Long> orderIds) {
-        List<Order> reorderedOrders = orderService.reorderOrders(orderIds);
-        return ResponseEntity.ok(reorderedOrders);
     }
     @GetMapping
     public ResponseEntity<List<Order>> getAllOrder() {
@@ -48,15 +42,9 @@ public class OrderController {
         }
     }
      
-   
     @GetMapping("/customerId/{customerId}")
-    public ResponseEntity<Order> getOrdersByCustomerId(@PathVariable("customerId") Long customerId) {
-        Order order = orderService.getOrdersByCustomerId(customerId);
-        if (order != null) {
-            return ResponseEntity.ok(order);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    public Order getOrdersByCustomerId(@PathVariable Long customerId) {
+        return orderService.getOrdersByCustomerId(customerId);
     }
 
     @GetMapping("/restaurantId/{restaurantId}")

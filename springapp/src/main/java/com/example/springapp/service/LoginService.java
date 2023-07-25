@@ -15,20 +15,16 @@ public class LoginService {
         this.loginRepository = loginRepository;
     }
 
-    public Customer login(String email, String password) {
+    public String login(String email, String password) {
         Login existingLogin = loginRepository.findByEmail(email);
-        Customer customer = null;
 
         if (existingLogin != null && existingLogin.getPassword().equals(password)) {
             // Credentials matched, redirect to the Home component
-            customer = customerService.getUserProfileById(existingLogin.getId());
-            customer.setPassword("");
-//            return "Login successful";
+            return "Login successful";
         } else {
             // Invalid credentials, show an alert
-//            return "Invalid credentials. Please try again.";
+            return "Invalid credentials. Please try again.";
         }
-        return customer;
     }
 
     public String logout() {
