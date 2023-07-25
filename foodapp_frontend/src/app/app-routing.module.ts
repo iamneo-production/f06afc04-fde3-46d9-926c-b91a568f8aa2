@@ -14,6 +14,8 @@ import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { CartComponent } from './cart/cart.component';
 import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantdashboard.component';
 import { HomeComponent } from './home/home.component';
+import { UserAuthGuard, RestaurantAuthGuard, AdminAuthGuard } from './auth.guard';
+
 
 
 
@@ -22,20 +24,21 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
 
-  {path:'header',component:HeaderComponent},
-  {path:'dashboard',component:DashboardComponent},
-  {path:'userlogin',component:UserloginComponent},
-  {path:'usersignup',component:UsersignupComponent},
-  {path:'adminlogin',component:AdminloginComponent},
-  {path:'adminsignup',component:AdminsignupComponent},
-  {path:'restaurantlogin',component:RestaurantloginComponent},
-  {path:'restaurantsignup',component:RestaurantsignupComponent},
-  {path:'about',component:AboutComponent},
-  {path:'contactus',component:ContactusComponent},
-  {path:'adminpanel',component:AdminpanelComponent},
-  {path:'cart',component:CartComponent},
-  {path:'restaurantdashboard',component:RestaurantdashboardComponent},
-  {path:'home',component:HomeComponent},
+  {path: 'header',component:HeaderComponent},
+  {path: 'dashboard',component:DashboardComponent},
+  {path: 'userlogin',component:UserloginComponent},
+  {path: 'usersignup',component:UsersignupComponent},
+  {path: 'adminlogin',component:AdminloginComponent},
+  {path: 'adminsignup',component:AdminsignupComponent},
+  {path: 'restaurantlogin',component:RestaurantloginComponent},
+  {path: 'restaurantsignup',component:RestaurantsignupComponent},
+  {path: 'about',component:AboutComponent},
+  {path: 'contactus',component:ContactusComponent},
+  {path: 'home', component: HomeComponent, canActivate: [UserAuthGuard]},
+  {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard] },
+  {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
+  {path: 'adminpanel', component: AdminpanelComponent, canActivate: [AdminAuthGuard] },
+
 
 
   

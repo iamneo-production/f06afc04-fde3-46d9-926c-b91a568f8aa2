@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
+
 
 @Component({
-  selector: 'app-userlogin',
+  selector: 'app-restaurantlogin',
   templateUrl: './userlogin.component.html',
   styleUrls: ['./userlogin.component.css']
 })
 export class UserloginComponent {
+
   email = '';
   password = '';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router,     private authService: AuthService ) {}
 
   login(): void {
     if ( !this.email || !this.password ) {
@@ -29,7 +32,9 @@ export class UserloginComponent {
       (response) => {
         if (response.status === 200) {
           // Login successful, redirect to the Home component
-          this.router.navigate(['/contactus']);
+          this.authService.setAuthenticated(true, 'user'); // Set the user type as 'admin'
+
+          this.router.navigate(['/restaurantpanel']);
         } 
         },
       (error: HttpErrorResponse) => {

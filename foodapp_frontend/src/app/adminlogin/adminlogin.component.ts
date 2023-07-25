@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
+
 
 @Component({
   selector: 'app-adminlogin',
@@ -11,10 +13,8 @@ export class AdminloginComponent {
   email = '';
   password = '';
 
-  constructor(
-    private http: HttpClient,
-    private router: Router,
-  ) { }
+  constructor(private http: HttpClient, private router: Router,     private authService: AuthService ) {}
+
 
   adminlogin(): void {
 
@@ -31,6 +31,8 @@ export class AdminloginComponent {
           // Login successful, store the admin name in AdminService
 
           // Redirect to the Adminpanel component
+          this.authService.setAuthenticated(true, 'admin'); // Set the user type as 'admin'
+
           this.router.navigate(['/adminpanel']);
         }
       },
