@@ -1,0 +1,162 @@
+<div class="container">
+  <div class="after-form-spacing"></div>
+
+  <h2 class="text-center">Welcome to Admin Panel</h2>
+  <h5 class="text-center">You can access customer, restaurant, and complaints details here</h5>
+  <div class="after-form-spacing1"></div>
+
+  <div class="row">
+    <!-- Customer Section -->
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header text-center pointer-cursor" (click)="toggleCustomer()">
+          <h3>Customer</h3>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- Restaurant Section -->
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header text-center pointer-cursor" (click)="toggleRestaurant()">
+          <h3>Restaurant</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Complaints Section -->
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header text-center pointer-cursor" (click)="toggleComplaints()">
+          <h3>Complaints</h3>
+        </div>
+      </div>
+  </div>
+
+
+    <!-- Customer Data Table -->
+    <div class="card-body" *ngIf="showCustomer">
+  
+    <div>
+      <input type="text" class="form-control mb-3 text-center " placeholder="Search by Customer Name"
+        [(ngModel)]="customerSearchTerm" (input)="filterCustomers()">
+    </div>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Serial No</th>
+            <th>Customer ID</th>
+            <th>Customer Name</th>
+            <th>Customer Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let customer of filteredCustomers; let i = index">
+            <td>{{ (currentPage - 1) * pageSize + i + 1 }}</td>
+            <td>{{ customer.id }}</td>
+            <td>{{ customer.name }}</td>
+            <td>{{ customer.email }}</td>
+            <td class="text-center">
+              <button class="btn btn-danger d-block mx-auto" (click)="deleteCustomer(customer)">Remove</button>
+            </td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="text-center">
+      <p>Total Customers: {{ filteredCustomers.length }}</p>
+    </div>
+  </div>
+
+
+
+    <!-- Restaurant Data Table -->
+
+  <div class="card-body" *ngIf="showRestaurant">
+    <div>
+      <input type="text" class="form-control mb-3 text-center" placeholder="Search by Restaurant Name"
+        [(ngModel)]="restaurantSearchTerm" (input)="filterRestaurants()">
+    </div>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Serial No</th>
+            <th>Restaurant ID</th>
+            <th>Restaurant Name</th>
+            <th>email</th>
+            <th>Restaurant Address</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let restaurant of filteredRestaurants; let index = index">
+            <td>{{ (currentPage - 1) * pageSize + index + 1 }}</td>
+            <td>{{ restaurant.id }}</td>
+            <td>{{ restaurant.name }}</td>
+            <td>{{ restaurant.email }}</td>
+            <td>{{ restaurant.address }}</td>
+            <td class="text-center">
+              <button class="btn btn-danger d-block mx-auto" (click)="deleteRestaurant(restaurant)">Remove</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="text-center">
+      <p>Total Restaurants: {{ filteredRestaurants.length }}</p>
+    </div>
+  </div>
+
+
+
+    <!-- Complaints Data Table -->
+
+  <div class="card-body" *ngIf="showComplaints">
+    <div>
+      <input type="text" class="form-control mb-3 text-center" placeholder="Search by Name, Email, or Message"
+        [(ngModel)]="complaintSearchTerm" (input)="filterComplaints()">
+    </div>
+    <ng-container *ngIf="filteredComplaints.length > 0; else noComplaints">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr >
+              <th>Serial No</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Message</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let complaint of filteredComplaints; let i = index">
+              <td>{{ (currentPage - 1) * pageSize + i + 1 }}</td>
+              <td>{{ complaint.name }}</td>
+              <td>{{ complaint.email }}</td>
+              <td>{{ complaint.message }}</td>
+              <td class="text-center">
+                <button class="btn btn-danger d-block mx-auto"  (click)="deleteComplaint(complaint)">Delete Complaint</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </ng-container>
+    <ng-template #noComplaints>
+      <p class="text-center">No complaints found.</p>
+    </ng-template>
+    <div class="text-center">
+      <p>Total Complaints: {{ filteredComplaints.length }}</p>
+    </div>
+  </div>
+</div>
+
+</div>
+<div class="after-form-spacing1"></div>
+

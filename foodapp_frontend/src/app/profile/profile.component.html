@@ -1,5 +1,6 @@
 
 <table >
+<<<<<<< HEAD
   <thead>
     <tr>
      
@@ -32,3 +33,37 @@
     
      </tbody>
 </table>
+=======
+    <thead>
+      <tr>
+       
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Address</th>
+  
+        <th >Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+       <tr *ngIf="customer">
+        
+        <td>{{customer.name}}</td>
+        <td>{{customer.email}}</td>
+        <td>
+            {{ customer.addressId.street}},
+            {{ customer.addressId.city }},
+            {{ customer.addressId.state }},
+            {{ customer.addressId.zipCode }}
+            <!-- Add more list items as needed -->
+          
+        </td>
+    
+        <td><button (click)="updateCustomer(customer.id)" class="btn-btn-primary">Update</button>
+            
+        </td>
+      </tr>
+      
+       </tbody>
+  </table>
+>>>>>>> 68beb65b1438c5fec4706e0e680ce1345a0abb55

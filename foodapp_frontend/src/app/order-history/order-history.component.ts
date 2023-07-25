@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
 import { OrderService } from '../order.service';
 import { ActivatedRoute, Router } from '@angular/router';
+<<<<<<< HEAD
 import { Order } from '../order';
+=======
+import { Order } from '../order.model';
+import { HttpClient } from '@angular/common/http';
+>>>>>>> 68beb65b1438c5fec4706e0e680ce1345a0abb55
 
 @Component({
   selector: 'app-order-history',
@@ -9,6 +14,7 @@ import { Order } from '../order';
   styleUrls: ['./order-history.component.css']
 })
 export class OrderHistoryComponent {
+<<<<<<< HEAD
 
   orders:Order[]=[];
   order : any = {
@@ -50,4 +56,47 @@ reorderItems(order:any){
 });
 }
 
+=======
+  
+
+  order: Order[] =[];
+  selectedOrderIds: number[] = [];
+
+
+  constructor(private service:OrderService,private router:Router, private activatedRoute : ActivatedRoute,private http: HttpClient){}
+
+  ngOnInit(): void {
+    this.loadOrder();
+  }
+
+  loadOrder(): void {
+    const customerId = Number(this.activatedRoute.snapshot.paramMap.get("customerId"));
+    console.log("customerId:", customerId);
+
+    this.service.getOrderByCustomerId(customerId).subscribe(
+      (response) => {
+        if (Array.isArray(response) && response.every(item => item instanceof Order)) {
+          this.order = response; 
+          console.error('Invalid API response format:', response);
+          this.order = []; 
+        }
+      },
+      (error) => {
+        console.error('Error fetching orders:', error);
+        this.order = [];
+      }
+    );
+  }
+
+  reorder(): void {
+    // Check if any orders are selected
+    if (this.selectedOrderIds.length === 0) {
+      console.log('No orders selected for reorder.');
+      return;
+    }
+
+    // Pass the selected order IDs to the cart page for reordering
+    this.router.navigate(['/cart'], { queryParams: { orderIds: this.selectedOrderIds.join(',') } });
+  }
+>>>>>>> 68beb65b1438c5fec4706e0e680ce1345a0abb55
 }

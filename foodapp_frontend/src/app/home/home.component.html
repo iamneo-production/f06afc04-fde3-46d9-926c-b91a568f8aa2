@@ -1,0 +1,18 @@
+<div class="search-bar">
+  <input type="text" class="location-input" placeholder="Search for Restaurant and Food" [(ngModel)]="searchText"(keyup.enter)="onSearch()">
+  <button class="search-button" (click)="onSearch()">Search</button>
+</div>
+
+<div class="after-form-spacing"></div>
+<div class="container"  >
+  <div class="card-container">
+     <div class="card" *ngFor="let item of restaurant" (click)="onCardClick(item.name)">
+      <div class="food-promotions">{{item.tags}}</div>
+      <img class="restaurant-image" [src]="item.image"alt="Restaurant 1">
+      <div class="restaurant-name">{{item.name}}</div>
+      <div class="food-type">{{item.description}}</div>
+      <div class="text-center">Order Now</div>
+  </div>
+</div>
+
+

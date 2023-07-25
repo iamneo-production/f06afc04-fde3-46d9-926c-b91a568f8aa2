@@ -2,7 +2,11 @@
     <thead>
       <tr>
        
+<<<<<<< HEAD
         <th scope="col">Customer Id</th>
+=======
+      
+>>>>>>> 68beb65b1438c5fec4706e0e680ce1345a0abb55
         <th scope="col">Order Id</th>
         <th scope="col">MenuItem Id</th>
         <th scope="col">Restaurant Id</th>
@@ -14,6 +18,7 @@
       </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
     
        <tr *ngFor = "let order of orders">
         <td>2</td>
@@ -50,6 +55,12 @@
        </tr>
         <tr>
         <td>{{order.customerId}}</td>
+=======
+      <!-- <tr *ngFor="let customer of customers"> -->
+       <tr *ngFor="let order of order" >
+      
+       
+>>>>>>> 68beb65b1438c5fec4706e0e680ce1345a0abb55
         <td>{{order.orderId}}</td>
         <td>{{order.menuItemId}}</td>
         <td>{{order.restaurantId}}</td>
@@ -57,10 +68,19 @@
         <td>{{order.deliveryAddress}}</td>
         <td>{{order.deliveryTime}}</td>
         <td>{{order.status}}</td>
+<<<<<<< HEAD
         <td><button (click)="reorderItems(order.customer.id)" class="btn-btn-primary">Reorder</button>
           
         </td>
 
+=======
+        <td><button (click)="reorder()" class="btn-btn-primary">Update</button>
+          
+        </td>
+       
+          
+        
+>>>>>>> 68beb65b1438c5fec4706e0e680ce1345a0abb55
       </tr>
       
        </tbody>

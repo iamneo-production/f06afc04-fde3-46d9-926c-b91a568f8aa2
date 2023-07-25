@@ -47,7 +47,11 @@ export class RessignupComponent {
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
+<<<<<<< HEAD:foodapp_frontend/src/app/ressignup/ressignup.component.ts
     this.http.post('http://localhost:8080/restaurant', restaurantData, { headers, responseType: 'text' }).subscribe(
+=======
+    this.http.post('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/admin', customerData, { headers, responseType: 'text' }).subscribe(
+>>>>>>> 68beb65b1438c5fec4706e0e680ce1345a0abb55:foodapp_frontend/src/app/adminsignup/adminsignup.component.ts
       (response: any) => {
         console.log(response); 
         if (response.includes('created') || response.includes('Customer created')) {
