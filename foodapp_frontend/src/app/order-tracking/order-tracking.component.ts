@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http';
 interface Order {
   id: number;
   customerId: number;
-  menuItemId: number;
   totalCost: number;
   deliveryAddress: string;
   deliveryTime: string;
@@ -28,7 +27,7 @@ export class OrderTrackingComponent implements OnInit {
 
   fetchOrderDetails() {
     const orderId = 1; 
-    this.http.get<Order>(`https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/GET/Order`)
+    this.http.get<Order>(`https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/GET_Order`)
       .subscribe(
         (response) => {
           this.order = response;
