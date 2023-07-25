@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Router } from '@angular/router';
 
 import { CustomerService } from '../customer.service';
-import { Customer } from '../customer';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -13,7 +13,10 @@ export class SignupComponent {
   name: string = '';
   email: string = '';
   password: string = '';
-  addressId: string = '';
+  city: string = '';
+  street: string = '';
+  state: string = '';
+  zipcode: string = '';
   
 
   
@@ -22,15 +25,21 @@ export class SignupComponent {
 
   register():void {
 
-    if (!this.name || !this.email || !this.password || !this.addressId) {
+    if (!this.name || !this.email || !this.password || !this.zipcode) {
       alert('Please provide all the required details.');
       return; 
     }
+    const addressData = {
+      street: this.street,
+      city: this.city,
+      state: this.state,
+      zipCode: this.zipcode
+    };
     const customerData = {
       name: this.name,
       email: this.email,
       password: this.password,
-      addressId: this.addressId
+      addressId: addressData
     };
 
    

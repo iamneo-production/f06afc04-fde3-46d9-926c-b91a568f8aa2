@@ -15,6 +15,10 @@ import { UpdateCustomerComponent } from './update-customer/update-customer.compo
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { OrderCreateComponent } from './order-create/order-create.component';
 import { NotificationComponent } from './notification/notification.component';
+import { ResloginComponent } from './reslogin/reslogin.component';
+import { RessignupComponent } from './ressignup/ressignup.component';
+import { ResdetailsComponent } from './resdetails/resdetails.component';
+import { UpdateDetailsComponent } from './update-details/update-details.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,10 @@ import { NotificationComponent } from './notification/notification.component';
     OrderHistoryComponent,
     OrderCreateComponent,
     NotificationComponent,
+    ResloginComponent,
+    RessignupComponent,
+    ResdetailsComponent,
+    UpdateDetailsComponent,
     
    
   ],

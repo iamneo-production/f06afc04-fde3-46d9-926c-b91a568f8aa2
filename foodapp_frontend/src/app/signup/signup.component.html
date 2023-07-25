@@ -7,26 +7,42 @@
 <form (submit)="register()" #signupForm="ngForm">      
 <div class="user-details">
 
-<div class="input-box">
-          <span class="details">Full Name</span>
+<div class="form-group">
+    <label for="name">Name</label>
           <input type="text" placeholder="Enter your name"  [(ngModel)]="name" name="name" required >
 
 </div>  
   
-<div class="input-box">
-          <span class="details">Email</span>
+<div class="form-group">
+    <label for="email">Email</label>
           <input type="email" placeholder="Enter your email" [(ngModel)]="email" name="email" required >
 </div>
 
-<div class="input-box">
-          <span class="details">Password</span>
+<div class="form-group">
+    <label for="password">Password</label>
           <input type="password" placeholder="Enter your password" [(ngModel)]="password" name="password" required>
 </div>
 
-<div class="input-box">
-    <span class="details">Address</span>
-    <input type="text" placeholder="Enter your address" [(ngModel)]="addressId" name="address" required >
-</div>
+
+<div class="form-group">
+    <label for="street">Street</label>
+    <input type="text" id="street" name="street" class="form-control" [(ngModel)]="street" placeholder="Enter your street">
+  </div>
+
+  <div class="form-group">
+    <label for="city">City</label>
+    <input type="text" id="city" name="city" class="form-control" [(ngModel)]="city" placeholder="Enter your city">
+  </div>
+
+  <div class="form-group">
+    <label for="state">State</label>
+    <input type="text" id="state" name="state" class="form-control" [(ngModel)]="state" placeholder="Enter your state">
+  </div>
+
+  <div class="form-group">
+    <label for="zipcode">Zipcode</label>
+    <input type="text" id="zipcode" name="zipcode" class="form-control" [(ngModel)]="zipcode" placeholder="Enter your zipcode">
+  </div>
 
 </div> <!--user details ending-->
           

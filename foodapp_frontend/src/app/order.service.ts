@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import {  Observable } from 'rxjs';
 import { Order } from './order';
 
 @Injectable({
@@ -9,15 +9,15 @@ import { Order } from './order';
 export class OrderService {
 
   private baseURL = "http://localhost:8080/order";
+  
+ 
 
-  private cartItemsSubject: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
-  public cartItems$: Observable<any[]> = this.cartItemsSubject.asObservable();
 
   constructor(private http:HttpClient) { }
 
-  getOrderByCustomerId(customerId:number):Observable<Order> 
+  getOrderByCustomerId(customerId:number):Observable<Order[]> 
   {
-     return this.http.get<Order>(`${this.baseURL}/customerId/${customerId}`);
+     return this.http.get<Order[]>(`${this.baseURL}/customerId/${customerId}`);
   }
 
   orderhistory(): Observable<Order[]> {
@@ -27,7 +27,6 @@ export class OrderService {
   createOrder(newOrder: any): Observable<any> {
     return this.http.post<any>(`${this.baseURL}`, newOrder);
   }
-
   reorderItems(order: any, customerId:number): Observable<number> {
     // Assuming you have an API endpoint in the backend to initiate the reorder process
     return this.http.post<number>(`${this.baseURL}/reorder/${customerId}`, order);
