@@ -1,6 +1,6 @@
 <div class="centered">
     <div id="hotel-details">
-        <a id="hotel-name">Zesty Foods</a>
+        <a id="hotel-name" [routerLink]="['/restaurantdetails/', restaurant.id]">{{restaurant.name}}</a>
         <a>
             <div id="ratings">
             <a class="stars">4.2 <img src="/assets/menu/star.svg" alt="star"></a>
