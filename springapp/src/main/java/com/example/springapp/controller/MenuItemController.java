@@ -28,7 +28,7 @@ public class MenuItemController {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     }
 }
-   
+
     @PutMapping
     public String updateMenuItems(@RequestBody MenuItem menuItem) {
         return menuItemService.updateMenuItems(menuItem);

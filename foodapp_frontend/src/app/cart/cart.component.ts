@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {CartService} from './cart.service';
 import { Router } from '@angular/router';
+import { MenuService } from '../menu/menu.service';
+import { Order } from '../Order';
 
 
 @Component({
@@ -18,77 +20,95 @@ export class CartComponent implements OnInit {
   deliveryOption:string="pickup";
   deliveryCharge:number=0;
   availablecoupans:string[]=['WELCOME','BIGDAY','FRESHIP']
+  couponApplied:boolean=false;
+  
   
 
-  constructor(private cartService: CartService, private router: Router) {}
+  constructor(private cartService: CartService, private router: Router,public menuService:MenuService) {}
   
 
   ngOnInit() {
-    this.items = this.cartService.getItems();
-    this.total = this.cartService.getTotal();
+    // this.items = this.cartService.getItems();
+    // this.total = this.cartService.getTotal();
+
     this.calculateDiscountedPrice();
   }
+  
+  orders:Order[]=this.menuService.order;
 
   incrementItemQuantity(item: any): void {
     this.cartService.incrementItemQuantity(item);
-    this.total = this.cartService.getTotal();
-    this.discount(this.coupanInput);
+    this.calculateDiscountedPrice();
   }
 
   decrementItemQuantity(item: any): void {
-    this.cartService.decrementItemQuantity(item);
-    this.total = this.cartService.getTotal();
-    this.discount(this.coupanInput);
-  }
+    if (item.quantity > 1) {
+        this.cartService.decrementItemQuantity(item);
+        // this.total = this.cartService.getTotal();
+        this.calculateDiscountedPrice();
+    }
+}
+
 
   removeItem(item:any): void {
     let index = this.items.indexOf(item);
     if (index !== -1) {
       this.items.splice(index, 1);
       this.total -= (item.price * item.quantity);
-      this.discount(this.coupanInput);
+      this.calculateDiscountedPrice();
     }
     
   }
 
   clearCart(): void {
-    this.cartService.clearCart();
-    this.items = [];
+    // this.cartService.clearCart();
+    this.orders = [];
     this.total = 0;
     this.calculateDiscountedPrice();
   }
 
   discount(couponInput: string): void {
     const enteredCoupon = couponInput.trim().toUpperCase();
-    
-    if (couponInput === 'WELCOME' && this.discountcount === 0) {
-      this.discountvalue = 0.5 * this.total;
+  
+    if (enteredCoupon === 'WELCOME' && !this.couponApplied) {
+      this.discountvalue = Math.min(0.5 * this.menuService.getTotalAmount(), 200);
+      this.couponApplied = true;
       this.calculateDiscountedPrice();
-      this.discountcount++;
-      alert('Coupon Applied Successfully');
-    } else if (couponInput === 'WELCOME' && this.discountcount !== 0) {
-      this.discountvalue=0.5*this.total;
+    } else if (enteredCoupon === 'BIGDAY' && !this.couponApplied) {
+      this.discountvalue = Math.min(100, this.menuService.getTotalAmount());
+      this.couponApplied = true;
+      this.calculateDiscountedPrice();
+    } else if (enteredCoupon === 'FREESHIP' && !this.couponApplied && this.deliveryCharge === 50) {
+      this.discountvalue = 50;
+      this.couponApplied = true;
       this.calculateDiscountedPrice();
     } else {
       this.discountedprice = this.total;
-      this.discountcount = 0;
+      this.couponApplied = false;
       this.discountvalue = 0;
-      
     }
   }
+  
+  
 
   calculateDiscountedPrice(): void {
-    if (this.discountcount == 0) {
-      this.discountedprice = this.total - this.discountvalue;
-    } else {
-      this.discountedprice = this.total-this.discountvalue;
-    }
+    if(this.couponApplied==true)
+    {this.discountvalue = Math.min(0.5 * this.menuService.getTotalAmount(), 200);
+    this.discountedprice = this.total - this.discountvalue;}
+  
   }
   update1():void{
    this.deliveryCharge=50;
+   
   }
   update2():void{
     this.deliveryCharge=0;
   }
-}
 
+  finalAmount():number{
+    return this.cartService.finalAmount(this.discountvalue,this.deliveryCharge);
+
+  }
+
+  
+}

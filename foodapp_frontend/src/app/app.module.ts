@@ -18,8 +18,12 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { CartComponent } from './cart/cart.component';
+import { MenuComponent } from './menu/menu.component';
 import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantdashboard.component';
 import { HomeComponent } from './home/home.component';
+import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
 
 
 @NgModule({
@@ -37,8 +41,12 @@ import { HomeComponent } from './home/home.component';
     ContactusComponent,
     AboutComponent,
     AdminpanelComponent,
+    MenuComponent,
     RestaurantdashboardComponent,
-    HomeComponent
+    HomeComponent,
+    RestaurantlistComponent,
+    CheckoutComponent,
+    OrderTrackingComponent
   ],
   imports: [
     BrowserModule,

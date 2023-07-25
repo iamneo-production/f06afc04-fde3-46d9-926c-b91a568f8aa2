@@ -1,5 +1,7 @@
+
 package com.example.springapp.controller;
 
+import com.example.springapp.model.Customer;
 import com.example.springapp.model.Restaurant;
 import com.example.springapp.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,20 +26,34 @@ public class RestaurantController {
     }
 
     @PostMapping
-    public ResponseEntity<Restaurant> createRestaurant(@RequestBody Restaurant restaurant) {
-         Restaurant createdRestaurant=restaurantService.createRestaurant(restaurant);
-        return ResponseEntity.status(HttpStatus.CREATED).body(createdRestaurant);
+    public ResponseEntity<String> createRestaurant(@RequestBody Restaurant restaurant) {
+        String result = restaurantService.createRestaurant(restaurant);
+        return ResponseEntity.status(HttpStatus.CREATED).body(result);
     }
 
+
+    @PutMapping
+    public  Restaurant updateRestaurant(@RequestBody Restaurant restaurant)
+    {
+        return restaurantService.restaurant(restaurant);
+
+    }
 
     @GetMapping
     public ResponseEntity<List<Restaurant>> getAllRestaurant() {
-    List<Restaurant> restaurants = restaurantService.getAllRestaurant();
-    if (restaurants.isEmpty()) {
-        return ResponseEntity.noContent().build();
+        List<Restaurant> restaurants = restaurantService.getAllRestaurant();
+        if (restaurants.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(restaurants);
     }
-    return ResponseEntity.ok(restaurants);
+
+    @GetMapping("/{id}")
+    public Restaurant getRestaurantById(@PathVariable Long id) {
+        Restaurant restaurant = restaurantService.getRestaurantById(id);
+        return restaurant;
     }
+
     @GetMapping("/name")
     public ResponseEntity<Restaurant> getRestaurantByName(@RequestParam("name") String name) {
         Restaurant restaurant = restaurantService.findByRestaurantName(name);
@@ -47,26 +63,16 @@ public class RestaurantController {
             return ResponseEntity.notFound().build();
         }
     }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<Restaurant> getRestaurantById(@PathVariable Long id) {
-        Restaurant restaurant = restaurantService.getRestaurantById(id);
-        if (restaurant != null) {
-            return ResponseEntity.ok(restaurant);
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteRestaurant(@PathVariable Long id) {
+        String result = restaurantService.deleteRestaurantById(id);
+        if (result != null) {
+            return ResponseEntity.ok(result);
         } else {
             return ResponseEntity.notFound().build();
         }
     }
+}
 
-    @PutMapping
 
-    public ResponseEntity<Restaurant> updateRestaurant(@RequestBody Restaurant restaurant) {
-        Restaurant updatedRestaurant = restaurantService.updateRestaurant(restaurant);
-        if (updatedRestaurant != null) {
-            return ResponseEntity.ok(updatedRestaurant);
 
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
-        }

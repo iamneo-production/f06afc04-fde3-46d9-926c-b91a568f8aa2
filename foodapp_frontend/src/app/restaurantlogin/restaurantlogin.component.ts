@@ -3,7 +3,6 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
-
 @Component({
   selector: 'app-restaurantlogin',
   templateUrl: './restaurantlogin.component.html',
@@ -14,29 +13,29 @@ export class RestaurantloginComponent {
   email = '';
   password = '';
 
-  constructor(private http: HttpClient, private router: Router,     private authService: AuthService ) {}
+  constructor(private http: HttpClient, private router: Router, private authService: AuthService) { }
 
   login(): void {
-    if ( !this.email || !this.password ) {
+    if (!this.email || !this.password) {
       alert('Please provide all the required details.');
-      return; 
+      return;
     }
-    
-    const loginData = { 
-      email: this.email, 
-      password: this.password 
+
+    const loginData = {
+      email: this.email,
+      password: this.password
     };
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post('http://localhost:8080/restaurant', loginData, { headers, observe: 'response' }).subscribe(
+    this.http.post<any>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/restaurantsLogin', loginData, { headers, observe: 'response' }).subscribe(
       (response) => {
-        if (response.status === 200) {
-          // Login successful, redirect to the Home component
-          this.authService.setAuthenticated(true, 'restaurant'); // Set the user type as 'admin'
-
-          this.router.navigate(['/restaurantpanel']);
-        } 
-        },
+        if (response.body?.message === 'Restaurants Login successful') {
+          // Login successful, store the email in localStorage
+          localStorage.setItem('restaurantEmail', this.email);
+          this.authService.setAuthenticated(true, 'restaurant'); // Set the user type as 'restaurant'
+          this.router.navigate(['/restaurantdashboard']);
+        }
+      },
       (error: HttpErrorResponse) => {
         if (error.status === 401) {
           // Show an alert for invalid credentials

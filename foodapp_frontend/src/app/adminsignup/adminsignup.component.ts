@@ -31,7 +31,7 @@ export class AdminsignupComponent {
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post('http://localhost:8080/admin', customerData, { headers, responseType: 'text' }).subscribe(
+    this.http.post('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/admin', customerData, { headers, responseType: 'text' }).subscribe(
       (response: any) => {
         console.log(response); 
         if (response.includes('created') || response.includes('Customer created')) {
