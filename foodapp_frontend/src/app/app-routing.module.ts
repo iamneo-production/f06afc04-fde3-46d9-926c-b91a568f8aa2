@@ -40,7 +40,7 @@ const routes: Routes = [
   {path: 'contactus',component:ContactusComponent},
   {path: 'home', component: HomeComponent, canActivate: [RestaurantAuthGuard]},
   {path: 'cart', component: CartComponent, canActivate: [RestaurantAuthGuard]},
-  {path: 'menu',component:MenuComponent, canActivate: [RestaurantAuthGuard]},
+  {path: 'menu',component:MenuComponent},
   {path: 'restaurantlist',component:RestaurantlistComponent, canActivate: [RestaurantAuthGuard]},
   {path: 'checkout',component:CheckoutComponent, canActivate: [RestaurantAuthGuard]},
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },

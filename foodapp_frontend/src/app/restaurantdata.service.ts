@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class RestaurantdataService {
 
-  url = 'https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/restaurant';
+  url = 'https://8080-bfdadceabdbcdeacfcdbceaeaadbdbabf.project.examly.io/restaurant';
   constructor(private http:HttpClient){}
   restaurants(){
     return this.http.get(this.url);
