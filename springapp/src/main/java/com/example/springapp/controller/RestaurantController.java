@@ -32,7 +32,13 @@ public class RestaurantController {
     }
 
 
-   
+    @PutMapping
+    public  Restaurant updateRestaurant(@RequestBody Restaurant restaurant)
+    {
+        return restaurantService.restaurant(restaurant);
+
+    }
+
     @GetMapping
     public ResponseEntity<List<Restaurant>> getAllRestaurant() {
         List<Restaurant> restaurants = restaurantService.getAllRestaurant();
@@ -41,24 +47,11 @@ public class RestaurantController {
         }
         return ResponseEntity.ok(restaurants);
     }
-    @GetMapping("/{id}")
-    public ResponseEntity<Restaurant> getRestaurantById(@PathVariable("id") Long id) {
-        Restaurant restaurant = restaurantService.getRestaurantById(id);
-        if (restaurant != null) {
-            return ResponseEntity.ok(restaurant);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
-    @PostMapping(value="/updatedetails",consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Restaurant> updateRestaurant(@RequestBody Restaurant restaurant) {
-        Restaurant result = restaurantService.updateRestaurant(restaurant);
-        if (result != null) {
-            return ResponseEntity.status(HttpStatus.OK).body(result);
 
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    @GetMapping("/{id}")
+    public Restaurant getRestaurantById(@PathVariable Long id) {
+        Restaurant restaurant = restaurantService.getRestaurantById(id);
+        return restaurant;
     }
 
     @GetMapping("/name")
@@ -80,6 +73,3 @@ public class RestaurantController {
         }
     }
 }
-
-
-

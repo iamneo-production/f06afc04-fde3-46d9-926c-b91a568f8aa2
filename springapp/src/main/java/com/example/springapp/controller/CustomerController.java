@@ -33,16 +33,15 @@ public class CustomerController {
         }
     }
 
-    @PostMapping(value="/updateprofile",consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Customer> updateUserProfile(@RequestBody Customer customer) {
-        Customer result = customerService.updateUserProfile(customer);
+    @PutMapping
+    public ResponseEntity<String> updateUserProfile(@RequestBody Customer customer) {
+        String result = customerService.updateUserProfile(customer);
         if (result != null) {
-            return ResponseEntity.status(HttpStatus.OK).body(result);
+            return ResponseEntity.ok(result);
         } else {
             return ResponseEntity.notFound().build();
         }
     }
-
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteCustomer(@PathVariable("id") Long id) {

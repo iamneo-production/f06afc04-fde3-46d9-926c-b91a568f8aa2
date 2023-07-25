@@ -27,16 +27,6 @@ public class OrderService {
     public Order getOrdersByCustomerId(Long customerId) {
         return orderRepository.findByCustomerId(customerId);
     }
-    public List<Order> reorderOrders(List<Long> orderIds) {
-        // Implement the logic to reorder the selected orders by their IDs
-        // For example, you can fetch the selected orders from the database
-        List<Order> selectedOrders = orderRepository.findByIdIn(orderIds);
-
-        // Additional logic to update order status or other details for reordering
-
-        // Return the reordered orders
-        return selectedOrders;
-    }
     public Order getOrdersByRestaurantId(Long restaurantId) {
         return orderRepository.findByRestaurantId(restaurantId);
     }
