@@ -86,8 +86,11 @@
     <button *ngIf="router.url==='/home' || router.url=='/menu'" class="button" value="My cart" routerLink='/cart' ><span><i class="fas fa-shopping-cart"></i> My Cart </span></button>
 
      <!-- profile  -->
-     <button *ngIf="router.url==='/adminpanel' || router.url==='/restaurantlist' || router.url==='/home' " class="button"><span><i class="fas fa-user"></i>
+     <button *ngIf="router.url==='/adminpanel' || router.url==='/restaurantlist' || router.url==='/home' " class="button" routerLink='/profile' ><span><i class="fas fa-user"></i>
       Edit Profile</span></button>
+
+      <button *ngIf="router.url==='/profile' " class="button" routerLink='/order-history' ><span><i class="fas fa-file-invoice"></i>
+        Orders</span></button>
 
        <!-- restaurant  -->
   <button *ngIf="router.url==='/home'" class="button" routerLink='/restaurantlist'><span> <i class="fas fa-utensils"></i>
