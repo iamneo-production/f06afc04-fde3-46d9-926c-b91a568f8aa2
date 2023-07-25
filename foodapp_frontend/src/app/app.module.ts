@@ -45,11 +45,9 @@ import { HomeComponent } from './home/home.component';
 import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetails.component';
-import { OrderTrackingComponent } from './ordertracking/ordertracking.component';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 import { ResdetailsComponent } from './resdetails/resdetails.component';
-import { UpdateDetailsComponent } from './update-details/update-details.component';
-import { OrderComponent } from './order/order.component';
+
 import { NotificationComponent } from './notification/notification.component';
 import { ProfileComponent } from './profile/profile.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
@@ -91,11 +89,11 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
     RestaurantlistComponent,
     CheckoutComponent,
     RestaurantdetailsComponent,
-    OrderTrackingComponent,
+
     UpdateCustomerComponent,
     ResdetailsComponent,
-    UpdateDetailsComponent,
-    OrderComponent,
+ 
+
     NotificationComponent,
     ProfileComponent,
     OrderHistoryComponent
