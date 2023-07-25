@@ -59,10 +59,14 @@ public class RestaurantController {
     }
 
     @PutMapping
-    public  Restaurant updateRestaurant(@RequestBody Restaurant restaurant)
-    {
-        return restaurantService.restaurant(restaurant);
-        return restaurantRepository.save(res);
 
+    public ResponseEntity<Restaurant> updateRestaurant(@RequestBody Restaurant restaurant) {
+        Restaurant updatedRestaurant = restaurantService.updateRestaurant(restaurant);
+        if (updatedRestaurant != null) {
+            return ResponseEntity.ok(updatedRestaurant);
+
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
-}
+        }

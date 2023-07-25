@@ -28,18 +28,26 @@ public class RestaurantService {
     public Restaurant getRestaurantById(Long id) {
         return restaurantRepository.findById(id).orElse(null);
     }
-    public  Restaurant restaurant(Restaurant restaurant){
-        long  id = restaurant.getId();
-       Restaurant res = restaurantRepository.findById(id).get();
-       res.setName(restaurant.getName());
-       res.setAddress(restaurant.getAddress());
-       res.setMenu_item_id(restaurant.getMenu_item_id());
-       return restaurantRepository.save(res);
- 
- 
-     }
+
+    
+
+    public Restaurant updateRestaurant(Restaurant restaurant) {
+        Long id = restaurant.getId();
+        Restaurant existingRestaurant = restaurantRepository.findById(id).orElse(null);
+        if (existingRestaurant != null) {
+            existingRestaurant.setName(restaurant.getName());
+            existingRestaurant.setAddress(restaurant.getAddress());
+            existingRestaurant.setMenu_item_id(restaurant.getMenu_item_id());
+            return restaurantRepository.save(existingRestaurant);
+        } else {
+            return null;
+        }
+    }
+
 
      public Restaurant findByRestaurantName(String name) {
     return restaurantRepository.findByName(name);
 }
 }
+
+
