@@ -22,12 +22,72 @@
 	</natures>
 	<filteredResources>
 		<filter>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 			<id>1683004934301</id>
+=======
+<<<<<<< HEAD
+			<id>1688104497859</id>
+=======
+<<<<<<< HEAD
+			<id>1688114600148</id>
+>>>>>>> a397c9c (updated the home and search components for home screen)
+=======
+			<id>1688051281088</id>
+>>>>>>> 9135be3 (first commit)
+=======
+<<<<<<< HEAD
+			<id>1688124233932</id>
+>>>>>>> 8a4c3b6 (api 16 done)
+=======
+			<id>1689046801558</id>
+>>>>>>> 98fdfa89a834b4f048fbd7c0654ef6cd3e932024
+=======
+			<id>1689087426299</id>
+>>>>>>> 79299ef1d7235cf3c13db9ac2499a1cafbe08b66
+>>>>>>> 8fa0a7abf8b16c075d338c9ac1ca34a0ff830913
+=======
+			<id>1689240979094</id>
+>>>>>>> 07b30fd81a250e6070f26c7afcfe9712e30cc599
+>>>>>>> origin/Project-Workspace-Ravi-Byahut
+=======
+			<id>1683004934301</id>
+>>>>>>> 099de46 (updated the home and search components for home screen)
+>>>>>>> a397c9c (updated the home and search components for home screen)
+=======
+			<id>1688999234453</id>
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
 			<name></name>
 			<type>30</type>
 			<matcher>
 				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+<<<<<<< HEAD
+<<<<<<< HEAD
+				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+=======
+				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+>>>>>>> ec75852372be6f1a12583025cd1786856d5ad35b
+=======
+				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+>>>>>>> 98fdfa89a834b4f048fbd7c0654ef6cd3e932024
+>>>>>>> origin/Project-Workspace-Ravi-Byahut
+=======
+				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+>>>>>>> 099de46 (updated the home and search components for home screen)
+>>>>>>> a397c9c (updated the home and search components for home screen)
+=======
+				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+>>>>>>> ec75852 (header, userlogin, dashboard was updated)
 			</matcher>
 		</filter>
 	</filteredResources>
