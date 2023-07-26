@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
-<<<<<<< HEAD
-=======
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
->>>>>>> 08a481a5c5f6d54a173704e846821425e3d3b270
 
 @Component({
   selector: 'app-adminlogin',
@@ -13,8 +10,6 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./adminlogin.component.css']
 })
 export class AdminloginComponent {
-<<<<<<< HEAD
-=======
   email = '';
   password = '';
 
@@ -51,6 +46,5 @@ export class AdminloginComponent {
       }
     );
   }
->>>>>>> 08a481a5c5f6d54a173704e846821425e3d3b270
 
 }
