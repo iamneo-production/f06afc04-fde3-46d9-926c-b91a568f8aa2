@@ -3,15 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "cart": {
-=======
-    "foodapp_frontend": {
->>>>>>> 099de46 (updated the home and search components for home screen)
-=======
-    "foodapp_frontend": {
->>>>>>> ec75852 (header, userlogin, dashboard was updated)
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -21,15 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-<<<<<<< HEAD
-<<<<<<< HEAD
             "outputPath": "dist/cart",
-=======
-            "outputPath": "dist/foodapp_frontend",
->>>>>>> 099de46 (updated the home and search components for home screen)
-=======
-            "outputPath": "dist/foodapp_frontend",
->>>>>>> ec75852 (header, userlogin, dashboard was updated)
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -76,23 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-<<<<<<< HEAD
-<<<<<<< HEAD
               "browserTarget": "cart:build:production"
             },
             "development": {
               "browserTarget": "cart:build:development"
-=======
-=======
->>>>>>> ec75852 (header, userlogin, dashboard was updated)
-              "browserTarget": "foodapp_frontend:build:production"
-            },
-            "development": {
-              "browserTarget": "foodapp_frontend:build:development"
-<<<<<<< HEAD
->>>>>>> 099de46 (updated the home and search components for home screen)
-=======
->>>>>>> ec75852 (header, userlogin, dashboard was updated)
             }
           },
           "defaultConfiguration": "development"
@@ -100,15 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-<<<<<<< HEAD
-<<<<<<< HEAD
             "browserTarget": "cart:build"
-=======
-            "browserTarget": "foodapp_frontend:build"
->>>>>>> 099de46 (updated the home and search components for home screen)
-=======
-            "browserTarget": "foodapp_frontend:build"
->>>>>>> ec75852 (header, userlogin, dashboard was updated)
           }
         },
         "test": {
@@ -133,14 +96,6 @@
     }
   },
   "cli": {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "analytics": "32711637-e8cd-416d-b241-69d4a2971fd8"
-=======
-    "analytics": "880512f1-8f23-430a-816a-443a07a1dc34"
->>>>>>> 099de46 (updated the home and search components for home screen)
-=======
-    "analytics": "2d43ca6a-88c5-4a34-8c19-ed806bcc1bb4"
->>>>>>> ec75852 (header, userlogin, dashboard was updated)
   }
 }
