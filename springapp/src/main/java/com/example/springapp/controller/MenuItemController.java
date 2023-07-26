@@ -1,22 +1,10 @@
 package com.example.springapp.controller;
 
-<<<<<<< HEAD
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-=======
->>>>>>> 874caa3 (restaurant dashboard,signup,home images)
 import com.example.springapp.model.MenuItem;
 import com.example.springapp.model.Restaurant;
 import com.example.springapp.repository.MenuItemRepository;
 import com.example.springapp.repository.RestaurantRepository;
 import com.example.springapp.service.MenuItemService;
-<<<<<<< HEAD
-=======
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
@@ -25,24 +13,12 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Optional;
->>>>>>> 874caa3 (restaurant dashboard,signup,home images)
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping()
+@RequestMapping("/menu-item")
 public class MenuItemController {
-	
-	@Autowired
-	private MenuItemService menuItemService;
-	
-	@PostMapping("/menu-item")
-	public String addMenuItem(@RequestBody MenuItem menuItem) {
-		String repsonse = menuItemService.addMenuItem(menuItem);
-		return repsonse;
-	}
 
-<<<<<<< HEAD
-=======
     @Autowired
     private MenuItemService menuItemService;
 
@@ -99,5 +75,4 @@ public class MenuItemController {
             return ResponseEntity.notFound().build();
         }
     }
->>>>>>> 874caa3 (restaurant dashboard,signup,home images)
 }

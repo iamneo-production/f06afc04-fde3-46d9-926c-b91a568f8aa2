@@ -1,12 +1,5 @@
 package com.example.springapp.service;
 
-<<<<<<< HEAD
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import com.example.springapp.model.MenuItem;
-import com.example.springapp.repository.MenuItemRepository;
-=======
 import com.example.springapp.model.MenuItem;
 import com.example.springapp.repository.MenuItemRepository;
 import org.springframework.beans.BeanUtils;
@@ -15,21 +8,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
->>>>>>> 874caa3 (restaurant dashboard,signup,home images)
 
 @Service
 public class MenuItemService {
 
-<<<<<<< HEAD
-	@Autowired
-	private MenuItemRepository menuItemRepository;
-	
-	public String addMenuItem(MenuItem menuItem) {
-		menuItemRepository.save(menuItem);
-		return "Created";
-	}
-	
-=======
     @Autowired
     private MenuItemRepository menuItemRepository;
 
@@ -72,5 +54,4 @@ public class MenuItemService {
 
 
 
->>>>>>> 874caa3 (restaurant dashboard,signup,home images)
 }

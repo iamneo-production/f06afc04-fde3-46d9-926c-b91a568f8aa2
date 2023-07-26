@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 08a481a5c5f6d54a173704e846821425e3d3b270
 # Cart
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
@@ -9,6 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 >>>>>>> ec75852372be6f1a12583025cd1786856d5ad35b
+<<<<<<< HEAD
 =======
 # FoodappFrontend
 
@@ -19,6 +23,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 >>>>>>> ec75852 (header, userlogin, dashboard was updated)
+=======
+>>>>>>> 08a481a5c5f6d54a173704e846821425e3d3b270
 
 ## Development server
 
