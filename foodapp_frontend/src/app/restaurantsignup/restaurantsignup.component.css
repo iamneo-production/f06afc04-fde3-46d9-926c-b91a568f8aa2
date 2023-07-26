@@ -90,3 +90,8 @@ form .user-details .form-group{
 
 
 
+
+form .user-details .form-group{
+  margin-bottom: 15px;
+  width: calc(100% / 3 - 20px);
+}
