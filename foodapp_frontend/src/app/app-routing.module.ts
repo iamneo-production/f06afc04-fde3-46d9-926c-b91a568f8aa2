@@ -40,15 +40,12 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   {path: 'update-customer/:id', component: UpdateCustomerComponent},
   {path: 'order-history', component: OrderHistoryComponent},
- 
   {path: 'notification', component: NotificationComponent},
-
   {path: 'resdetails', component: ResdetailsComponent},
   {path: 'adminlogin',component:AdminloginComponent},
   {path: 'adminsignup',component:AdminsignupComponent},
   {path: 'restaurantlogin',component:RestaurantloginComponent},
   {path: 'restaurantsignup',component:RestaurantsignupComponent},
-
   {path: 'about',component:AboutComponent},
   {path: 'contactus',component:ContactusComponent},
   {path: 'home', component: HomeComponent, canActivate: [UserAuthGuard]},
