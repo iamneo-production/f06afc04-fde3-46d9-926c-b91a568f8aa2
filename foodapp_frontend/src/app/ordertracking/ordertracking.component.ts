@@ -28,7 +28,7 @@ export class OrdertrackingComponent implements OnInit {
 
   fetchOrderDetails() {
     const orderId = 1; 
-    this.http.get<Order>(`http://localhost:8080/order/${orderId}`)
+    this.http.get<Order>(`https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/GET_Order`)
       .subscribe(
         (response) => {
           this.order = response;
