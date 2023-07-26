@@ -11,7 +11,7 @@ import { Restaurant } from '../restaurant.model';
 export class RestaurantlistComponent {
   restaurant: Restaurant[] = [];
   searchText = '';
-  cuisineTypes: string[] = [];
+  cuisineType = '';
 
   constructor(
     private restaurantdata: RestaurantdataService,
@@ -20,8 +20,7 @@ export class RestaurantlistComponent {
   ) {
     this.route.queryParams.subscribe(params => {
       this.searchText = params['search'] || '';
-      const cuisineTypeParam = params['cuisineType'];
-      this.cuisineTypes = cuisineTypeParam ? cuisineTypeParam.split(',') : [];
+      this.cuisineType = params['cuisineType'] || '';
       this.getRestaurants();
     });
   }
@@ -29,20 +28,27 @@ export class RestaurantlistComponent {
   getRestaurants() {
     this.restaurantdata.restaurants().subscribe((data: any) => {
       if (this.searchText.trim() === '') {
-        if (this.cuisineTypes.length > 0) {
-          this.restaurant = data.filter((item: Restaurant) => this.cuisineTypes.some(cuisine => item.cuisinetype.toLowerCase().includes(cuisine.toLowerCase())));
+        if (this.cuisineType.trim() !== '') {
+          this.restaurant = data.filter((item: Restaurant) => item.cuisinetype.toLowerCase().includes(this.cuisineType.toLowerCase()));
         } else {
           this.restaurant = data;
         }
       } else {
-        this.restaurant = data.filter((item: { name: string }) =>
+        const searchResultByName = data.filter((item: Restaurant) =>
           item.name.toLowerCase().includes(this.searchText.toLowerCase())
         );
+
+        const searchResultByCuisine = data.filter((item: Restaurant) =>
+          item.cuisinetype.toLowerCase().includes(this.searchText.toLowerCase())
+        );
+
+        // Merge both search results (removing duplicates)
+        this.restaurant = [...new Set([...searchResultByName, ...searchResultByCuisine])];
       }
     });
   }
 
   onclick(id: number) {
-    this.router.navigate(['/restaurantdetails', id]);
-  }
+    this.router.navigate(['/restaurantdetails', id]);
+  }
 }

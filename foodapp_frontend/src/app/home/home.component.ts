@@ -22,9 +22,9 @@ export class HomeComponent {
       this.router.navigate(['/restaurantlist'], { queryParams: { search: this.searchText } });
     }
   }
+  
 
- onCardClick(itemName: string) {
-  this.router.navigate(['/restaurantlist'], { queryParams: { cuisineType: itemName.toLowerCase() } });
-}
-
+  onCardClick(itemName: string) {
+    this.router.navigate(['/restaurantlist'], { queryParams: { cuisineType: itemName.toLowerCase() } });
+  }
 }

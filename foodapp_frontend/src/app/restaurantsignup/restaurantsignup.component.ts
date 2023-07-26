@@ -13,7 +13,14 @@ export class RestaurantsignupComponent {
   email: string = '';
   password: string = '';
   address: string = '';
-  menu_item_id: number =0; // Make menu_item_id nullable
+  menu_item_id: number =0;
+  deliverytime: string = '';
+  minimumordervalue: string = '';
+  cuisinetype: string = '';
+  imageData: string = '';
+  rating: string = '';
+  
+
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -28,7 +35,12 @@ export class RestaurantsignupComponent {
       email: this.email,
       password: this.password,
       address: this.address,
-      menu_item_id: this.menu_item_id // Assign the value of menu_item_id
+      menu_item_id: this.menu_item_id ,
+      deliverytime:this.deliverytime,
+      minimumordervalue:this.minimumordervalue,
+      cuisinetype:this.cuisinetype,
+      rating:this.rating,
+      imageData:this.imageData,// Assign the value of menu_item_id
     };
   
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });

@@ -24,6 +24,8 @@ public class MenuItem {
 	
 	private String tags;
 
+	private String imageUrl;
+
 	public Long getId() {
 		return id;
 	}
@@ -64,6 +66,14 @@ public class MenuItem {
 		this.tags = tags;
 	}
 
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
 	public MenuItem(Long id, String name, String description, double price, String tags) {
 		super();
 		this.id = id;
@@ -71,6 +81,15 @@ public class MenuItem {
 		this.description = description;
 		this.price = price;
 		this.tags = tags;
+	}
+
+	public MenuItem(Long id, String name, String description, double price, String tags, String imageUrl) {
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.tags = tags;
+		this.imageUrl = imageUrl;
 	}
 
 	public MenuItem() {

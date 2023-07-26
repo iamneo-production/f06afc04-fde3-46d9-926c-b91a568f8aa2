@@ -1,4 +1,7 @@
-
+.body{
+  display: flex;
+  padding: 10px;
+}
 
 .container{
   max-width: 800px;
@@ -66,4 +69,14 @@ input[type="submit"] {
   .container {
     max-width: 80%;
   }
+}
+
+
+
+
+
+
+form .user-details .form-group{
+  margin-bottom: 15px;
+  width: calc(100% / 3 - 20px);
 }
