@@ -13,22 +13,22 @@ interface Order {
 }
 
 @Component({
-  selector: 'app-order-tracking',
-  templateUrl: './order-tracking.component.html',
-  styleUrls: ['./order-tracking.component.css']
+  selector: 'app-ordertracking',
+  templateUrl: './ordertracking.component.html',
+  styleUrls: ['./ordertracking.component.css']
 })
-export class OrderTrackingComponent implements OnInit {
+export class OrdertrackingComponent implements OnInit {
   order: Order | undefined;
 
   constructor(private http: HttpClient) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.fetchOrderDetails();
   }
 
   fetchOrderDetails() {
     const orderId = 1; 
-    this.http.get<Order>(`https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/GET/Order`)
+    this.http.get<Order>(`https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/GET_Order`)
       .subscribe(
         (response) => {
           this.order = response;

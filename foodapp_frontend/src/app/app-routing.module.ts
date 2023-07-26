@@ -18,6 +18,12 @@ import { UserAuthGuard, RestaurantAuthGuard, AdminAuthGuard } from './auth.guard
 import { MenuComponent } from './menu/menu.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
+import { NotificationComponent } from './notification/notification.component';
+import { ProfileComponent } from './profile/profile.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { OrdertrackingComponent } from './ordertracking/ordertracking.component';
+import { ResdetailsComponent } from './resdetails/resdetails.component';
 
 
 
@@ -31,18 +37,23 @@ const routes: Routes = [
   {path: 'dashboard',component:DashboardComponent},
   {path: 'userlogin',component:UserloginComponent},
   {path: 'usersignup',component:UsersignupComponent},
+  { path: 'profile', component: ProfileComponent },
+  {path: 'update-customer/:id', component: UpdateCustomerComponent},
+  {path: 'order-history', component: OrderHistoryComponent},
+  {path: 'notification', component: NotificationComponent},
+  {path: 'resdetails', component: ResdetailsComponent},
   {path: 'adminlogin',component:AdminloginComponent},
   {path: 'adminsignup',component:AdminsignupComponent},
   {path: 'restaurantlogin',component:RestaurantloginComponent},
   {path: 'restaurantsignup',component:RestaurantsignupComponent},
-
   {path: 'about',component:AboutComponent},
   {path: 'contactus',component:ContactusComponent},
   {path: 'home', component: HomeComponent, canActivate: [UserAuthGuard]},
   {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard]},
-  {path: 'menu',component:MenuComponent, canActivate: [UserAuthGuard]},
+  {path: 'menu/:id',component:MenuComponent, canActivate: [UserAuthGuard]},
   {path: 'restaurantlist',component:RestaurantlistComponent, canActivate: [UserAuthGuard]},
   {path: 'checkout',component:CheckoutComponent, canActivate: [UserAuthGuard]},
+  {path: 'ordertracking',component:OrdertrackingComponent, canActivate: [UserAuthGuard]},
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
   {path: 'adminpanel', component: AdminpanelComponent, canActivate: [AdminAuthGuard] },
 

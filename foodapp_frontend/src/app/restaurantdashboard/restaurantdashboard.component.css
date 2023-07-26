@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: #aeabb8;
     overflow-y: auto;
     height: 40.5rem;
@@ -12,15 +12,30 @@ body {
 }
 
 .custom-margin {
-    margin-top: 3rem;
+    margin-top: 3rem; */
   
     /* adjust the value to increase or decrease the gap */
-}
-
+/* } */
+/* 
 .form-spacing {
     margin-bottom: 20px;
   }
 
   .after-form-spacing {
     margin-bottom: 20px;
+  } */
+
+
+
+  .after-form-spacing {
+    margin-bottom: 50px;
+  }
+
+  
+  .after-form-spacing1 {
+    margin-bottom: 80px;
+  }
+
+  .after-form-spacing2 {
+    margin-bottom: 10px;
   }

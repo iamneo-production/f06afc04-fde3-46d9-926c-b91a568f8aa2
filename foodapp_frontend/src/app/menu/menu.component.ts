@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { MenuService } from './menu.service';
 import { FoodItem } from '../FoodItem';
 import { Order } from '../Order';
+import { ActivatedRoute } from '@angular/router';
+import { RestaurantdataService } from '../restaurantdata.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,12 +12,18 @@ import { Order } from '../Order';
 })
 export class MenuComponent {
 
-  constructor(private menuService:MenuService) { }
+  constructor(private menuService:MenuService, private route:ActivatedRoute, private restaurantService:RestaurantdataService) { }
 
   menu:FoodItem[] = [];
   filteredMenu:FoodItem[] = [];
+  restaurant:any = {name: "", id: 0};
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      let id:number = Number(params.get('id')) as number;
+      this.getRestaurantDetails(id);
+    });
+
     this.menuService.getMenu()
       .subscribe({
         next: data => {
@@ -24,6 +32,7 @@ export class MenuComponent {
           },
         error: error => {
           this.menuService.apiAvailable = false;
+          this.restaurant.name = "Zesty Foods";
           
           this.menuService.getMenuFromJSON()
               .subscribe(data => {
@@ -79,5 +88,12 @@ export class MenuComponent {
     if(orderItem == undefined)
       return 0;
     return orderItem.quantity;
+  }
+
+  getRestaurantDetails(id:number){
+    this.restaurantService.getRestaurantById(id)
+      .subscribe(data => {
+        this.restaurant = data;
+      });
   }
 }

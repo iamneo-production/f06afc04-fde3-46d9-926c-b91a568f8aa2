@@ -12,12 +12,13 @@ export class CheckoutComponent {
   constructor(public menuService:MenuService, private http: HttpClient) { } 
 
   orders=this.menuService.order;
+  paymentDone:boolean = false;
 
   amount:number=this.menuService.getTotalAmount();
-  date:Date=new Date();
+  date:String=new Date().toISOString().split('T')[0];
   
   makePayment() {
-    const url = 'https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/payment'; // Replace with your server's endpoint
+    const url = 'http://localhost:8080/payment'; // Replace with your server's endpoint
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
@@ -28,8 +29,9 @@ export class CheckoutComponent {
     // Make the HTTP POST request
     this.http.post<Payment>(url, payment, httpOptions).subscribe(
       (response) => {
-        console.log('Payment sent successfully:', response);
-        // Handle the response from the server here, if needed
+        // console.log('Payment sent successfully:', response);
+        this.paymentDone=true;
+        this.menuService.order = [];
       },
       (error) => {
         console.log(payment);
@@ -38,18 +40,4 @@ export class CheckoutComponent {
       }
     );
   }
-
-
-
-
-
-
-
-
-  submitAddress() {
-    console.log('Address:');
-  }
-
-
-
 }
