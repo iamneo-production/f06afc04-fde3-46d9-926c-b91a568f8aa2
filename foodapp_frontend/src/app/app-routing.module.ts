@@ -22,7 +22,7 @@ import { NotificationComponent } from './notification/notification.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
-
+import { OrdertrackingComponent } from './ordertracking/ordertracking.component';
 import { ResdetailsComponent } from './resdetails/resdetails.component';
 
 
@@ -56,6 +56,7 @@ const routes: Routes = [
   {path: 'menu/:id',component:MenuComponent, canActivate: [UserAuthGuard]},
   {path: 'restaurantlist',component:RestaurantlistComponent, canActivate: [UserAuthGuard]},
   {path: 'checkout',component:CheckoutComponent, canActivate: [UserAuthGuard]},
+  {path: 'ordertracking',component:OrdertrackingComponent, canActivate: [UserAuthGuard]},
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
   {path: 'adminpanel', component: AdminpanelComponent, canActivate: [AdminAuthGuard] },
 

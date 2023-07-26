@@ -30,6 +30,7 @@ import { ResdetailsComponent } from './resdetails/resdetails.component';
 import { NotificationComponent } from './notification/notification.component';
 import { ProfileComponent } from './profile/profile.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
+import { OrdertrackingComponent } from './ordertracking/ordertracking.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 
     NotificationComponent,
     ProfileComponent,
-    OrderHistoryComponent
+    OrderHistoryComponent,
+    OrdertrackingComponent
   ],
   imports: [
     BrowserModule,
