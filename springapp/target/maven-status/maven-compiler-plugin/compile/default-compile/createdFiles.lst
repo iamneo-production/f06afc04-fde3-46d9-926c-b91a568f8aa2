@@ -5,7 +5,6 @@ com/example/springapp/controller/RestaurantsLoginController.class
 com/example/springapp/controller/AdminLoginController.class
 com/example/springapp/service/OrderService.class
 com/example/springapp/model/ContactUs.class
-com/example/springapp/security/SecurityConfig.class
 com/example/springapp/controller/MenuItemController.class
 com/example/springapp/SpringappApplication.class
 com/example/springapp/controller/RestaurantController.class

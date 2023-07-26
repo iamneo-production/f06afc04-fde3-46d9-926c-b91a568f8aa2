@@ -1,3 +1,4 @@
+// RestaurantService.java
 
 package com.example.springapp.service;
 
@@ -33,24 +34,30 @@ public class RestaurantService {
         return restaurantRepository.findAll();
     }
 
+    public List<Restaurant> getRestaurantsByCuisine(String cuisineType) {
+        return restaurantRepository.findByCuisinetypeContainingIgnoreCase(cuisineType);
+    }
+    
+
     public Restaurant getRestaurantById(Long id) {
         return restaurantRepository.findById(id).orElse(null);
     }
-    public  Restaurant restaurant(Restaurant restaurant){
-        long  id = restaurant.getId();
-        Restaurant res = restaurantRepository.findById(id).get();
-        res.setName(restaurant.getName());
-        res.setAddress(restaurant.getAddress());
-        res.setMenu_item_id(restaurant.getMenu_item_id());
-        return restaurantRepository.save(res);
 
-
+    public Restaurant updateRestaurant(Long id, Restaurant restaurant) {
+        Optional<Restaurant> restaurantOptional = restaurantRepository.findById(id);
+        if (restaurantOptional.isPresent()) {
+            Restaurant existingRestaurant = restaurantOptional.get();
+            existingRestaurant.setName(restaurant.getName());
+            existingRestaurant.setAddress(restaurant.getAddress());
+            existingRestaurant.setMenu_item_id(restaurant.getMenu_item_id());
+            return restaurantRepository.save(existingRestaurant);
+        }
+        return null;
     }
 
     public Restaurant findByRestaurantName(String name) {
         return restaurantRepository.findByName(name);
     }
-
 
     public String deleteRestaurantById(Long id) {
         Optional<Restaurant> optionalRestaurant = restaurantRepository.findById(id);
@@ -58,8 +65,7 @@ public class RestaurantService {
             restaurantRepository.delete(optionalRestaurant.get());
             return "Restaurant deleted successfully";
         } else {
-            return null; // Or you can throw an exception indicating that the restaurant was not found
+            return null;
         }
     }
 }
-

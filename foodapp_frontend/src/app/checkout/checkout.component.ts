@@ -18,7 +18,7 @@ export class CheckoutComponent {
   date:String=new Date().toISOString().split('T')[0];
   
   makePayment() {
-    const url = 'http://localhost:8080/payment'; // Replace with your server's endpoint
+    const url = 'https://8080-eaeeecbfecacfcdbceaeaadbdbabf.project.examly.io/payment'; // Replace with your server's endpoint
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'

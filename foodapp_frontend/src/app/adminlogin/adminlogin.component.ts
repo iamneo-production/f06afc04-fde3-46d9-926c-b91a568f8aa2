@@ -24,7 +24,7 @@ export class AdminloginComponent {
     };
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post<any>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/adminLogin', loginData, { headers, observe: 'response' }).subscribe(
+    this.http.post<any>('https://8080-eaeeecbfecacfcdbceaeaadbdbabf.project.examly.io/adminLogin', loginData, { headers, observe: 'response' }).subscribe(
       (response) => {
         console.log(response);
         if (response.status === 200) {
