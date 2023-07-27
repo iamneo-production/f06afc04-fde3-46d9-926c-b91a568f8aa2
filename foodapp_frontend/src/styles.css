@@ -19,10 +19,11 @@ button:hover, .btn-secondary:hover, .title:hover {
 }
 
 .body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: white;
   overflow: hidden;
   height: 91.57vh;
-   justify-content: center;
+  justify-content: center;
   align-items: center;
 }
 

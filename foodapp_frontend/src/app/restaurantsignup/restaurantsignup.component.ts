@@ -25,7 +25,7 @@ export class RestaurantsignupComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
   register(): void {
-    if (!this.name || !this.email || !this.password || !this.address) {
+    if (!this.name || !this.email || !this.password || !this.address|| !this.deliverytime || !this.minimumordervalue || !this.cuisinetype) {
       alert('Please provide all the required details.');
       return;
     }
