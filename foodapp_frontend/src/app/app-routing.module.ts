@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-<<<<<<< HEAD
+
 import { Routes, RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
-=======
+
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -29,21 +29,16 @@ import { UpdateCustomerComponent } from './update-customer/update-customer.compo
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { OrdertrackingComponent } from './ordertracking/ordertracking.component';
 import { ResdetailsComponent } from './resdetails/resdetails.component';
+import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetails.component';
 
 
 
->>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
+
 
 
 
 
 const routes: Routes = [
-<<<<<<< HEAD
-  {path:'header',component:HeaderComponent},
-  { path: 'order-tracking', component: OrderTrackingComponent },
-  
-   {path:'**',pathMatch:'full',redirectTo:'order-tracking'}
-=======
 
   {path: 'header',component:HeaderComponent},
   {path: 'dashboard',component:DashboardComponent},
@@ -64,6 +59,8 @@ const routes: Routes = [
   {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard]},
   {path: 'menu/:id',component:MenuComponent, canActivate: [UserAuthGuard]},
   {path: 'restaurantlist',component:RestaurantlistComponent, canActivate: [UserAuthGuard]},
+  {path: 'restaurantdetails/:id',component:RestaurantdetailsComponent, canActivate: [UserAuthGuard]},
+
   {path: 'checkout',component:CheckoutComponent, canActivate: [UserAuthGuard]},
   {path: 'ordertracking',component:OrdertrackingComponent, canActivate: [UserAuthGuard]},
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
@@ -71,7 +68,6 @@ const routes: Routes = [
 
   
   {path:'**',pathMatch:'full',redirectTo:'dashboard'}
->>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
 
 
 ];

@@ -1,7 +1,5 @@
-
 package com.example.springapp.controller;
 
-import com.example.springapp.model.Customer;
 import com.example.springapp.model.Restaurant;
 import com.example.springapp.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,13 +28,24 @@ public class RestaurantController {
         String result = restaurantService.createRestaurant(restaurant);
         return ResponseEntity.status(HttpStatus.CREATED).body(result);
     }
+    @GetMapping("/cuisine")
+    public ResponseEntity<List<Restaurant>> getRestaurantsByCuisine(@RequestParam("cuisineType") String cuisineType) {
+        List<Restaurant> restaurants = restaurantService.getRestaurantsByCuisine(cuisineType);
+        if (restaurants.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(restaurants);
+    }
 
 
-    @PutMapping
-    public  Restaurant updateRestaurant(@RequestBody Restaurant restaurant)
-    {
-        return restaurantService.restaurant(restaurant);
-
+    @PutMapping("/{id}")
+    public ResponseEntity<Restaurant> updateRestaurant(@PathVariable Long id, @RequestBody Restaurant restaurantData) {
+        Restaurant updatedRestaurant = restaurantService.updateRestaurant(id, restaurantData);
+        if (updatedRestaurant != null) {
+            return ResponseEntity.ok(updatedRestaurant);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @GetMapping
@@ -49,9 +58,12 @@ public class RestaurantController {
     }
 
     @GetMapping("/{id}")
-    public Restaurant getRestaurantById(@PathVariable Long id) {
+    public ResponseEntity<Restaurant> getRestaurantById(@PathVariable Long id) {
         Restaurant restaurant = restaurantService.getRestaurantById(id);
-        return restaurant;
+        if (restaurant != null) {
+            return ResponseEntity.ok(restaurant);
+        }
+        return ResponseEntity.notFound().build();
     }
 
     @GetMapping("/name")
@@ -63,6 +75,7 @@ public class RestaurantController {
             return ResponseEntity.notFound().build();
         }
     }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteRestaurant(@PathVariable Long id) {
         String result = restaurantService.deleteRestaurantById(id);

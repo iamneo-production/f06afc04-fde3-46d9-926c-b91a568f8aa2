@@ -9,7 +9,11 @@ import { RestaurantdataService } from '../restaurantdata.service';
   styleUrls: ['./restaurantdetails.component.css']
 })
 export class RestaurantdetailsComponent {
+  restaurantdataService: any;
+  menu: any;
+  filteredMenu: any;
   constructor(private route:ActivatedRoute,private restaurantService:RestaurantdataService){}
+  offer:{head:String,body:string}[]=[];
   id:number=0
   restaurant:any;
   ngOnInit(){
@@ -24,4 +28,13 @@ export class RestaurantdetailsComponent {
     this.restaurant=data
   })
  }
+ searchMenu(event:any) {
+  let searchTerm = event.target.value;
+    this.filteredMenu = this.menu;
+  else {
+    this.filteredMenu = this.menu.filter((food: { name: string; }) => food.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  }
+}
+
+
 }

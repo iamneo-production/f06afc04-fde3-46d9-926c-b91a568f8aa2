@@ -39,15 +39,16 @@
 }
 
 .dropdown-menu a {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   color: orange;
-=======
+
   color:   #e72929;
->>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
-=======
+
+
   color:   #FF3131;
->>>>>>> 874caa3aadda389be1a8277ce1c2e6aecff947d0
+
+  color:   #FF3131;
+
   padding: 8px 16px;
   text-align: center;
   text-decoration: none;
@@ -114,17 +115,16 @@
 }
 
 .button:hover {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   background-color:  #e72929;
   opacity: 1;
-=======
+
   background-color: #ec4a4a;
-=======
+
   background-color: #fa4a4a;
->>>>>>> 874caa3aadda389be1a8277ce1c2e6aecff947d0
-  
->>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
+
+  background-color: #fa4a4a;
+
 
 }
 
