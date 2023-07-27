@@ -9,6 +9,7 @@ export class CartService {
   items:any = [];
   total = 0;
   finaltotal=0;
+  cusId=0;
 
   constructor(private menuService:MenuService) { }
   
@@ -64,6 +65,8 @@ export class CartService {
       
     }
   }
+
+
   
 
   

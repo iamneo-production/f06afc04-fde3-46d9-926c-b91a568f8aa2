@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CartService } from '../cart/cart.service';
 
 interface Order {
   id: number;
@@ -20,15 +21,15 @@ interface Order {
 export class OrdertrackingComponent implements OnInit {
   order: Order | undefined;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private cartService:CartService) { }
 
   ngOnInit(): void {
     this.fetchOrderDetails();
   }
 
   fetchOrderDetails() {
-    const orderId = 1; 
-    this.http.get<Order>(`https://8080-bfdadceabdbcdeacfcdbceaeaadbdbabf.project.examly.io/GET_Order`)
+    const orderId:number = this.cartService.cusId; 
+    this.http.get<Order>(`https://8080-bfdadceabdbcdeacfcdbceaeaadbdbabf.project.examly.io/order/${orderId}`)
       .subscribe(
         (response) => {
           this.order = response;
@@ -38,4 +39,5 @@ export class OrdertrackingComponent implements OnInit {
         }
       );
   }
+
 }
