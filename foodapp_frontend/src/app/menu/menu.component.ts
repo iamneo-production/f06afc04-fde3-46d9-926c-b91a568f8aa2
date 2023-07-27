@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MenuService } from './menu.service';
 import { FoodItem } from '../FoodItem';
 import { Order } from '../Order';
+import { RestaurantdataService } from '../restaurantdata.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,17 +11,29 @@ import { Order } from '../Order';
 })
 export class MenuComponent {
 
-  constructor(private menuService:MenuService) { }
+  constructor(private menuService:MenuService, private restaurantService:RestaurantdataService) { }
 
+  message:string = "Fetching menu";
+  apiAvailable:boolean = false;
   menu:FoodItem[] = [];
   filteredMenu:FoodItem[] = [];
+  restaurant:any = {name: "", id: 0};
 
   ngOnInit() {
+    this.getRestaurantDetails(this.restaurantService.restaurantId);
+
     this.menuService.getMenu()
-      .subscribe(data => {
-        this.menu = data;
-        this.filteredMenu = this.menu;
-      });
+      .subscribe({
+        next: data => {
+          this.apiAvailable = true;
+          this.menu = data;
+          this.filteredMenu = this.menu;
+          },
+        error: error => {          
+          console.error(error);
+          this.message = "HTTP Error | Status: "+error.status;
+          }
+        });
   }
 
   order:Order[] = this.menuService.order;
@@ -68,5 +81,12 @@ export class MenuComponent {
     if(orderItem == undefined)
       return 0;
     return orderItem.quantity;
+  }
+
+  getRestaurantDetails(id:number){
+    this.restaurantService.getRestaurantById(id)
+      .subscribe(data => {
+        this.restaurant = data;
+      });
   }
 }

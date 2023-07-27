@@ -1,7 +1,7 @@
 .contact-us {
   padding: 70px 0;
   width: 100%;
-  background-color: #aeabb8;
+  background-color: white;
   overflow: hidden;
   height: 91.57vh;
 }
@@ -12,6 +12,7 @@
   background-color: #fff;
   padding: 20px ;
   border-radius: 10px;
+  box-shadow: rgba(78, 74, 74, 0.56) 0px 22px 70px 4px;
 
 }
 
@@ -22,6 +23,7 @@
 
 .contact-form .form-group label {
   font-weight: bold;
+  
 }
 
 .contact-form .form-group input,
@@ -42,7 +44,7 @@
   margin-top: 8px;
   border-radius: 8px;
   display: block;
-  background-color: #73919b;
+  background-color: #FF3131;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
@@ -52,7 +54,7 @@
 
 
 .contact-form button:hover {
-background-color: #768b94;
+background-color:#fa4a4a;
 
 }
 

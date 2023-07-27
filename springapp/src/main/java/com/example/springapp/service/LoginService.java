@@ -4,6 +4,7 @@ import com.example.springapp.model.Login;
 import com.example.springapp.repository.LoginRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Service
 public class LoginService {
@@ -18,7 +19,9 @@ public class LoginService {
     public String login(String email, String password) {
         Login existingLogin = loginRepository.findByEmail(email);
 
-        if (existingLogin != null && existingLogin.getPassword().equals(password)) {
+        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+
+        if (existingLogin != null && bCryptPasswordEncoder.matches(password, existingLogin.getPassword())) {
             // Credentials matched, redirect to the Home component
             return "Login successful";
         } else {
@@ -28,8 +31,6 @@ public class LoginService {
     }
 
     public String logout() {
-
         return "Logout successfully done";
-
     }
 }

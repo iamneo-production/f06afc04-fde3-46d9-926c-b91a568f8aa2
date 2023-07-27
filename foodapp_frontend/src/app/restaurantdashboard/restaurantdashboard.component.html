@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<div class="after-form-spacing1"></div>
 
 <body>
   <div class="container custom-margin">
@@ -7,10 +8,11 @@
     <div class="after-form-spacing"></div>
 
     <div class="mb-3">
-      <!-- Add New button -->
-      <button class="btn btn-primary" (click)="toggleAddForm()">Add New Item</button>
-    </div>
-
+        <!-- Add New button -->
+        <button class="btn btn-primary mr-2" (click)="toggleAddForm()">Add New Item</button>
+        <button class="btn btn-primary mr-2" (click)="showMenuItems = true; showOrders = false;">See Menu Items</button>
+        <button class="btn btn-primary" (click)="showOrders = true; showMenuItems = false;">See Order Details</button>
+      </div>
     <!-- Add New Item Form -->
     <div class="card mb-3" *ngIf="showAddForm">
       <div class="card-header">
@@ -36,19 +38,19 @@
             <input type="text" class="form-control" id="tags" name="tags" [(ngModel)]="newMenuItem.tags">
           </div>
           <div class="form-group">
-            <label for="restaurant_id">Restaurant Id</label>
-            <input type="text" class="form-control" id="restaurant_id" name="restaurant_id"
-              [(ngModel)]="newMenuItem.restaurant_id">
+            <label for="image">Image url</label>
+            <input type="text" class="form-control" id="image" name="imageUrl" [(ngModel)]="newMenuItem.imageUrl">
           </div>
+       
           <button type="button" class="btn btn-success" (click)="onAddSubmit()">Add</button>
         </form>
       </div>
     </div>
-    <div class="after-form-spacing"></div>
+    <div class="after-form-spacing2"></div>
 
 
     <!-- Menu Items Table -->
-    <table class="table table-hover">
+    <table class="table table-hover" *ngIf="showMenuItems">
       <thead>
         <tr>
           <th>ID</th>
@@ -56,7 +58,9 @@
           <th>Description</th>
           <th>Price</th>
           <th>Tags</th>
+          <th>Image url</th>
           <th>Actions</th>
+          
         </tr>
       </thead>
       <tbody>
@@ -66,19 +70,20 @@
           <td>{{ menuItem.description }}</td>
           <td>{{ menuItem.price }}</td>
           <td>{{ menuItem.tags }}</td>
+          <td>{{ menuItem.imageUrl}}</td>
           <td>
-            <div class="button-group">
-              <button class="btn btn-primary btn-sm" (click)="openEditModal(menuItem)">Edit</button>
-              <button class="btn btn-danger btn-sm" (click)="deleteMenuItem(menuItem)">Delete</button>
-            </div>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-primary btn-sm mr-2" (click)="openEditModal(menuItem)">Edit</button>
+                <button class="btn btn-danger btn-sm" (click)="deleteMenuItem(menuItem)">Delete</button>
+              </div>
           </td>
         </tr>
       </tbody>
     </table>
 
-    <div class="text-center mt-3">
-      <p>Total items: {{ getTotalItems() }}</p>
-    </div>
+    <div class="text-center mt-3" *ngIf="showMenuItems">
+        <p>Total items: {{ getTotalItems() }}</p>
+      </div>
 
     <!-- Edit Menu Item Container -->
     <div class="edit-container" *ngIf="showEditForm">
@@ -108,6 +113,10 @@
               <label for="editTags">Tags</label>
               <input type="text" class="form-control" id="editTags" name="editTags" [(ngModel)]="editedMenuItem.tags">
             </div>
+            <div class="form-group">
+                <label for="imageUrl">Images</label>
+                <input type="text" class="form-control" id="editimage" name="imageUrl" [(ngModel)]="editedMenuItem.imageUrl">
+              </div>
             <div class="button-group">
 
               <button class="btn btn-success" (click)="onEditSubmit()">Update</button>
@@ -120,7 +129,34 @@
     </div>
     <div class="after-form-spacing"></div>
 
+
+<div *ngIf="showOrders">
+<h3 class="text-center">Order Details</h3>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Menu Item ID</th>
+      <th>Total Cost</th>
+      <th>Delivery Address</th>
+      <th>Delivery Time</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.id }}</td>
+      <td>{{ order.menuItemId }}</td>
+      <td>{{ order.totalCost }}</td>
+      <td>{{ order.deliveryAddress }}</td>
+      <td>{{ order.deliveryTime }}</td>
+      <td>{{ order.status }}</td>
+    </tr>
+  </tbody>
+</table>
+ <div class="text-center mt-3">
+    <p>Total orders: {{ getTotalOrders() }}</p>
+</div>
+</div>
   </div>
-
-
 </body>

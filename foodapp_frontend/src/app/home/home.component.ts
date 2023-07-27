@@ -19,6 +19,7 @@ export class HomeComponent {
 
   onSearch() {
     if (this.searchText.trim() !== '') {
+<<<<<<< HEAD
       this.router.navigate(['/restaurantlist'], { queryParams: { search: this.searchText } });
     }
   }
@@ -27,4 +28,15 @@ export class HomeComponent {
   this.router.navigate(['/restaurantlist'], { queryParams: { cuisineType: itemName.toLowerCase() } });
 }
 
+=======
+      // Search for both restaurant name and cuisine type
+      this.router.navigate(['/restaurantlist'], { queryParams: { search: this.searchText } });
+    }
+  }
+  
+  onCardClick(itemName: string) {
+    // Navigate to the RestaurantList with the cuisine type as search parameter
+    this.router.navigate(['/restaurantlist'], { queryParams: { cuisineType: itemName.toLowerCase() } });
+  }
+>>>>>>> 10bc20662fe349f08226a0b011e88abd0e338aa3
 }

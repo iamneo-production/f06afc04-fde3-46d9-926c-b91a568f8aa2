@@ -1,26 +1,21 @@
 package com.example.springapp.service;
 
+import com.example.springapp.model.Payment;
+import com.example.springapp.repository.PaymentRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
-public class PaymentService implements PaymentRequestService {
-    private final String UPI_ID = "";
+public class PaymentService  {
 
-    private long amount = 10000000000L;
-    private final int password = 1234;
-    @Override
-    public Boolean verifyUpiId(String upiId){
-        return upiId.equals(UPI_ID);
+    @Autowired
+    private PaymentRepository paymentRepository;
+
+    public String makePayment(Payment payment) {
+            paymentRepository.save(payment);
+            return "{\"response\": \"Payment done\"}";
     }
-
-    @Override
-    public String paymentRequest(long cost, int pass){
-        if (password == pass && amount >= cost) {
-            amount -= cost;
-          return  "Payment is success"; }
-        return "Payment is unsuccessful";
 }
-    }
 
 
 

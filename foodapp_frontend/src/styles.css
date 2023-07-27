@@ -1,1 +1,153 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+button, .btn-secondary, .title { 
+    background: #FF3131;
+    color: white;
+}
+
+button:hover, .btn-secondary:hover, .title:hover { 
+    opacity: 1;
+}
+
+
+
+/* Login css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.body {
+  background-color: white;
+  overflow: hidden;
+  height: 91.57vh;
+   justify-content: center;
+  align-items: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+
+
+.wrapper {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(78, 74, 74, 0.56) 0px 22px 70px 4px;
+
+
+}
+
+.wrapper .title {
+  height: 90px;
+  background-color: #FF3131;
+  border-radius: 100px 10px 0 0;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper form {
+  padding: 30px 25px 25px 25px;
+}
+
+
+
+.wrapper form .signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+.wrapper form .signup-link a {
+  color: #FF3131;
+  text-decoration: none;
+}
+
+.wrapper form .signup-link a:hover {
+  text-decoration: underline;
+}
+
+input[type="submit"] {
+  border: none;
+  outline: none;
+  margin-top: 8px;
+  border-radius: 8px;
+  display: block;
+  background-color: #FF3131;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 12px 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  letter-spacing: 1px;
+
+}
+
+input[type="submit"]:hover {
+  background-color: #fa4a4a;
+  
+
+}
+/* login css ended */
+
+/* signup css */
+
+.container .title::before{
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+
+form .user-details .form-group{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .form-group span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .form-group input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.signup-link{
+  text-align: end;
+  margin-top: 20px;
+  font-size: 17px;
+}
+ .signup-link a{
+  color:  #FF3131;
+  text-decoration: none;
+}
+.signup-link a:hover{
+  text-decoration: underline;
+}

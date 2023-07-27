@@ -1,7 +1,18 @@
 package com.example.springapp.controller;
-
-import com.example.springapp.service.OrderService;
-import com.example.springapp.service.PaymentRequestService;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import com.example.springapp.model.Payment;
 import com.example.springapp.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,17 +25,13 @@ import org.springframework.web.bind.annotation.*;
 public class PaymentController {
 
     @Autowired
-    PaymentRequestService paymentRequestService;
-    @PostMapping(value ="/upi-verification")
-    public ResponseEntity<Boolean> verifyUpi(@RequestParam("upi-id") String upiId)
-    {
-        return ResponseEntity.status(HttpStatus.OK.value()).body(paymentRequestService.verifyUpiId(upiId));
-    }
+    PaymentService paymentService;
 
-    @PostMapping(value = "/request")
-    public ResponseEntity<String> requestPayment(@RequestParam("amount") long amount, @RequestParam("password") int password)
+
+    @PostMapping
+    public String makePayment(@RequestBody Payment payment)
     {
-        return ResponseEntity.status(HttpStatus.OK.value()).body(paymentRequestService.paymentRequest(amount, password));
+        return paymentService.makePayment(payment);
     }
 
 }

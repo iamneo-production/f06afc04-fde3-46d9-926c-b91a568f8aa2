@@ -3,6 +3,7 @@
     
   }
   
+<<<<<<< HEAD
   body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,6 +12,10 @@
     margin-right: 100px;
     
   }
+=======
+ 
+
+>>>>>>> 10bc20662fe349f08226a0b011e88abd0e338aa3
   
   .search-bar {
     display: flex;
@@ -196,7 +201,47 @@
     font-family: 'Arial', sans-serif;
     text-align: center;
   }
+<<<<<<< HEAD
   
+=======
+  /* CSS */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.search-bar input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.search-bar button.search-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.search-bar .search-button:hover {
+  background-color: rgb(224, 147, 5);
+}
+.after-form-spacing {
+  margin-top: 65px;
+  
+}
+
+>>>>>>> 10bc20662fe349f08226a0b011e88abd0e338aa3
   
   /* Responsive styles */
   @media screen and (max-width: 767px) {

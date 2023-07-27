@@ -26,6 +26,7 @@ public class Restaurant {
     private Long menu_item_id;
     private String email;
     private String password;
+<<<<<<< HEAD
     private String cuisinetype;
     private String rating;
     public Restaurant(String cuisinetype, String rating, String deliverytime, String minimumordervalue,
@@ -42,6 +43,13 @@ public class Restaurant {
     private String imageData;
 
 
+=======
+    private String deliverytime;
+    private String minimumordervalue;
+    private String imageData;
+    private String cuisinetype;
+    private String rating;
+>>>>>>> 10bc20662fe349f08226a0b011e88abd0e338aa3
 
 
     public long getId() {
@@ -94,6 +102,50 @@ public class Restaurant {
         this.password = password;
     }
 
+<<<<<<< HEAD
+=======
+
+    public String getDeliverytime() {
+        return deliverytime;
+    }
+
+    public void setDeliverytime(String deliverytime) {
+        this.deliverytime = deliverytime;
+    }
+
+    public String getMinimumordervalue() {
+        return minimumordervalue;
+    }
+
+    public void setMinimumordervalue(String minimumordervalue) {
+        this.minimumordervalue = minimumordervalue;
+    }
+
+    public String getImageData() {
+        return imageData;
+    }
+
+    public void setImageData(String imageData) {
+        this.imageData = imageData;
+    }
+
+    public String getCuisinetype() {
+        return cuisinetype;
+    }
+
+    public void setCuisinetype(String cuisinetype) {
+        this.cuisinetype = cuisinetype;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+>>>>>>> 10bc20662fe349f08226a0b011e88abd0e338aa3
     public Restaurant(long id, String name, String address, Long menu_item_id, String email, String password) {
         this.id = id;
         this.name = name;
@@ -110,6 +162,18 @@ public class Restaurant {
         this.name = name;
         this.address = address;
         this.menu_item_id = menu_item_id;
+<<<<<<< HEAD
+=======
+    }
+
+    public Restaurant(String deliverytime, String minimumordervalue, String imageData, String cuisinetype,
+            String rating) {
+        this.deliverytime = deliverytime;
+        this.minimumordervalue = minimumordervalue;
+        this.imageData = imageData;
+        this.cuisinetype = cuisinetype;
+        this.rating = rating;
+>>>>>>> 10bc20662fe349f08226a0b011e88abd0e338aa3
     }
 
     public Restaurant() {

@@ -1,22 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
-}
-
-.body {
-  background-color: #aeabb8;
-  overflow: hidden;
-  height: 91.57vh;
-}
 
 .container {
   max-width: 640px;
   padding: 0 20px;
   margin: 20vh auto;
+<<<<<<< HEAD
 }
 
 .wrapper {
@@ -118,6 +106,8 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #768b94;
   
+=======
+>>>>>>> 10bc20662fe349f08226a0b011e88abd0e338aa3
 
 }
 

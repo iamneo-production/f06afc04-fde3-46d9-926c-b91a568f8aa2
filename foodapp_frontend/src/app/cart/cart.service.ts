@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { MenuService } from '../menu/menu.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -6,31 +8,34 @@ import { Injectable } from '@angular/core';
 export class CartService {
   items:any = [];
   total = 0;
+  finaltotal=0;
+  cusId=0;
 
-  constructor() { }
-
-  addToCart(item:any): void {
-    let existingItem = this.items.find((x: { name: any; }) => x.name === item.name);
-    if (existingItem) {
-      existingItem.quantity++;
-    } else {
-      item.quantity = 1;
-      this.items.push(item);
-    }
-    this.total += item.price;
-    console.log("Item added to cart: ", item);
-    console.log("Total after adding item: ", this.total);
-  }
+  constructor(private menuService:MenuService) { }
   
 
-  getItems() {
-    // return a default item to display in the cart
-    return [
-      { id: 1, name: 'Pizza', price: 9.99, quantity: 0 },
-      { id: 2, name: 'Burger', price: 6.99, quantity: 0 },
-      { id: 3, name: 'Fries', price: 3.99, quantity: 0 }
-    ];
-  }
+  // addToCart(item:any): void {
+  //   let existingItem = this.items.find((x: { name: any; }) => x.name === item.name);
+  //   if (existingItem) {
+  //     existingItem.quantity++;
+  //   } else {
+  //     item.quantity = 1;
+  //     this.items.push(item);
+  //   }
+  //   this.total += item.price;
+  //   console.log("Item added to cart: ", item);
+  //   console.log("Total after adding item: ", this.total);
+  // }
+  
+
+  // getItems() {
+  //   // return a default item to display in the cart
+  //   return [
+  //     { id: 1, name: 'Pizza', price: 9.99, quantity: 0 },
+  //     { id: 2, name: 'Burger', price: 6.99, quantity: 0 },
+  //     { id: 3, name: 'Fries', price: 3.99, quantity: 0 }
+  //   ];
+  // }
 
   getTotal(): number {
   console.log("Current total: ", this.total);
@@ -45,11 +50,11 @@ export class CartService {
   decrementItemQuantity(item:any): void {
     if(item.quantity>0)
     {item.quantity--;
-    this.total -= item.price;
-    if (item.quantity === 0) {
-      this.removeItem(item);
+    this.total -= item.price;}
+    else {
+      this.menuService.removeItem(item.id);
     }
-  }
+  
   }
 
   removeItem(item:any): void {
@@ -61,9 +66,13 @@ export class CartService {
     }
   }
 
-  clearCart(): void {
-    this.items = [];
-    this.total = 0;
+
+  
+
+  
+  finalAmount(discountvalue:number,deliveryCharge:number):number{
+    this.finaltotal= this.menuService.getTotalAmount()-discountvalue+deliveryCharge;
+    return this.finaltotal;
   }
   
 }
