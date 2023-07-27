@@ -1,0 +1,66 @@
+<div class="centered">
+    <img class="image" [src]="restaurant.imageData" alt="">
+    <div id="hotel-details">
+        <a id="hotel-name">{{restaurant.name}}</a>
+        <br>
+        <a >
+          <div class="ca">
+            <div id="ratings">
+            <a class="stars">{{restaurant.rating}} <img src="/assets/menu/star.svg" alt="star"></a>
+            <a class="times">11K ratings</a>
+            </div>
+          </div>
+        </a>
+    </div>
+    <a id="Address">{{restaurant.address}}</a>
+    <a id="time">Timming 9:00 Am To 10:00 Pm  </a>
+    <div class="overview">
+      <button class="na">Overview</button>
+      <button class="na" routerLink="/menu">Menu</button>
+    </div>
+    
+    <hr class="divider">
+    <h2 class="t2">Special Offers</h2>
+  
+    <div class="offer-card-container">
+      <div class="offer-card">
+        <div class="offer-content">
+          <h3 class="offer-title">Get 50% off</h3>
+          <p class="offer-description">on first order</p>
+        </div>
+      </div>
+    
+      <div class="offer-card">
+        <div class="offer-content">
+          <h3 class="offer-title">Flat ₹50 off</h3>
+          <p class="offer-description">upto ₹250</p>
+        </div>
+      </div>
+    
+      <div class="offer-card">
+        <div class="offer-content">
+          <h3 class="offer-title">Get 30% off</h3>
+          <p class="offer-description">upto 120</p>
+        </div>
+      </div>
+    
+      <div class="offer-card">
+        <div class="offer-content">
+          <h3 class="offer-title">Get ₹200 off</h3>
+          <p class="offer-description">use abc card</p>
+        </div>
+      </div>
+    </div>
+  
+    <h2 class="t2">Cuisines</h2>
+    <button class="Cuisines">{{restaurant.cuisinetype}}</button>
+  
+    <h2 class="t2">Estimate Time</h2>
+    <p class="cost">{{restaurant.deliverytime}} Minimum</p>
+   
+    <h2 class="t2">Average Cost</h2>
+    <p class="cost">{{restaurant.minimumordervalue}} for two people (approx.)</p>
+    <p class="cost">Cash, Cards and Meal Coupons accepted Digital payments accepted</p>
+    
+    
+    

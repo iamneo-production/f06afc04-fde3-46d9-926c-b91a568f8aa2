@@ -33,9 +33,19 @@ import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantda
 import { HomeComponent } from './home/home.component';
 import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+<<<<<<< HEAD
 >>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
 
 
+=======
+import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetails.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { ResdetailsComponent } from './resdetails/resdetails.component';
+import { NotificationComponent } from './notification/notification.component';
+import { ProfileComponent } from './profile/profile.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { OrdertrackingComponent } from './ordertracking/ordertracking.component';
+>>>>>>> 874caa3aadda389be1a8277ce1c2e6aecff947d0
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,8 +70,19 @@ import { CheckoutComponent } from './checkout/checkout.component';
     RestaurantdashboardComponent,
     HomeComponent,
     RestaurantlistComponent,
+<<<<<<< HEAD
     CheckoutComponent
 >>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
+=======
+    CheckoutComponent,
+    RestaurantdetailsComponent,
+    UpdateCustomerComponent,
+    ResdetailsComponent,
+    NotificationComponent,
+    ProfileComponent,
+    OrderHistoryComponent,
+    OrdertrackingComponent,
+>>>>>>> 874caa3aadda389be1a8277ce1c2e6aecff947d0
   ],
   imports: [
     BrowserModule,

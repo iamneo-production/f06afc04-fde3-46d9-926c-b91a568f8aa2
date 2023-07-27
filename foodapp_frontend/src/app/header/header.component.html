@@ -27,17 +27,26 @@
     <!--Logo-->
     <div class="logo-container">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <a *ngIf="router.url==='/home' || router.url==='/adminpanel'|| router.url==='/order-tracking'" [routerLink]="['/home']">
 =======
       <a *ngIf="router.url==='/home' || router.url==='/menu'|| router.url==='/cart'|| router.url==='/checkout'|| router.url==='/restaurantlist' || router.url.startsWith('/restaurantlist')" [routerLink]="['/home']">
         <img src="..\assets\images\logo4.jpg" width="100" height="55" alt="Logo">
+=======
+      <a *ngIf="router.url==='/home' || router.url.startsWith('/menu') || router.url==='/cart'|| router.url==='/checkout'|| router.url==='/ordertracking'||router.url==='/restaurantlist' || router.url.startsWith('/restaurantlist')" [routerLink]="['/home']">
+        <img src="..\assets\images\logo6.png" width="100" height="55" alt="Logo">
+>>>>>>> 874caa3aadda389be1a8277ce1c2e6aecff947d0
       </a>
       <a *ngIf="router.url==='/adminpanel'"[routerLink]="['/adminpanel']">
-        <img src="..\assets\images\logo4.jpg" width="100" height="55" alt="Logo">
+        <img src="..\assets\images\logo6.png" width="100" height="55" alt="Logo">
       </a>
       <a *ngIf="router.url==='/restaurantdashboard'"[routerLink]="['/restaurantdashboard']">
+<<<<<<< HEAD
 >>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
         <img src="..\assets\images\logo4.jpg" width="100" height="55" alt="Logo">
+=======
+        <img src="..\assets\images\logo6.png" width="100" height="55" alt="Logo">
+>>>>>>> 874caa3aadda389be1a8277ce1c2e6aecff947d0
       </a>
     </div>
 
@@ -97,6 +106,7 @@
     <button *ngIf="router.url==='/dashboard'" class="button" onclick="alert('Please Login to view Your Cart')"
       value="My cart"> <span><i class='fas fa-shopping-cart'></i> My Cart </span></button>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <button *ngIf="router.url==='/home'" class="button" value="My cart"><span>My Cart </span></button>
 
     <!-- profile  -->
@@ -110,10 +120,16 @@
                      || router.url==='/cart'" class="button" (click)="logout()"> <span> <i class="fas fa-sign-out-alt">
 =======
     <button *ngIf="router.url==='/home' || router.url=='/menu'" class="button" value="My cart" routerLink='/cart' ><span><i class="fas fa-shopping-cart"></i> My Cart </span></button>
+=======
+    <button *ngIf="router.url==='/home' || router.url.startsWith('/menu')" class="button" value="My cart" routerLink='/cart' ><span><i class="fas fa-shopping-cart"></i> My Cart </span></button>
+>>>>>>> 874caa3aadda389be1a8277ce1c2e6aecff947d0
 
      <!-- profile  -->
-     <button *ngIf="router.url==='/adminpanel' || router.url==='/restaurantlist' || router.url==='/home' " class="button"><span><i class="fas fa-user"></i>
+     <button *ngIf="router.url==='/adminpanel' || router.url==='/restaurantlist' || router.url==='/ordertracking' || router.url==='/home' " class="button" routerLink='/profile' ><span><i class="fas fa-user"></i>
       Edit Profile</span></button>
+
+      <button *ngIf="router.url==='/profile' " class="button" routerLink='/order-history' ><span><i class="fas fa-file-invoice"></i>
+        Orders</span></button>
 
        <!-- restaurant  -->
   <button *ngIf="router.url==='/home'" class="button" routerLink='/restaurantlist'><span> <i class="fas fa-utensils"></i>
@@ -123,6 +139,7 @@
     <button *ngIf="router.url==='/home'
                      || router.url==='/adminpanel'
                      || router.url==='/restaurantdashboard'
+                     || router.url==='/ordertracking'
                      || router.url==='/cart'" class="button" routerLink='/dashboard'> <span> <i class="fas fa-sign-out-alt">
 >>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
         </i> Log out</span></button>
