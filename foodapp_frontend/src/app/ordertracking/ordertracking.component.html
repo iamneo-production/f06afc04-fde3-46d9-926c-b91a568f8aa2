@@ -7,18 +7,16 @@
           <div class="card-body">
             <h2 class="text-center header">Order Status</h2>
     <p><strong>Order ID:</strong> {{ order.id }}</p>
-    <p><strong>Customer ID:</strong> {{ order.customerId }}</p>
     <p><strong>Menu Item ID:</strong> {{ order.menuItemId }}</p>
     <p><strong>Total Cost:</strong> {{ order.totalCost }}</p>
     <p><strong>Delivery Address:</strong> {{ order.deliveryAddress }}</p>
     <p><strong>Delivery Time:</strong> {{ order.deliveryTime }}</p>
     <p><strong>Restaurant ID:</strong> {{ order.restaurantId }}</p>
     <p><strong>Status:</strong> {{ order.status }}</p>
-    <a href="https://www.google.com/maps/@16.3050267,80.4215138,15z" class="btn btn-info track-order-button">Track my order</a>
   </div>
   </div>
   <div *ngIf="!order" class="text-center mt-3">
-    <p>Loading order details...</p>
+    <p>Order details Not Available...</p>
   </div>
 </div>
 </body>

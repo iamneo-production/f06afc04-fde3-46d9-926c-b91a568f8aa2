@@ -1,16 +1,14 @@
 .topnav {
   overflow: hidden;
-  background-color:  #FF3131;
+  background-color: #FF3131;
   margin: 0;
 }
-
 
 .topnav a {
   padding: 16px 10px;
   text-decoration: none;
   font-size: 18px;
 }
-
 
 .topnav-left {
   float: left;
@@ -20,8 +18,7 @@
   float: right;
 }
 
-
-
+/* Dropdown menu styles */
 .dropdown {
   position: relative;
   display: contents;
@@ -34,12 +31,10 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-
-
 }
 
 .dropdown-menu a {
-  color:   #FF3131;
+  color: #FF3131;
   padding: 8px 16px;
   text-align: center;
   text-decoration: none;
@@ -47,39 +42,31 @@
 }
 
 .dropdown-menu a:hover {
-  background-color: whitesmoke
+  background-color: whitesmoke;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-
-
-
+/* Active button style */
 .active {
   border-radius: 4px;
   border: none;
-  background-color:#fa4a4a;
-  color:white;
+  background-color: #fa4a4a;
+  color: white;
   text-align: center;
   font-size: 18px;
   padding: 16px 16px;
-
 }
 
-
+/* Logo container styles */
 .logo-container {
   padding-left: 30px;
   padding-top: 1px;
-
 }
 
-
-
-
-
-
+/* General button styles */
 .button {
   border-radius: 4px;
   border: none;
@@ -107,8 +94,6 @@
 
 .button:hover {
   background-color: #fa4a4a;
-  
-
 }
 
 .button:hover span {
@@ -118,4 +103,39 @@
 .button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens up to 768px width (e.g., tablets) */
+@media (max-width: 768px) {
+  .topnav {
+    padding: 8px 0;
+  }
+
+  .topnav a {
+    font-size: 16px;
+    padding: 10px 5px;
+  }
+
+  .topnav-left {
+    float: none;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .topnav .topnav-right {
+    float: none;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .logo-container {
+    padding-left: 0;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 10px 5px;
+  }
 }

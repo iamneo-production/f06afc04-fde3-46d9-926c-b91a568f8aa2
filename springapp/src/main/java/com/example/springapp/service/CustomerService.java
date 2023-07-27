@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.springapp.model.Customer;
 import com.example.springapp.repository.CustomerRepository;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.List;
 
@@ -16,6 +17,9 @@ public class CustomerService {
 
     public String register(Customer customer) {
         if (!customerRepository.existsByEmail(customer.getEmail())) {
+            BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+            customer.setPassword(bCryptPasswordEncoder.encode(customer.getPassword()));
+
             customerRepository.save(customer);
             return "Customer created";
         } else {

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { MenuService } from './menu.service';
 import { FoodItem } from '../FoodItem';
 import { Order } from '../Order';
-import { ActivatedRoute } from '@angular/router';
 import { RestaurantdataService } from '../restaurantdata.service';
 
 @Component({
@@ -12,33 +11,27 @@ import { RestaurantdataService } from '../restaurantdata.service';
 })
 export class MenuComponent {
 
-  constructor(private menuService:MenuService, private route:ActivatedRoute, private restaurantService:RestaurantdataService) { }
+  constructor(private menuService:MenuService, private restaurantService:RestaurantdataService) { }
 
+  message:string = "Fetching menu";
+  apiAvailable:boolean = false;
   menu:FoodItem[] = [];
   filteredMenu:FoodItem[] = [];
   restaurant:any = {name: "", id: 0};
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      let id:number = Number(params.get('id')) as number;
-      this.getRestaurantDetails(id);
-    });
+    this.getRestaurantDetails(this.restaurantService.restaurantId);
 
     this.menuService.getMenu()
       .subscribe({
         next: data => {
+          this.apiAvailable = true;
           this.menu = data;
           this.filteredMenu = this.menu;
           },
-        error: error => {
-          this.menuService.apiAvailable = false;
-          this.restaurant.name = "Zesty Foods";
-          
-          this.menuService.getMenuFromJSON()
-              .subscribe(data => {
-                this.menu = data;
-                this.filteredMenu = this.menu;
-              });
+        error: error => {          
+          console.error(error);
+          this.message = "HTTP Error | Status: "+error.status;
           }
         });
   }

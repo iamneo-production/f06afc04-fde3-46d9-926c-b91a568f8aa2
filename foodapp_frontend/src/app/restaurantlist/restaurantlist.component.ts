@@ -69,6 +69,7 @@ export class RestaurantlistComponent {
   }
 
   onclick(id: number) {
-    this.router.navigate(['/menu', id]);
+    this.restaurantdata.restaurantId = id;
+    this.router.navigate(['/menu']);
   }
 }

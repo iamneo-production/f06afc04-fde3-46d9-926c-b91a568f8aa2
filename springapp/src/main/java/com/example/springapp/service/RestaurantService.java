@@ -1,5 +1,3 @@
-// RestaurantService.java
-
 package com.example.springapp.service;
 
 import com.example.springapp.model.Admin;
