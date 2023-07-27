@@ -1,15 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-<<<<<<< HEAD
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
-
-import { HeaderComponent } from './header/header.component';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-
-=======
 import {  FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -33,11 +23,6 @@ import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantda
 import { HomeComponent } from './home/home.component';
 import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-<<<<<<< HEAD
->>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
-
-
-=======
 import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetails.component';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 import { ResdetailsComponent } from './resdetails/resdetails.component';
@@ -45,15 +30,9 @@ import { NotificationComponent } from './notification/notification.component';
 import { ProfileComponent } from './profile/profile.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { OrdertrackingComponent } from './ordertracking/ordertracking.component';
->>>>>>> 874caa3aadda389be1a8277ce1c2e6aecff947d0
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    OrderTrackingComponent,
-
-    HeaderComponent,
-=======
     CartComponent,
     HeaderComponent,
     DashboardComponent,
@@ -70,10 +49,6 @@ import { OrdertrackingComponent } from './ordertracking/ordertracking.component'
     RestaurantdashboardComponent,
     HomeComponent,
     RestaurantlistComponent,
-<<<<<<< HEAD
-    CheckoutComponent
->>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
-=======
     CheckoutComponent,
     RestaurantdetailsComponent,
     UpdateCustomerComponent,
@@ -82,27 +57,15 @@ import { OrdertrackingComponent } from './ordertracking/ordertracking.component'
     ProfileComponent,
     OrderHistoryComponent,
     OrdertrackingComponent,
->>>>>>> 874caa3aadda389be1a8277ce1c2e6aecff947d0
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
-    FormsModule,
-    HttpClientModule
-=======
     HttpClientModule,
     FormsModule
->>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-<<<<<<< HEAD
-
 export class AppModule { }
-
-=======
-export class AppModule { }
->>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2

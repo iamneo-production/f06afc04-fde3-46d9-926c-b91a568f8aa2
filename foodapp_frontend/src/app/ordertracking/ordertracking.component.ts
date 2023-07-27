@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
 interface Order {
   id: number;
   customerId: number;
@@ -19,6 +20,7 @@ interface Order {
 })
 export class OrdertrackingComponent implements OnInit {
   order: Order | undefined;
+ Currency: number | undefined;
 
   constructor(private http: HttpClient) { }
 
