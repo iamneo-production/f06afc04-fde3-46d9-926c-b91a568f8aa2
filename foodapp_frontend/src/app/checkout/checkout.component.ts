@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Payment } from '../Payment';
 import { MenuService } from '../menu/menu.service';
+import { CartService } from '../cart/cart.service';
 import { Router } from '@angular/router';
 import { CartService } from '../cart/cart.service';
 
@@ -11,8 +12,8 @@ import { CartService } from '../cart/cart.service';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent {
-  constructor(public menuService:MenuService, private http: HttpClient,private router: Router,private cartService:CartService) { } 
-
+  constructor(public menuService:MenuService, private http: HttpClient, public cartService:CartService) { } 
+finalTotal=this.cartService.finaltotal;
   orders=this.menuService.order;
   paymentDone:boolean = false;
 
@@ -30,7 +31,7 @@ export class CheckoutComponent {
   public message: string = '';
   
   makePayment() {
-    const url = 'https://8080-bfdadceabdbcdeacfcdbceaeaadbdbabf.project.examly.io/payment'; // Replace with your server's endpoint
+    const url = 'https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/payment'; // Replace with your server's endpoint
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'

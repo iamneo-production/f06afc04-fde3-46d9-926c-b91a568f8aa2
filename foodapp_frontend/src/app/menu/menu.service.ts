@@ -19,7 +19,7 @@ export class MenuService {
     if(! this.apiAvailable)
       return this.getMenuFromJSON();
       
-    return this.httpService.get<FoodItem[]>('http://localhost:8080/menu-item');
+    return this.httpService.get<FoodItem[]>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/menu-item');
   }
 
   getMenuFromJSON() : Observable<FoodItem[]> {
