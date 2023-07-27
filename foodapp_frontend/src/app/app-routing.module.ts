@@ -24,6 +24,7 @@ import { UpdateCustomerComponent } from './update-customer/update-customer.compo
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { OrdertrackingComponent } from './ordertracking/ordertracking.component';
 import { ResdetailsComponent } from './resdetails/resdetails.component';
+import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetails.component';
 
 
 
@@ -52,6 +53,8 @@ const routes: Routes = [
   {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard]},
   {path: 'menu/:id',component:MenuComponent, canActivate: [UserAuthGuard]},
   {path: 'restaurantlist',component:RestaurantlistComponent, canActivate: [UserAuthGuard]},
+  {path: 'restaurantdetails/:id',component:RestaurantdetailsComponent, canActivate: [UserAuthGuard]},
+
   {path: 'checkout',component:CheckoutComponent, canActivate: [UserAuthGuard]},
   {path: 'ordertracking',component:OrdertrackingComponent, canActivate: [UserAuthGuard]},
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },

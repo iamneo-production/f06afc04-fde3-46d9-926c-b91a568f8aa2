@@ -21,7 +21,7 @@
 
     <!--Logo-->
     <div class="logo-container">
-      <a *ngIf="router.url==='/home' || router.url.startsWith('/menu') || router.url==='/cart'|| router.url==='/checkout'|| router.url==='/ordertracking'||router.url==='/restaurantlist' || router.url.startsWith('/restaurantlist')" [routerLink]="['/home']">
+      <a *ngIf="router.url==='/home' || router.url.startsWith('/menu')|| router.url.startsWith('/restaurantdetails') || router.url==='/cart'|| router.url==='/checkout'|| router.url==='/ordertracking'||router.url==='/restaurantlist' || router.url.startsWith('/restaurantlist')" [routerLink]="['/home']">
         <img src="..\assets\images\logo6.png" width="100" height="55" alt="Logo">
       </a>
       <a *ngIf="router.url==='/adminpanel'"[routerLink]="['/adminpanel']">
