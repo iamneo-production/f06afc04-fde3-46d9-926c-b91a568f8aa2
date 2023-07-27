@@ -10,12 +10,14 @@ button:hover, .btn-secondary:hover, .title:hover {
     opacity: 1;
 }
 
+
+
 /* Login css */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .body {
@@ -24,6 +26,8 @@ button:hover, .btn-secondary:hover, .title:hover {
   height: 91.57vh;
    justify-content: center;
   align-items: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+
 }
 
 
