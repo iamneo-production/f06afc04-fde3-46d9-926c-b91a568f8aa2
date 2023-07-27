@@ -16,9 +16,6 @@ import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantda
 import { HomeComponent } from './home/home.component';
 import { UserAuthGuard, RestaurantAuthGuard, AdminAuthGuard } from './auth.guard';
 import { MenuComponent } from './menu/menu.component';
-<<<<<<< HEAD
-import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
-=======
 import { CheckoutComponent } from './checkout/checkout.component';
 import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
 import { NotificationComponent } from './notification/notification.component';
@@ -28,7 +25,7 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { OrdertrackingComponent } from './ordertracking/ordertracking.component';
 import { ResdetailsComponent } from './resdetails/resdetails.component';
 import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetails.component';
->>>>>>> 10bc20662fe349f08226a0b011e88abd0e338aa3
+import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 
 
 
@@ -49,16 +46,6 @@ const routes: Routes = [
   {path: 'restaurantsignup',component:RestaurantsignupComponent},
   {path: 'about',component:AboutComponent},
   {path: 'contactus',component:ContactusComponent},
-<<<<<<< HEAD
-  {path: 'home', component: HomeComponent},
-  {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard] },
-  {path: 'menu',component:MenuComponent,canActivate: [UserAuthGuard] },
-  {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
-  {path: 'restaurantlist',component:RestaurantlistComponent  },
-
- 
-
-=======
   {path: 'home', component: HomeComponent, canActivate: [UserAuthGuard]},
   {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard]},
   {path: 'menu',component:MenuComponent, canActivate: [UserAuthGuard]},
@@ -73,7 +60,6 @@ const routes: Routes = [
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
   {path: 'adminpanel', component: AdminpanelComponent, canActivate: [AdminAuthGuard] },
   {path: 'adminsignup',component:AdminsignupComponent, canActivate: [AdminAuthGuard] },
->>>>>>> 10bc20662fe349f08226a0b011e88abd0e338aa3
 
   
   {path:'**',pathMatch:'full',redirectTo:'dashboard'}
