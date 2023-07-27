@@ -34,20 +34,7 @@
 }
 
 .dropdown-menu a {
-<<<<<<< HEAD
-
-  color: orange;
-
-  color:   #e72929;
-
-
-  color:   #FF3131;
-
-  color:   #FF3131;
-
-=======
   color: #FF3131;
->>>>>>> 5b25e75e6ffeab9c68e7be0b5541d2604da63fa8
   padding: 8px 16px;
   text-align: center;
   text-decoration: none;
@@ -113,13 +100,6 @@
   background-color: #ec4a4a;
 
   background-color: #fa4a4a;
-<<<<<<< HEAD
-
-  background-color: #fa4a4a;
-
-
-=======
->>>>>>> 5b25e75e6ffeab9c68e7be0b5541d2604da63fa8
 }
 
 .button:hover span {

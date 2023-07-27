@@ -58,11 +58,7 @@ finalTotal=this.cartService.finaltotal;
     );
   }
   public createOrder() {
-<<<<<<< HEAD
-    const url = 'https://8080-fbaacecbbceacfcdbccbacbfccbbebfcae.project.examly.io/order';
-=======
     const url = 'https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/order';
->>>>>>> 5b25e75e6ffeab9c68e7be0b5541d2604da63fa8
 
     // this.order.customerId = 
     this.order.menuItemId = this.menuService.order[0].id;
