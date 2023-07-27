@@ -46,7 +46,7 @@
           <td></td>
           <td></td>
           <td></td>
-          <td style="font-size: medium;"><strong>Total: {{ menuService.getTotalAmount() | currency:'INR' }}</strong></td>
+          <td style="font-size: medium;"><strong>Total: {{ finalTotal | currency:'INR' }}</strong></td>
         </tr>
       </tfoot>
     </table>
@@ -57,7 +57,7 @@
       <form class="address-form">
         <div>
           <label for="address">Address:</label>
-          <input type="text" id="address" name="address" required>
+          <input [(ngModel)]="order.deliveryAddress" type="text" id="address" name="address">
         </div>
       </form>
 
@@ -78,7 +78,7 @@
       <div class="payment-summary">
       
         <label for="orderId">Date:</label>{{date}}<br>
-        <label for="orderId">Amount:</label>{{amount}}<br>
+        <label for="orderId">Amount:</label>{{finalTotal}}<br>
         
         <br>
       </div>

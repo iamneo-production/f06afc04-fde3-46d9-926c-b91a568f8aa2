@@ -11,19 +11,10 @@ export class MenuService {
 
   constructor(private httpService: HttpClient) { }
 
-  apiAvailable:boolean = true;
-
   order:Order[] = [];
 
   getMenu() : Observable<FoodItem[]> {
-    if(! this.apiAvailable)
-      return this.getMenuFromJSON();
-      
-    return this.httpService.get<FoodItem[]>('https://8080-bfdadceabdbcdeacfcdbceaeaadbdbabf.project.examly.io/menu-item');
-  }
-
-  getMenuFromJSON() : Observable<FoodItem[]> {
-    return this.httpService.get<FoodItem[]>('/assets/menu/menu.json');
+    return this.httpService.get<FoodItem[]>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/menu-item');
   }
   getTotalAmount(){
     let totalAmount:number = 0;

@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Payment } from '../Payment';
 import { MenuService } from '../menu/menu.service';
-import { Router } from '@angular/router';
 import { CartService } from '../cart/cart.service';
+import { Router } from '@angular/router';
+import { RestaurantdataService } from '../restaurantdata.service';
 
 @Component({
   selector: 'app-checkout',
@@ -11,8 +12,9 @@ import { CartService } from '../cart/cart.service';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent {
-  constructor(public menuService:MenuService, private http: HttpClient,private router: Router,private cartService:CartService) { } 
+  constructor(public menuService:MenuService, private restaurantService:RestaurantdataService, private http: HttpClient,private router: Router,private cartService:CartService) { } 
 
+finalTotal=this.cartService.finaltotal;
   orders=this.menuService.order;
   paymentDone:boolean = false;
 
@@ -20,17 +22,18 @@ export class CheckoutComponent {
   date:String=new Date().toISOString().split('T')[0];
   public order: any = {
     customerId: 0,
-    menuItemId: 25,
-    totalCost: 500,
+    menuItemId: 0,
+    totalCost: 0,
     deliveryAddress:"",
-    deliveryTime: '2023-12-12T09:30:00',
+    deliveryTime: '',
     restaurantId: 0,
     status: 'delivering'
   };
   public message: string = '';
   
   makePayment() {
-    const url = 'https://8080-bfdadceabdbcdeacfcdbceaeaadbdbabf.project.examly.io/payment'; // Replace with your server's endpoint
+    const url = 'https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/payment'; // Replace with your server's endpoint
+
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
@@ -43,7 +46,6 @@ export class CheckoutComponent {
       (response) => {
         // console.log('Payment sent successfully:', response);
         this.paymentDone=true;
-        this.menuService.order = [];
         this.createOrder();
         
         
@@ -56,8 +58,16 @@ export class CheckoutComponent {
     );
   }
   public createOrder() {
-    const url = 'https://8080-bfdadceabdbcdeacfcdbceaeaadbdbabf.project.examly.io/order';
-    this.order.deliveryTime = new Date(this.order.deliveryTime).toISOString();
+    const url = 'https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/order';
+
+    // this.order.customerId = 
+    this.order.menuItemId = this.menuService.order[0].id;
+    this.order.totalCost = this.cartService.finaltotal;
+    this.order.deliveryTime = new Date().toISOString();
+    this.order.restaurantId = this.restaurantService.restaurantId;
+
+    this.menuService.order = [];
+    
     this.http.post(url, this.order).subscribe(
       (response: any) => {
         this.message = 'Order created successfully!';

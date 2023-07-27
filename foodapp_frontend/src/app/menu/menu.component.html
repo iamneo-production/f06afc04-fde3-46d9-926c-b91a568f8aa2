@@ -1,6 +1,8 @@
 <div class="centered">
-    <div id="hotel-details">
-        <a id="hotel-name" [routerLink]="['/restaurantdetails/', restaurant.id]">{{restaurant.name}}</a>
+    <div id="message" *ngIf="!apiAvailable">{{message}}</div>
+
+    <div id="hotel-details" *ngIf="apiAvailable">
+        <a id="hotel-name" routerLink="/restaurantdetails">{{restaurant.name}}</a>
         <a>
             <div id="ratings">
             <a class="stars">4.2 <img src="/assets/menu/star.svg" alt="star"></a>
