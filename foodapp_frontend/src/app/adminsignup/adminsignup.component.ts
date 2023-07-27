@@ -31,12 +31,12 @@ export class AdminsignupComponent {
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/admin', adminData, { headers, responseType: 'text' }).subscribe(
+    this.http.post('https://8080-cdcccaeacaaacfcdbceaeaadbdbabf.project.examly.io/admin', adminData, { headers, responseType: 'text' }).subscribe(
       (response: any) => {
         console.log(response); 
         if (response.includes('created') || response.includes('Customer created')) {
           alert('Registration successful!');
-          this.router.navigate(['/userlogin']);
+          this.router.navigate(['/adminlogin']);
         } else if (response.includes('already registered')) {
           alert('Email is already registered. Please use a different email.');
         } else {

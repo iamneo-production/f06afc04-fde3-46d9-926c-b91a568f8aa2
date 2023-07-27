@@ -46,7 +46,7 @@ export class RestaurantsignupComponent {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
   
   
-    this.http.post('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/restaurant', restaurantData, { headers, responseType: 'text' }).subscribe(
+    this.http.post('https://8080-cdcccaeacaaacfcdbceaeaadbdbabf.project.examly.io/restaurant', restaurantData, { headers, responseType: 'text' }).subscribe(
       (response: any) => {
         console.log(response);
         if (response.includes('created') || response.includes('Restaurant created')) {

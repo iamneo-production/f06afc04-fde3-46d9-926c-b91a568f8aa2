@@ -25,7 +25,7 @@ export class RestaurantdashboardComponent implements OnInit {
   }
 
   fetchMenuItems(): void {
-    this.http.get<any[]>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/menu-item').subscribe(
+    this.http.get<any[]>('https://8080-cdcccaeacaaacfcdbceaeaadbdbabf.project.examly.io/menu-item').subscribe(
       (response) => {
         this.menuItems = response;
         
@@ -39,7 +39,7 @@ export class RestaurantdashboardComponent implements OnInit {
   fetchOrders(): void {
     // Assuming you have a restaurantId (replace with your actual restaurant ID)
     const restaurantIds = 1;
-    this.http.get<RestaurantOrder[]>(`https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/order/restaurantId/${restaurantIds}`).subscribe(
+    this.http.get<RestaurantOrder[]>(`https://8080-cdcccaeacaaacfcdbceaeaadbdbabf.project.examly.io/order/restaurantId/${restaurantIds}`).subscribe(
       (response) => {
         this.orders = response;
       },
@@ -61,7 +61,7 @@ export class RestaurantdashboardComponent implements OnInit {
       return; // Exit the function if any field is empty
     }
 
-    this.http.post('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/menu-item', this.newMenuItem).subscribe(
+    this.http.post('https://8080-cdcccaeacaaacfcdbceaeaadbdbabf.project.examly.io/menu-item', this.newMenuItem).subscribe(
       () => {
         this.showAddForm = false; // Hide the form after successful addition
         this.fetchMenuItems(); // Refresh the data after successful addition
@@ -81,7 +81,7 @@ export class RestaurantdashboardComponent implements OnInit {
   }
 
   onEditSubmit(): void {
-    this.http.put(`https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/menu-item/${this.editedMenuItem.id}`, this.editedMenuItem).subscribe(
+    this.http.put(`https://8080-cdcccaeacaaacfcdbceaeaadbdbabf.project.examly.io/menu-item/${this.editedMenuItem.id}`, this.editedMenuItem).subscribe(
       () => {
         this.showEditForm = false; // Hide the edit form after successful edit
         this.fetchMenuItems(); // Refresh the data after successful edit
@@ -101,7 +101,7 @@ export class RestaurantdashboardComponent implements OnInit {
   deleteMenuItem(menuItem: any): void {
     const confirmed = confirm(`Are you sure you want to delete ${menuItem.name}?`);
     if (confirmed) {
-      this.http.delete(`https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/menu-item/${menuItem.id}`, { responseType: 'text' }).subscribe(
+      this.http.delete(`https://8080-cdcccaeacaaacfcdbceaeaadbdbabf.project.examly.io/menu-item/${menuItem.id}`, { responseType: 'text' }).subscribe(
         (response) => {
           console.log('Delete Response:', response);
           this.fetchMenuItems(); // Refresh the data after successful deletion
