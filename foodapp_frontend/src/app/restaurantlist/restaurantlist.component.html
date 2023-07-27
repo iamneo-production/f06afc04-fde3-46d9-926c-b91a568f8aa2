@@ -15,12 +15,13 @@
         <div class="info-div">
           <div class="rating">
             <span class="icon-star"><i class="fa-solid fa-star"></i></span>
-            
+            <span>{{resta.rating}}</span>
+
           </div>
             <div>•</div>
-          
+            <div class="timing">{{resta.deliverytime}}</div>
             <div>•</div>
-        
+            <div class="price">₹{{resta.minimumordervalue}}</div>
         <br><br>
         </div>
         <button class="view-button" (click)="onclick(resta.id)">View Now</button>
