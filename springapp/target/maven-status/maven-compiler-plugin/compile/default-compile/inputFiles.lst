@@ -1,5 +1,6 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/SpringappApplication.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Restaurant.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/CustomerRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/RestaurantRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/RestaurantController.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Login.java

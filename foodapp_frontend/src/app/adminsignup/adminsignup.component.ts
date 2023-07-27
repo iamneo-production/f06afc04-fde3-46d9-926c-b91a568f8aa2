@@ -22,7 +22,7 @@ export class AdminsignupComponent {
       alert('Please provide all the required details.');
       return; // Exit the method
     }
-    const customerData = {
+    const adminData = {
       name: this.name,
       email: this.email,
       password: this.password,
@@ -31,11 +31,12 @@ export class AdminsignupComponent {
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/admin', customerData, { headers, responseType: 'text' }).subscribe(
+    this.http.post('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/admin', adminData, { headers, responseType: 'text' }).subscribe(
       (response: any) => {
         console.log(response); 
         if (response.includes('created') || response.includes('Customer created')) {
           alert('Registration successful!');
+          this.router.navigate(['/userlogin']);
         } else if (response.includes('already registered')) {
           alert('Email is already registered. Please use a different email.');
         } else {
