@@ -52,6 +52,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent, canActivate: [UserAuthGuard]},
   {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard]},
   {path: 'menu/:id',component:MenuComponent, canActivate: [UserAuthGuard]},
+  {path: 'restaurantdetails/:id',component:RestaurantdetailsComponent, canActivate: [UserAuthGuard]},
   {path: 'restaurantlist',component:RestaurantlistComponent, canActivate: [UserAuthGuard]},
   {path: 'restaurantdetails/:id',component:RestaurantdetailsComponent, canActivate: [UserAuthGuard]},
 
