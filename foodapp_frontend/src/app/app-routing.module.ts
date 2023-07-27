@@ -1,9 +1,4 @@
 import { NgModule } from '@angular/core';
-
-import { Routes, RouterModule } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
-
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -30,7 +25,6 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { OrdertrackingComponent } from './ordertracking/ordertracking.component';
 import { ResdetailsComponent } from './resdetails/resdetails.component';
 import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetails.component';
-
 
 
 

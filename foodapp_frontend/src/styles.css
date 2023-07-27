@@ -1,13 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-<<<<<<< HEAD
-=======
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-<<<<<<< HEAD
-button, .btn-secondary .title { 
-=======
 button, .btn-secondary, .title { 
->>>>>>> a0e8690d4a8eee935a07d8806f0c01de0f75805e
     background: #FF3131;
     color: white;
 }
@@ -104,12 +98,6 @@ input[type="submit"]:hover {
 
 }
 /* login css ended */
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 6b19261a154fa6f742850d81fde2fa5a4b2337f2
-=======
-=======
->>>>>>> a0e8690d4a8eee935a07d8806f0c01de0f75805e
 
 /* signup css */
 
@@ -158,9 +146,4 @@ form .form-group span.details{
 }
 .signup-link a:hover{
   text-decoration: underline;
-<<<<<<< HEAD
 }
->>>>>>> 874caa3aadda389be1a8277ce1c2e6aecff947d0
-=======
-}
->>>>>>> a0e8690d4a8eee935a07d8806f0c01de0f75805e
