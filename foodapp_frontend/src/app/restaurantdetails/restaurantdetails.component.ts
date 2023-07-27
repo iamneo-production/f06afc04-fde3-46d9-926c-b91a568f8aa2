@@ -30,6 +30,8 @@ export class RestaurantdetailsComponent {
  }
  searchMenu(event:any) {
   let searchTerm = event.target.value;
+  
+  if(!searchTerm)
     this.filteredMenu = this.menu;
   else {
     this.filteredMenu = this.menu.filter((food: { name: string; }) => food.name.toLowerCase().includes(searchTerm.toLowerCase()));

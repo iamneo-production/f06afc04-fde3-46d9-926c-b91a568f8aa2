@@ -7,6 +7,8 @@ import { Restaurant } from './restaurant.model';
   providedIn: 'root'
 })
 export class RestaurantdataService {
+  restaurantId:number = 0;
+  
   baseUrl = 'https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io';
 
   constructor(private http: HttpClient) {}
@@ -30,9 +32,5 @@ export class RestaurantdataService {
 
   getRestaurantsByCuisine(cuisineType: string): Observable<Restaurant[]> {
     return this.http.get<Restaurant[]>(`${this.baseUrl}/restaurant/cuisine?cuisineType=${cuisineType}`);
-  }
-  updateRestaurant(id:number,restaurant:Restaurant): any{
-    let headers = new HttpHeaders().set('Content-Type','application/json')
-    return this.http.post(`${this.url}/updatedetails`,JSON.stringify(restaurant),{headers : headers});
   }
 }
