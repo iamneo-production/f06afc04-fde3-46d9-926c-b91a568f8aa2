@@ -11,7 +11,7 @@ import { Order } from './order.model';
 })
 export class OrderService {
 
-  private baseURL = "https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/order";
+  private baseURL = "https://8080-bfdadceabdbcdeacfcdbceaeaadbdbabf.project.examly.io/order";
   
  
 
