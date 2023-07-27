@@ -44,14 +44,14 @@ export class RestaurantdataService {
 }
 =======
 
-  url = 'http://localhost:8080/restaurant';
+  url = 'https://8080-acebbedadecfacfcdbccbacbfccbbebfcae.project.examly.io/restaurant';
   constructor(private http:HttpClient){}
   restaurants(){
     return this.http.get(this.url);
   }
 
   getRestaurantById(id:number):Observable<any>{
-    let url = `http://localhost:8080/restaurant/${id}`;
+    let url = `https://8080-acebbedadecfacfcdbccbacbfccbbebfcae.project.examly.io/${id}`;
     return this.http.get(url)
   }
 }
