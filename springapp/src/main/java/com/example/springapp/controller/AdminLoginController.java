@@ -18,7 +18,7 @@ public class AdminLoginController {
     private final AdminLoginService adminLoginService;
 
     @Autowired
-       public AdminLoginController(AdminLoginService adminLoginService) {
+    public AdminLoginController(AdminLoginService adminLoginService) {
         this.adminLoginService = adminLoginService;
     }
 
@@ -31,7 +31,4 @@ public class AdminLoginController {
         response.put("message", result);
         return ResponseEntity.status(status).body(response);
     }
-
-
-
 }

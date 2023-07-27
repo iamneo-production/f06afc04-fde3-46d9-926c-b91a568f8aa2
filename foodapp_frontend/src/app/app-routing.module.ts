@@ -43,7 +43,6 @@ const routes: Routes = [
   {path: 'notification', component: NotificationComponent},
   {path: 'resdetails', component: ResdetailsComponent},
   {path: 'adminlogin',component:AdminloginComponent},
-  {path: 'adminsignup',component:AdminsignupComponent},
   {path: 'restaurantlogin',component:RestaurantloginComponent},
   {path: 'restaurantsignup',component:RestaurantsignupComponent},
   {path: 'about',component:AboutComponent},
@@ -56,6 +55,8 @@ const routes: Routes = [
   {path: 'ordertracking',component:OrdertrackingComponent, canActivate: [UserAuthGuard]},
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
   {path: 'adminpanel', component: AdminpanelComponent, canActivate: [AdminAuthGuard] },
+  {path: 'adminsignup',component:AdminsignupComponent, canActivate: [AdminAuthGuard]},
+
 
   
   {path:'**',pathMatch:'full',redirectTo:'dashboard'}
