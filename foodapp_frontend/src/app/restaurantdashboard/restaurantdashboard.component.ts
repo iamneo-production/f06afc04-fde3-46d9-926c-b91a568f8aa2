@@ -100,7 +100,7 @@ export class RestaurantdashboardComponent implements OnInit {
   deleteMenuItem(menuItem: any): void {
     const confirmed = confirm(`Are you sure you want to delete ${menuItem.name}?`);
     if (confirmed) {
-      this.http.delete(`https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/menu-item/${menuItem.id}`, { responseType: 'text' }).subscribe(
+      this.http.delete(`https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/menu-item/${menuItem.id}`, { responseType: 'text' }).subscribe(
         (response) => {
           console.log('Delete Response:', response);
           this.fetchMenuItems(); // Refresh the data after successful deletion

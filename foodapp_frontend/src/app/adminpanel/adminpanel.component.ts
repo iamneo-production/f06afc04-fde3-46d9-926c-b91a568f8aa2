@@ -50,7 +50,7 @@ export class AdminpanelComponent {
     
     this.showComplaints = false;
     this.showRestaurant = false;
-    this.http.get<any[]>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/customer')
+    this.http.get<any[]>('https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io//customer')
       .subscribe(data => {
         this.customers = data;
         this.filteredCustomers = this.customers;
