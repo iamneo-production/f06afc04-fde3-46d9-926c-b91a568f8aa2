@@ -19,12 +19,13 @@ export class HomeComponent {
 
   onSearch() {
     if (this.searchText.trim() !== '') {
+      // Search for both restaurant name and cuisine type
       this.router.navigate(['/restaurantlist'], { queryParams: { search: this.searchText } });
     }
   }
   
-
   onCardClick(itemName: string) {
+    // Navigate to the RestaurantList with the cuisine type as search parameter
     this.router.navigate(['/restaurantlist'], { queryParams: { cuisineType: itemName.toLowerCase() } });
   }
 }
