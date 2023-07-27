@@ -1,9 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-<<<<<<< HEAD
-
-const routes: Routes = [];
-=======
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
@@ -14,12 +10,13 @@ import { RestaurantloginComponent } from './restaurantlogin/restaurantlogin.comp
 import { RestaurantsignupComponent } from './restaurantsignup/restaurantsignup.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
-import { AdminpanelComponent } from './adminpanel/adminpanel.component';
+
 import { CartComponent } from './cart/cart.component';
 import { RestaurantdashboardComponent } from './restaurantdashboard/restaurantdashboard.component';
 import { HomeComponent } from './home/home.component';
 import { UserAuthGuard, RestaurantAuthGuard, AdminAuthGuard } from './auth.guard';
 import { MenuComponent } from './menu/menu.component';
+import { RestaurantlistComponent } from './restaurantlist/restaurantlist.component';
 
 
 
@@ -39,12 +36,13 @@ const routes: Routes = [
   {path: 'restaurantsignup',component:RestaurantsignupComponent},
   {path: 'about',component:AboutComponent},
   {path: 'contactus',component:ContactusComponent},
-  {path: 'home', component: HomeComponent, canActivate: [UserAuthGuard]},
+  {path: 'home', component: HomeComponent},
   {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard] },
   {path: 'menu',component:MenuComponent,canActivate: [UserAuthGuard] },
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
-  {path: 'adminpanel', component: AdminpanelComponent, canActivate: [AdminAuthGuard] },
+  {path: 'restaurantlist',component:RestaurantlistComponent  },
 
+ 
 
 
   
@@ -52,7 +50,6 @@ const routes: Routes = [
 
 
 ];
->>>>>>> 98fdfa89a834b4f048fbd7c0654ef6cd3e932024
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
