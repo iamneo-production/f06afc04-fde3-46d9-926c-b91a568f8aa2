@@ -9,7 +9,7 @@ import { Restaurant } from './restaurant.model';
 export class RestaurantdataService {
   restaurantId:number = 0;
   
-  baseUrl = 'https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io';
+  baseUrl = 'https://8080-eaeeecbfecacfcdbceaeaadbdbabf.project.examly.io/';
 
   constructor(private http: HttpClient) {}
 

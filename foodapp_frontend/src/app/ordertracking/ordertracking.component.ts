@@ -29,7 +29,7 @@ export class OrdertrackingComponent implements OnInit {
 
   fetchOrderDetails() {
     const orderId:number = this.cartService.cusId; 
-    this.http.get<Order>(`https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/order/${orderId}`)
+    this.http.get<Order>(`https://8080-eaeeecbfecacfcdbceaeaadbdbabf.project.examly.io/order/${orderId}`)
       .subscribe(
         (response) => {
           this.order = response;
