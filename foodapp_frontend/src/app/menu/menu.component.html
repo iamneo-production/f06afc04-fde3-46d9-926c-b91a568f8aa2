@@ -1,7 +1,8 @@
 <div class="centered">
     <div id="message" *ngIf="!apiAvailable">{{message}}</div>
 
-    <div id="hotel-details" *ngIf="apiAvailable">
+    <div id="hotel-div" *ngIf="apiAvailable">
+        <div class="hotel-details">
         <a id="hotel-name" routerLink="/restaurantdetails">{{restaurant.name}}</a>
         <a>
             <div id="ratings">
@@ -9,7 +10,11 @@
             <a class="times">11K ratings</a>
             </div>
         </a>
-        <input id="search" placeholder="Search within menu" (keyup)="searchMenu($event)">
+        </div>
+        <div class="hotel-details">
+            <a id="address" routerLink="/restaurantdetails">{{restaurant.address}}</a>
+            <input id="search" placeholder="Search within menu" (keyup)="searchMenu($event)">
+        </div>
     </div>
 
     <div id="offers" *ngIf="apiAvailable">
