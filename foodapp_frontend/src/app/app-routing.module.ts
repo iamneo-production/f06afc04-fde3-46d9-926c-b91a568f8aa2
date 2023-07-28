@@ -24,6 +24,7 @@ import { UpdateCustomerComponent } from './update-customer/update-customer.compo
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { OrdertrackingComponent } from './ordertracking/ordertracking.component';
 import { ResdetailsComponent } from './resdetails/resdetails.component';
+import { RestaurantdetailsComponent } from './restaurantdetails/restaurantdetails.component';
 
 
 
@@ -37,9 +38,6 @@ const routes: Routes = [
   {path: 'dashboard',component:DashboardComponent},
   {path: 'userlogin',component:UserloginComponent},
   {path: 'usersignup',component:UsersignupComponent},
-  { path: 'profile', component: ProfileComponent },
-  {path: 'update-customer/:id', component: UpdateCustomerComponent},
-  {path: 'order-history', component: OrderHistoryComponent},
   {path: 'notification', component: NotificationComponent},
   {path: 'resdetails', component: ResdetailsComponent},
   {path: 'adminlogin',component:AdminloginComponent},
@@ -49,14 +47,18 @@ const routes: Routes = [
   {path: 'contactus',component:ContactusComponent},
   {path: 'home', component: HomeComponent, canActivate: [UserAuthGuard]},
   {path: 'cart', component: CartComponent, canActivate: [UserAuthGuard]},
-  {path: 'menu/:id',component:MenuComponent, canActivate: [UserAuthGuard]},
+  {path: 'menu',component:MenuComponent, canActivate: [UserAuthGuard]},
+  { path: 'profile', component: ProfileComponent, canActivate: [UserAuthGuard] },
+  {path: 'update-customer/:id', component: UpdateCustomerComponent, canActivate: [UserAuthGuard]},
+  {path: 'order-history', component: OrderHistoryComponent, canActivate: [UserAuthGuard]},
   {path: 'restaurantlist',component:RestaurantlistComponent, canActivate: [UserAuthGuard]},
+  {path: 'notification', component: NotificationComponent, canActivate: [UserAuthGuard]},
+  {path: 'restaurantdetails',component:RestaurantdetailsComponent, canActivate: [UserAuthGuard]},
   {path: 'checkout',component:CheckoutComponent, canActivate: [UserAuthGuard]},
   {path: 'ordertracking',component:OrdertrackingComponent, canActivate: [UserAuthGuard]},
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
   {path: 'adminpanel', component: AdminpanelComponent, canActivate: [AdminAuthGuard] },
-  {path: 'adminsignup',component:AdminsignupComponent, canActivate: [AdminAuthGuard]},
-
+  {path: 'adminsignup',component:AdminsignupComponent, canActivate: [AdminAuthGuard] },
 
   
   {path:'**',pathMatch:'full',redirectTo:'dashboard'}

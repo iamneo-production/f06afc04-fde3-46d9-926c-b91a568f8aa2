@@ -7,7 +7,7 @@ import { RestaurantOrder } from './restaurant-order.model';
   providedIn: 'root'
 })
 export class RestaurantOrderService {
-  private apiUrl = 'https://api.example.com/restaurant-orders'; // Replace with your API URL for restaurant orders
+  private apiUrl = 'https://8081-acebbedadecfacfcdbccbacbfccbbebfcae.project.examly.io/restaurant-orders'; // Replace with your API URL for restaurant orders
 
   constructor(private http: HttpClient) {}
 
