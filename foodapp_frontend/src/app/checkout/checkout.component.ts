@@ -32,7 +32,7 @@ finalTotal=this.cartService.finaltotal;
   public message: string = '';
   
   makePayment() {
-    const url = 'https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/payment'; // Replace with your server's endpoint
+    const url = 'hhttps://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/payment'; // Replace with your server's endpoint
 
     const httpOptions = {
       headers: new HttpHeaders({
