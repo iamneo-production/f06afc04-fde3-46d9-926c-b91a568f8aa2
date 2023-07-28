@@ -34,7 +34,7 @@ export class ContactusComponent {
       })
     };
   
-    this.http.post('https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io//contactus', formData, httpOptions)
+    this.http.post('https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/contactus', formData, httpOptions)
       .subscribe(
         () => {
           // Handle success response

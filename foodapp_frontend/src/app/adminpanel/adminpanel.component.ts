@@ -50,7 +50,7 @@ export class AdminpanelComponent {
     
     this.showComplaints = false;
     this.showRestaurant = false;
-    this.http.get<any[]>('https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io//customer')
+    this.http.get<any[]>('https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/customer')
       .subscribe(data => {
         this.customers = data;
         this.filteredCustomers = this.customers;
@@ -64,7 +64,7 @@ export class AdminpanelComponent {
           
     this.showCustomer = false;
     this.showComplaints = false;
-    this.http.get<any[]>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/restaurant')
+    this.http.get<any[]>('https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/restaurant')
       .subscribe(data => {
   
         this.restaurants = data;
@@ -78,7 +78,7 @@ export class AdminpanelComponent {
 
     this.showCustomer = false;
     this.showRestaurant = false;
-    this.http.get<any[]>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/contactus')
+    this.http.get<any[]>('https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/contactus')
       .subscribe(data => {
         this.complaints = data;
         this.filteredComplaints = this.complaints;
@@ -88,7 +88,7 @@ export class AdminpanelComponent {
   }
 
   deleteCustomer(customer: any) {
-    this.http.delete(`https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/customer/${customer.id}`, { responseType: 'text' })
+    this.http.delete(`https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/customer/${customer.id}`, { responseType: 'text' })
       .subscribe(() => {
         this.customers = this.customers.filter(c => c.id !== customer.id);
         this.filteredCustomers = this.filteredCustomers.filter(c => c.id !== customer.id);
@@ -100,7 +100,7 @@ export class AdminpanelComponent {
   }
 
   deleteRestaurant(restaurant: any) {
-    this.http.delete(`https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/restaurant/${restaurant.id}`, { responseType: 'text' })
+    this.http.delete(`https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/restaurant/${restaurant.id}`, { responseType: 'text' })
       .subscribe(() => {
         this.restaurants = this.restaurants.filter(r => r.id !== restaurant.id);
         this.filteredRestaurants = this.filteredRestaurants.filter(r => r.id !== restaurant.id);
@@ -114,7 +114,7 @@ export class AdminpanelComponent {
 
 
   deleteComplaint(complaint: any) {
-    this.http.delete(`https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/contactus/${complaint.id}`, { responseType: 'text' })
+    this.http.delete(`https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/contactus/${complaint.id}`, { responseType: 'text' })
       .subscribe(() => {
         this.filteredComplaints = this.filteredComplaints.filter(c => c.id !== complaint.id);
         window.alert('Complaint deleted successfully');
