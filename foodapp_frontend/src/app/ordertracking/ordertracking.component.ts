@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { CartService } from '../cart/cart.service';
 
 interface Order {
@@ -21,7 +22,7 @@ interface Order {
 export class OrdertrackingComponent implements OnInit {
   order: Order | undefined;
 
-  constructor(private http: HttpClient,private cartService:CartService) { }
+  constructor(private http: HttpClient,private router: Router, private cartService:CartService) { }
 
   ngOnInit(): void {
     this.fetchOrderDetails();
