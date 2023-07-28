@@ -96,25 +96,6 @@
     }
   },
   "cli": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "analytics": "5f7e75eb-cd67-4f14-ad18-3fc30328251e"
-=======
-    "analytics": "2d43ca6a-88c5-4a34-8c19-ed806bcc1bb4"
->>>>>>> 98fdfa89a834b4f048fbd7c0654ef6cd3e932024
-=======
     "analytics": "32711637-e8cd-416d-b241-69d4a2971fd8"
->>>>>>> 42cde8b03d32f715aec3e1f737992120ab3da49d
-=======
-    "analytics": "32711637-e8cd-416d-b241-69d4a2971fd8"
-=======
-    "analytics": "5f7e75eb-cd67-4f14-ad18-3fc30328251e"
->>>>>>> e632fe5 (frontebd)
->>>>>>> b981db2 (frontebd)
-=======
-    "analytics": "32711637-e8cd-416d-b241-69d4a2971fd8"
->>>>>>> 45103b0 (update for)
   }
 }
