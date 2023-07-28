@@ -1,10 +1,6 @@
 .topnav {
   overflow: hidden;
-<<<<<<< HEAD
-  background-color:  #e72929;
-=======
   background-color: #FF3131;
->>>>>>> 10bc20662fe349f08226a0b011e88abd0e338aa3
   margin: 0;
 }
 
@@ -57,20 +53,11 @@
 .active {
   border-radius: 4px;
   border: none;
-<<<<<<< HEAD
-  background-color: #e72929;
-  color:white;
-  text-align: center;
-  font-size: 18px;
-  padding: 16px 16px;
-
-=======
   background-color: #fa4a4a;
   color: white;
   text-align: center;
   font-size: 18px;
   padding: 16px 16px;
->>>>>>> 10bc20662fe349f08226a0b011e88abd0e338aa3
 }
 
 /* Logo container styles */
@@ -82,15 +69,7 @@
 /* General button styles */
 .button {
   border-radius: 4px;
-<<<<<<< HEAD
-  background-color:  #e72929;
-  opacity: 0.8;
-
   border: none;
-  color: white;
-=======
-  border: none;
->>>>>>> 10bc20662fe349f08226a0b011e88abd0e338aa3
   text-align: center;
   font-size: 18px;
   padding: 16px 16px;
@@ -114,13 +93,7 @@
 }
 
 .button:hover {
-<<<<<<< HEAD
-  background-color:  #e72929;
-  opacity: 1;
-
-=======
   background-color: #fa4a4a;
->>>>>>> 10bc20662fe349f08226a0b011e88abd0e338aa3
 }
 
 .button:hover span {
