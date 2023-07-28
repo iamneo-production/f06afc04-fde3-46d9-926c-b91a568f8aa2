@@ -9,14 +9,18 @@
     margin-top: 5rem;
 }
 
-#hotel-details {
-    display: flex;
+#hotel-div {
     padding: 2rem;
+}
+
+.hotel-details {
+    display: flex;
+    align-items: center;
 }
 
 #hotel-name {
     color: #787878;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 900;
     text-decoration: none;
 }
@@ -24,6 +28,12 @@
 #hotel-name:hover {
     color: #525151;
     cursor: pointer;
+}
+
+#address {
+    color: #787878;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 #ratings {
@@ -161,6 +171,12 @@ img.food {
     display: none;
 }
 
+#offers {
+    border-top: 1px dashed rgb(235, 235, 235);
+    padding: 2rem;
+    color: #787878;
+}
+
 @media screen and (max-width: 992px) {
     .centered {
         width: 85%;
@@ -174,8 +190,11 @@ img.food {
         margin: 0 auto;
     }
 
-    #hotel-details {
+    #hotel-div {
         padding: 2rem 0;
+    }
+
+    .hotel-details {
         flex-wrap: wrap;
     }
 
@@ -183,4 +202,40 @@ img.food {
         flex-basis: 100%;
         margin-top: 2rem;
     }
+
+    #offers {
+        padding: 2rem 0;
+    }
 }
+
+.t2{
+    font-size: 22px;    
+  }
+
+.offer-card-container {
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .offer-card {
+    min-width: 150px;
+    border: 1px solid red;
+    border-style: dashed;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  
+  .offer-content {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .offer-title {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .offer-description {
+    font-size: 14px;
+    margin: 5px 0;
+  }
