@@ -60,7 +60,7 @@ export class RestaurantdashboardComponent implements OnInit {
       return; // Exit the function if any field is empty
     }
 
-    this.http.post('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/menu-item', this.newMenuItem).subscribe(
+    this.http.post('https://8080-acebbedadecfacfcdbccbacbfccbbebfcae.project.examly.io/menu-item', this.newMenuItem).subscribe(
       () => {
         this.showAddForm = false; // Hide the form after successful addition
         this.fetchMenuItems(); // Refresh the data after successful addition

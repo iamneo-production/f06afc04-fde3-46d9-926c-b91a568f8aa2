@@ -11,11 +11,7 @@ import { Restaurant } from '../restaurant.model';
 export class RestaurantlistComponent {
   restaurant: Restaurant[] = [];
   searchText = '';
-<<<<<<< HEAD
   cuisineType = '';
-=======
-  cuisineTypes: string[] = [];
->>>>>>> a7d4add (Update Restaurant)
 
   constructor(
     private restaurantdata: RestaurantdataService,
@@ -24,18 +20,12 @@ export class RestaurantlistComponent {
   ) {
     this.route.queryParams.subscribe(params => {
       this.searchText = params['search'] || '';
-<<<<<<< HEAD
       this.cuisineType = params['cuisineType'] || '';
-=======
-      const cuisineTypeParam = params['cuisineType'];
-      this.cuisineTypes = cuisineTypeParam ? cuisineTypeParam.split(',') : [];
->>>>>>> a7d4add (Update Restaurant)
       this.getRestaurants();
     });
   }
 
   getRestaurants() {
-<<<<<<< HEAD
     if (this.searchText.trim() === '') {
       if (this.cuisineType.trim() !== '') {
         // If cuisineType is provided, get restaurants by cuisineType
@@ -82,24 +72,4 @@ export class RestaurantlistComponent {
     this.restaurantdata.restaurantId = id;
     this.router.navigate(['/menu']);
   }
-=======
-    this.restaurantdata.restaurants().subscribe((data: any) => {
-      if (this.searchText.trim() === '') {
-        if (this.cuisineTypes.length > 0) {
-          this.restaurant = data.filter((item: Restaurant) => this.cuisineTypes.some(cuisine => item.cuisinetype.toLowerCase().includes(cuisine.toLowerCase())));
-        } else {
-          this.restaurant = data;
-        }
-      } else {
-        this.restaurant = data.filter((item: { name: string }) =>
-          item.name.toLowerCase().includes(this.searchText.toLowerCase())
-        );
-      }
-    });
-  }
-
-  onclick(id: number) {
-    this.router.navigate(['/restaurantdetails', id]);
-  }
->>>>>>> a7d4add (Update Restaurant)
 }

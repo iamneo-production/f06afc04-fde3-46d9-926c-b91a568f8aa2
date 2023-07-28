@@ -19,7 +19,6 @@ export class HomeComponent {
 
   onSearch() {
     if (this.searchText.trim() !== '') {
-<<<<<<< HEAD
       // Search for both restaurant name and cuisine type
       this.router.navigate(['/restaurantlist'], { queryParams: { search: this.searchText } });
     }
@@ -29,14 +28,4 @@ export class HomeComponent {
     // Navigate to the RestaurantList with the cuisine type as search parameter
     this.router.navigate(['/restaurantlist'], { queryParams: { cuisineType: itemName.toLowerCase() } });
   }
-=======
-      this.router.navigate(['/restaurantlist'], { queryParams: { search: this.searchText } });
-    }
-  }
-
- onCardClick(itemName: string) {
-  this.router.navigate(['/restaurantlist'], { queryParams: { cuisineType: itemName.toLowerCase() } });
-}
-
->>>>>>> a7d4add (Update Restaurant)
 }

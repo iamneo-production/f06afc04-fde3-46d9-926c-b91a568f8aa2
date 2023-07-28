@@ -24,6 +24,9 @@
   }
   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 45103b0 (update for)
  .text-center{
   text-align: center;
   padding: 20px;
@@ -34,6 +37,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+<<<<<<< HEAD
 =======
     .body{
       background-color: white;
@@ -46,6 +50,8 @@
 >>>>>>> a7d4add (Update Restaurant)
       background-size: cover;
 >>>>>>> 4dcb710 (Update Restaurant)
+=======
+>>>>>>> 45103b0 (update for)
     
    
   }
@@ -181,6 +187,7 @@
       width: calc(25% - 20px);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   
@@ -227,6 +234,9 @@
     
     
 >>>>>>> 4dcb710 (Update Restaurant)
+=======
+  }
+>>>>>>> 45103b0 (update for)
   
   
 

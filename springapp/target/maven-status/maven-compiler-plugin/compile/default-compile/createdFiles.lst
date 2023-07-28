@@ -15,8 +15,13 @@ com/example/springapp/controller/DeliveryController.class
 com/example/springapp/repository/OrderRepository.class
 com/example/springapp/controller/AdminController.class
 com/example/springapp/security/ApplSecurityConfig.class
+<<<<<<< HEAD
 com/example/springapp/repository/LoginRepository.class
 com/example/springapp/controller/OrderController.class
+=======
+com/example/springapp/controller/OrderController.class
+com/example/springapp/repository/LoginRepository.class
+>>>>>>> 45103b0 (update for)
 com/example/springapp/repository/RestaurantsLoginRepository.class
 com/example/springapp/model/Restaurant.class
 com/example/springapp/service/DeliveryService.class
@@ -30,8 +35,13 @@ com/example/springapp/controller/PaymentController.class
 com/example/springapp/service/ContactUsService.class
 com/example/springapp/service/MenuItemService.class
 com/example/springapp/repository/AdminLoginRepository.class
+<<<<<<< HEAD
 com/example/springapp/model/RestaurantsLogin.class
 com/example/springapp/controller/CustomerController.class
+=======
+com/example/springapp/controller/CustomerController.class
+com/example/springapp/model/RestaurantsLogin.class
+>>>>>>> 45103b0 (update for)
 com/example/springapp/repository/ContactUsRepository.class
 com/example/springapp/model/Order.class
 com/example/springapp/model/Delivery.class

@@ -6,10 +6,17 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Login.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/DeliveryRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/DeliveryController.java
+<<<<<<< HEAD
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/PaymentRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/LoginController.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/RestaurantsLogin.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/AdminController.java
+=======
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/LoginController.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/PaymentRepository.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/AdminController.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/RestaurantsLogin.java
+>>>>>>> 45103b0 (update for)
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/RestaurantsLoginService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/AdminService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Delivery.java
@@ -18,11 +25,17 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/RestaurantsLoginRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/PaymentService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/LoginService.java
+<<<<<<< HEAD
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/AdminLoginService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/ContactUsService.java
+=======
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/ContactUsService.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/AdminLoginService.java
+>>>>>>> 45103b0 (update for)
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/MenuItem.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Customer.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/RestaurantService.java
+<<<<<<< HEAD
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/CustomerService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Admin.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Payment.java
@@ -35,6 +48,21 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/AdminLogin.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/AddressService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Address.java
+=======
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Payment.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Admin.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/OrderRepository.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/ContactUs.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/DeliveryService.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/RestaurantsLoginController.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/PaymentController.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/MenuItemController.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/AdminLogin.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/AddressService.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Address.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/OrderController.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/ContactUsController.java
+>>>>>>> 45103b0 (update for)
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/LoginRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/ContactUsController.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/OrderController.java
@@ -42,7 +70,14 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/OrderService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/ContactUsRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/MenuItemService.java
+<<<<<<< HEAD
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/AdminLoginRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/AdminRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/AdminLoginController.java
+=======
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/ContactUsRepository.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/AdminLoginController.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/AdminRepository.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/AdminLoginRepository.java
+>>>>>>> 45103b0 (update for)
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/security/ApplSecurityConfig.java

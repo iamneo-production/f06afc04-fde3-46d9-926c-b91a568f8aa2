@@ -26,30 +26,11 @@ public class Restaurant {
     private Long menu_item_id;
     private String email;
     private String password;
-<<<<<<< HEAD
     private String deliverytime;
     private String minimumordervalue;
     private String imageData;
     private String cuisinetype;
     private String rating;
-=======
-    private String cuisinetype;
-    private String rating;
-    public Restaurant(String cuisinetype, String rating, String deliverytime, String minimumordervalue,
-            String imageData) {
-        this.cuisinetype = cuisinetype;
-        this.rating = rating;
-        this.deliverytime = deliverytime;
-        this.minimumordervalue = minimumordervalue;
-        this.imageData = imageData;
-    }
-
-    private String deliverytime;
-    private String minimumordervalue;
-    private String imageData;
-
-
->>>>>>> 6dec428 (First commit)
 
 
     public long getId() {

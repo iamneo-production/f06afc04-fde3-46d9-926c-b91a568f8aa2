@@ -15,6 +15,7 @@ describe('AppComponent', () => {
   });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,10 +27,13 @@ describe('AppComponent', () => {
 =======
 >>>>>>> e632fe5 (frontebd)
 >>>>>>> b981db2 (frontebd)
+=======
+>>>>>>> 45103b0 (update for)
   it(`should have as title 'foodapp_frontend'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('foodapp_frontend');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -37,12 +41,15 @@ describe('AppComponent', () => {
 =======
 >>>>>>> e632fe5 (frontebd)
 >>>>>>> b981db2 (frontebd)
+=======
+>>>>>>> 45103b0 (update for)
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
+<<<<<<< HEAD
 <<<<<<< HEAD
     expect(compiled.querySelector('.content span')?.textContent).toContain('foodapp_frontend app is running!');
 =======
@@ -56,5 +63,8 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.content span')?.textContent).toContain('foodapp_frontend app is running!');
 >>>>>>> e632fe5 (frontebd)
 >>>>>>> b981db2 (frontebd)
+=======
+    expect(compiled.querySelector('.content span')?.textContent).toContain('foodapp_frontend app is running!');
+>>>>>>> 45103b0 (update for)
   });
 });
