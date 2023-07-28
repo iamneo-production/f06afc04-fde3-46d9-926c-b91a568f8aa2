@@ -51,6 +51,7 @@ export class RestaurantsignupComponent {
         console.log(response);
         if (response.includes('created') || response.includes('Restaurant created')) {
           alert('Registration successful!');
+          this.router.navigate(['/restaurantlogin']);
         } else if (response.includes('already registered')) {
           alert('Email is already registered. Please use a different email.');
         } else {

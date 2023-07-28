@@ -36,6 +36,7 @@ export class AdminsignupComponent {
         console.log(response); 
         if (response.includes('created') || response.includes('Customer created')) {
           alert('Registration successful!');
+          this.router.navigate(['/adminlogin']);
         } else if (response.includes('already registered')) {
           alert('Email is already registered. Please use a different email.');
         } else {
