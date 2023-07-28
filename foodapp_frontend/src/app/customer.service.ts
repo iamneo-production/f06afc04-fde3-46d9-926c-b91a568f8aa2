@@ -7,7 +7,7 @@ import { Customer } from './customer';
   providedIn: 'root'
 })
 export class CustomerService {
-   private baseURL="https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/customer";
+   private baseURL="https://8080-cdcccaeacaaacfcdbceaeaadbdbabf.project.examly.io/customer";
   constructor(private http:HttpClient) { }
 
   getCustomerById(id:number):Observable<Customer> 

@@ -32,7 +32,7 @@ export class AdminloginComponent {
     }
 
     // If not default credentials, send the login request to the backend
-    this.http.post<any>('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/adminLogin', loginData, { headers, observe: 'response' }).subscribe(
+    this.http.post<any>('https://8080-cdcccaeacaaacfcdbceaeaadbdbabf.project.examly.io/adminLogin', loginData, { headers, observe: 'response' }).subscribe(
       (response) => {
         console.log(response);
         if (response.status === 200) {

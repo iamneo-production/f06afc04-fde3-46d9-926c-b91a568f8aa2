@@ -38,7 +38,7 @@ export class RestaurantdashboardComponent implements OnInit {
 
   fetchOrders(): void {
     // feching data from orders
-    this.http.get<RestaurantOrder[]>(`https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/order`).subscribe(
+    this.http.get<RestaurantOrder[]>(`https://8080-cdcccaeacaaacfcdbceaeaadbdbabf.project.examly.io/order`).subscribe(
       (response) => {
         this.orders = response;
       },
