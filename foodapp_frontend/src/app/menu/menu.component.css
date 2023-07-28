@@ -184,3 +184,41 @@ img.food {
         margin-top: 2rem;
     }
 }
+
+#offers {
+    border-top: 1px dashed rgb(235, 235, 235);
+    padding: 2rem;
+    color: #787878;
+}
+
+.t2{
+    font-size: 22px;    
+  }
+
+.offer-card-container {
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .offer-card {
+    min-width: 150px;
+    border: 1px solid red;
+    border-style: dashed;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  
+  .offer-content {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .offer-title {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .offer-description {
+    font-size: 14px;
+    margin: 5px 0;
+  }
