@@ -28,9 +28,9 @@ public class LoginController {
         HttpStatus status = result.equals("Login successful") ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
 
         Map<String, String> response = new HashMap<>();
-        response.put("message", result);
+        response.put("message", result);  
         return ResponseEntity.status(status).body(response);
-    }
+    }   
 
 
     @PostMapping("/logout")
@@ -42,4 +42,4 @@ public class LoginController {
 
         return ResponseEntity.ok(response);
     }
-}
+}  

@@ -25,6 +25,12 @@ export class RestaurantsignupComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
   register(): void {
+
+    if (!this.validateEmailFormat(this.email)) {
+      alert('Incorrect email format. Please enter a valid email address.');
+      return;
+    }
+
     if (!this.name || !this.email || !this.password || !this.address|| !this.deliverytime || !this.minimumordervalue || !this.cuisinetype) {
       alert('Please provide all the required details.');
       return;
@@ -62,5 +68,11 @@ export class RestaurantsignupComponent {
         console.log(error);
       }
     );
+  }
+
+  validateEmailFormat(email: string): boolean {
+    // Regular expression for email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   }
 }

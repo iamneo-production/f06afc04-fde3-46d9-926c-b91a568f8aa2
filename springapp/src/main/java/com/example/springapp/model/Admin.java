@@ -65,7 +65,6 @@ public class Admin {
     }
 
     public Admin(long id, String name, String email, String password, int phone_number) {
-        super();
         this.id = id;
         this.name = name;
         this.email = email;
@@ -74,7 +73,6 @@ public class Admin {
     }
 
     public Admin() {
-        super();
     }
 
 

@@ -18,6 +18,11 @@ export class AdminsignupComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
   register(): void {
+
+    if (!this.validateEmailFormat(this.email)) {
+      alert('Incorrect email format. Please enter a valid email address.');
+      return;
+    }
     if (!this.name || !this.email || !this.password || !this.phone_number) {
       alert('Please provide all the required details.');
       return; // Exit the method
@@ -47,5 +52,10 @@ export class AdminsignupComponent {
         console.log(error);
       }
     );
+  }
+  validateEmailFormat(email: string): boolean {
+    // Regular expression for email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   }
 }

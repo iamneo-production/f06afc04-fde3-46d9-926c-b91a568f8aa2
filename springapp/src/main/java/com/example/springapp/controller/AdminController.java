@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*")  
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
@@ -56,6 +56,11 @@ public class AdminController {
     @GetMapping
     public ResponseEntity<List<Admin>> getAllAdmin() {
         List<Admin> admins = adminService.getAllAdmins();
-        return ResponseEntity.ok(admins);
+        if(admins!=null){
+          return ResponseEntity.ok(admins);
     }
+         else {
+         return ResponseEntity.notFound().build();
+    }
+}
 }
