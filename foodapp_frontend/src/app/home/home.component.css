@@ -213,7 +213,7 @@ font-size: 15px; /* Set the font size of the placeholder text */
 }
 
 .search-bar button.search-button {
-  background-color: #ffcf26;
+background-color: #ffcf26;
 color: white;
 border: none;
 padding: 10px 20px;

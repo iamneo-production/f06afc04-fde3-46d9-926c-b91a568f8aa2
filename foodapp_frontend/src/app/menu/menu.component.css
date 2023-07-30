@@ -67,7 +67,7 @@
 
 #search:focus {
     outline: none;
-    border: 1px solid #e72929;
+    border: 1px solid #ffcf26;
 }
 
 ul {
@@ -119,7 +119,7 @@ div.content-right .name {
 .addToCart button, .addToCart a {
     padding: 10px 15px;
     border: none;
-    background: #e72929;
+    background: #ffcf26;
     color: white;
     opacity: 0.8;
     margin: 0;
@@ -139,7 +139,7 @@ img.food {
 
 #order {
     display: flex;
-    background-color: #e72929;
+    background-color:#ffcf26;
     color: white;
     padding: 10px;
     position: fixed;

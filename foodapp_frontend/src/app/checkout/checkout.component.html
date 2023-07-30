@@ -1,70 +1,47 @@
-
 <div class="container">
-  <!-- <div class="left-side">
-    <h2 class="section-title">Order Details</h2>
-    <div class="product-card">
-      <div class="product-details">
-        <p class="product-name">{{ productName }}</p>
-        <p class="product-price">Total MRP: {{ actualPrice }}</p>
-        <p class="product-discount">Discount on MRP: {{ discount }}</p>
-        <p class="product-fee">Convenience Fee: {{ convenienceFee }}</p>
-        <p class="product-total">Total Amount: {{ totalPrice }}</p>
-      </div>
-    </div>
-  </div> -->
+  <div *ngIf="orders.length > 0 && !paymentDone" class="row">
+    <div class="col-md-8">
+      <h2 class="section-title">Order Details</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orders">
+            <td>{{ order.name }}</td>
+            <td>{{ order.price | currency:'INR' }}</td>
+            <td>{{ order.quantity }}</td>
+            <td>{{ order.quantity * order.price | currency:'INR' }}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><button class="btn btn-secondary ml-0" routerLink="/menu">Add More Items</button></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="font-size: medium;"><strong>Total: {{ finalTotal | currency:'INR' }}</strong></td>
+          </tr>
+        </tfoot>
+      </table>
 
-  <div *ngIf="orders.length > 0 && !paymentDone">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Quantity</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let order of orders">
-          <td>{{ order.name }}</td>
-          <!-- <td>
-            <button class="btn btn-sm btn-secondary me-1" (click)="decrementItemQuantity(order)">-</button>
-            {{ order.quantity }}
-            <button class="btn btn-sm btn-secondary ms-1" (click)="incrementItemQuantity(order)">+</button>
-          </td> -->
-          <td>{{ order.price | currency:'INR' }}</td>
-          <td>{{ order.quantity * order.price | currency:'INR' }}</td>
-          <!-- <td>
-            <button class="btn btn-sm btn-danger" (click)="menuService.removeItem(order.id)">
-              <i class="fas fa-trash-alt"></i>
-            </button>
-          </td> -->
-          
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td><button class="btn btn-secondary ml-0" routerLink="/menu">Add More Items</button></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td style="font-size: medium;"><strong>Total: {{ finalTotal | currency:'INR' }}</strong></td>
-        </tr>
-      </tfoot>
-    </table>
-
-  <div class="right-side">
-    <div class="right-side-container">
       <h2 class="section-title">Delivery Address</h2>
       <form class="address-form">
-        <div>
-          <label for="address">Address:</label>
-          <input [(ngModel)]="order.deliveryAddress" type="text" id="address" name="address">
+        <div class="mb-3">
+          <label for="address" class="form-label">Address:</label>
+          <input [(ngModel)]="order.deliveryAddress" type="text" id="address" name="address" class="form-control">
         </div>
       </form>
 
       <h2 class="section-title">Payment Method</h2>
       <form class="payment-form">
-        <div>
-          <select id="paymentMethod"  name="paymentMethod">
+        <div class="mb-3">
+          <select id="paymentMethod" name="paymentMethod" class="form-select">
             <option value="creditCard">Credit Card</option>
             <option value="paypal">PayPal</option>
             <option value="Gpay">Gpay</option>
@@ -73,20 +50,21 @@
           </select>
         </div>
       </form>
+    </div>
 
+    <div class="mb-3">
+      <!-- Move Payment Summary section here -->
       <h2 class="section-title">Payment Summary</h2>
       <div class="payment-summary">
-      
-        <label for="orderId">Date:</label>{{date}}<br>
-        <label for="orderId">Amount:</label>{{finalTotal}}<br>
-        
+        <label for="orderId">Date:</label> {{ date }}<br>
+        <label for="orderId">Amount:</label> {{ finalTotal | currency:'INR' }}<br>
         <br>
       </div>
-      <button class="payment-btn" (click)="makePayment()">Pay now</button>
+      <button class="payment-btn btn btn-primary" (click)="makePayment()">Pay now</button>
     </div>
   </div>
 </div>
 
-<div *ngIf="paymentDone">
+<div *ngIf="paymentDone" class="payment-success">
   Payment Successful
 </div>
