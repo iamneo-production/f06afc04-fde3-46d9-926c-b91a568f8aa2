@@ -86,3 +86,13 @@ form .user-details .form-group{
     max-width: 80%;
   }
 }
+
+
+
+
+
+
+form .user-details .form-group{
+  margin-bottom: 15px;
+  width: calc(100% / 3 - 20px);
+}
