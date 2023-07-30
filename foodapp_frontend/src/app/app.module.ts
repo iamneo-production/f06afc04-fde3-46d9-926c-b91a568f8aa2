@@ -15,6 +15,7 @@ import { UpdateCustomerComponent } from './update-customer/update-customer.compo
 import { UpdateDetailsComponent } from './update-details/update-details.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ResdetailsComponent } from './resdetails/resdetails.component';
+<<<<<<< HEAD
 import { CustomerService } from './customer.service';
 
 
@@ -27,11 +28,45 @@ import { CustomerService } from './customer.service';
     ResloginComponent,
     RessignupComponent,
     ProfileComponent,
+=======
+import { NotificationComponent } from './notification/notification.component';
+import { ProfileComponent } from './profile/profile.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { OrdertrackingComponent } from './ordertracking/ordertracking.component';
+@NgModule({
+  declarations: [
+    AppComponent,
+    CartComponent,
+    HeaderComponent,
+    DashboardComponent,
+    UserloginComponent,
+    UsersignupComponent,
+    AdminsignupComponent,
+    AdminloginComponent,
+    RestaurantloginComponent,
+    RestaurantsignupComponent,
+    ContactusComponent,
+    AboutComponent,
+    AdminpanelComponent,
+    MenuComponent,
+    RestaurantdashboardComponent,
+    HomeComponent,
+    RestaurantlistComponent,
+    CheckoutComponent,
+    RestaurantdetailsComponent,
+>>>>>>> b4bc5ad83b4543cda3b6f54f26fee259cf11f943
     UpdateCustomerComponent,
     UpdateDetailsComponent,
     ResdetailsComponent,
+<<<<<<< HEAD
 
  
+=======
+    NotificationComponent,
+    ProfileComponent,
+    OrderHistoryComponent,
+    OrdertrackingComponent,
+>>>>>>> b4bc5ad83b4543cda3b6f54f26fee259cf11f943
   ],
   imports: [
     BrowserModule,
@@ -45,4 +80,6 @@ import { CustomerService } from './customer.service';
   providers: [CustomerService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+

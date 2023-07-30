@@ -1,0 +1,59 @@
+<nav class="topnav">
+
+  <div class="topnav-left">
+    <!--home-->
+    <button *ngIf="router.url==='/dashboard'" class="active" title="You are in Dashboard"><i class="fa fa-home"></i>
+      Home</button>
+    <button *ngIf="router.url==='/about' 
+    || router.url==='/usersignup'
+    || router.url==='/restaurantsignup' 
+    || router.url==='/userlogin'
+    || router.url==='/adminlogin'
+    || router.url==='/restaurantlogin'
+    || router.url==='/contactus'" class="button" [routerLink]="(['/dashboard'])"><span><i class="fa fa-home"></i>
+        Home</span></button>
+
+    <!-- About -->
+    <button *ngIf="router.url==='/about'" class="active" title="You are in About page">About</button>
+    <button *ngIf="router.url==='/dashboard'
+        ||router.url==='/Contactus'" class="button" [routerLink]="(['/about'])"><span> About</span></button>
+
+    <!--Logo-->
+    <div class="logo-container">
+      <a *ngIf="router.url==='/home' || router.url.startsWith('/menu') || router.url==='/cart'|| router.url==='/checkout'|| router.url==='/profile'|| router.url==='/ordertracking'||router.url==='/restaurantlist' || router.url.startsWith('/restaurantlist')" [routerLink]="['/home']">
+        <img src="..\assets\images\logo6.png" width="100" height="55" alt="Logo">
+      </a>
+      <a *ngIf="router.url==='/adminpanel'|| router.url==='/adminsignup' "[routerLink]="['/adminpanel']">
+        <img src="..\assets\images\logo6.png" width="100" height="55" alt="Logo">
+      </a>
+      <a *ngIf="router.url==='/restaurantdashboard'"[routerLink]="['/restaurantdashboard']">
+        <img src="..\assets\images\logo6.png" width="100" height="55" alt="Logo">
+      </a>
+    </div>
+
+
+
+
+  </div>
+
+
+  <div class="topnav-right">
+
+    <!--Login-->
+    <div class="dropdown" *ngIf="router.url==='/dashboard'
+            || router.url==='/userlogin'
+            || router.url==='/adminlogin'
+            || router.url==='/usersignup'
+            || router.url==='/restaurantsignup'
+            || router.url==='/restaurantlogin'">
+      <button class="button">
+        <i class="fa fa-fw fa-user"></i>Login <i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" [routerLink]="(['/userlogin'])">Customer</a>
+        <a class="dropdown-item" [routerLink]="(['/restaurantlogin'])">Restaurants</a>
+        <hr>
+        <a class="dropdown-item" [routerLink]="(['/adminlogin'])">Admin</a>
+      </div>
+    </nav>
+  </header>
+  

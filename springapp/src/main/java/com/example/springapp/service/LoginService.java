@@ -20,7 +20,9 @@ public class LoginService {
         Login existingLogin = loginRepository.findByEmail(email);
         Customer customer = null;
 
-        if (existingLogin != null && existingLogin.getPassword().equals(password)) {
+        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+
+        if (existingLogin != null && bCryptPasswordEncoder.matches(password, existingLogin.getPassword())) {
             // Credentials matched, redirect to the Home component
             customer = customerService.getUserProfileById(existingLogin.getId());
             customer.setPassword("");
