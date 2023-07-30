@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class RestaurantService {
 
-  private baseURL="http://localhost:8080/restaurant";
+  private baseURL="https://8080-baadfdbadacdfeacfcdbceaeaadbdbabf.project.examly.io/restaurant";
   constructor(private http:HttpClient) { }
 
   getRestaurantById(id:number):Observable<Restaurant> 

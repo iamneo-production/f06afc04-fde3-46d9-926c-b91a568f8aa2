@@ -1,26 +1,13 @@
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a routerLink="login" routerLinkActive="active" class="nav-link">Login</a>
-      </li>
-      
-      <li class="nav-item">
-        <a routerLink="signup" routerLinkActive="active" class="nav-link">SignUp</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="logout" routerLinkActive="active" class="nav-link">Logout</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="order-history" routerLinkActive="active" class="nav-link">Orders</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="order-create" routerLinkActive="active" class="nav-link">Create Order</a>
-      </li>
-    </ul>
-  </nav>
-  
-  <h1 class="text-center">Food App</h1>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-    
+<nav class="navbar">
+  <a routerLink="login" routerLinkActive="active" class="nav-link">Login</a>
+  <a routerLink="signup" routerLinkActive="active" class="nav-link">SignUp</a>
+  <a routerLink="reslogin" routerLinkActive="active" class="nav-link">Res Login</a>
+  <a routerLink="ressignup" routerLinkActive="active" class="nav-link">Res Signup</a>
+  <a routerLink="notification" routerLinkActive="active" class="nav-link">Notification</a>
+</nav>
+
+  <h1 class="text-center">Food Zone</h1>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

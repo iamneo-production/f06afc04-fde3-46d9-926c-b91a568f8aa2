@@ -25,9 +25,7 @@ export class UpdateCustomerComponent implements OnInit{
   }
 
   onSubmit(){
-    this.service.updateCustomer(this.id,this.customer).subscribe((data : any)=>{
-      this.gotoProfile(data);
-    })
+    
   }
 
   gotoProfile(customer : any)

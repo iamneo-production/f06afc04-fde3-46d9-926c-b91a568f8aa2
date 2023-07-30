@@ -1,14 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { Restaurant } from '../restaurant';
 import { RestaurantService } from '../restaurant.service';
 import { ActivatedRoute, Router } from '@angular/router';
-=======
-
-import { RestaurantdataService } from '../restaurantdata.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Restaurant } from '../restaurant.model';
->>>>>>> 68beb65b1438c5fec4706e0e680ce1345a0abb55
 
 @Component({
   selector: 'app-update-details',
@@ -18,15 +11,9 @@ import { Restaurant } from '../restaurant.model';
 export class UpdateDetailsComponent implements OnInit {
 
   id!:number;
-<<<<<<< HEAD
   restaurant:Restaurant=new Restaurant();
 
   constructor(private service:RestaurantService, private route:ActivatedRoute, private router:Router){}
-=======
-  restaurant!: Restaurant;
-
-  constructor(private service:RestaurantdataService, private route:ActivatedRoute, private router:Router){}
->>>>>>> 68beb65b1438c5fec4706e0e680ce1345a0abb55
 
   ngOnInit(): void {
     this.id=this.route.snapshot.params['id'];

@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.example.springapp.SpringappApplicationTests
--------------------------------------------------------------------------------
-Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.342 s <<< FAILURE! - in com.example.springapp.SpringappApplicationTests
-testGetRestaurantByName  Time elapsed: 0.059 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<204>
-	at com.example.springapp.SpringappApplicationTests.testGetRestaurantByName(SpringappApplicationTests.java:131)
-

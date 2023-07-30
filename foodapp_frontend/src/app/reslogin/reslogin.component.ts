@@ -27,7 +27,7 @@ export class ResloginComponent {
     };
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post('http://localhost:8080/reslogin', loginData, { responseType: 'json' }).subscribe(
+    this.http.post('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/reslogin', loginData, { responseType: 'json' }).subscribe(
       (response) => {
         console.log(response);
         if (response) {

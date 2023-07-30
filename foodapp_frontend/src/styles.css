@@ -147,3 +147,6 @@ form .form-group span.details{
 .signup-link a:hover{
   text-decoration: underline;
 }
+.navbar {
+  background-color: red; /* Replace "your-desired-color" with your desired color value */
+}

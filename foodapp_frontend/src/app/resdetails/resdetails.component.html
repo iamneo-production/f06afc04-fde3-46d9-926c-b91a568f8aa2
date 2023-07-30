@@ -1,1 +1,39 @@
-<p>resdetails works!</p>
+
+<table>
+    <thead>
+      <tr>
+       
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Cuisine Type</th>
+        <th scope="col">Min Order Value</th>
+        <th scope="col">Delivery Time</th>
+        <th scope="col">Image Data</th>
+        <th scope="col">Rating</th>
+  
+        <th >Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr *ngFor="let restaurant of restaurants"> -->
+       <tr *ngIf="restaurant">
+        
+        <td>{{restaurant.name}}</td>
+        <td>{{restaurant.email}}</td>
+        <td>{{restaurant.phone_number}}</td>
+        <td>{{ restaurant.cuisinetype}}</td>
+            <td>{{ restaurant.minimumordervalue }}</td>
+           <td> {{ restaurant.deliverytime }} </td>
+           <td>   {{ restaurant.imageData }} </td>
+           <td>   {{ restaurant.rating }} </td>
+            <!-- Add more list items as needed -->
+          
+    
+        <td><button (click)="updateRestaurant(restaurant.id)" class="btn-btn-primary">Update</button>
+            
+        </td>
+      </tr>
+      
+       </tbody>
+  </table>

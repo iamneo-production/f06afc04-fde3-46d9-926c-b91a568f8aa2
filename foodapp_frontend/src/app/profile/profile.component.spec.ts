@@ -1,9 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-<<<<<<< HEAD
-<<<<<<< HEAD:foodapp_frontend/src/app/profile/profile.component.spec.ts
-=======
->>>>>>> 68beb65b1438c5fec4706e0e680ce1345a0abb55
 import { ProfileComponent } from './profile.component';
 
 describe('ProfileComponent', () => {
@@ -15,22 +11,6 @@ describe('ProfileComponent', () => {
       declarations: [ProfileComponent]
     });
     fixture = TestBed.createComponent(ProfileComponent);
-<<<<<<< HEAD
-=======
-import { CartComponent } from './cart.component';
-
-describe('CartComponent', () => {
-  let component: CartComponent;
-  let fixture: ComponentFixture<CartComponent>;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [CartComponent]
-    });
-    fixture = TestBed.createComponent(CartComponent);
->>>>>>> 68beb65b1438c5fec4706e0e680ce1345a0abb55:foodapp_frontend/src/app/cart/cart.component.spec.ts
-=======
->>>>>>> 68beb65b1438c5fec4706e0e680ce1345a0abb55
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

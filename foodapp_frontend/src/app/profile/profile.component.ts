@@ -1,39 +1,49 @@
 import { Component, OnInit } from '@angular/core';
-
-import { CustomerService } from '../customer.service';
+import { ActivatedRoute } from '@angular/router';
 import { Customer } from '../customer';
-import { ActivatedRoute, Router } from '@angular/router';
-
+import { CustomerService } from '../customer.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
+
 })
-export class ProfileComponent {
-  customer: Customer | null = null;
-  constructor(private service:CustomerService,private router:Router, private activatedRoute : ActivatedRoute){}  
+export class ProfileComponent implements OnInit {
+  customer: Customer | undefined;
+  customerId!: number;
+  isAuthenticated: boolean = false;
+  constructor(
+    private route: ActivatedRoute,
+    private customerService: CustomerService,
+    private authService: AuthService
+  ) {}
+
   ngOnInit(): void {
-    this.loadCustomer();
+
+    this.authService.isAuthenticated$.subscribe((authenticated) => {
+      this.isAuthenticated = authenticated;
+    });
+    this.route.params.subscribe((params) => {
+      this.customerId = +params['id'];
+      this.getCustomerProfile();
+    });
   }
 
-  loadCustomer(): void {
-    const customerId = Number(this.activatedRoute.snapshot.paramMap.get("id"));
-
-    this.service.getCustomerById(customerId).subscribe(
+  getCustomerProfile(): void {
+    this.customerService.getCustomerById(this.customerId).subscribe(
       (customer) => {
         this.customer = customer;
       },
       (error) => {
-        console.error('Error fetching customer:', error);
+        console.error('Error fetching customer profile:', error);
       }
     );
   }
-
-updateCustomer(id:number){
-  this.router.navigate(['update-customer', id]);
+  updateCustomer(id:number){
+   
+  }
+  
+ 
 }
-
-
-}
-

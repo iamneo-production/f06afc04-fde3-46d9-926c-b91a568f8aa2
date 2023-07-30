@@ -23,13 +23,12 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Map<String, String>> login(@RequestBody Login login) {
-        String result = loginService.login(login.getEmail(), login.getPassword());
-        HttpStatus status = result.equals("Login successful") ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
+    public ResponseEntity<Customer> login(@RequestBody Login login) {
+        Customer result = loginService.login(login.getEmail(), login.getPassword());
+//        HttpStatus status = result.equals("Login successful") ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
+        HttpStatus status = (result != null) ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
+        return ResponseEntity.status(status).body(result);
 
-        Map<String, String> response = new HashMap<>();
-        response.put("message", result);
-        return ResponseEntity.status(status).body(response);
     }
 
 

@@ -1,20 +1,24 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  isAuthenticated: boolean = false;
-<<<<<<< HEAD
+  private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
+  public isAuthenticated$ = this.isAuthenticatedSubject.asObservable();
 
-  setAuthenticated(status: boolean): void {
-    this.isAuthenticated = status;
-=======
-  userType: string = '';
+  constructor() {
+    this.loadAuthenticatedState();
+  }
 
-  setAuthenticated(status: boolean, userType: string): void {
-    this.isAuthenticated = status;
-    this.userType = userType;
->>>>>>> 68beb65b1438c5fec4706e0e680ce1345a0abb55
+  setAuthenticated(authenticated: boolean): void {
+    this.isAuthenticatedSubject.next(authenticated);
+    localStorage.setItem('authenticated', authenticated.toString());
+  }
+
+  private loadAuthenticatedState(): void {
+    const authenticated = localStorage.getItem('authenticated') === 'true';
+    this.isAuthenticatedSubject.next(authenticated);
   }
 }
