@@ -10,6 +10,12 @@
   padding: 70px 0;
   width: 100%;
   background-color: white;
+  font-family: "Avenir Next Regular", Arial, sans-serif;
+  background-image: url('src/assets/images/bg.jpg');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow-y: auto;
 }
 
 .pic {
@@ -24,6 +30,7 @@
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  overflow-y: hidden;
 }
 
 .text {
@@ -53,6 +60,10 @@
 @media (min-width: 768px) {
   .about {
     flex-wrap: nowrap;
+  }
+
+  .about-us{
+    overflow-y: auto;
   }
 
   .pic {

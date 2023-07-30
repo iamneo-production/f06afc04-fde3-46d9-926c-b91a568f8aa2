@@ -1,7 +1,7 @@
 /* Common styles */
 .topnav {
   overflow: hidden;
-  background-color: #FF3131;
+  background-color: #7a7a73;
   margin: 0;
 }
 
@@ -28,14 +28,13 @@
 .dropdown-menu {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: #7a7a73;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
 }
 
 .dropdown-menu a {
-  color: #FF3131;
+  color: white;
   padding: 8px 16px;
   text-align: center;
   text-decoration: none;
@@ -43,18 +42,19 @@
 }
 
 .dropdown-menu a:hover {
-  background-color: whitesmoke;
+  background-color: #8e8e85;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
+  
 }
 
 /* Active button style */
 .active {
   border-radius: 4px;
   border: none;
-  background-color: #fa4a4a;
+  background-color: #8e8e85;
   color: white;
   text-align: center;
   font-size: 18px;
@@ -94,7 +94,7 @@
 }
 
 .button:hover {
-  background-color: #fa4a4a;
+  background-color: #8e8e85;
 }
 
 .button:hover span {

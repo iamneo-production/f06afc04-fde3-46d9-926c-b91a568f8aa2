@@ -32,7 +32,7 @@ finalTotal=this.cartService.finaltotal;
   public message: string = '';
   
   makePayment() {
-    const url = 'https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/payment'; // Replace with your server's endpoint
+    const url = 'https://8080-cdcccaeacaaacfcdbceaeaadbdbabf.project.examly.io/payment'; // Replace with your server's endpoint
 
     const httpOptions = {
       headers: new HttpHeaders({
@@ -58,7 +58,7 @@ finalTotal=this.cartService.finaltotal;
     );
   }
   public createOrder() {
-    const url = 'https://8080-aaabcaeedefcbacfcdbceaeaadbdbabf.project.examly.io/order';
+    const url = 'https://8080-cdcccaeacaaacfcdbceaeaadbdbabf.project.examly.io/order';
 
     // this.order.customerId = 
     this.order.menuItemId = this.menuService.order[0].id;
