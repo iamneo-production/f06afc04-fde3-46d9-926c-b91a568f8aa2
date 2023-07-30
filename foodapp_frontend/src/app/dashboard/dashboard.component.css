@@ -1,8 +1,41 @@
+/* Common styles for the dashboard image */
 .bg-image {
-  background-image: url('src/assets/images/dashboard1.jpg');
+  background-image: url('src/assets/images/dashboard9.png');
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 91.57vh;
   position: relative;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens up to 768px width (e.g., tablets) */
+@media (max-width: 768px) {
+  .bg-image {
+    background-size: auto 100%; /* Show original image width and scale height to 100% */
+    background-position: 0% center;
+    height: 82.5vh; /* Reduce the height to fit smaller screens */
+  }
+}
+
+/* For screens up to 576px width (e.g., smartphones) */
+@media (max-width: 576px) {
+  .bg-image {
+    background-size: auto 100%; /* Show original image width and scale height to 100% */
+    background-position: 90% center; /* Adjust the horizontal position (left to right) */
+    height: 83.5vh; /* Further reduce the height for smaller screens */
+  }
+}
+
+/* Adjust the location of the "Order Now" link */
+.bg-image a {
+  position: absolute;
+  bottom: 120px; /* Adjust the vertical position from the bottom */
+  left: 135px; /* Adjust the horizontal position from the right */
+  padding: 15px 110px;
+  font-size: 24px;
+  background-color: #ffcf26;
+  color: white;
+  text-decoration: none;
 }

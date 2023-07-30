@@ -2,7 +2,11 @@
 .body{
   display: flex;
   padding: 10px;
+  background-image: url('src/assets/images/bg.jpg');
+
 }
+
+
 .container{
   max-width: 800px;
   width: 100%;
@@ -19,7 +23,7 @@
   height: 90px;
   margin-left: -30px;
   margin-right: -30px;
-  background-color: #FF3131;
+  background-color:#7a7a73;
   border-radius: 100px 10px 0 0;
   color: #fff;
   font-size: 30px;

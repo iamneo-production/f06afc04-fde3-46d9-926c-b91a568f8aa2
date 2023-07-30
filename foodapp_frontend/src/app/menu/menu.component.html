@@ -1,7 +1,8 @@
 <div class="centered">
     <div id="message" *ngIf="!apiAvailable">{{message}}</div>
 
-    <div id="hotel-details" *ngIf="apiAvailable">
+    <div id="hotel-div" *ngIf="apiAvailable">
+        <div class="hotel-details">
         <a id="hotel-name" routerLink="/restaurantdetails">{{restaurant.name}}</a>
         <a>
             <div id="ratings">
@@ -9,7 +10,52 @@
             <a class="times">11K ratings</a>
             </div>
         </a>
-        <input id="search" placeholder="Search within menu" (keyup)="searchMenu($event)">
+        </div>
+        <div class="hotel-details">
+            <a id="address" routerLink="/restaurantdetails">{{restaurant.address}}</a>
+            <input id="search" placeholder="Search within menu" (keyup)="searchMenu($event)">
+        </div>
+    </div>
+
+    <div id="offers" *ngIf="apiAvailable">
+        <h2 class="t2">Special Offers</h2>
+
+        <div class="offer-card-container" >
+            <div class="offer-card">
+                <div class="offer-content">
+                <h3 class="offer-title">Get 50% off</h3>
+                <p class="offer-description">Code:welcome</p>
+                </div>
+            </div>
+
+            <div class="offer-card">
+                <div class="offer-content">
+                <h3 class="offer-title">Flat ₹50 off</h3>
+                <p class="offer-description">upto ₹250</p>
+                </div>
+            </div>
+
+            <div class="offer-card">
+                <div class="offer-content">
+                <h3 class="offer-title">Get 30% off</h3>
+                <p class="offer-description">upto ₹120</p>
+                </div>
+            </div>
+
+            <div class="offer-card">
+                <div class="offer-content">
+                <h3 class="offer-title">Get ₹200 off</h3>
+                <p class="offer-description">use abc card</p>
+                </div>
+            </div>
+
+            <div class="offer-card">
+                <div class="offer-content">
+                <h3 class="offer-title">Get 50% off</h3>
+                <p class="offer-description">on first order</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <ul>

@@ -55,7 +55,7 @@ const routes: Routes = [
   {path: 'notification', component: NotificationComponent, canActivate: [UserAuthGuard]},
   {path: 'restaurantdetails',component:RestaurantdetailsComponent, canActivate: [UserAuthGuard]},
   {path: 'checkout',component:CheckoutComponent, canActivate: [UserAuthGuard]},
-  {path: 'ordertracking',component:OrdertrackingComponent, canActivate: [UserAuthGuard]},
+  {path: 'ordertracking',component:OrdertrackingComponent},
   {path: 'restaurantdashboard', component: RestaurantdashboardComponent, canActivate: [RestaurantAuthGuard] },
   {path: 'adminpanel', component: AdminpanelComponent, canActivate: [AdminAuthGuard] },
   {path: 'adminsignup',component:AdminsignupComponent, canActivate: [AdminAuthGuard] },
