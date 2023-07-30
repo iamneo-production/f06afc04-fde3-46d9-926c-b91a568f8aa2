@@ -9,18 +9,14 @@
     margin-top: 5rem;
 }
 
-#hotel-div {
-    padding: 2rem;
-}
-
-.hotel-details {
+#hotel-details {
     display: flex;
-    align-items: center;
+    padding: 2rem;
 }
 
 #hotel-name {
     color: #787878;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 900;
     text-decoration: none;
 }
@@ -28,12 +24,6 @@
 #hotel-name:hover {
     color: #525151;
     cursor: pointer;
-}
-
-#address {
-    color: #787878;
-    font-size: 20px;
-    text-decoration: none;
 }
 
 #ratings {
@@ -77,7 +67,7 @@
 
 #search:focus {
     outline: none;
-    border: 1px solid #e72929;
+    border: 1px solid #ffcf26;
 }
 
 ul {
@@ -129,7 +119,7 @@ div.content-right .name {
 .addToCart button, .addToCart a {
     padding: 10px 15px;
     border: none;
-    background: #e72929;
+    background: #ffcf26;
     color: white;
     opacity: 0.8;
     margin: 0;
@@ -149,7 +139,7 @@ img.food {
 
 #order {
     display: flex;
-    background-color: #e72929;
+    background-color:#ffcf26;
     color: white;
     padding: 10px;
     position: fixed;
@@ -171,12 +161,6 @@ img.food {
     display: none;
 }
 
-#offers {
-    border-top: 1px dashed rgb(235, 235, 235);
-    padding: 2rem;
-    color: #787878;
-}
-
 @media screen and (max-width: 992px) {
     .centered {
         width: 85%;
@@ -190,11 +174,8 @@ img.food {
         margin: 0 auto;
     }
 
-    #hotel-div {
+    #hotel-details {
         padding: 2rem 0;
-    }
-
-    .hotel-details {
         flex-wrap: wrap;
     }
 
@@ -202,40 +183,4 @@ img.food {
         flex-basis: 100%;
         margin-top: 2rem;
     }
-
-    #offers {
-        padding: 2rem 0;
-    }
 }
-
-.t2{
-    font-size: 22px;    
-  }
-
-.offer-card-container {
-    display: flex;
-    overflow-x: auto;
-  }
-  
-  .offer-card {
-    min-width: 150px;
-    border: 1px solid red;
-    border-style: dashed;
-    border-radius: 5px;
-    margin: 10px;
-  }
-  
-  .offer-content {
-    margin-top: 10px;
-    text-align: center;
-  }
-  
-  .offer-title {
-    font-size: 18px;
-    margin: 0;
-  }
-  
-  .offer-description {
-    font-size: 14px;
-    margin: 5px 0;
-  }

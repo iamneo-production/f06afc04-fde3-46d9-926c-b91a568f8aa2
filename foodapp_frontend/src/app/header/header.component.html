@@ -54,6 +54,55 @@
         <hr>
         <a class="dropdown-item" [routerLink]="(['/adminlogin'])">Admin</a>
       </div>
-    </nav>
-  </header>
+    </div>
+
+    <!--Sign up-->
+    <button *ngIf="router.url==='/userlogin'" class="button" [routerLink]="(['/usersignup'])">
+      <i class="fa fa-fw fa-user"></i><span>sign up</span></button>
+    
+    <button *ngIf="router.url==='/restaurantlogin'" class="button" [routerLink]="(['/restaurantsignup'])">
+      <i class="fa fa-fw fa-user"></i><span>sign up</span></button>
   
+    <!--admin Sign up-->
+    <button *ngIf="router.url==='/adminpanel'" class="button" [routerLink]="(['/adminsignup'])">
+      <i class="fa fa-fw fa-user"></i><span>New Member</span></button>
+
+    <!--Contact us-->
+    <button *ngIf="router.url=='/dashboard' 
+            || router.url=='/about'
+            || router.url==='/userlogin'
+            || router.url==='/adminlogin'
+            || router.url==='/usersignup'
+            || router.url==='/restaurantsignup' 
+            || router.url==='/restaurantlogin'" class="button" [routerLink]="(['/contactus'])"><i
+        class="fa fa-fw fa-envelope"></i> <span>Contact us</span></button>
+    <button *ngIf="router.url==='/contactus'" class="active" title="You are in Contact page"><i
+        class="fa fa-fw fa-envelope"></i> Contact us</button>
+
+
+    <!--My cart-->
+    <button *ngIf="router.url==='/dashboard'" class="button" onclick="alert('Please Login to view Your Cart')" value="My cart"> <span><i class="fas fa-shopping-cart"></i> My Cart </span></button>
+
+    <button *ngIf="router.url==='/home' || router.url.startsWith('/menu')" class="button" value="My cart" routerLink='/cart' ><span><i class="fas fa-shopping-cart"></i> My Cart </span></button>
+
+     <!-- profile  -->
+     <button *ngIf="router.url==='/adminpanel'|| router.url==='/home' " class="button" routerLink='/profile' ><span><i class="fas fa-user"></i>
+      Edit Profile</span></button>
+
+      <button *ngIf="router.url==='/profile' " class="button" routerLink='/order-history' ><span><i class="fas fa-file-invoice"></i>
+        Orders</span></button>
+
+       <!-- restaurant  -->
+  <button *ngIf="router.url==='/home'" class="button" routerLink='/restaurantlist'><span> <i class="fas fa-utensils"></i>
+      Restaurants</span></button>
+
+    <!--Log out-->
+    <button *ngIf="router.url==='/home'
+                     || router.url==='/adminpanel'
+                     || router.url==='/restaurantdashboard'
+                     || router.url==='/ordertracking'
+                     || router.url==='/cart'" class="button" routerLink='/dashboard'> <span><i class="fas fa-sign-out-alt"></i> 
+       Log out</span></button>
+
+  </div>
+</nav>
