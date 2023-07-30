@@ -32,8 +32,9 @@
 .bg-image a {
   position: absolute;
   bottom: 120px; /* Adjust the vertical position from the bottom */
-  left: 150px; /* Adjust the horizontal position from the right */
-  padding: 10px 70px;
+  left: 135px; /* Adjust the horizontal position from the right */
+  padding: 15px 110px;
+  font-size: 24px;
   background-color: #ffcf26;
   color: white;
   text-decoration: none;
