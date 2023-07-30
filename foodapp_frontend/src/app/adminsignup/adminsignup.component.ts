@@ -18,11 +18,16 @@ export class AdminsignupComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
   register(): void {
+
+    if (!this.validateEmailFormat(this.email)) {
+      alert('Incorrect email format. Please enter a valid email address.');
+      return;
+    }
     if (!this.name || !this.email || !this.password || !this.phone_number) {
       alert('Please provide all the required details.');
       return; // Exit the method
     }
-    const customerData = {
+    const adminData = {
       name: this.name,
       email: this.email,
       password: this.password,
@@ -31,7 +36,7 @@ export class AdminsignupComponent {
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post('https://8080-eaeeecbfecacfcdbceaeaadbdbabf.project.examly.io/admin', customerData, { headers, responseType: 'text' }).subscribe(
+    this.http.post('https://8080-cdcccaeacaaacfcdbccbacbfccbbebfcae.project.examly.io/admin', customerData, { headers, responseType: 'text' }).subscribe(
       (response: any) => {
         console.log(response); 
         if (response.includes('created') || response.includes('Customer created')) {
@@ -47,5 +52,10 @@ export class AdminsignupComponent {
         console.log(error);
       }
     );
+  }
+  validateEmailFormat(email: string): boolean {
+    // Regular expression for email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   }
 }

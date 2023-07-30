@@ -4,6 +4,11 @@
   background-color: white;
   overflow: hidden;
   height: 91.57vh;
+  background-image: url('src/assets/images/bg.jpg');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .contact-form {
@@ -44,7 +49,7 @@
   margin-top: 8px;
   border-radius: 8px;
   display: block;
-  background-color: #FF3131;
+  background-color: #7a7a73;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
@@ -54,7 +59,7 @@
 
 
 .contact-form button:hover {
-background-color:#fa4a4a;
+  background-color: #8e8e85;
 
 }
 

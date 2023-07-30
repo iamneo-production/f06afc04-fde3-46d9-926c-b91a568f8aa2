@@ -17,6 +17,11 @@ export class AdminloginComponent {
   constructor(private http: HttpClient, private router: Router, private authService: AuthService) {}
 
   adminlogin(): void {
+
+    if (!this.validateEmailFormat(this.email)) {
+      alert('Incorrect email format. Please enter a valid email address.');
+      return;
+    }
     const loginData = {
       email: this.email,
       password: this.password
@@ -51,5 +56,11 @@ export class AdminloginComponent {
         }
       }
     );
+  }
+
+  validateEmailFormat(email: string): boolean {
+    // Regular expression for email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   }
 }

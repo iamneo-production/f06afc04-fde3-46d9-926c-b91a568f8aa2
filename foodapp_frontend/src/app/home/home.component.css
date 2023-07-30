@@ -180,7 +180,7 @@ button{
 
 .text-center {
   display: inline-block;
-  background-color:  #FF3131;
+  background-color: #ffcf26;
   color: white;
   font-size: 14px;
   padding: 4px 8px;
@@ -213,7 +213,7 @@ font-size: 15px; /* Set the font size of the placeholder text */
 }
 
 .search-bar button.search-button {
-background-color:  #FF3131;
+background-color: #ffcf26;
 color: white;
 border: none;
 padding: 10px 20px;
@@ -224,29 +224,32 @@ margin-left: 10px;
 }
 
 .search-bar .search-button:hover {
-background-color: #fa4a4a;
+  background-color: #f7c616
 }
 .after-form-spacing {
 margin-top: 35px;
 
 }
 
-  
-  /* Responsive styles */
-  @media screen and (max-width: 767px) {
-    .card {
-      width: 100%;
-    }
-  }
-  
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-    .card {
-      width: calc(50% - 20px);
-    }
-  }
-  
-  @media screen and (min-width: 992px) {
-    .card {
-      width: calc(25% - 20px);
-    }
-  }
+/* ... (previous CSS code) ... */
+
+/* Responsive styles */
+@media screen and (max-width: 767px) {
+.card {
+  width: 100%;
+}
+
+.search-bar {
+  padding: 15px; /* Add some padding on mobile view to maintain space */
+  max-width: 700%; /* Allow the search bar to take full width on mobile */
+}
+
+.search-bar input[type="text"] {
+  max-width: 50%; /* Allow the input to take full width on mobile */
+}
+
+.search-bar .search-button {
+  margin-left: 0; /* Remove the margin on mobile view */
+  margin-top: 9px; /* Add some vertical space */
+}
+}

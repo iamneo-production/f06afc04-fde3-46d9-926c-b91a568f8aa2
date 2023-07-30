@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-button, .btn-secondary, .title { 
-    background: #FF3131;
+button,  .title { 
+  background-color: #ffcf26;
     color: white;
 }
 
-button:hover, .btn-secondary:hover, .title:hover { 
+button:hover,  .title:hover { 
     opacity: 1;
 }
 
@@ -17,18 +17,24 @@ button:hover, .btn-secondary:hover, .title:hover {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: "Avenir Next Regular", Arial, sans-serif;
 }
+
 
 .body {
-  background-color: white;
   overflow: hidden;
   height: 91.57vh;
-   justify-content: center;
+  justify-content: center;
   align-items: center;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: "Avenir Next Regular", Arial, sans-serif;
+  background-image: url('src/assets/images/login.png');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
 
 }
+
 
 
 .wrapper {
@@ -42,7 +48,7 @@ button:hover, .btn-secondary:hover, .title:hover {
 
 .wrapper .title {
   height: 90px;
-  background-color: #FF3131;
+  background-color:#7a7a73;
   border-radius: 100px 10px 0 0;
   color: white;
   font-size: 30px;
@@ -65,7 +71,7 @@ button:hover, .btn-secondary:hover, .title:hover {
 }
 
 .wrapper form .signup-link a {
-  color: #FF3131;
+  color: #ffcf26;
   text-decoration: none;
 }
 
@@ -79,8 +85,8 @@ input[type="submit"] {
   margin-top: 8px;
   border-radius: 8px;
   display: block;
-  background-color: #FF3131;
-  color: #fff;
+  background-color: #7a7a73;
+  color: #ffffff;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 16px;
@@ -97,7 +103,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #fa4a4a;
+  background-color: #8e8e85;
   
 
 }
@@ -145,9 +151,10 @@ form .form-group span.details{
   font-size: 17px;
 }
  .signup-link a{
-  color:  #FF3131;
+  color:  #ffcf26;
   text-decoration: none;
 }
 .signup-link a:hover{
   text-decoration: underline;
 }
+
