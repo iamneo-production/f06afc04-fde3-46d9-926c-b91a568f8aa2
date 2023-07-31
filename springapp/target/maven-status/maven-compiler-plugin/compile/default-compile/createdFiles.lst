@@ -27,8 +27,8 @@ com/example/springapp/service/LoginService.class
 com/example/springapp/service/AdminService.class
 com/example/springapp/service/AddressService.class
 com/example/springapp/controller/PaymentController.class
-com/example/springapp/service/MenuItemService.class
 com/example/springapp/service/ContactUsService.class
+com/example/springapp/service/MenuItemService.class
 com/example/springapp/repository/AdminLoginRepository.class
 com/example/springapp/model/RestaurantsLogin.class
 com/example/springapp/controller/CustomerController.class
