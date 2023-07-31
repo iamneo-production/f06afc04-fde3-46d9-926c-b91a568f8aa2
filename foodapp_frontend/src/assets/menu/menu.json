@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Vegetarian Platter",
+        "imageUrl": "/assets/menu/veg_platter.jpg",
+        "description": "An ultimate Mediterranean appetizer platter loaded with hummus, red pepper dip, pita chips, veggie sticks, feta cheese, falafel, olives, and figs.",
+        "tags": "Veg, Chef's special",
+        "price": 200
+    },
+    {
+        "id": 2,
+        "name": "Pizza",
+        "imageUrl": "/assets/menu/pizza.jpg",
+        "description": "Flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese",
+        "tags": "Veg",
+        "price": 300
+    },
+    {
+        "id": 3,
+        "name": "Baked fish",
+        "imageUrl": "/assets/menu/baked_fish.jpg",
+        "description": "Spices, garlic, basil ribbons, olive oil and lemon juice.",
+        "tags": "Non-Veg",
+        "price": 600
+    },
+    {
+        "id": 4,
+        "name": "Cheese Pasta",
+        "imageUrl": "/assets/menu/cheese_pasta.jpg",
+        "description": "Tossed with four kinds of cheese and different spices to make this creamy casserole dish.",
+        "tags": "Veg",
+        "price": 250
+    },
+    {
+        "id": 5,
+        "name": "Meatball",
+        "imageUrl": "/assets/menu/meatball.jpg",
+        "description": "Ground meat rolled into a ball, along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning.",
+        "tags": "Non-Veg",
+        "price": 700
+    },
+    {
+        "id": 6,
+        "name": "Berry French Toast",
+        "imageUrl": "/assets/menu/berry_french_toast.jpg",
+        "description": "This dish is filled with delicious berries to make for an appetising meal at any time of the day!",
+        "tags": "Veg",
+        "price": 150
+    },
+    {
+        "id": 7,
+        "name": "Greek Salad",
+        "imageUrl": "/assets/menu/greek_salad.jpg",
+        "description": "Consists of sliced cucumbers, tomatoes, green bell pepper, red onion, olives, and feta cheese.",
+        "tags": "Veg",
+        "price": 100
+    },
+    {
+        "id": 8,
+        "name": "Dumpling",
+        "imageUrl": "/assets/menu/dumpling.jpg",
+        "description": "Delicate, bite-sized treats of different fillings wrapped in a thin layer of dough.",
+        "tags": "Veg",
+        "price": 100
+    }
+]

@@ -1,0 +1,35 @@
+
+<div class="body">
+  
+  <h1 class="text-center" >Restaurant List</h1>
+  
+  <div class="container1"  >
+    <div class="card-container">
+      <div *ngIf="restaurant.length === 0" class="no-restaurants">
+        No Results Found
+      </div>
+      <div class="card " *ngFor = "let resta of restaurant ">
+        <img class="restaurant-image" [src]="resta.imageData" alt="Restaurant ">
+        <div class="restaurant-name">{{resta.name}}</div>
+        <div class="food-type">{{resta.cuisinetype}}</div>
+        <div class="info-div">
+          <div class="rating">
+            <span class="icon-star"><i class="fa-solid fa-star"></i></span>
+            <span>{{resta.rating}}</span>
+
+          </div>
+            <div>•</div>
+            <div class="timing">{{resta.deliverytime}}</div>
+            <div>•</div>
+            <div class="price">₹{{resta.minimumordervalue}}</div>
+        <br><br>
+        </div>
+        <button class="view-button" (click)="onclick(resta.id)">View Now</button>
+        </div>
+    
+    </div>
+  </div>
+  </div>
+  
+  
+  

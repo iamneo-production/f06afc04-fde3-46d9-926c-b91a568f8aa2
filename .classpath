@@ -31,6 +31,35 @@
 			<attribute name="m2e-apt" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/Project-Workspace-Ravi-Byahut
+=======
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+<<<<<<< HEAD
+>>>>>>> deff43fc3665e43775af2aa3b94a0425ce172108
+=======
+>>>>>>> ec75852372be6f1a12583025cd1786856d5ad35b
+=======
+>>>>>>> 98fdfa89a834b4f048fbd7c0654ef6cd3e932024
+>>>>>>> origin/Project-Workspace-Ravi-Byahut
+>>>>>>> 8c661e73a3444e8d0e3d3fe49b37eb23728a0081
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>
