@@ -14,7 +14,7 @@ export class MenuService {
   order:Order[] = [];
 
   getMenu() : Observable<FoodItem[]> {
-    return this.httpService.get<FoodItem[]>('https://8080-eaeeecbfecacfcdbceaeaadbdbabf.project.examly.io/menu-item');
+    return this.httpService.get<FoodItem[]>('https://8080-eaeeecbfecacfcdbccbacbfccbbebfcae.project.examly.io/menu-item');
   }
 
   getTotalAmount(){

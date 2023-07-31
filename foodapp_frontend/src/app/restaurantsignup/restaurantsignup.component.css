@@ -86,15 +86,3 @@ form .user-details .form-group{
     max-width: 80%;
   }
 }
-
-
-
-
-<<<<<<< HEAD
-
-form .user-details .form-group{
-  margin-bottom: 15px;
-  width: calc(100% / 3 - 20px);
-}
-=======
->>>>>>> 8c661e73 (updated theme)

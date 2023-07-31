@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "foodapp_frontend": {
+    "cart": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/foodapp_frontend",
+            "outputPath": "dist/cart",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "foodapp_frontend:build:production"
+              "browserTarget": "cart:build:production"
             },
             "development": {
-              "browserTarget": "foodapp_frontend:build:development"
+              "browserTarget": "cart:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,11 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "foodapp_frontend:build"
-<<<<<<< HEAD
->>>>>>> 099de46 (updated the home and search components for home screen)
-=======
->>>>>>> 7a9a5638 (updated the home and search components for home screen)
+            "browserTarget": "cart:build"
           }
         },
         "test": {
@@ -100,10 +96,6 @@
     }
   },
   "cli": {
-<<<<<<< HEAD
-
-=======
-    "analytics": "880512f1-8f23-430a-816a-443a07a1dc34"
->>>>>>> 7a9a5638 (updated the home and search components for home screen)
+    "analytics": "32711637-e8cd-416d-b241-69d4a2971fd8"
   }
 }

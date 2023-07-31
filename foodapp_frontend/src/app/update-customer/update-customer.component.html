@@ -1,31 +1,31 @@
 <div class="col-md-6 offset-md-3">
-    <h1>Update User Record</h1>
-    <form (ngSubmit) = "onSubmit()"> 
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="customer.name">
-          
-          <label for="email">Email</label>
-          <input type="text" class="form-control" id="email" name="email" [(ngModel)]="customer.email">
+  <h1>Update User Record</h1>
+  <form (ngSubmit) = "onSubmit()"> 
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="customer.name">
+        
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" name="email" [(ngModel)]="customer.email">
 
-          <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" name="password" [(ngModel)]="customer.password">
-       
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="customer.password">
+     
 
-            <label for="address">Street</label>
-            <input type="text" class="form-control" id="street" name="street" [(ngModel)]="customer.addressId.street">
+          <label for="address">Street</label>
+          <input type="text" class="form-control" id="street" name="street" [(ngModel)]="customer.addressId.street">
 
-            <label for="address">State</label>
-            <input type="text" class="form-control" id="city" name="city" [(ngModel)]="customer.addressId.city">
+          <label for="address">State</label>
+          <input type="text" class="form-control" id="city" name="city" [(ngModel)]="customer.addressId.city">
 
-            <label for="address">City</label>
-            <input type="text" class="form-control" id="state" name="state" [(ngModel)]="customer.addressId.state">
+          <label for="address">City</label>
+          <input type="text" class="form-control" id="state" name="state" [(ngModel)]="customer.addressId.state">
 
-            <label for="address">Zipcode</label>
-            <input type="text" class="form-control" id="zipCode" name="zipCode" [(ngModel)]="customer.addressId.zipCode">
-          <br>
-        <button class="btn btn-primary" type="submit">Submit</button>
-        </div>
-      </form>
+          <label for="address">Zipcode</label>
+          <input type="text" class="form-control" id="zipCode" name="zipCode" [(ngModel)]="customer.addressId.zipCode">
+        <br>
+      <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>
 
 </div> 

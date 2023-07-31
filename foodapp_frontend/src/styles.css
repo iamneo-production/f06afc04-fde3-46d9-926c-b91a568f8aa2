@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 button,  .title { 
@@ -158,4 +157,3 @@ form .form-group span.details{
 .signup-link a:hover{
   text-decoration: underline;
 }
-
